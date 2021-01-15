@@ -5,13 +5,13 @@ namespace SoulWorkerPropertySimulator.Data
 {
     internal static class BroochesData
     {
-        private static readonly BroochesClassify       SdTera  = new(BroochesSeries.Sd, BroochesRare.Tera);
-        private static readonly BroochesClassify       BskTera = new(BroochesSeries.Bsk, BroochesRare.Tera);
-        private static readonly BroochesClassify       FotTera = new(BroochesSeries.Fot, BroochesRare.Tera);
-        private static readonly BroochesClassify       SinTera = new(BroochesSeries.Sin, BroochesRare.Tera);
-        private static          ICollection<Brooches>? _Brooches;
+        private static readonly BroochesClassify               SdTera  = new(BroochesSeries.Sd, BroochesRare.Tera);
+        private static readonly BroochesClassify               BskTera = new(BroochesSeries.Bsk, BroochesRare.Tera);
+        private static readonly BroochesClassify               FotTera = new(BroochesSeries.Fot, BroochesRare.Tera);
+        private static readonly BroochesClassify               SinTera = new(BroochesSeries.Sin, BroochesRare.Tera);
+        private static          IReadOnlyCollection<Brooches>? _Brooches;
 
-        internal static ICollection<Brooches> Get()
+        internal static IReadOnlyCollection<Brooches> Get()
         {
             if (_Brooches != null) { return _Brooches; }
 

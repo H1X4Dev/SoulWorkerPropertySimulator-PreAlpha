@@ -210,9 +210,10 @@ namespace SoulWorkerPropertySimulator.Models
 
     public record ArmorSetEffect : Item, IUpgradeable
     {
-        internal ArmorSetEffect(IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffects,
-            string name,
-            string? inSet = null) : base(name, Classify.Accessory, inSet)
+        internal ArmorSetEffect(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffects) : base(
+            name,
+            Classify.Accessory,
+            name)
         {
             StepEffects = stepEffects;
             ValidStep   = Enumerable.Range(0, stepEffects.Select(x => x.Key).Max()).ToList();

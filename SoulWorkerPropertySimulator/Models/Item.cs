@@ -50,8 +50,8 @@ namespace SoulWorkerPropertySimulator.Models
         public IReadOnlyCollection<EffectRandomContext>              RandomEffects     { get; }
         public int                                                   RandomEffectCount { get; }
         public string?                                               SetName           { get; }
-        public IReadOnlyCollection<Effect>                           FixedEffects      { get; }
-        public IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> StepEffects       { get; }
+        public IReadOnlyCollection<Effect>                           FixedEffects      { get; init; }
+        public IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> StepEffects       { get; init; }
 
         public bool CheckEffectAllowed(IReadOnlyCollection<Effect>? effects) =>
             effects == null && RandomEffectCount == 0 ||
