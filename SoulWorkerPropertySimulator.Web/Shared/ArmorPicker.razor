@@ -1,0 +1,183 @@
+﻿@using SoulWorkerPropertySimulator.Extensions
+@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Services
+@* @inherits ItemGenerator<SoulWorkerPropertySimulator.Models.Armor> *@
+@inject IDataProvideService Data
+@inject IArmorComputeService ArmorCompute
+
+@if (_options.Any())
+{
+    <select @bind="SelectedKey">
+        <Virtualize Items="_options" Context="item">
+            <option value="@item.Name">@item.Name</option>
+        </Virtualize>
+    </select>
+
+    @if (SelectedBlueprint != null)
+    {
+        <div>
+            <div>強化</div>
+            <select @bind="SelectedStep" disabled="@(SelectedBlueprint.ValidStep.Count == 1)">
+                @if (SelectedBlueprint.ValidStep.Count > 1)
+                {
+                    @foreach (var i in SelectedBlueprint.ValidStep)
+                    {
+                        <option value="@i">@i</option>
+                    }
+                }
+            </select>
+        </div>
+
+        _selectedValue = SelectedBlueprint.MaxValue;
+        @*@if (SelectedValue < SelectedContext.Min || SelectedValue > SelectedContext.Max) { SelectedValue = SelectedContext.Max; }*@
+
+        <div>
+            <input type="number" min="0" max="100" @bind="_selectedValue"/>
+        </div>
+
+        <EffectsCreator Blueprint="SelectedBlueprint" DefaultEffects="DefaultArmor?.SelectedEffect" NotifyUpdate="Update" @ref="_effectsCreator"/>
+
+        @if (SelectedBlueprint.PluginLimit > 0)
+        {
+            <PluginsCreator Field="SelectedBlueprint.Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear" Limit="SelectedBlueprint.PluginLimit" NotifyUpdate="Update" DefaultPlugins="DefaultArmor?.Plugins" @ref="_pluginsCreator"/>
+        }
+
+        <div>
+            <div>
+                <select @bind="SelectedTagRares">
+                    @foreach (var rare in Enum.GetValues<TagRare>().OrderByDescending(x => x))
+                    {
+                        <option value="@rare">@rare.GetDescription()</option>
+                    }
+                </select>
+            </div>
+            <div>
+                <select @bind="SelectedTagName">
+                    @foreach (var tag in TagOptions)
+                    {
+                        <option value="@tag.Name">@tag.Name</option>
+                    }
+                    @* <Virtualize Items="TagOptions" Context="tag"> *@
+                    @*     <option value="@tag.Name">@tag.Name</option> *@
+                    @* </Virtualize> *@
+                </select>
+            </div>
+        </div>
+    }
+}
+
+@code
+{
+
+    [Parameter]
+    public ArmorField Field { get; set; }
+
+    [Parameter]
+    public Armor? DefaultArmor { get; set; }
+
+    private string? _selectedKey;
+
+    private string? SelectedKey
+    {
+        get => _selectedKey;
+        set
+        {
+            if (_selectedKey == value) { return; }
+            _selectedKey = value;
+            Update();
+        }
+    }
+
+    private ArmorBlueprint? SelectedBlueprint => _options.FirstOrDefault(x => x.Name.Equals(_selectedKey));
+
+    private readonly ICollection<ArmorBlueprint> _options = new List<ArmorBlueprint>();
+
+    private int _selectedValue;
+
+    private int SelectValue
+    {
+        get => _selectedValue;
+        set
+        {
+            if (value < 0 || value > 100) { throw new InvalidOperationException(); }
+            _selectedValue = value;
+            Update();
+        }
+    }
+
+    private int _selectedStep;
+
+    public int SelectedStep
+    {
+        get => _selectedStep;
+        set
+        {
+            if (SelectedBlueprint == null || !SelectedBlueprint.ValidStep.Contains(value)) { throw new InvalidOperationException(); }
+            _selectedStep = value;
+        }
+    }
+
+    private TagRare? _selectedTagRare;
+    private string? _selectedTagName;
+
+    public int? SelectedTagRares
+    {
+        get => (int?) _selectedTagRare;
+        set
+        {
+            if (value == null)
+            {
+                _selectedTagRare = null;
+                return;
+            }
+
+            if (!Enum.IsDefined(typeof(TagRare), value)) { throw new InvalidOperationException(); }
+            _selectedTagRare = (TagRare?) value;
+            Update();
+        }
+    }
+
+    public string? SelectedTagName
+    {
+        get => _selectedTagName;
+        set
+        {
+            _selectedTagName = value;
+            Update();
+        }
+    }
+
+    private IReadOnlyCollection<Tag> TagOptions => _selectedTagRare != null ? Data.GetTags(Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear, (TagRare) _selectedTagRare) : Array.Empty<Tag>();
+    private Tag? SelectedTag => TagOptions.FirstOrDefault(x => x.Name.Equals(_selectedTagName));
+
+    private EffectsCreator? _effectsCreator;
+    private PluginsCreator? _pluginsCreator;
+
+    private Armor? Item => _effectsCreator == null || _effectsCreator.Effects.Count != SelectedBlueprint?.RandomEffectCount ? null : SelectedBlueprint?.Create(SelectValue / 100, _effectsCreator.Effects, _pluginsCreator?.Plugins, SelectedTag);
+
+    private void Update()
+    {
+        if (Item == null) { ArmorCompute.Clear(Field); }
+        else
+        { ArmorCompute.Change(Item); }
+    }
+
+    protected override Task OnParametersSetAsync()
+    {
+        base.OnParametersSetAsync();
+
+        var options = Data.GetArmorBlueprints(Field).ToList();
+        foreach (var item in _options.Where(x => !options.Contains(x))) { _options.Remove(item); }
+        foreach (var item in options.Where(x => !_options.Contains(x))) { _options.Add(item); }
+
+        if (DefaultArmor != null)
+        {
+            _selectedKey = DefaultArmor.Blueprint.Name;
+            _selectedStep = DefaultArmor.Step;
+            _selectedTagRare = DefaultArmor.Tag?.Rare;
+            _selectedTagName = DefaultArmor.Tag?.Name;
+        }
+
+        return Task.CompletedTask;
+    }
+}

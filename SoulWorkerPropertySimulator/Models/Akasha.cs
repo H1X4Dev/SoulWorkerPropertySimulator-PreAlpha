@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace SoulWorkerPropertySimulator.Models
+{
+    public record Akasha : Item
+    {
+        internal Akasha(string name, bool isSecret, int step, IReadOnlyCollection<Effect> effects) : base(name,
+            Classify.Akasha)
+        {
+            Step     = step;
+            IsSecret = isSecret;
+            Effects  = effects;
+        }
+
+        internal Akasha(string name, bool isSecret, int step, string skill) : base(name, Classify.Akasha)
+        {
+            Step     = step;
+            IsSecret = isSecret;
+            Skill    = skill;
+        }
+
+        public          bool                        IsSecret { get; }
+        public          int                         Step     { get; }
+        public override IReadOnlyCollection<Effect> Effects  { get; } = Array.Empty<Effect>();
+        public          string?                     Skill    { get; }
+
+        public bool IsPassive => Skill == null;
+    }
+}

@@ -1,0 +1,77 @@
+﻿@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Models
+@inject IDataProvideService Data
+@inject ICharacterComputeService CharacterCompute
+
+<h3>CharacterSetting</h3>
+
+<div>
+    <div>
+        <TitlePicker Field="TitleField.First"/>
+        <TitlePicker Field="TitleField.Last"/>
+    </div>
+    <div>
+        <select @bind="SelectedName">
+            @foreach (var character in _options)
+            {
+                <option value="@character.Name">@character.Name</option>
+            }
+        </select>
+        <select @bind="Level">
+            @foreach (var i in _selected.StepEffects.Keys.OrderBy(x => x))
+            {
+                <option value="@i">@i</option>
+            }
+        </select>
+    </div>
+    <div>
+        @for (var i = 0; i < 5; i++)
+        {
+            <AkashaPicker Index="i"/>
+        }
+    </div>
+</div>
+
+@code {
+    private IReadOnlyCollection<Character> _options = null!;
+
+    private Character _selected = null!;
+
+    private string SelectedName
+    {
+        get => _selected.Name;
+        set
+        {
+            _selected = _options.First(x => x.Name.Equals(value));
+            CharacterCompute.Change(_selected with { Step = Level });
+        }
+    }
+
+    private int _level;
+
+    public int Level
+    {
+        get => _level;
+        set
+        {
+            if (!_selected.ValidStep.Contains(_level)) { throw new InvalidOperationException(); }
+            _level = value;
+            CharacterCompute.Change(_selected with { Step = Level });
+        }
+    }
+
+    public ICollection<AkashaPicker> Picker = new List<AkashaPicker>();
+
+    protected override Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+
+        _options = Data.GetCharacters();
+        if (!_options.Any()) { throw new InvalidOperationException(); }
+
+        SelectedName = (CharacterCompute.Get() ?? _options.First()).Name;
+
+        return Task.CompletedTask;
+    }
+
+}

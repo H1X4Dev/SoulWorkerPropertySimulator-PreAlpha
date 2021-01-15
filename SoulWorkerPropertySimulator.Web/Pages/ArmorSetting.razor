@@ -1,0 +1,29 @@
+﻿@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Models
+@inject IArmorComputeService ArmorCompute
+
+<h3>ArmorSetting</h3>
+
+<div>
+    @foreach (var field in _fields)
+    {
+        <ArmorPicker Field="field" DefaultArmor="_default.FirstOrDefault(x => x.Field == field)"/>
+    }
+</div>
+
+@code {
+    private readonly IReadOnlyCollection<ArmorField> _fields = new[] {ArmorField.Head, ArmorField.Shoulder, ArmorField.Chest, ArmorField.Leg, ArmorField.Weapon};
+
+    private ICollection<Armor> _default = Array.Empty<Armor>();
+
+
+    protected override Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+
+        _default = ArmorCompute.Get().ToList();
+
+        return Task.CompletedTask;
+    }
+
+}

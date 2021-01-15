@@ -1,0 +1,65 @@
+﻿@using SoulWorkerPropertySimulator.Extensions
+@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Services
+@inject IDataProvideService DataProvide
+@inject IBroochesComputeService BroochesCompute
+
+<select class="rare form-select" @bind="Rare">
+    @foreach (var rare in Enum.GetValues<BroochesRare>())
+    {
+        <option value="@rare">@rare.GetDescription()</option>
+    }
+</select>
+<select class="brooches form-select ms-2" @onchange="Update">
+    @try
+    {
+        @foreach (var brooches in List.Where(x => x.BroochesClassify.Rare == _rare))
+        {
+            <option value="@brooches.Name" selected="@(_selected != null && _selected.BroochesClassify.Rare == _rare && _selected.Name.Equals(brooches.Name))">
+                @brooches.Name
+            </option>
+        }
+    }
+    catch (KeyNotFoundException) { }
+</select>
+
+@code {
+    private BroochesRare _rare;
+    private Brooches? _selected;
+    public IReadOnlyCollection<Brooches> List = null!;
+
+    [Parameter]
+    public BroochesField Field { get; set; }
+
+    [Parameter]
+    public BroochesType Type { get; set; }
+
+    public int Rare
+    {
+        get => (int) _rare;
+        set
+        {
+            if (!Enum.IsDefined(typeof(BroochesRare), value)) { throw new InvalidOperationException(); }
+            _rare = (BroochesRare) value;
+        }
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        _selected = BroochesCompute.Get(Field, Type);
+        _rare = _selected?.BroochesClassify.Rare ?? BroochesRare.Tera;
+        List = DataProvide.GetBrooches(Type);
+
+        return base.OnInitializedAsync();
+    }
+
+    private void Update(ChangeEventArgs e)
+    {
+        var brooches = List.FirstOrDefault(x => x.Name.Equals(e.Value) && x.BroochesClassify.Rare == _rare);
+
+        if (brooches == null) { BroochesCompute.Clear(Field, Type); }
+        else
+        { BroochesCompute.Change(brooches, Field); }
+    }
+
+}

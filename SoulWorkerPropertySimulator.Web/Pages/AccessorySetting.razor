@@ -1,0 +1,66 @@
+﻿@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Models
+@inject IAccessoryComputeService AccessoryCompute
+
+<h3>AccessorySetting</h3>
+
+<div>
+
+    <CascadingValue Name="Parents" Value="this" IsFixed="true">
+        @foreach (var handle in Defaults)
+        {
+            <AccessoryPicker Field="handle.Field" DefaultAccessory="handle.Accessory" NotifyUpdate="Update"/>
+        }
+    </CascadingValue>
+</div>
+
+@code {
+    private static readonly IReadOnlyList<AccessoryHandler> Defaults = new List<AccessoryHandler> {new(AccessoryField.Amulet, null), new(AccessoryField.Earrings, null), new(AccessoryField.Ring, null), new(AccessoryField.Ring, null)};
+
+    public ICollection<AccessoryPicker> Pickers { get; } = new List<AccessoryPicker>();
+
+    public void Update(AccessoryField field)
+    {
+        var items = Pickers.Where(x => x.Field == field && x.Item != null).Select(x => x.Item)!.ToList();
+        if (items.Any()) { AccessoryCompute.Change(items); }
+        else
+        { AccessoryCompute.Clear(field); }
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+
+
+        var rings = new List<Accessory>();
+        AccessoryCompute.Get().Where(x => x != null)!.ToList().ForEach(x =>
+        {
+            if (x.Field != AccessoryField.Ring) { Defaults.First(y => y.Field == x.Field).Accessory = x; }
+            else
+            { rings.Add(x); }
+        });
+
+        var handlers = Defaults.Where(x => x.Field == AccessoryField.Ring).ToList();
+        try
+        {
+            handlers[0].Accessory = rings[0];
+            handlers[1].Accessory = rings[1];
+        }
+        catch (KeyNotFoundException) { }
+
+        return Task.CompletedTask;
+    }
+
+    private class AccessoryHandler
+    {
+        internal AccessoryField Field { get; }
+        internal Accessory? Accessory { get; set; }
+
+        internal AccessoryHandler(AccessoryField field, Accessory? accessory)
+        {
+            Field = field;
+            Accessory = accessory;
+        }
+    }
+
+}
