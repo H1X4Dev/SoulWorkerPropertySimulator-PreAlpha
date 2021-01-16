@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoulWorkerPropertySimulator
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FBA74D2A-9BD0-470A-A673-2C7DDCC9C9EA}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\main.yml = .github\workflows\main.yml
+		.github\workflows\deploy.yml = .github\workflows\deploy.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoulWorkerPropertySimulator.Web.Deprecation", "SoulWorkerPropertySimulator.Web.Deprecation\SoulWorkerPropertySimulator.Web.Deprecation.csproj", "{547319E9-DC15-438F-8600-EA48DC07ECE6}"

@@ -1,5 +1,5 @@
-﻿@using SoulWorkerPropertySimulator.Models
-@using SoulWorkerPropertySimulator.Services
+﻿@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Models
 @using SoulWorkerPropertySimulator.Web.Shared.Effects
 @inject IDataProvideService Data
 @inject IArmorComputeService ArmorCompute
@@ -132,7 +132,7 @@
         get
         {
     // try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedValue, _effectsCreator.Effects, _pluginsCreator?.Plugins, SelectedTag); }
-            try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects, null, null); }
+            try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects); }
             catch (InvalidOperationException) {
                 return null;
             }

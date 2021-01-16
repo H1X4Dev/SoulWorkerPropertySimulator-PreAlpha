@@ -65,6 +65,7 @@
     }
 
     private Effect? _defaultEffect;
+
     [Parameter]
     public Effect? DefaultEffect
     {
@@ -112,7 +113,7 @@
 
     public Effect? Effect => SelectedContext?.CreateEffect(_selectedValue);
 
-    public void Refresh() => StateHasChanged();
+    public void Refresh() { StateHasChanged(); }
 
     private bool _notInitializePhase;
 
@@ -122,7 +123,7 @@
         if (firstRender)
         {
             _notInitializePhase = true;
-            // NotifyUpdate.InvokeAsync();
+    // NotifyUpdate.InvokeAsync();
         }
     }
 
@@ -132,5 +133,6 @@
         Parents.Pickers.Add(this);
     }
 
-    public void Dispose() => Parents.Pickers.Remove(this);
+    public void Dispose() { Parents.Pickers.Remove(this); }
+
 }

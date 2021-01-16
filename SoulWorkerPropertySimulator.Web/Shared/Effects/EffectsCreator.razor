@@ -37,7 +37,7 @@
 
     private int Count => Blueprint.RandomEffectCount;
     private IReadOnlyCollection<EffectRandomContext> Contexts => Blueprint.RandomEffects;
-    public IReadOnlyCollection<Effect> Effects => Pickers.Select(x => x.Effect).Where(x => x != null)!.ToList<Effect>();
+    public IReadOnlyCollection<Effect> Effects => Pickers.Select(x => x.Effect).Where(x => x != null)!.ToList();
     private IReadOnlyCollection<EffectRandomContext> this[int key] => Pickers.Where(x => x.Key.HasValue && x.Key != key && x.Effect != null).Select(x => x.SelectedContext)!.ToList();
 
     private void RefreshOther(EffectPicker self)
@@ -48,7 +48,7 @@
     protected override void OnAfterRender(bool firstRender)
     {
         base.OnAfterRender(firstRender);
-        // if (firstRender && DefaultEffects == null) { NotifyUpdate.InvokeAsync(); }
+    // if (firstRender && DefaultEffects == null) { NotifyUpdate.InvokeAsync(); }
     }
 
 }
