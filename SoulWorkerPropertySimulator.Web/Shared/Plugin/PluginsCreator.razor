@@ -1,0 +1,65 @@
+﻿@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Models
+@inject IDataProvideService Data
+
+<h3>PluginCreator</h3>
+
+<CascadingValue Name="Field" Value="Field">
+    <CascadingValue Name="Options" Value="Options">
+        @for (var i = 0; i < Limit; i++)
+        {
+            <PluginPicker NotifyUpdate="NotifyUpdate" DefaultPlugin="_defaultPlugins?.Count > i ? _defaultPlugins[i] : null"/>
+        }
+    </CascadingValue>
+</CascadingValue>
+
+@code {
+
+    [Parameter]
+    public PluginField Field { get; set; }
+
+    [Parameter]
+    public int Limit { get; set; }
+
+    private int _level;
+
+    [Parameter]
+    public int Level
+    {
+        get => _level;
+        set
+        {
+            if (_level != value) { Options = Data.GetPluginBlueprints(Field).Where(x => x.Level <= Level).ToList(); }
+            _level = value;
+        }
+    }
+
+    private IReadOnlyList<Plugin>? _defaultPlugins;
+
+    [Parameter]
+    public IReadOnlyCollection<Plugin>? DefaultPlugins
+    {
+        get => _defaultPlugins;
+        set
+        {
+            if (_notInitializePhase || _defaultPlugins != null) { return; }
+            _defaultPlugins = value?.ToList();
+        }
+    }
+
+    [Parameter]
+    public EventCallback NotifyUpdate { get; set; }
+
+    public ICollection<PluginBlueprint> Options { get; set; } = new List<PluginBlueprint>();
+    public ICollection<PluginPicker> Pickers { get; } = new List<PluginPicker>();
+    public IReadOnlyCollection<Plugin> Plugins => Pickers.Select(x => x.Item).Where(x => x != null)!.ToList<Plugin>();
+
+    private bool _notInitializePhase;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        if (firstRender) { _notInitializePhase = true; }
+    }
+
+}

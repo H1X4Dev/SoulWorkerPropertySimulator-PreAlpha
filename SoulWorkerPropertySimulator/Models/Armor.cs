@@ -34,12 +34,56 @@ namespace SoulWorkerPropertySimulator.Models
             MaxValue       = maxValue;
         }
 
-        public ArmorField Field       { get; init; }
-        public ArmorRare  Rare        { get; }
-        public int        PluginLimit { get; }
+        public ArmorField               Field          { get; init; }
+        public ArmorRare                Rare           { get; }
+        public int                      PluginLimit    { get; }
+        public Property                 RandomProperty { get; }
+        public int                      MinValue       { get; }
+        public int                      MaxValue       { get; }
+        public IReadOnlyCollection<int> ValidStep      => Enumerable.Range(0, GetMaxStep(Rare) + 1).ToList();
 
-        public IReadOnlyCollection<int> ValidStep =>
-            Enumerable.Range(0, StepEffects.Any() ? StepEffects.Keys.Max() + 1 : 1).ToList();
+        public Armor Create(decimal      ratio,
+            IReadOnlyCollection<Effect>  randomEffects,
+            IReadOnlyCollection<Plugin>? plugins = null,
+            Tag?                         tag     = null,
+            int?                         step    = null) =>
+            new(this, ratio, randomEffects)
+            {
+                Plugins = plugins ?? Array.Empty<Plugin>(), Tag = tag, Step = step ?? GetMaxStep(Rare)
+            };
+
+        public Effect ComputePropertyValue(int value, int step)
+        {
+            if (Rare == ArmorRare.Common) { return new Effect(new EffectContext(RandomProperty), value); }
+
+            try { return new Effect(new EffectContext(RandomProperty), value * GetMagnification(Rare)[step]); }
+            catch (KeyNotFoundException) { return new Effect(new EffectContext(RandomProperty), MaxValue); }
+        }
+
+        private static int GetMaxStep(ArmorRare rare, bool isPrimal = false) =>
+            rare switch
+            {
+                ArmorRare.Common                  => 0,
+                ArmorRare.Magical                 => Magical.Keys.Max(),
+                ArmorRare.Valuable                => Valuable.Keys.Max(),
+                ArmorRare.Unique                  => Unique.Keys.Max(),
+                ArmorRare.Legendary when isPrimal => Unique.Keys.Max(),
+                ArmorRare.Legendary               => Legendary.Keys.Max(),
+                // ArmorRare.Heroic    => Magical.Keys.Max(),
+                _ => throw new ArgumentOutOfRangeException(nameof(rare), rare, null)
+            };
+
+        private static IDictionary<int, decimal> GetMagnification(ArmorRare rare, bool isPrimal = false) =>
+            rare switch
+            {
+                ArmorRare.Magical                 => Magical,
+                ArmorRare.Valuable                => Valuable,
+                ArmorRare.Unique                  => Unique,
+                ArmorRare.Legendary when isPrimal => Unique,
+                ArmorRare.Legendary               => Legendary,
+                ArmorRare.Heroic                  => throw new NotImplementedException(),
+                _                                 => throw new ArgumentOutOfRangeException(nameof(rare), rare, null)
+            };
 
         private static IDictionary<int, decimal> Legendary =>
             new Dictionary<int, decimal>
@@ -99,36 +143,6 @@ namespace SoulWorkerPropertySimulator.Models
                 {7, 2.28m},
                 {8, 2.66m},
                 {9, 3.1m}
-            };
-
-        public Property RandomProperty { get; }
-        public int      MinValue       { get; }
-        public int      MaxValue       { get; }
-
-        public Armor Create(decimal      ratio,
-            IReadOnlyCollection<Effect>  randomEffects,
-            IReadOnlyCollection<Plugin>? plugins = null,
-            Tag?                         tag     = null) =>
-            new(this, ratio, randomEffects) {Plugins = plugins ?? Array.Empty<Plugin>(), Tag = tag};
-
-        public Effect ComputePropertyValue(int value, int step)
-        {
-            if (Rare == ArmorRare.Common) { return new Effect(new EffectContext(RandomProperty), value); }
-
-            try { return new Effect(new EffectContext(RandomProperty), value * GetMagnification(Rare)[step]); }
-            catch (KeyNotFoundException) { return new Effect(new EffectContext(RandomProperty), MaxValue); }
-        }
-
-        private static IDictionary<int, decimal> GetMagnification(ArmorRare rare, bool isPrimal = false) =>
-            rare switch
-            {
-                ArmorRare.Magical                 => Magical,
-                ArmorRare.Valuable                => Valuable,
-                ArmorRare.Unique                  => Unique,
-                ArmorRare.Legendary when isPrimal => Unique,
-                ArmorRare.Legendary               => Legendary,
-                ArmorRare.Heroic                  => throw new NotImplementedException(),
-                _                                 => throw new ArgumentOutOfRangeException(nameof(rare), rare, null)
             };
     }
 

@@ -88,7 +88,7 @@ namespace SoulWorkerPropertySimulator.Services
         {
             var before = _sets.ToList();
             var sets   = _provider.GetAccessorySetEffects();
-            var data   = _accessories.Where(x => x != null).GroupBy(x => x.InSet);
+            var data   = _accessories.Where(x => x != null).GroupBy(x => x.SetName);
 
             ICollection<AccessorySetEffect> after = (from grouping in data
                                                      let effect =

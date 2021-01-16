@@ -1,0 +1,188 @@
+﻿@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Web.Shared.Effects
+@inject IDataProvideService Data
+@inject IArmorComputeService ArmorCompute
+
+<div>
+    @if (Options.Any())
+    {
+        <div>
+            <select @bind="Selected">
+                <option></option>
+                @foreach (var item in Options)
+                {
+                    <option value="@item.GetHashCode()">@item.Name</option>
+                }
+            </select>
+        </div>
+        @if (SelectedBlueprint != null && SelectedBlueprint.ValidStep.Count > 1)
+        {
+            <div>
+                <div>強化 +</div>
+                <div>
+                    <select @bind="SelectedStep">
+                        @foreach (var i in SelectedBlueprint.ValidStep)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        }
+
+        @if (SelectedBlueprint != null && SelectedBlueprint.RandomEffectCount > 0)
+        {
+            <EffectsCreator @ref="_effectsCreator" NotifyUpdate="NotifyUpdate" Blueprint="SelectedBlueprint" DefaultEffects="DefaultPlugin?.SelectedEffect"/>
+        }
+    }
+</div>
+
+@code
+{
+    [CascadingParameter(Name = nameof(Field))]
+    public PluginField Field { get; set; }
+
+    [CascadingParameter(Name = nameof(Options))]
+    public ICollection<PluginBlueprint> Options { get; set; } = null!;
+
+    [Parameter]
+    public EventCallback NotifyUpdate { get; set; }
+
+    private Plugin? _defaultPlugin;
+
+    [Parameter]
+    public Plugin? DefaultPlugin
+    {
+        get => _defaultPlugin;
+        set
+        {
+            if (_notInitializePhase || _defaultPlugin != null) { return; }
+            _defaultPlugin = value;
+        }
+    }
+
+    private int? _selected;
+
+    public PluginBlueprint? SelectedBlueprint
+    {
+        set => Selected = value?.GetHashCode();
+        get => Options.FirstOrDefault(x => x.GetHashCode() == _selected);
+    }
+
+    private int? Selected
+    {
+        get => _selected;
+        set
+        {
+            if (_selected == value) { return; }
+            _selected = value;
+            SelectedStep = SelectedBlueprint?.ValidStep.Max() ?? 0;
+        }
+    }
+
+    private int _selectedStep;
+
+    public int SelectedStep
+    {
+        get => _selectedStep;
+        set
+        {
+            _selectedStep = value;
+            if (_notInitializePhase) { NotifyUpdate.InvokeAsync(); }
+        }
+    }
+
+    private EffectsCreator? _effectsCreator;
+
+    public Plugin? Item
+    {
+        get
+        {
+            try { return SelectedBlueprint?.Create(_effectsCreator?.Effects); }
+            catch (InvalidOperationException) {
+                return null;
+            }
+        }
+    }
+
+    private bool _notInitializePhase;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        if (firstRender) { _notInitializePhase = true; }
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+        if (DefaultPlugin != null)
+        {
+            _selected = DefaultPlugin.Blueprint.GetHashCode();
+            _selectedStep = DefaultPlugin.Step;
+        }
+
+        return Task.CompletedTask;
+    }
+
+    // private string? _selectedKey;
+    //
+    // private string? SelectedKey
+    // {
+    //     get => _selectedKey;
+    //     set
+    //     {
+    //         if (_selectedKey == value) { return; }
+    //         _selectedKey = value;
+    //         Update();
+    //     }
+    // }
+    //
+    //
+    // private decimal _selectedValue;
+    //
+    // private int SelectValue
+    // {
+    //     get => (int) (_selectedValue * 100);
+    //     set
+    //     {
+    //         if (value < 0 || value > 100) { throw new InvalidOperationException(); }
+    //         _selectedValue = value / 100m;
+    //         Update();
+    //     }
+    // }
+    //
+    // private TagRare? _selectedTagRare;
+    // private string? _selectedTagName;
+    //
+    // public int? SelectedTagRares
+    // {
+    //     get => (int?) _selectedTagRare;
+    //     set
+    //     {
+    //         if (value == null)
+    //         {
+    //             _selectedTagRare = null;
+    //             return;
+    //         }
+    //
+    //         if (!Enum.IsDefined(typeof(TagRare), value)) { throw new InvalidOperationException(); }
+    //         _selectedTagRare = (TagRare?) value;
+    //         Update();
+    //     }
+    // }
+    //
+    // public string? SelectedTagName
+    // {
+    //     get => _selectedTagName;
+    //     set
+    //     {
+    //         _selectedTagName = value;
+    //         Update();
+    //     }
+    // }
+    //
+    // private IReadOnlyCollection<Tag> TagOptions => _selectedTagRare != null ? Data.GetTags(Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear, (TagRare) _selectedTagRare) : Array.Empty<Tag>();
+    // private Tag? SelectedTag => TagOptions.FirstOrDefault(x => x.Name.Equals(_selectedTagName));
+}

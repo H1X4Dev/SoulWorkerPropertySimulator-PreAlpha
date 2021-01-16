@@ -6,16 +6,18 @@ namespace SoulWorkerPropertySimulator.Models
 {
     public abstract record Item
     {
-        protected Item(string name, Classify classify, string? inSet = null)
+        protected Item(string name, Classify classify, string? setName = null)
         {
             Name     = name;
             Classify = classify;
-            InSet    = inSet;
+            SetName  = setName;
         }
 
         public string   Name     { get; }
-        public string?  InSet    { get; }
+        public string?  SetName  { get; }
         public Classify Classify { get; }
+
+        public string FullName => $"{SetName}{Name}";
 
         public abstract IReadOnlyCollection<Effect> Effects { get; }
     }
@@ -52,6 +54,8 @@ namespace SoulWorkerPropertySimulator.Models
         public string?                                               SetName           { get; }
         public IReadOnlyCollection<Effect>                           FixedEffects      { get; init; }
         public IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> StepEffects       { get; init; }
+
+        public string FullName => $"{SetName}{Name}";
 
         public bool CheckEffectAllowed(IReadOnlyCollection<Effect>? effects) =>
             effects                 == null

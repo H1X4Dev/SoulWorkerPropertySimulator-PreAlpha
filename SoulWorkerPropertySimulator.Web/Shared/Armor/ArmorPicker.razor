@@ -1,30 +1,32 @@
 ﻿@using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Models
 @using SoulWorkerPropertySimulator.Web.Shared.Effects
+@using SoulWorkerPropertySimulator.Web.Shared.Plugin
 @inject IDataProvideService Data
 @inject IArmorComputeService ArmorCompute
 
 @if (Options.Any())
 {
     <div>
-        <select @bind="SelectedName">
+        <select @bind="Selected">
+            <option></option>
             @foreach (var item in Options)
             {
-                <option value="@item.Name">@item.Name</option>
+                <option value="@item.GetHashCode()">@item.FullName</option>
             }
         </select>
     </div>
     <div>
         <div>品質</div>
         <div>
-            <input type="number" min="0" max="100" @bind="SelectedQuality"/>
+            <input type="number" min="0" max="100" @bind="SelectedQuality" disabled="@(SelectedBlueprint == null)"/>
         </div>
     </div>
     <div>
         <div>強化 +</div>
         <div>
-            <select @bind="SelectedStep" disabled="@(SelectedBlueprint.ValidStep.Count <= 1)">
-                @if (!SelectedBlueprint.ValidStep.Any())
+            <select @bind="SelectedStep" disabled="@(SelectedBlueprint == null || SelectedBlueprint.ValidStep.Count <= 1)">
+                @if (SelectedBlueprint == null || !SelectedBlueprint.ValidStep.Any())
                 {
                     <option value="0">0</option>
                 }
@@ -39,35 +41,37 @@
         </div>
     </div>
 
-    <EffectsCreator @ref="_effectsCreator" NotifyUpdate="Update" Blueprint="SelectedBlueprint" DefaultEffects="DefaultArmor?.SelectedEffect"/>
+    @if (SelectedBlueprint != null)
+    {
+        <EffectsCreator @ref="_effectsCreator" NotifyUpdate="Update" Blueprint="SelectedBlueprint" DefaultEffects="DefaultArmor?.SelectedEffect"/>
 
-    @* *@
-    @*         @if (SelectedBlueprint.PluginLimit > 0) *@
-    @*         { *@
-    @*             <PluginsCreator Field="SelectedBlueprint.Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear" Limit="SelectedBlueprint.PluginLimit" NotifyUpdate="Update" DefaultPlugins="DefaultArmor?.Plugins" @ref="_pluginsCreator"/> *@
-    @*         } *@
-    @* *@
-    @*         <div> *@
-    @*             <div> *@
-    @*                 <select @bind="SelectedTagRares"> *@
-    @*                     @foreach (var rare in Enum.GetValues<TagRare>().OrderByDescending(x => x)) *@
-    @*                     { *@
-    @*                         <option value="@rare">@rare.GetDescription()</option> *@
-    @*                     } *@
-    @*                 </select> *@
-    @*             </div> *@
-    @*             <div> *@
-    @*                 <select @bind="SelectedTagName"> *@
-    @*                     @foreach (var tag in TagOptions) *@
-    @*                     { *@
-    @*                         <option value="@tag.Name">@tag.Name</option> *@
-    @*                     } *@
-    @*                     $1$ <Virtualize Items="TagOptions" Context="tag"> #1# *@
-    @*                     $1$     <option value="@tag.Name">@tag.Name</option> #1# *@
-    @*                     $1$ </Virtualize> #1# *@
-    @*                 </select> *@
-    @*             </div> *@
-    @*         </div> *@
+        @if (SelectedBlueprint!.PluginLimit > 0)
+        {
+            @*<PluginsCreator @ref="_pluginsCreator" NotifyUpdate="Update" Field="SelectedBlueprint.Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear" Limit="SelectedBlueprint.PluginLimit" DefaultPlugins="DefaultArmor?.Plugins"/>*@
+        }
+    }
+
+@*         <div> *@
+@*             <div> *@
+@*                 <select @bind="SelectedTagRares"> *@
+@*                     @foreach (var rare in Enum.GetValues<TagRare>().OrderByDescending(x => x)) *@
+@*                     { *@
+@*                         <option value="@rare">@rare.GetDescription()</option> *@
+@*                     } *@
+@*                 </select> *@
+@*             </div> *@
+@*             <div> *@
+@*                 <select @bind="SelectedTagName"> *@
+@*                     @foreach (var tag in TagOptions) *@
+@*                     { *@
+@*                         <option value="@tag.Name">@tag.Name</option> *@
+@*                     } *@
+@*                     $1$ <Virtualize Items="TagOptions" Context="tag"> #1# *@
+@*                     $1$     <option value="@tag.Name">@tag.Name</option> #1# *@
+@*                     $1$ </Virtualize> #1# *@
+@*                 </select> *@
+@*             </div> *@
+@*         </div> *@
 }
 
 @code
@@ -80,21 +84,21 @@
 
     private IReadOnlyCollection<ArmorBlueprint> Options { get; set; } = null!;
 
-    private string? _selectedName;
+    private int? _selected;
 
-    public ArmorBlueprint SelectedBlueprint
+    public ArmorBlueprint? SelectedBlueprint
     {
-        set => SelectedName = value.ToString();
-        get => Options.First(x => x.Name.Equals(SelectedName));
+        set => Selected = value?.GetHashCode();
+        get => Options.FirstOrDefault(x => x.GetHashCode() == _selected);
     }
 
-    private string? SelectedName
+    private int? Selected
     {
-        get => _selectedName;
+        get => _selected;
         set
         {
-            if (_selectedName == value) { return; }
-            _selectedName = value;
+            if (_selected == value) { return; }
+            _selected = value;
             SelectedQuality = 100;
             SelectedStep = SelectedBlueprint?.ValidStep.Max() ?? 0;
         }
@@ -125,14 +129,14 @@
     }
 
     private EffectsCreator? _effectsCreator;
-    // private PluginsCreator? _pluginsCreator;
+    private PluginsCreator? _pluginsCreator;
 
     private Armor? Item
     {
         get
         {
-    // try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedValue, _effectsCreator.Effects, _pluginsCreator?.Plugins, SelectedTag); }
-            try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects); }
+    // try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedValue, _effectsCreator.Effects, _pluginsCreator?.Plugins, SelectedTag, SelectedStep); }
+            try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects, _pluginsCreator?.Plugins, step: SelectedStep); }
             catch (InvalidOperationException) {
                 return null;
             }
@@ -151,11 +155,7 @@
     protected override void OnAfterRender(bool firstRender)
     {
         base.OnAfterRender(firstRender);
-        if (firstRender)
-        {
-            _notInitializePhase = true;
-            if (DefaultArmor == null) { Update(); }
-        }
+        if (firstRender) { _notInitializePhase = true; }
     }
 
     protected override Task OnInitializedAsync()
@@ -166,14 +166,15 @@
 
         if (DefaultArmor != null)
         {
-            _selectedName = DefaultArmor.Blueprint.Name;
+            _selected = DefaultArmor.Blueprint.GetHashCode();
             _selectedQuality = DefaultArmor.SelectedRatio;
             _selectedStep = DefaultArmor.Step;
+
     // _selectedTagRare = DefaultArmor.Tag?.Rare;
     // _selectedTagName = DefaultArmor.Tag?.Name;
         }
-        else
-        { SelectedName = Options.First().Name; }
+    // else
+    // { Selected = Options.First().GetHashCode(); }
 
         return Task.CompletedTask;
     }

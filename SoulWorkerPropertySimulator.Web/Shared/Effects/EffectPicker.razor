@@ -6,18 +6,22 @@
     {
         <div>
             <select @bind="SelectedKey">
+                <option></option>
                 @foreach (var item in Options)
                 {
-                    <option value="@item.Context.ToString()" disabled="@DisableContext?.Contains(item)">@item.Context.Property.GetDescription()</option>
+                    <option value="@item.Context.GetHashCode()" disabled="@DisableContext?.Contains(item)">@item.Context.Property.GetDescription()</option>
                 }
             </select>
         </div>
         <div>
-            <div>Min: @SelectedContext.DisplayMinValue</div>
-            <div>
-                <input type="number" min="@SelectedContext.DisplayMinValue" max="@SelectedContext.DisplayMaxValue" @bind="SelectedValue"/>
-            </div>
-            <div>Max: @SelectedContext.DisplayMaxValue</div>
+            @if (SelectedContext != null)
+            {
+                <div>Min: @SelectedContext.DisplayMinValue</div>
+                <div>
+                    <input type="number" min="@SelectedContext.DisplayMinValue" max="@SelectedContext.DisplayMaxValue" @bind="SelectedValue"/>
+                </div>
+                <div>Max: @SelectedContext.DisplayMaxValue</div>
+            }
         </div>
     }
 </div>
@@ -36,19 +40,8 @@
     [Parameter]
     public int? Key { get; set; }
 
-    private IReadOnlyCollection<EffectRandomContext> _options = null!;
-
     [Parameter]
-    public IReadOnlyCollection<EffectRandomContext> Options
-    {
-        get => _options;
-        set
-        {
-            _options = value;
-
-            if (_selectedKey == null || !Options.Contains(SelectedContext)) { SelectedContext = Options.Skip(Key ?? 0).First(); }
-        }
-    }
+    public IReadOnlyCollection<EffectRandomContext> Options { get; set; } = null!;
 
     private IReadOnlyCollection<EffectRandomContext>? _disableContext;
 
@@ -60,7 +53,7 @@
         {
             _disableContext = value;
             if (value == null) { return; }
-            if (_notInitializePhase && value.Contains(SelectedContext)) { SelectedKey = Options.First(x => !value.Contains(x)).Context.ToString(); }
+            if (_notInitializePhase && value.Contains(SelectedContext)) { SelectedKey = Options.First(x => !value.Contains(x)).Context.GetHashCode(); }
         }
     }
 
@@ -79,39 +72,39 @@
         }
     }
 
-    private string? _selectedKey;
+    private int? _selectedKey;
 
-    public EffectRandomContext SelectedContext
+    public EffectRandomContext? SelectedContext
     {
-        get => Options.First(x => x.Context.ToString().Equals(SelectedKey));
-        set => SelectedKey = value.Context.ToString();
+        get => Options.FirstOrDefault(x => x.Context.GetHashCode() == SelectedKey);
+        set => SelectedKey = value?.Context.GetHashCode();
     }
 
-    private string? SelectedKey
+    private int? SelectedKey
     {
         get => _selectedKey;
         set
         {
             if (_selectedKey == value) { return; }
             _selectedKey = value;
-            SelectedValue = SelectedContext.DisplayMaxValue;
+            SelectedValue = SelectedContext?.DisplayMaxValue;
             if (_notInitializePhase || _defaultEffect == null) { RefreshOther.InvokeAsync(this); }
         }
     }
 
-    private decimal _selectedValue;
+    private decimal? _selectedValue;
 
-    public int SelectedValue
+    public int? SelectedValue
     {
-        get => (int) (SelectedContext.Context.IsPercent ? _selectedValue * 100 : _selectedValue);
+        get => (int?) (SelectedContext == null ? null : SelectedContext.Context.IsPercent ? _selectedValue * 100 : _selectedValue);
         set
         {
-            _selectedValue = SelectedContext.Context.IsPercent ? value / 100m : value;
+            _selectedValue = SelectedContext == null ? null : SelectedContext.Context.IsPercent ? value / 100m : value;
             if (_notInitializePhase) { NotifyUpdate.InvokeAsync(); }
         }
     }
 
-    public Effect? Effect => SelectedContext?.CreateEffect(_selectedValue);
+    public Effect? Effect => _selectedValue == null ? null : SelectedContext?.CreateEffect(_selectedValue.Value);
 
     public void Refresh() { StateHasChanged(); }
 
@@ -120,11 +113,7 @@
     protected override void OnAfterRender(bool firstRender)
     {
         base.OnAfterRender(firstRender);
-        if (firstRender)
-        {
-            _notInitializePhase = true;
-    // NotifyUpdate.InvokeAsync();
-        }
+        if (firstRender) { _notInitializePhase = true; }
     }
 
     protected override void OnInitialized()

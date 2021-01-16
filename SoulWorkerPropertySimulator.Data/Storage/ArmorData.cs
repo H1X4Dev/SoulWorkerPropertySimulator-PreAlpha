@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using SoulWorkerPropertySimulator.Models;
 
-namespace SoulWorkerPropertySimulator.Data
+namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class ArmorData
     {
@@ -12,7 +12,7 @@ namespace SoulWorkerPropertySimulator.Data
             if (_armorBlueprintResult != null) { return _armorBlueprintResult; }
 
             var result = new List<ArmorBlueprint>();
-            var weapon68 = new ArmorBlueprint("進階幕光的流浪者",
+            var weapon68 = new ArmorBlueprint("進階暮光流浪者",
                 ArmorField.Weapon,
                 68,
                 ArmorRare.Legendary,
@@ -24,7 +24,7 @@ namespace SoulWorkerPropertySimulator.Data
                     new(new EffectContext(Property.ExtraDamageRateBasic), .02m, .09m),
                     new(new EffectContext(Property.ExtraDamageRateBoss), .02m, .09m),
                     new(new EffectContext(Property.CriticalRate), .02m, .07m),
-                    new(new EffectContext(Property.CriticalDamage), 1_743,  1_885),
+                    new(new EffectContext(Property.CriticalDamage), 1_743, 1_885),
                     new(new EffectContext(Property.SuperArmorBreakPowerRate), .02m, .11m),
                     new(new EffectContext(Property.DefenseBreakRate), .01m, .06m),
                     new(new EffectContext(Property.SoulNovaVolumeRate), .01m, .07m),
@@ -43,15 +43,15 @@ namespace SoulWorkerPropertySimulator.Data
                     new(new EffectContext(Property.Accuracy), -50)
                 });
             result.Add(weapon68);
-            result.Add(weapon68 with {Name = "進階幕光的平流"});
-            result.Add(weapon68 with {Name = "進階幕光的榮耀"});
-            result.Add(weapon68 with {Name = "進階幕光憐憫頌"});
-            result.Add(weapon68 with {Name = "進階幕光的細緻"});
-            result.Add(weapon68 with {Name = "進階幕光的廢墟"});
-            result.Add(weapon68 with {Name = "進階幕光的追跡"});
-            result.Add(weapon68 with {Name = "進階幕光的畸變"});
+            result.Add(weapon68 with {Name = "進階暮光平流"});
+            result.Add(weapon68 with {Name = "進階暮光榮耀"});
+            result.Add(weapon68 with {Name = "進階暮光憐憫頌"});
+            result.Add(weapon68 with {Name = "進階暮光細緻"});
+            result.Add(weapon68 with {Name = "進階暮光廢墟"});
+            result.Add(weapon68 with {Name = "進階暮光追跡"});
+            result.Add(weapon68 with {Name = "進階暮光畸變"});
 
-            var gear68 = new ArmorBlueprint("進階幕光鳶尾戰盔",
+            var gear68 = new ArmorBlueprint("鳶尾戰盔",
                 ArmorField.Head,
                 68,
                 ArmorRare.Legendary,
@@ -79,7 +79,7 @@ namespace SoulWorkerPropertySimulator.Data
                     {6, new Effect[] {new(new(Property.DefenseRate), .36m)}},
                     {9, new Effect[] {new(new(Property.ExtraDamageRateBoss), .03m)}}
                 },
-                "進階幕光套裝",
+                "進階幕光",
                 new List<Effect>
                 {
                     new(new EffectContext(Property.SoulNovaVolumeRate), .3m),
@@ -89,7 +89,7 @@ namespace SoulWorkerPropertySimulator.Data
             result.Add(gear68);
             result.Add(gear68 with
             {
-                Name = "進階幕光光輪護肩",
+                Name = "光輪護肩",
                 Field = ArmorField.Shoulder,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
@@ -106,7 +106,7 @@ namespace SoulWorkerPropertySimulator.Data
             });
             result.Add(gear68 with
             {
-                Name = "進階幕光忠心護甲",
+                Name = "忠心護甲",
                 Field = ArmorField.Chest,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
@@ -125,7 +125,7 @@ namespace SoulWorkerPropertySimulator.Data
             });
             result.Add(gear68 with
             {
-                Name = "進階幕光代償護腿",
+                Name = "代償護腿",
                 Field = ArmorField.Leg,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {

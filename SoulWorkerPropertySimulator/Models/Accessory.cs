@@ -49,7 +49,7 @@ namespace SoulWorkerPropertySimulator.Models
     {
         internal AccessorySetEffect(IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffect,
             string name,
-            string? inSet = null) : base(name, Classify.Accessory, inSet)
+            string? setName = null) : base(name, Classify.Accessory, setName)
         {
             StepEffects = stepEffect;
             ValidStep   = Enumerable.Range(0, stepEffect.Select(x => x.Key).Max()).ToList();

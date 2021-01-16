@@ -46,8 +46,6 @@ namespace SoulWorkerPropertySimulator.Services
         {
             if (item == null) { throw new InvalidOperationException(); }
 
-            Console.WriteLine($"Change: {JsonSerializer.Serialize(item)}");
-
             Armor? before;
             try { before = _armors[item.Field]; }
             catch (KeyNotFoundException) { before = null; }
@@ -128,7 +126,7 @@ namespace SoulWorkerPropertySimulator.Services
         {
             var before = _sets.ToList();
             var sets   = _provider.GetArmorSetEffects();
-            var data   = _armors.Where(x => x.Value != null).GroupBy(x => x.Value!.InSet);
+            var data   = _armors.Where(x => x.Value != null).GroupBy(x => x.Value!.SetName);
 
             ICollection<ArmorSetEffect> after = (from grouping in data
                                                  let effect = sets.FirstOrDefault(x => x.Name.Equals(grouping.Key))

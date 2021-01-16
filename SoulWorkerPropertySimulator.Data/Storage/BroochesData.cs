@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using SoulWorkerPropertySimulator.Models;
 
-namespace SoulWorkerPropertySimulator.Data
+namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class BroochesData
     {

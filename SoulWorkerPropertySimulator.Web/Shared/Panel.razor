@@ -1,14 +1,12 @@
 ﻿@using SoulWorkerPropertySimulator.Services
 @inject IPanelComputeService PanelCompute
 
-@* <h3>Panel</h3> *@
-
 <div>
     @foreach (var (context, value) in _effects.Where(x => x.Value != 0))
     {
         <div>
             <div>@context.Description:</div>
-            <div>@(context.IsPercent ? value * 100 : value)</div>
+            <div>@(context.IsPercent ? $"{value * 100}%" : (int) value)</div>
         </div>
     }
 </div>

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using SoulWorkerPropertySimulator.Models;
 
-namespace SoulWorkerPropertySimulator.Data
+namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class ArmorSetData
     {
@@ -17,7 +13,7 @@ namespace SoulWorkerPropertySimulator.Data
 
             return _armorSetEffectResult = new List<ArmorSetEffect>
             {
-                new("進階幕光套裝",
+                new("進階暮光",
                     new Dictionary<int, IReadOnlyCollection<Effect>>
                     {
                         {
