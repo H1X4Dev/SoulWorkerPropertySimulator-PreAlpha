@@ -6,7 +6,7 @@ namespace SoulWorkerPropertySimulator.Models
 
     public record Brooches : Item
     {
-        internal Brooches(string        name,
+        public Brooches(string        name,
             BroochesType                type,
             BroochesClassify            classify,
             IReadOnlyCollection<Effect> effects) : base(name, Classify.Brooches)

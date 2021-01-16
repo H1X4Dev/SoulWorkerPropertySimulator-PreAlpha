@@ -31,9 +31,9 @@ namespace SoulWorkerPropertySimulator.Data
                             3,
                             new List<Effect>
                             {
-                                new(new(Property.Attack, Opportunity.HitStamina70Down, Duration: 1), 500),
-                                new(new(Property.Attack, Opportunity.HitStamina40Down, Duration: 1), 1000),
-                                new(new(Property.Attack, Opportunity.HitStamina10Down, Duration: 1), 3000),
+                                new(new(Property.Attack, Opportunity.HitStamina70Down, duration: 1), 500),
+                                new(new(Property.Attack, Opportunity.HitStamina40Down, duration: 1), 1000),
+                                new(new(Property.Attack, Opportunity.HitStamina10Down, duration: 1), 3000),
                             }
                         },
                         {

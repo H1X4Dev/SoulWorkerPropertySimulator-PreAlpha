@@ -1,21 +1,29 @@
 ﻿@using SoulWorkerPropertySimulator.Services
+@using System.Text.Json
 @inject IPanelComputeService PanelCompute
 
-<h3>Panel</h3>
+@* <h3>Panel</h3> *@
 
 <div>
-    <Virtualize Items="_effects" Context="effect">
+    @foreach (var (context, value) in _effects.Where(x => x.Value != 0))
+    {
         <div>
-            <div>@effect.Key.ToString():</div>
-            <div>@effect.Value</div>
+            <div>@context.Description:</div>
+            <div>@(context.IsPercent ? value * 100 : value)</div>
         </div>
-    </Virtualize>
+    }
 </div>
 
 @code {
     private IDictionary<EffectContext, decimal> _effects = null!;
 
-    public void Update(EffectContext context, decimal value) => _effects[context] = value;
+    public void Update(EffectContext context, decimal value)
+    {
+        if (!_effects.ContainsKey(context)) { _effects.Add(context, value); }
+        else
+        { _effects[context] = value; }
+        StateHasChanged();
+    }
 
     protected override Task OnInitializedAsync()
     {

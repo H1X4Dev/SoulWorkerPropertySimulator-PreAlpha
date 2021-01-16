@@ -10,14 +10,14 @@ else
             {
                 @foreach (var item in Contexts)
                 {
-                    <EffectPicker Contexts="new[] {item}" NotifyUpdate="NotifyUpdate"/>
+                    <EffectPicker NotifyUpdate="NotifyUpdate" Contexts="new[] {item}"/>
                 }
             }
             else
             {
                 @for (var i = 0; i < Count; i++)
                 {
-                    <EffectPicker Key="i" Contexts="Contexts" DisableContext="this[i]" ReRenderOther="ReRenderOther" NotifyUpdate="NotifyUpdate" DefaultEffect="DefaultEffectList?.Count > i ? DefaultEffectList[i] : null"/>
+                    <EffectPicker Key="i" ReRenderOther="ReRenderOther" NotifyUpdate="NotifyUpdate" Contexts="Contexts" DefaultEffect="DefaultEffectList?.Count > i ? DefaultEffectList[i] : null" DisableContext="this[i]"/>
                 }
             }
         </CascadingValue>
@@ -47,6 +47,15 @@ else
     private void ReRenderOther(EffectPicker self)
     {
         foreach (var i in Pickers.Where(x => x != self)) { i.ReRender(); }
+    }
+
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        base.OnAfterRenderAsync(firstRender);
+
+        if (firstRender) { NotifyUpdate.InvokeAsync(); }
+
+        return Task.CompletedTask;
     }
 
 }

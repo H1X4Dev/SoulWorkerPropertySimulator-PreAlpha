@@ -34,10 +34,12 @@ namespace SoulWorkerPropertySimulator.Models
             MaxValue       = maxValue;
         }
 
-        public ArmorField               Field       { get; }
-        public ArmorRare                Rare        { get; }
-        public int                      PluginLimit { get; }
-        public IReadOnlyCollection<int> ValidStep   => Enumerable.Range(0, StepEffects.Keys.Max()).ToList();
+        public ArmorField Field       { get; init; }
+        public ArmorRare  Rare        { get; }
+        public int        PluginLimit { get; }
+
+        public IReadOnlyCollection<int> ValidStep =>
+            Enumerable.Range(0, StepEffects.Any() ? StepEffects.Keys.Max() + 1 : 1).ToList();
 
         private static IDictionary<int, decimal> Legendary =>
             new Dictionary<int, decimal>
@@ -146,7 +148,7 @@ namespace SoulWorkerPropertySimulator.Models
             Blueprint      = blueprint;
             SelectedEffect = randomEffects;
             SelectedRatio  = ratio;
-            Step           = StepEffects.Keys.Max();
+            Step           = StepEffects.Any() ? StepEffects.Keys.Max() : 0;
             Plugins        = new List<Plugin>();
         }
 
@@ -156,7 +158,7 @@ namespace SoulWorkerPropertySimulator.Models
         public int                         PluginLimit => Blueprint.PluginLimit;
 
         public int SelectedValue =>
-            (int) Math.Round((Blueprint.MinValue - Blueprint.MaxValue) * SelectedRatio, 0) + Blueprint.MinValue;
+            (int) Math.Round((Blueprint.MaxValue - Blueprint.MinValue) * SelectedRatio, 0) + Blueprint.MinValue;
 
         public override IReadOnlyCollection<Effect> Effects =>
             Blueprint.FixedEffects.Concat(SelectedEffect)
@@ -164,6 +166,8 @@ namespace SoulWorkerPropertySimulator.Models
                 .Concat(StepEffects.Where(x => x.Key <= Step).SelectMany(x => x.Value))
                 .Concat(Plugins.Where(x => x         != null).SelectMany(x => x!.Effects))
                 .Concat(Tag?.Effects ?? Array.Empty<Effect>())
+                .GroupBy(x => x.Context)
+                .Select(x => new Effect(x.Key, x.Sum(y => y.Value)))
                 .ToList();
 
         public int Level => Blueprint.Level;
@@ -173,8 +177,8 @@ namespace SoulWorkerPropertySimulator.Models
         public ArmorBlueprint                                        Blueprint      { get; }
         public IReadOnlyCollection<Effect>                           SelectedEffect { get; init; }
         public decimal                                               SelectedRatio  { get; init; }
-        public Property                                              Property       => Blueprint.RandomProperty;
         public int                                                   Step           { get; init; }
+        public Property                                              Property       => Blueprint.RandomProperty;
         public IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> StepEffects    => Blueprint.StepEffects;
         public IReadOnlyCollection<int>                              ValidStep      => Blueprint.ValidStep;
 
@@ -210,7 +214,7 @@ namespace SoulWorkerPropertySimulator.Models
 
     public record ArmorSetEffect : Item, IUpgradeable
     {
-        internal ArmorSetEffect(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffects) : base(
+        public ArmorSetEffect(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffects) : base(
             name,
             Classify.Accessory,
             name)

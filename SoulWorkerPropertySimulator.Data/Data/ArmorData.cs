@@ -24,7 +24,7 @@ namespace SoulWorkerPropertySimulator.Data
                     new(new EffectContext(Property.ExtraDamageRateBasic), .02m, .09m),
                     new(new EffectContext(Property.ExtraDamageRateBoss), .02m, .09m),
                     new(new EffectContext(Property.CriticalRate), .02m, .07m),
-                    new(new EffectContext(Property.CriticalDamage), 1885, 1743),
+                    new(new EffectContext(Property.CriticalDamage), 1_743,  1_885),
                     new(new EffectContext(Property.SuperArmorBreakPowerRate), .02m, .11m),
                     new(new EffectContext(Property.DefenseBreakRate), .01m, .06m),
                     new(new EffectContext(Property.SoulNovaVolumeRate), .01m, .07m),
@@ -90,6 +90,7 @@ namespace SoulWorkerPropertySimulator.Data
             result.Add(gear68 with
             {
                 Name = "進階幕光光輪護肩",
+                Field = ArmorField.Shoulder,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {3, new Effect[] {new(new(Property.AttackRate, Opportunity.HitBoss, .1m, 2), .06m)}},
@@ -106,6 +107,7 @@ namespace SoulWorkerPropertySimulator.Data
             result.Add(gear68 with
             {
                 Name = "進階幕光忠心護甲",
+                Field = ArmorField.Chest,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {
@@ -124,6 +126,7 @@ namespace SoulWorkerPropertySimulator.Data
             result.Add(gear68 with
             {
                 Name = "進階幕光代償護腿",
+                Field = ArmorField.Leg,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {

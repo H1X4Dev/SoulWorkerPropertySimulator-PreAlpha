@@ -54,16 +54,16 @@ namespace SoulWorkerPropertySimulator.Models
         public IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> StepEffects       { get; init; }
 
         public bool CheckEffectAllowed(IReadOnlyCollection<Effect>? effects) =>
-            effects == null && RandomEffectCount == 0 ||
-            effects       != null                                    &&
-            effects.Count == RandomEffectCount                       &&
-            effects.GroupBy(x => x.Context).All(x => x.Count() == 1) &&
-            effects.All(x =>
-            {
-                var (context, value) = x;
-                var tmp = RandomEffects.FirstOrDefault(y => y.Context.Equals(context));
-                return tmp != null && value >= tmp.Min && value <= tmp.Max;
-            });
+            effects                 == null
+                ? RandomEffectCount == 0
+                : effects.Count == RandomEffectCount                       &&
+                  effects.GroupBy(x => x.Context).All(x => x.Count() == 1) &&
+                  effects.All(x =>
+                  {
+                      var (context, value) = x;
+                      var tmp = RandomEffects.FirstOrDefault(y => y.Context.Equals(context));
+                      return tmp != null && value >= tmp.Min && value <= tmp.Max;
+                  });
     }
 
     public abstract record Blueprint<T> : Blueprint where T : Item
@@ -80,7 +80,9 @@ namespace SoulWorkerPropertySimulator.Models
             randomEffectCount,
             stepEffects,
             setName,
-            fixedEffects) { }
+            fixedEffects)
+        {
+        }
 
         public abstract T Create(IReadOnlyCollection<Effect> randomEffects);
     }
@@ -99,7 +101,9 @@ namespace SoulWorkerPropertySimulator.Models
             randomEffectCount,
             stepEffects,
             setName,
-            fixedEffects) { }
+            fixedEffects)
+        {
+        }
 
         // public abstract T Create(decimal ratio, IReadOnlyCollection<Effect> randomEffects);
     }

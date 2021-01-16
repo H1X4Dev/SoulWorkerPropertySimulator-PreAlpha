@@ -1,0 +1,54 @@
+﻿@using SoulWorkerPropertySimulator.Models
+<CascadingValue Name="Parents" Value="this" IsFixed="true">
+    @if (Count == Contexts.Count)
+    {
+        @foreach (var item in Contexts)
+        {
+            <EffectPicker NotifyUpdate="NotifyUpdate" Options="new[] {item}"/>
+        }
+    }
+    else
+    {
+        @for (var i = 0; i < Count; i++)
+        {
+            <EffectPicker RefreshOther="RefreshOther" NotifyUpdate="NotifyUpdate" Key="i" Options="Contexts" DefaultEffect="_defaultEffects?.Count > i ? _defaultEffects[i] : null" DisableContext="this[i]"/>
+        }
+    }
+</CascadingValue>
+
+@code {
+
+    [Parameter]
+    public EventCallback NotifyUpdate { get; set; }
+
+    [Parameter]
+    public Blueprint Blueprint { get; set; } = null!;
+
+    private IReadOnlyList<Effect>? _defaultEffects;
+
+    [Parameter]
+    public IReadOnlyCollection<Effect>? DefaultEffects
+    {
+        get => _defaultEffects;
+        set => _defaultEffects = value?.ToList();
+    }
+
+    public ICollection<EffectPicker> Pickers { get; } = new List<EffectPicker>();
+
+    private int Count => Blueprint.RandomEffectCount;
+    private IReadOnlyCollection<EffectRandomContext> Contexts => Blueprint.RandomEffects;
+    public IReadOnlyCollection<Effect> Effects => Pickers.Select(x => x.Effect).Where(x => x != null)!.ToList<Effect>();
+    private IReadOnlyCollection<EffectRandomContext> this[int key] => Pickers.Where(x => x.Key.HasValue && x.Key != key && x.Effect != null).Select(x => x.SelectedContext)!.ToList();
+
+    private void RefreshOther(EffectPicker self)
+    {
+        foreach (var i in Pickers.Where(x => x != self)) { i.Refresh(); }
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        // if (firstRender && DefaultEffects == null) { NotifyUpdate.InvokeAsync(); }
+    }
+
+}

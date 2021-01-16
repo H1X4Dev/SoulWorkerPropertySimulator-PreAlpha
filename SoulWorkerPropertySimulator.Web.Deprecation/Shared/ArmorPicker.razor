@@ -8,9 +8,11 @@
 @if (_options.Any())
 {
     <select @bind="SelectedKey">
-        <Virtualize Items="_options" Context="item">
+        @* <option>Select...</option> *@
+        @foreach (var item in _options)
+        {
             <option value="@item.Name">@item.Name</option>
-        </Virtualize>
+        }
     </select>
 
     @if (SelectedBlueprint != null)
@@ -27,12 +29,10 @@
                 }
             </select>
         </div>
-
-        _selectedValue = SelectedBlueprint.MaxValue;
         @*@if (SelectedValue < SelectedContext.Min || SelectedValue > SelectedContext.Max) { SelectedValue = SelectedContext.Max; }*@
 
         <div>
-            <input type="number" min="0" max="100" @bind="_selectedValue"/>
+            <input type="number" min="0" max="100" @bind="SelectValue"/>
         </div>
 
         <EffectsCreator Blueprint="SelectedBlueprint" DefaultEffects="DefaultArmor?.SelectedEffect" NotifyUpdate="Update" @ref="_effectsCreator"/>
@@ -92,15 +92,15 @@
 
     private readonly ICollection<ArmorBlueprint> _options = new List<ArmorBlueprint>();
 
-    private int _selectedValue;
+    private decimal _selectedValue;
 
     private int SelectValue
     {
-        get => _selectedValue;
+        get => (int) (_selectedValue * 100);
         set
         {
             if (value < 0 || value > 100) { throw new InvalidOperationException(); }
-            _selectedValue = value;
+            _selectedValue = value / 100m;
             Update();
         }
     }
@@ -153,7 +153,16 @@
     private EffectsCreator? _effectsCreator;
     private PluginsCreator? _pluginsCreator;
 
-    private Armor? Item => _effectsCreator == null || _effectsCreator.Effects.Count != SelectedBlueprint?.RandomEffectCount ? null : SelectedBlueprint?.Create(SelectValue / 100, _effectsCreator.Effects, _pluginsCreator?.Plugins, SelectedTag);
+    private Armor? Item
+    {
+        get
+        {
+            try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedValue, _effectsCreator.Effects, _pluginsCreator?.Plugins, SelectedTag); }
+            catch (InvalidOperationException) {
+                return null;
+            }
+        }
+    }
 
     private void Update()
     {
@@ -162,8 +171,9 @@
         { ArmorCompute.Change(Item); }
     }
 
-    protected override Task OnParametersSetAsync()
+    protected override Task OnInitializedAsync()
     {
+        base.OnInitializedAsync();
         base.OnParametersSetAsync();
 
         var options = Data.GetArmorBlueprints(Field).ToList();
@@ -173,11 +183,38 @@
         if (DefaultArmor != null)
         {
             _selectedKey = DefaultArmor.Blueprint.Name;
+            _selectedValue = DefaultArmor.SelectedRatio;
             _selectedStep = DefaultArmor.Step;
             _selectedTagRare = DefaultArmor.Tag?.Rare;
             _selectedTagName = DefaultArmor.Tag?.Name;
         }
+        else
+        {
+            _selectedKey = _options.FirstOrDefault()?.Name;
+            _selectedValue = 1;
+        }
 
         return Task.CompletedTask;
     }
+
+    // protected override Task OnParametersSetAsync()
+    // {
+    //     base.OnParametersSetAsync();
+    //
+    //     var options = Data.GetArmorBlueprints(Field).ToList();
+    //     foreach (var item in _options.Where(x => !options.Contains(x))) { _options.Remove(item); }
+    //     foreach (var item in options.Where(x => !_options.Contains(x))) { _options.Add(item); }
+    //  
+    //     if (DefaultArmor != null)
+    //     {
+    //         _selectedKey = DefaultArmor.Blueprint.Name;
+    //         _selectedStep = DefaultArmor.Step;
+    //         _selectedTagRare = DefaultArmor.Tag?.Rare;
+    //         _selectedTagName = DefaultArmor.Tag?.Name;
+    //     }
+    //     else
+    //     { _selectedKey = _options.FirstOrDefault()?.Name; }
+    //
+    //     return Task.CompletedTask;
+    // }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using SoulWorkerPropertySimulator.Models;
 
 namespace SoulWorkerPropertySimulator.Services
@@ -45,13 +46,17 @@ namespace SoulWorkerPropertySimulator.Services
         {
             if (item == null) { throw new InvalidOperationException(); }
 
-            if (!_armors.ContainsKey(item.Field) || _armors[item.Field] == null) { return; }
+            Console.WriteLine($"Change: {JsonSerializer.Serialize(item)}");
 
-            var before = _armors[item.Field]!;
+            Armor? before;
+            try { before = _armors[item.Field]; }
+            catch (KeyNotFoundException) { before = null; }
+
             _armors[item.Field] = item;
 
             var (setBefore, setAfter) = ProcessSetAffect();
-            NotifyChange(ComputeAffect(before.Effects.Concat(setBefore.SelectMany(x => x.Effects)),
+            NotifyChange(ComputeAffect(
+                (before?.Effects ?? Array.Empty<Effect>()).Concat(setBefore.SelectMany(x => x.Effects)),
                 item.Effects.Concat(setAfter.SelectMany(x => x.Effects))));
         }
 

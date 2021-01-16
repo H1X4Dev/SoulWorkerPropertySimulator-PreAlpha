@@ -11,21 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # uses GitHub's checkout action to checkout code form the master branch
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.3.4
     
     # sets up .NET Core SDK 3.1
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0
+        dotnet-version: 5.0.101
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish BlazorGitHubPagesDemo.csproj -c Release -o release --nologo
+      run: dotnet publish ./SoulWorkerPropertySimulator.Web/SoulWorkerPropertySimulator.Web.csproj -c Release -o release --nologo
     
     # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to BlazorGitHubPagesDemo
-      run: sed -i 's/<base href="\/" \/>/<base href="\/BlazorGitHubPagesDemo\/" \/>/g' release/wwwroot/index.html
+    - name: Change base-tag in index.html from / to SoulWorkerPropertySimulator-PreAlpha
+      run: sed -i 's/<base href="\/" \/>/<base href="\/SoulWorkerPropertySimulator-PreAlpha\/" \/>/g' release/wwwroot/index.html
     
     # copy index.html to 404.html to serve the same file when a file is not found
     - name: copy index.html to 404.html
@@ -38,6 +38,6 @@ jobs:
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.SWPS_PA }}
         BRANCH: gh-pages
         FOLDER: release/wwwroot

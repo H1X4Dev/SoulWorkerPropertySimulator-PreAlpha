@@ -100,7 +100,7 @@ namespace SoulWorkerPropertySimulator.Data
                     SdTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.DamageReductionRate, Opportunity.Avoid, Duration: 5), 5)
+                        new(new EffectContext(Property.DamageReductionRate, Opportunity.Avoid, duration: 5), 5)
                     }),
                 new("巨人",
                     BroochesType.Defense,
@@ -115,7 +115,7 @@ namespace SoulWorkerPropertySimulator.Data
                     SdTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.DamageReductionRate, Opportunity.AirSuffer, Duration: 5),
+                        new(new EffectContext(Property.DamageReductionRate, Opportunity.AirSuffer, duration: 5),
                             7)
                     }),
                 new("地殼",
@@ -123,7 +123,7 @@ namespace SoulWorkerPropertySimulator.Data
                     SdTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.DamageReductionRate, Opportunity.Fall, Duration: 5), 7)
+                        new(new EffectContext(Property.DamageReductionRate, Opportunity.Fall, duration: 5), 7)
                     }),
                 new("幻象",
                     BroochesType.Defense,
@@ -141,7 +141,7 @@ namespace SoulWorkerPropertySimulator.Data
                     SdTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.HPRecovery, Opportunity.SufferCritical, Duration: 50),
+                        new(new EffectContext(Property.HPRecovery, Opportunity.SufferCritical, duration: 50),
                             2500)
                     }),
                 new("生命",
@@ -366,7 +366,7 @@ namespace SoulWorkerPropertySimulator.Data
                     BskTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.DamageReductionRate, Opportunity.Avoid, Duration: 5), 9)
+                        new(new EffectContext(Property.DamageReductionRate, Opportunity.Avoid, duration: 5), 9)
                     }),
                 new("巨人",
                     BroochesType.Defense,
@@ -381,7 +381,7 @@ namespace SoulWorkerPropertySimulator.Data
                     BskTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.DamageReductionRate, Opportunity.AirHit, Duration: 5),
+                        new(new EffectContext(Property.DamageReductionRate, Opportunity.AirHit, duration: 5),
                             10)
                     }),
                 new("地殼",
@@ -391,7 +391,7 @@ namespace SoulWorkerPropertySimulator.Data
                     {
                         new(new EffectContext(Property.DamageReductionRate,
                                 Opportunity.FallSuffer,
-                                Duration: 5),
+                                duration: 5),
                             10)
                     }),
                 new("狂暴",
@@ -536,14 +536,14 @@ namespace SoulWorkerPropertySimulator.Data
                     BskTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.Attack, Opportunity.Kill, Duration: 5), 1225)
+                        new(new EffectContext(Property.Attack, Opportunity.Kill, duration: 5), 1225)
                     }),
                 new("狂人",
                     BroochesType.Effect,
                     BskTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.SuperArmorBreakPowerRate, Opportunity.Kill, Duration: 5),
+                        new(new EffectContext(Property.SuperArmorBreakPowerRate, Opportunity.Kill, duration: 5),
                             16)
                     }),
                 new("感覺",
@@ -551,7 +551,7 @@ namespace SoulWorkerPropertySimulator.Data
                     BskTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.DefenseBreakRate, Opportunity.Kill, Duration: 5), 16)
+                        new(new EffectContext(Property.DefenseBreakRate, Opportunity.Kill, duration: 5), 16)
                     }),
                 new("燃料庫",
                     BroochesType.Attack,
@@ -614,14 +614,14 @@ namespace SoulWorkerPropertySimulator.Data
                     FotTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.CriticalDamage, Opportunity.Critical, Duration: 3), 870)
+                        new(new EffectContext(Property.CriticalDamage, Opportunity.Critical, duration: 3), 870)
                     }),
                 new("勇氣",
                     BroochesType.Attack,
                     FotTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.CriticalDamage, Opportunity.HP30Down, Duration: 3), 1260)
+                        new(new EffectContext(Property.CriticalDamage, Opportunity.HP30Down, duration: 3), 1260)
                     }),
                 new("大將",
                     BroochesType.Attack,
@@ -694,7 +694,7 @@ namespace SoulWorkerPropertySimulator.Data
                     FotTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.Defense, Opportunity.HP50Down, Duration: 10), 770)
+                        new(new EffectContext(Property.Defense, Opportunity.HP50Down, duration: 10), 770)
                     }),
                 new("休戰",
                     BroochesType.Defense,
@@ -703,7 +703,7 @@ namespace SoulWorkerPropertySimulator.Data
                     {
                         new(new EffectContext(Property.CriticalResistanceRate,
                                 Opportunity.HP50Down,
-                                Duration: 10),
+                                duration: 10),
                             27)
                     }),
                 new("掃蕩",
@@ -715,14 +715,14 @@ namespace SoulWorkerPropertySimulator.Data
                     FotTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.Attack, Opportunity.Kill, Duration: 5), 1200)
+                        new(new EffectContext(Property.Attack, Opportunity.Kill, duration: 5), 1200)
                     }),
                 new("防護",
                     BroochesType.Effect,
                     FotTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.Defense, Opportunity.Kill, Duration: 5), 850)
+                        new(new EffectContext(Property.Defense, Opportunity.Kill, duration: 5), 850)
                     }),
                 new("撤退",
                     BroochesType.Effect,
@@ -736,7 +736,7 @@ namespace SoulWorkerPropertySimulator.Data
                     FotTera,
                     new List<Effect>
                     {
-                        new(new EffectContext(Property.DamageReductionRate, Opportunity.Kill, Duration: 5), 12)
+                        new(new EffectContext(Property.DamageReductionRate, Opportunity.Kill, duration: 5), 12)
                     }),
                 new("狙擊",
                     BroochesType.Effect,
@@ -933,7 +933,7 @@ namespace SoulWorkerPropertySimulator.Data
                     {
                         new(new EffectContext(Property.CriticalDamage,
                                 Opportunity.SufferStamina50Up,
-                                Duration: 5),
+                                duration: 5),
                             550)
                     }),
                 new("噬血",

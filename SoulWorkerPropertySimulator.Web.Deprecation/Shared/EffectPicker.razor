@@ -1,0 +1,140 @@
+﻿@using SoulWorkerPropertySimulator.Extensions
+@implements IDisposable
+
+<div>
+    @if (!Options.Any()) { }
+    else
+    {
+        <div>
+            <select @bind="SelectedKey">
+                @foreach (var item in Options)
+                {
+                    <option value="@item.Context.ToString()" disabled="@DisableContext?.Contains(item)">@item.Context.Property.GetDescription()</option>
+                }
+            </select>
+        </div>
+    }
+
+    @if (SelectedContext != null)
+    {
+        <div>
+            <div>Min: @SelectedContext.DisplayMinValue</div>
+            <input type="number" min="@SelectedContext.Min" max="@SelectedContext.Max" @bind="SelectedValue"/>
+            <div>Max: @SelectedContext.DisplayMaxValue</div>
+        </div>
+    }
+</div>
+
+@code {
+
+    [CascadingParameter(Name = nameof(Parents))]
+    public EffectsCreator Parents { get; set; } = null!;
+
+    [Parameter]
+    public int? Key { get; set; }
+
+    [Parameter]
+    public IReadOnlyCollection<EffectRandomContext> Contexts
+    {
+        set
+        {
+            foreach (var item in Options.Where(x => !value.Contains(x))) { Options.Remove(item); }
+            foreach (var item in value.Where(x => !Options.Contains(x))) { Options.Add(item); }
+
+            if (SelectedKey == null || !Options.Any(x => x.Context.ToString().Equals(SelectedKey))) { SelectedKey = Options.Skip(Key ?? 0).First().Context.ToString(); }
+
+            if (SelectedValue < SelectedContext.DisplayMinValue || SelectedValue > SelectedContext.DisplayMaxValue) { SelectedValue = SelectedContext.DisplayMaxValue; }
+        }
+    }
+
+    [Parameter]
+    public EventCallback<EffectPicker> ReRenderOther { get; set; }
+
+    [Parameter]
+    public EventCallback NotifyUpdate { get; set; }
+
+    private IReadOnlyCollection<EffectRandomContext>? _disableContext;
+
+    [Parameter]
+    public IReadOnlyCollection<EffectRandomContext>? DisableContext
+    {
+        get => _disableContext;
+        set
+        {
+            _disableContext = value;
+            if (value == null) { return; }
+            if (_noInitProtect && value.Contains(SelectedContext)) { SelectedKey = Options.First(x => !value.Contains(x)).Context.ToString(); }
+        }
+    }
+
+    [Parameter]
+    public Effect? DefaultEffect
+    {
+        set
+        {
+            if (value == null) { return; }
+            _selectedKey = value.Context.ToString();
+            SelectedValue = value.DisplayValue;
+        }
+    }
+
+    private ICollection<EffectRandomContext> Options { get; } = new List<EffectRandomContext>();
+
+    private string? _selectedKey;
+
+    private string? SelectedKey
+    {
+        get => _selectedKey;
+        set
+        {
+            if (_selectedKey == value) { return; }
+            _selectedKey = value;
+            SelectedValue = SelectedContext.DisplayMaxValue;
+            if (_noInitProtect) { ReRenderOther.InvokeAsync(this); }
+        }
+    }
+
+    public EffectRandomContext SelectedContext => Options.First(x => x.Context.ToString().Equals(SelectedKey));
+
+    private int _selectedValue;
+
+    private int SelectedValue
+    {
+        get => _selectedValue;
+        set
+        {
+            if (_selectedValue == value) { return; }
+            _selectedValue = value;
+            if (_noInitProtect) { NotifyUpdate.InvokeAsync(); }
+        }
+    }
+
+    public Effect? Effect => SelectedContext?.CreateEffect(SelectedContext.Context.IsPercent ? SelectedValue / 100m : SelectedValue);
+
+    public void ReRender() => StateHasChanged();
+
+    // protected override Task OnParametersSetAsync()
+    // {
+    //     base.OnParametersSetAsync();
+    //
+    //     return Task.CompletedTask;
+    // }
+
+    private bool _noInitProtect = false;
+
+    protected override Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+
+        Parents.Pickers.Add(this);
+        return Task.CompletedTask;
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        _noInitProtect = !firstRender;
+    }
+
+    public void Dispose() => Parents.Pickers.Remove(this);
+}

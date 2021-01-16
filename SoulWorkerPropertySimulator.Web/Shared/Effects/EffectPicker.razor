@@ -1,0 +1,136 @@
+﻿@using SoulWorkerPropertySimulator.Extensions
+@implements IDisposable
+
+<div>
+    @if (Options.Any())
+    {
+        <div>
+            <select @bind="SelectedKey">
+                @foreach (var item in Options)
+                {
+                    <option value="@item.Context.ToString()" disabled="@DisableContext?.Contains(item)">@item.Context.Property.GetDescription()</option>
+                }
+            </select>
+        </div>
+        <div>
+            <div>Min: @SelectedContext.DisplayMinValue</div>
+            <div>
+                <input type="number" min="@SelectedContext.DisplayMinValue" max="@SelectedContext.DisplayMaxValue" @bind="SelectedValue"/>
+            </div>
+            <div>Max: @SelectedContext.DisplayMaxValue</div>
+        </div>
+    }
+</div>
+
+@code {
+
+    [CascadingParameter(Name = nameof(Parents))]
+    public EffectsCreator Parents { get; set; } = null!;
+
+    [Parameter]
+    public EventCallback NotifyUpdate { get; set; }
+
+    [Parameter]
+    public EventCallback<EffectPicker> RefreshOther { get; set; }
+
+    [Parameter]
+    public int? Key { get; set; }
+
+    private IReadOnlyCollection<EffectRandomContext> _options = null!;
+
+    [Parameter]
+    public IReadOnlyCollection<EffectRandomContext> Options
+    {
+        get => _options;
+        set
+        {
+            _options = value;
+
+            if (_selectedKey == null || !Options.Contains(SelectedContext)) { SelectedContext = Options.Skip(Key ?? 0).First(); }
+        }
+    }
+
+    private IReadOnlyCollection<EffectRandomContext>? _disableContext;
+
+    [Parameter]
+    public IReadOnlyCollection<EffectRandomContext>? DisableContext
+    {
+        get => _disableContext;
+        set
+        {
+            _disableContext = value;
+            if (value == null) { return; }
+            if (_notInitializePhase && value.Contains(SelectedContext)) { SelectedKey = Options.First(x => !value.Contains(x)).Context.ToString(); }
+        }
+    }
+
+    private Effect? _defaultEffect;
+    [Parameter]
+    public Effect? DefaultEffect
+    {
+        set
+        {
+            if (value == null || _notInitializePhase) { return; }
+
+            _defaultEffect = value;
+            SelectedContext = Options.First(x => x.Context.Equals(value.Context));
+            _selectedValue = value.Value;
+        }
+    }
+
+    private string? _selectedKey;
+
+    public EffectRandomContext SelectedContext
+    {
+        get => Options.First(x => x.Context.ToString().Equals(SelectedKey));
+        set => SelectedKey = value.Context.ToString();
+    }
+
+    private string? SelectedKey
+    {
+        get => _selectedKey;
+        set
+        {
+            if (_selectedKey == value) { return; }
+            _selectedKey = value;
+            SelectedValue = SelectedContext.DisplayMaxValue;
+            if (_notInitializePhase || _defaultEffect == null) { RefreshOther.InvokeAsync(this); }
+        }
+    }
+
+    private decimal _selectedValue;
+
+    public int SelectedValue
+    {
+        get => (int) (SelectedContext.Context.IsPercent ? _selectedValue * 100 : _selectedValue);
+        set
+        {
+            _selectedValue = SelectedContext.Context.IsPercent ? value / 100m : value;
+            if (_notInitializePhase) { NotifyUpdate.InvokeAsync(); }
+        }
+    }
+
+    public Effect? Effect => SelectedContext?.CreateEffect(_selectedValue);
+
+    public void Refresh() => StateHasChanged();
+
+    private bool _notInitializePhase;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        if (firstRender)
+        {
+            _notInitializePhase = true;
+            // NotifyUpdate.InvokeAsync();
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Parents.Pickers.Add(this);
+    }
+
+    public void Dispose() => Parents.Pickers.Remove(this);
+}

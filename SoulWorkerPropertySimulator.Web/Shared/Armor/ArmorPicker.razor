@@ -1,0 +1,240 @@
+﻿@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Web.Shared.Effects
+@inject IDataProvideService Data
+@inject IArmorComputeService ArmorCompute
+
+@if (Options.Any())
+{
+    <div>
+        <select @bind="SelectedName">
+            @foreach (var item in Options)
+            {
+                <option value="@item.Name">@item.Name</option>
+            }
+        </select>
+    </div>
+    <div>
+        <div>品質</div>
+        <div>
+            <input type="number" min="0" max="100" @bind="SelectedQuality"/>
+        </div>
+    </div>
+    <div>
+        <div>強化 +</div>
+        <div>
+            <select @bind="SelectedStep" disabled="@(SelectedBlueprint.ValidStep.Count <= 1)">
+                @if (!SelectedBlueprint.ValidStep.Any())
+                {
+                    <option value="0">0</option>
+                }
+                else
+                {
+                    @foreach (var i in SelectedBlueprint.ValidStep)
+                    {
+                        <option value="@i">@i</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+
+    <EffectsCreator @ref="_effectsCreator" NotifyUpdate="Update" Blueprint="SelectedBlueprint" DefaultEffects="DefaultArmor?.SelectedEffect"/>
+
+    @* *@
+    @*         @if (SelectedBlueprint.PluginLimit > 0) *@
+    @*         { *@
+    @*             <PluginsCreator Field="SelectedBlueprint.Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear" Limit="SelectedBlueprint.PluginLimit" NotifyUpdate="Update" DefaultPlugins="DefaultArmor?.Plugins" @ref="_pluginsCreator"/> *@
+    @*         } *@
+    @* *@
+    @*         <div> *@
+    @*             <div> *@
+    @*                 <select @bind="SelectedTagRares"> *@
+    @*                     @foreach (var rare in Enum.GetValues<TagRare>().OrderByDescending(x => x)) *@
+    @*                     { *@
+    @*                         <option value="@rare">@rare.GetDescription()</option> *@
+    @*                     } *@
+    @*                 </select> *@
+    @*             </div> *@
+    @*             <div> *@
+    @*                 <select @bind="SelectedTagName"> *@
+    @*                     @foreach (var tag in TagOptions) *@
+    @*                     { *@
+    @*                         <option value="@tag.Name">@tag.Name</option> *@
+    @*                     } *@
+    @*                     $1$ <Virtualize Items="TagOptions" Context="tag"> #1# *@
+    @*                     $1$     <option value="@tag.Name">@tag.Name</option> #1# *@
+    @*                     $1$ </Virtualize> #1# *@
+    @*                 </select> *@
+    @*             </div> *@
+    @*         </div> *@
+}
+
+@code
+{
+    [Parameter]
+    public ArmorField Field { get; set; }
+
+    [Parameter]
+    public Armor? DefaultArmor { get; set; }
+
+    private IReadOnlyCollection<ArmorBlueprint> Options { get; set; } = null!;
+
+    private string? _selectedName;
+
+    public ArmorBlueprint SelectedBlueprint
+    {
+        set => SelectedName = value.ToString();
+        get => Options.First(x => x.Name.Equals(SelectedName));
+    }
+
+    private string? SelectedName
+    {
+        get => _selectedName;
+        set
+        {
+            if (_selectedName == value) { return; }
+            _selectedName = value;
+            SelectedQuality = 100;
+            SelectedStep = SelectedBlueprint?.ValidStep.Max() ?? 0;
+        }
+    }
+
+    private decimal _selectedQuality;
+
+    public int SelectedQuality
+    {
+        get => (int) (_selectedQuality * 100);
+        set
+        {
+            _selectedQuality = value / 100m;
+            if (_notInitializePhase) { Update(); }
+        }
+    }
+
+    private int _selectedStep;
+
+    public int SelectedStep
+    {
+        get => _selectedStep;
+        set
+        {
+            _selectedStep = value;
+            if (_notInitializePhase) { Update(); }
+        }
+    }
+
+    private EffectsCreator? _effectsCreator;
+    // private PluginsCreator? _pluginsCreator;
+
+    private Armor? Item
+    {
+        get
+        {
+    // try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedValue, _effectsCreator.Effects, _pluginsCreator?.Plugins, SelectedTag); }
+            try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects, null, null); }
+            catch (InvalidOperationException) {
+                return null;
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (Item == null) { ArmorCompute.Clear(Field); }
+        else
+        { ArmorCompute.Change(Item); }
+    }
+
+    private bool _notInitializePhase;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        if (firstRender)
+        {
+            _notInitializePhase = true;
+            if (DefaultArmor == null) { Update(); }
+        }
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+
+        Options = Data.GetArmorBlueprints(Field).ToList();
+
+        if (DefaultArmor != null)
+        {
+            _selectedName = DefaultArmor.Blueprint.Name;
+            _selectedQuality = DefaultArmor.SelectedRatio;
+            _selectedStep = DefaultArmor.Step;
+    // _selectedTagRare = DefaultArmor.Tag?.Rare;
+    // _selectedTagName = DefaultArmor.Tag?.Name;
+        }
+        else
+        { SelectedName = Options.First().Name; }
+
+        return Task.CompletedTask;
+    }
+
+    // private string? _selectedKey;
+    //
+    // private string? SelectedKey
+    // {
+    //     get => _selectedKey;
+    //     set
+    //     {
+    //         if (_selectedKey == value) { return; }
+    //         _selectedKey = value;
+    //         Update();
+    //     }
+    // }
+    //
+    //
+    // private decimal _selectedValue;
+    //
+    // private int SelectValue
+    // {
+    //     get => (int) (_selectedValue * 100);
+    //     set
+    //     {
+    //         if (value < 0 || value > 100) { throw new InvalidOperationException(); }
+    //         _selectedValue = value / 100m;
+    //         Update();
+    //     }
+    // }
+    //
+    // private TagRare? _selectedTagRare;
+    // private string? _selectedTagName;
+    //
+    // public int? SelectedTagRares
+    // {
+    //     get => (int?) _selectedTagRare;
+    //     set
+    //     {
+    //         if (value == null)
+    //         {
+    //             _selectedTagRare = null;
+    //             return;
+    //         }
+    //
+    //         if (!Enum.IsDefined(typeof(TagRare), value)) { throw new InvalidOperationException(); }
+    //         _selectedTagRare = (TagRare?) value;
+    //         Update();
+    //     }
+    // }
+    //
+    // public string? SelectedTagName
+    // {
+    //     get => _selectedTagName;
+    //     set
+    //     {
+    //         _selectedTagName = value;
+    //         Update();
+    //     }
+    // }
+    //
+    // private IReadOnlyCollection<Tag> TagOptions => _selectedTagRare != null ? Data.GetTags(Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear, (TagRare) _selectedTagRare) : Array.Empty<Tag>();
+    // private Tag? SelectedTag => TagOptions.FirstOrDefault(x => x.Name.Equals(_selectedTagName));
+}

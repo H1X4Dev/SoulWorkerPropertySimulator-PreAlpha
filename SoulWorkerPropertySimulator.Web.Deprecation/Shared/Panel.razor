@@ -1,0 +1,30 @@
+﻿@using SoulWorkerPropertySimulator.Services
+@inject IPanelComputeService PanelCompute
+
+<h3>Panel</h3>
+
+<div>
+    <Virtualize Items="_effects" Context="effect">
+        <div>
+            <div>@effect.Key.ToString():</div>
+            <div>@effect.Value</div>
+        </div>
+    </Virtualize>
+</div>
+
+@code {
+    private IDictionary<EffectContext, decimal> _effects = null!;
+
+    public void Update(EffectContext context, decimal value) => _effects[context] = value;
+
+    protected override Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+
+        _effects = PanelCompute.Get();
+        PanelCompute.OnChange += Update;
+
+        return Task.CompletedTask;
+    }
+
+}
