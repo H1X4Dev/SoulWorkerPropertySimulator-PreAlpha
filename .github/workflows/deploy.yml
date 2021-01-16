@@ -41,3 +41,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.SWPS_PA }}
         BRANCH: gh-pages
         FOLDER: release/wwwroot
+ 
+    - name: Cloudflare Purge Cache
+      uses: jakejarvis/cloudflare-purge-action@v0.3.0
+      env:
+        CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE_SOULWORKER }}
+        CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN_SOULWORKER }}
