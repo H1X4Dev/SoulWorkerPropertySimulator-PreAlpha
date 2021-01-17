@@ -51,7 +51,9 @@ namespace SoulWorkerPropertySimulator.Models
         public int         Level => Blueprint.Level;
 
         public override IReadOnlyCollection<Effect> Effects =>
-            Blueprint.FixedEffects.Concat(SelectedEffect).Concat(StepEffects[Step]).ToList();
+            Blueprint.FixedEffects.Concat(SelectedEffect)
+                .Concat(_step == null ? Array.Empty<Effect>() : StepEffects[Step])
+                .ToList();
 
         public PluginBlueprint Blueprint { get; }
 

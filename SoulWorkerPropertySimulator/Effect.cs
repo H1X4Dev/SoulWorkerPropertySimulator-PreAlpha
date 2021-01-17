@@ -67,6 +67,9 @@ namespace SoulWorkerPropertySimulator
         [Description("城鎮中移動速度(%)")]
         MoveSpaceRateTown,
 
+        [Description("戰鬥區域中移動速度(%)")]
+        MoveSpaceRateBattle,
+
         [Description("耐力回復")]
         StaminaRecovery,
 

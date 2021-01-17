@@ -1,6 +1,7 @@
 ﻿@using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Models
 @using SoulWorkerPropertySimulator.Web.Shared.Effects
+@implements IDisposable
 @inject IDataProvideService Data
 @inject IArmorComputeService ArmorCompute
 
@@ -40,8 +41,20 @@
 
 @code
 {
-    [CascadingParameter(Name = nameof(Field))]
-    public PluginField Field { get; set; }
+    private PluginsCreator? _parents;
+
+    [CascadingParameter(Name = nameof(Parents))]
+    public PluginsCreator? Parents
+    {
+        get => _parents;
+        set
+        {
+            _parents?.Pickers.Remove(this);
+            _parents = value;
+            value?.Pickers.Add(this);
+        }
+    }
+
 
     [CascadingParameter(Name = nameof(Options))]
     public ICollection<PluginBlueprint> Options { get; set; } = null!;
@@ -49,18 +62,22 @@
     [Parameter]
     public EventCallback NotifyUpdate { get; set; }
 
-    private Plugin? _defaultPlugin;
 
     [Parameter]
-    public Plugin? DefaultPlugin
-    {
-        get => _defaultPlugin;
-        set
-        {
-            if (_notInitializePhase || _defaultPlugin != null) { return; }
-            _defaultPlugin = value;
-        }
-    }
+    public Plugin? DefaultPlugin { get; set; }
+
+    // private Plugin? _defaultPlugin;
+    //
+    // [Parameter]
+    // public Plugin? DefaultPlugin
+    // {
+    //     get => _defaultPlugin;
+    //     set
+    //     {
+    //         if (_notInitializePhase || _defaultPlugin != null) { return; }
+    //         _defaultPlugin = value;
+    //     }
+    // }
 
     private int? _selected;
 
@@ -77,7 +94,10 @@
         {
             if (_selected == value) { return; }
             _selected = value;
-            SelectedStep = SelectedBlueprint?.ValidStep.Max() ?? 0;
+    // _notInitializePhase = _selected == null;
+            // _selectedStep = SelectedBlueprint?.ValidStep?.Any() ?? false ? SelectedBlueprint.ValidStep.Max() : 0;
+            if (SelectedBlueprint == null || SelectedBlueprint.RandomEffectCount == 0 || SelectedBlueprint.RandomEffects.Count > SelectedBlueprint.RandomEffectCount) { NotifyUpdate.InvokeAsync(); }
+    // _notInitializePhase = true;
         }
     }
 
@@ -89,7 +109,8 @@
         set
         {
             _selectedStep = value;
-            if (_notInitializePhase) { NotifyUpdate.InvokeAsync(); }
+            NotifyUpdate.InvokeAsync();
+    // if (_notInitializePhase) { NotifyUpdate.InvokeAsync(); }
         }
     }
 
@@ -106,25 +127,54 @@
         }
     }
 
-    private bool _notInitializePhase;
+    //private bool _notInitializePhase;
 
-    protected override void OnAfterRender(bool firstRender)
-    {
-        base.OnAfterRender(firstRender);
-        if (firstRender) { _notInitializePhase = true; }
-    }
+    //protected override void OnAfterRender(bool firstRender)
+    //{
+    //    base.OnAfterRender(firstRender);
+    //    if (firstRender) { _notInitializePhase = true; }
+    //}
 
-    protected override Task OnInitializedAsync()
+    // private bool _parentInsertProtect = false;
+
+    // public override async Task SetParametersAsync(ParameterView parameters)
+    // {
+    //     await base.SetParametersAsync(parameters);
+    //
+    //     if (!_parentInsertProtect && Parents != null)
+    //     {
+    //         Parents.Pickers.Add(this);
+    //         _parentInsertProtect = true;
+    //     }
+    // }
+
+
+    private bool _processDefault = false;
+
+    protected override void OnInitialized()
     {
         base.OnInitializedAsync();
-        if (DefaultPlugin != null)
+        _processDefault = DefaultPlugin != null;
+
+    // if (DefaultPlugin != null)
+    // {
+    //     _selected = DefaultPlugin.Blueprint.GetHashCode();
+    //     _selectedStep = DefaultPlugin.Step;
+    // }
+    }
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+        if (_processDefault && DefaultPlugin != null)
         {
             _selected = DefaultPlugin.Blueprint.GetHashCode();
             _selectedStep = DefaultPlugin.Step;
+            _processDefault = false;
         }
-
-        return Task.CompletedTask;
     }
+
+    public void Dispose() => Parents?.Pickers.Remove(this);
 
     // private string? _selectedKey;
     //

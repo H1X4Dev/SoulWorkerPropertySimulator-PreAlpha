@@ -47,7 +47,12 @@
 
         @if (SelectedBlueprint!.PluginLimit > 0)
         {
-            @*<PluginsCreator @ref="_pluginsCreator" NotifyUpdate="Update" Field="SelectedBlueprint.Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear" Limit="SelectedBlueprint.PluginLimit" DefaultPlugins="DefaultArmor?.Plugins"/>*@
+            <PluginsCreator @ref="_pluginsCreator"
+                             NotifyUpdate="Update"
+                             Field="SelectedBlueprint!.Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear"
+                             Limit="SelectedBlueprint.PluginLimit"
+                             Level="SelectedBlueprint.Level"
+                             DefaultPlugins="DefaultArmor?.Plugins"/>
         }
     }
 
@@ -99,8 +104,11 @@
         {
             if (_selected == value) { return; }
             _selected = value;
-            SelectedQuality = 100;
-            SelectedStep = SelectedBlueprint?.ValidStep.Max() ?? 0;
+    // SelectedQuality = 100
+    // SelectedStep = SelectedBlueprint?.ValidStep.Max() ?? 0;
+            _selectedQuality = 1;
+            _selectedStep = SelectedBlueprint?.ValidStep.Max() ?? 0;
+            Update();
         }
     }
 
@@ -136,7 +144,19 @@
         get
         {
     // try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedValue, _effectsCreator.Effects, _pluginsCreator?.Plugins, SelectedTag, SelectedStep); }
-            try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects, _pluginsCreator?.Plugins, step: SelectedStep); }
+            try
+            {
+                if (_effectsCreator == null) { return null; }
+
+                var item = SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects);
+                if (item == null) { return null; }
+                return item with {
+                    Plugins = _pluginsCreator?.Plugins ?? Array.Empty<Plugin>(),
+                    Step = SelectedStep
+                    };
+
+    // return _effectsCreator == null ? null : SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects, _pluginsCreator?.Plugins, step: SelectedStep);
+            }
             catch (InvalidOperationException) {
                 return null;
             }
@@ -145,9 +165,10 @@
 
     private void Update()
     {
-        if (Item == null) { ArmorCompute.Clear(Field); }
+        var item = Item;
+        if (item == null) { ArmorCompute.Clear(Field); }
         else
-        { ArmorCompute.Change(Item); }
+        { ArmorCompute.Change(item); }
     }
 
     private bool _notInitializePhase;
@@ -158,7 +179,7 @@
         if (firstRender) { _notInitializePhase = true; }
     }
 
-    protected override Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         base.OnInitializedAsync();
 
@@ -173,10 +194,6 @@
     // _selectedTagRare = DefaultArmor.Tag?.Rare;
     // _selectedTagName = DefaultArmor.Tag?.Name;
         }
-    // else
-    // { Selected = Options.First().GetHashCode(); }
-
-        return Task.CompletedTask;
     }
 
     // private string? _selectedKey;

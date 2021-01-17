@@ -4,7 +4,7 @@
     {
         @foreach (var item in Contexts)
         {
-            <EffectPicker NotifyUpdate="NotifyUpdate" Options="new[] {item}"/>
+            <EffectPicker NotifyUpdate="NotifyUpdate" Options="new[] {item}" DefaultEffect="_defaultEffects?.FirstOrDefault()" />
         }
     }
     else
@@ -43,12 +43,6 @@
     private void RefreshOther(EffectPicker self)
     {
         foreach (var i in Pickers.Where(x => x != self)) { i.Refresh(); }
-    }
-
-    protected override void OnAfterRender(bool firstRender)
-    {
-        base.OnAfterRender(firstRender);
-    // if (firstRender && DefaultEffects == null) { NotifyUpdate.InvokeAsync(); }
     }
 
 }
