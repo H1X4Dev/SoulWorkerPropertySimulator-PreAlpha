@@ -29,7 +29,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                             {
                                 new(new(Property.Attack, Opportunity.HitStamina70Down, duration: 1), 500),
                                 new(new(Property.Attack, Opportunity.HitStamina40Down, duration: 1), 1000),
-                                new(new(Property.Attack, Opportunity.HitStamina10Down, duration: 1), 3000),
+                                new(new(Property.Attack, Opportunity.HitStamina10Down, duration: 1), 3000)
                             }
                         },
                         {

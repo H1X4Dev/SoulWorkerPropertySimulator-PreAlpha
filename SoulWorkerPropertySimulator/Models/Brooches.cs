@@ -6,10 +6,8 @@ namespace SoulWorkerPropertySimulator.Models
 
     public record Brooches : Item
     {
-        public Brooches(string        name,
-            BroochesType                type,
-            BroochesClassify            classify,
-            IReadOnlyCollection<Effect> effects) : base(name, Classify.Brooches)
+        public Brooches(string name, BroochesType type, BroochesClassify classify, IReadOnlyCollection<Effect> effects)
+            : base(name, Classify.Brooches)
         {
             Type             = type;
             BroochesClassify = classify;
@@ -18,9 +16,10 @@ namespace SoulWorkerPropertySimulator.Models
             Id = $"{{ Name:{Name}, {BroochesClassify} }}";
         }
 
-        public          BroochesType                Type             { get; }
-        public          BroochesClassify            BroochesClassify { get; }
-        public override IReadOnlyCollection<Effect> Effects          { get; }
+        public override IReadOnlyCollection<Effect> Effects { get; }
+
+        public BroochesType     Type             { get; }
+        public BroochesClassify BroochesClassify { get; }
 
         public string Id { get; }
     }
@@ -35,7 +34,8 @@ namespace SoulWorkerPropertySimulator.Models
             Effects = effects;
         }
 
-        public          BroochesClassify            Class   { get; }
         public override IReadOnlyCollection<Effect> Effects { get; }
+
+        public BroochesClassify Class { get; }
     }
 }

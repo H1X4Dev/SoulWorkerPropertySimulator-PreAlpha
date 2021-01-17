@@ -30,13 +30,13 @@ namespace SoulWorkerPropertySimulator.Models
 
     public abstract record Blueprint
     {
-        protected Blueprint(string                                 name,
-            int                                                    level,
-            IReadOnlyCollection<EffectRandomContext>               randomEffects,
-            int                                                    randomEffectCount,
-            IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects  = null,
-            string?                                                setName      = null,
-            IReadOnlyCollection<Effect>?                           fixedEffects = null)
+        protected Blueprint(string                                                 name,
+                            int                                                    level,
+                            IReadOnlyCollection<EffectRandomContext>               randomEffects,
+                            int                                                    randomEffectCount,
+                            IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects  = null,
+                            string?                                                setName      = null,
+                            IReadOnlyCollection<Effect>?                           fixedEffects = null)
         {
             Name              = name;
             Level             = level;
@@ -72,13 +72,13 @@ namespace SoulWorkerPropertySimulator.Models
 
     public abstract record Blueprint<T> : Blueprint where T : Item
     {
-        protected Blueprint(string                                 name,
-            int                                                    level,
-            IReadOnlyCollection<EffectRandomContext>               randomEffects,
-            int                                                    randomEffectCount,
-            IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects  = null,
-            string?                                                setName      = null,
-            IReadOnlyCollection<Effect>?                           fixedEffects = null) : base(name,
+        protected Blueprint(string                                                 name,
+                            int                                                    level,
+                            IReadOnlyCollection<EffectRandomContext>               randomEffects,
+                            int                                                    randomEffectCount,
+                            IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects  = null,
+                            string?                                                setName      = null,
+                            IReadOnlyCollection<Effect>?                           fixedEffects = null) : base(name,
             level,
             randomEffects,
             randomEffectCount,
@@ -93,13 +93,13 @@ namespace SoulWorkerPropertySimulator.Models
 
     public abstract record RandomValueBlueprint<T> : Blueprint where T : Item
     {
-        protected RandomValueBlueprint(string                      name,
-            int                                                    level,
-            IReadOnlyCollection<EffectRandomContext>               randomEffects,
-            int                                                    randomEffectCount,
-            IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects  = null,
-            string?                                                setName      = null,
-            IReadOnlyCollection<Effect>?                           fixedEffects = null) : base(name,
+        protected RandomValueBlueprint(string name,
+                                       int level,
+                                       IReadOnlyCollection<EffectRandomContext> randomEffects,
+                                       int randomEffectCount,
+                                       IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects = null,
+                                       string? setName = null,
+                                       IReadOnlyCollection<Effect>? fixedEffects = null) : base(name,
             level,
             randomEffects,
             randomEffectCount,

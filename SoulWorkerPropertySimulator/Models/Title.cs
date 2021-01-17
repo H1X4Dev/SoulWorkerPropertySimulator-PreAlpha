@@ -12,8 +12,9 @@ namespace SoulWorkerPropertySimulator.Models
             Effects = effects;
         }
 
-        public          int                         Index   { get; }
-        public          TitleField                  Field   { get; }
         public override IReadOnlyCollection<Effect> Effects { get; }
+
+        public int        Index { get; }
+        public TitleField Field { get; }
     }
 }

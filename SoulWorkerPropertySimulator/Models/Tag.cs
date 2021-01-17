@@ -12,8 +12,9 @@ namespace SoulWorkerPropertySimulator.Models
             Effects = effects;
         }
 
-        public          TagRare                     Rare    { get; }
-        public          TagField                    Field   { get; }
         public override IReadOnlyCollection<Effect> Effects { get; }
+
+        public TagRare  Rare  { get; }
+        public TagField Field { get; }
     }
 }

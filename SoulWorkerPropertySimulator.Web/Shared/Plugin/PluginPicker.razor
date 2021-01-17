@@ -55,29 +55,14 @@
         }
     }
 
-
     [CascadingParameter(Name = nameof(Options))]
     public ICollection<PluginBlueprint> Options { get; set; } = null!;
 
     [Parameter]
     public EventCallback NotifyUpdate { get; set; }
 
-
     [Parameter]
     public Plugin? DefaultPlugin { get; set; }
-
-    // private Plugin? _defaultPlugin;
-    //
-    // [Parameter]
-    // public Plugin? DefaultPlugin
-    // {
-    //     get => _defaultPlugin;
-    //     set
-    //     {
-    //         if (_notInitializePhase || _defaultPlugin != null) { return; }
-    //         _defaultPlugin = value;
-    //     }
-    // }
 
     private int? _selected;
 
@@ -94,10 +79,7 @@
         {
             if (_selected == value) { return; }
             _selected = value;
-    // _notInitializePhase = _selected == null;
-            // _selectedStep = SelectedBlueprint?.ValidStep?.Any() ?? false ? SelectedBlueprint.ValidStep.Max() : 0;
             if (SelectedBlueprint == null || SelectedBlueprint.RandomEffectCount == 0 || SelectedBlueprint.RandomEffects.Count > SelectedBlueprint.RandomEffectCount) { NotifyUpdate.InvokeAsync(); }
-    // _notInitializePhase = true;
         }
     }
 
@@ -110,7 +92,6 @@
         {
             _selectedStep = value;
             NotifyUpdate.InvokeAsync();
-    // if (_notInitializePhase) { NotifyUpdate.InvokeAsync(); }
         }
     }
 
@@ -127,112 +108,30 @@
         }
     }
 
-    //private bool _notInitializePhase;
-
-    //protected override void OnAfterRender(bool firstRender)
-    //{
-    //    base.OnAfterRender(firstRender);
-    //    if (firstRender) { _notInitializePhase = true; }
-    //}
-
-    // private bool _parentInsertProtect = false;
-
-    // public override async Task SetParametersAsync(ParameterView parameters)
-    // {
-    //     await base.SetParametersAsync(parameters);
-    //
-    //     if (!_parentInsertProtect && Parents != null)
-    //     {
-    //         Parents.Pickers.Add(this);
-    //         _parentInsertProtect = true;
-    //     }
-    // }
-
-
-    private bool _processDefault = false;
+    // private bool _processDefault = false;
 
     protected override void OnInitialized()
     {
         base.OnInitializedAsync();
-        _processDefault = DefaultPlugin != null;
+    // _processDefault = DefaultPlugin != null;
 
-    // if (DefaultPlugin != null)
-    // {
-    //     _selected = DefaultPlugin.Blueprint.GetHashCode();
-    //     _selectedStep = DefaultPlugin.Step;
-    // }
-    }
-
-    protected override void OnParametersSet()
-    {
-        base.OnParametersSet();
-        if (_processDefault && DefaultPlugin != null)
+        if (DefaultPlugin != null)
         {
             _selected = DefaultPlugin.Blueprint.GetHashCode();
             _selectedStep = DefaultPlugin.Step;
-            _processDefault = false;
         }
     }
 
-    public void Dispose() => Parents?.Pickers.Remove(this);
+    // protected override void OnParametersSet()
+    // {
+    //     base.OnParametersSet();
+    //     if (_processDefault && DefaultPlugin != null)
+    //     {
+    //         _selected = DefaultPlugin.Blueprint.GetHashCode();
+    //         _selectedStep = DefaultPlugin.Step;
+    //         _processDefault = false;
+    //     }
+    // }
 
-    // private string? _selectedKey;
-    //
-    // private string? SelectedKey
-    // {
-    //     get => _selectedKey;
-    //     set
-    //     {
-    //         if (_selectedKey == value) { return; }
-    //         _selectedKey = value;
-    //         Update();
-    //     }
-    // }
-    //
-    //
-    // private decimal _selectedValue;
-    //
-    // private int SelectValue
-    // {
-    //     get => (int) (_selectedValue * 100);
-    //     set
-    //     {
-    //         if (value < 0 || value > 100) { throw new InvalidOperationException(); }
-    //         _selectedValue = value / 100m;
-    //         Update();
-    //     }
-    // }
-    //
-    // private TagRare? _selectedTagRare;
-    // private string? _selectedTagName;
-    //
-    // public int? SelectedTagRares
-    // {
-    //     get => (int?) _selectedTagRare;
-    //     set
-    //     {
-    //         if (value == null)
-    //         {
-    //             _selectedTagRare = null;
-    //             return;
-    //         }
-    //
-    //         if (!Enum.IsDefined(typeof(TagRare), value)) { throw new InvalidOperationException(); }
-    //         _selectedTagRare = (TagRare?) value;
-    //         Update();
-    //     }
-    // }
-    //
-    // public string? SelectedTagName
-    // {
-    //     get => _selectedTagName;
-    //     set
-    //     {
-    //         _selectedTagName = value;
-    //         Update();
-    //     }
-    // }
-    //
-    // private IReadOnlyCollection<Tag> TagOptions => _selectedTagRare != null ? Data.GetTags(Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear, (TagRare) _selectedTagRare) : Array.Empty<Tag>();
-    // private Tag? SelectedTag => TagOptions.FirstOrDefault(x => x.Name.Equals(_selectedTagName));
+    public void Dispose() => Parents?.Pickers.Remove(this);
 }

@@ -19,16 +19,16 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 4,
                 new List<EffectRandomContext>
                 {
-                    new(new EffectContext(Property.AttackSpeedRate), .01m, .06m),
-                    new(new EffectContext(Property.Accuracy), 16, 65),
-                    new(new EffectContext(Property.ExtraDamageRateBasic), .02m, .09m),
-                    new(new EffectContext(Property.ExtraDamageRateBoss), .02m, .09m),
-                    new(new EffectContext(Property.CriticalRate), .02m, .07m),
-                    new(new EffectContext(Property.CriticalDamage), 1_743, 1_885),
-                    new(new EffectContext(Property.SuperArmorBreakPowerRate), .02m, .11m),
-                    new(new EffectContext(Property.DefenseBreakRate), .01m, .06m),
-                    new(new EffectContext(Property.SoulNovaVolumeRate), .01m, .07m),
-                    new(new EffectContext(Property.KillHPRecovery), 28, 217)
+                    new(new(Property.AttackSpeedRate), .01m, .06m),
+                    new(new(Property.Accuracy), 16, 65),
+                    new(new(Property.ExtraDamageRateBasic), .02m, .09m),
+                    new(new(Property.ExtraDamageRateBoss), .02m, .09m),
+                    new(new(Property.CriticalRate), .02m, .07m),
+                    new(new(Property.CriticalDamage), 1_743, 1_885),
+                    new(new(Property.SuperArmorBreakPowerRate), .02m, .11m),
+                    new(new(Property.DefenseBreakRate), .01m, .06m),
+                    new(new(Property.SoulNovaVolumeRate), .01m, .07m),
+                    new(new(Property.KillHPRecovery), 28, 217)
                 },
                 3,
                 Property.Attack,
@@ -36,11 +36,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 3234,
                 fixedEffects: new List<Effect>
                 {
-                    new(new EffectContext(Property.Attack), 3_726),
-                    new(new EffectContext(Property.AttackSpeedRate), .07m),
-                    new(new EffectContext(Property.ExtraDamageRateBoss), .3m),
-                    new(new EffectContext(Property.CriticalDamage), 2_000),
-                    new(new EffectContext(Property.Accuracy), -50)
+                    new(new(Property.Attack), 3_726),
+                    new(new(Property.AttackSpeedRate), .07m),
+                    new(new(Property.ExtraDamageRateBoss), .3m),
+                    new(new(Property.CriticalDamage), 2_000),
+                    new(new(Property.Accuracy), -50)
                 });
             result.Add(weapon68);
             result.Add(weapon68 with {Name = "進階暮光平流"});
@@ -58,16 +58,16 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 4,
                 new List<EffectRandomContext>
                 {
-                    new(new EffectContext(Property.Attack), 36, 198),
-                    new(new EffectContext(Property.Accuracy), 7, 37),
-                    new(new EffectContext(Property.CriticalDamage), 140, 659),
-                    new(new EffectContext(Property.HP), 2_365, 11_100),
-                    new(new EffectContext(Property.CriticalRate), .01m, .07m),
-                    new(new EffectContext(Property.CooldownShorterRate), .01m, .05m),
-                    new(new EffectContext(Property.Defense), 66, 250),
-                    new(new EffectContext(Property.Evade), 14, 69),
-                    new(new EffectContext(Property.ExpVolumeRateEnemy), .02m, .12m),
-                    new(new EffectContext(Property.PartialDamageRate), .01m, .09m)
+                    new(new(Property.Attack), 36, 198),
+                    new(new(Property.Accuracy), 7, 37),
+                    new(new(Property.CriticalDamage), 140, 659),
+                    new(new(Property.HP), 2_365, 11_100),
+                    new(new(Property.CriticalRate), .01m, .07m),
+                    new(new(Property.CooldownShorterRate), .01m, .05m),
+                    new(new(Property.Defense), 66, 250),
+                    new(new(Property.Evade), 14, 69),
+                    new(new(Property.ExpVolumeRateEnemy), .02m, .12m),
+                    new(new(Property.PartialDamageRate), .01m, .09m)
                 },
                 3,
                 Property.Defense,
@@ -82,9 +82,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 "進階幕光",
                 new List<Effect>
                 {
-                    new(new EffectContext(Property.SoulNovaVolumeRate), .3m),
-                    new(new EffectContext(Property.DamageReductionRateBoss), .08m),
-                    new(new EffectContext(Property.Evade), -100)
+                    new(new(Property.SoulNovaVolumeRate), .3m),
+                    new(new(Property.DamageReductionRateBoss), .08m),
+                    new(new(Property.Evade), -100)
                 });
             result.Add(gear68);
             result.Add(gear68 with
@@ -99,9 +99,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 },
                 FixedEffects = new List<Effect>
                 {
-                    new(new EffectContext(Property.DamageReductionRateCritical), .18m),
-                    new(new EffectContext(Property.Accuracy), 59),
-                    new(new EffectContext(Property.Stamina), -20)
+                    new(new(Property.DamageReductionRateCritical), .18m),
+                    new(new(Property.Accuracy), 59),
+                    new(new(Property.Stamina), -20)
                 }
             });
             result.Add(gear68 with
@@ -118,9 +118,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 },
                 FixedEffects = new List<Effect>
                 {
-                    new(new EffectContext(Property.HP), 5_994),
-                    new(new EffectContext(Property.KillHPRecovery), 80),
-                    new(new EffectContext(Property.Defense), -10000)
+                    new(new(Property.HP), 5_994),
+                    new(new(Property.KillHPRecovery), 80),
+                    new(new(Property.Defense), -10000)
                 }
             });
             result.Add(gear68 with
@@ -138,9 +138,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 },
                 FixedEffects = new List<Effect>
                 {
-                    new(new EffectContext(Property.Evade), 89),
-                    new(new EffectContext(Property.MoveSpaceRate), .1m),
-                    new(new EffectContext(Property.DamageReductionRate), -.05m)
+                    new(new(Property.Evade), 89),
+                    new(new(Property.MoveSpaceRate), .1m),
+                    new(new(Property.DamageReductionRate), -.05m)
                 }
             });
 

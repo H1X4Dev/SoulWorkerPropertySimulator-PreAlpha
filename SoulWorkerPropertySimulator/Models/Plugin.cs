@@ -6,14 +6,14 @@ namespace SoulWorkerPropertySimulator.Models
 {
     public record PluginBlueprint : Blueprint<Plugin>
     {
-        public PluginBlueprint(string                              name,
-            PluginField                                            field,
-            int                                                    level,
-            IReadOnlyCollection<EffectRandomContext>               randomEffects,
-            int                                                    randomEffectCount,
-            IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects  = null,
-            string?                                                setName      = null,
-            IReadOnlyCollection<Effect>?                           fixedEffects = null) : base(name,
+        public PluginBlueprint(string                                                 name,
+                               PluginField                                            field,
+                               int                                                    level,
+                               IReadOnlyCollection<EffectRandomContext>               randomEffects,
+                               int                                                    randomEffectCount,
+                               IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects  = null,
+                               string?                                                setName      = null,
+                               IReadOnlyCollection<Effect>?                           fixedEffects = null) : base(name,
             level,
             randomEffects,
             randomEffectCount,
@@ -47,19 +47,18 @@ namespace SoulWorkerPropertySimulator.Models
             _step = StepEffects.Any() ? StepEffects.Max(x => x.Key) : null;
         }
 
-        public PluginField Field => Blueprint.Field;
-        public int         Level => Blueprint.Level;
-
         public override IReadOnlyCollection<Effect> Effects =>
             Blueprint.FixedEffects.Concat(SelectedEffect)
                 .Concat(_step == null ? Array.Empty<Effect>() : StepEffects[Step])
                 .ToList();
 
-        public PluginBlueprint Blueprint { get; }
+        // public PluginField Field => Blueprint.Field;
+        // public int         Level => Blueprint.Level;
 
+        public PluginBlueprint                                       Blueprint      { get; }
         public IReadOnlyCollection<Effect>                           SelectedEffect { get; }
-        public IReadOnlyCollection<int>                              ValidStep      => Blueprint.ValidStep;
         public IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> StepEffects    => Blueprint.StepEffects!;
+        public IReadOnlyCollection<int>                              ValidStep      => Blueprint.ValidStep;
 
         public int Step
         {

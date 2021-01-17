@@ -4,56 +4,56 @@ namespace SoulWorkerPropertySimulator.Services
 {
     public interface IAttackComputeService
     {
-        public (decimal Top, decimal Bottom) Get(int enemyLevel,
-            int                                      enemyDefense,
-            decimal                                  enemyCriticalResistance,
-            int                                      enemyEvade,
-            int                                      maxAttack,
-            decimal                                  criticalRate,
-            int                                      criticalDamage,
-            int                                      accuracy,
-            decimal                                  partialDamage,
-            decimal                                  armorBreak,
-            decimal                                  extraDamage);
+        public (decimal Top, decimal Bottom) Get(int     enemyLevel,
+                                                 int     enemyDefense,
+                                                 decimal enemyCriticalResistance,
+                                                 int     enemyEvade,
+                                                 int     maxAttack,
+                                                 decimal criticalRate,
+                                                 int     criticalDamage,
+                                                 int     accuracy,
+                                                 decimal partialDamage,
+                                                 decimal armorBreak,
+                                                 decimal extraDamage);
 
-        (decimal Top, decimal Bottom) Get65(int maxAttack,
-            decimal                             criticalRate,
-            int                                 criticalDamage,
-            int                                 accuracy,
-            decimal                             partialDamage,
-            decimal                             armorBreak,
-            decimal                             extraDamage);
+        (decimal Top, decimal Bottom) Get65(int     maxAttack,
+                                            decimal criticalRate,
+                                            int     criticalDamage,
+                                            int     accuracy,
+                                            decimal partialDamage,
+                                            decimal armorBreak,
+                                            decimal extraDamage);
 
-        (decimal Top, decimal Bottom) Get68(int maxAttack,
-            decimal                             criticalRate,
-            int                                 criticalDamage,
-            int                                 accuracy,
-            decimal                             partialDamage,
-            decimal                             armorBreak,
-            decimal                             extraDamage);
+        (decimal Top, decimal Bottom) Get68(int     maxAttack,
+                                            decimal criticalRate,
+                                            int     criticalDamage,
+                                            int     accuracy,
+                                            decimal partialDamage,
+                                            decimal armorBreak,
+                                            decimal extraDamage);
 
-        (decimal Top, decimal Bottom) Get72(int maxAttack,
-            decimal                             criticalRate,
-            int                                 criticalDamage,
-            int                                 accuracy,
-            decimal                             partialDamage,
-            decimal                             armorBreak,
-            decimal                             extraDamage);
+        (decimal Top, decimal Bottom) Get72(int     maxAttack,
+                                            decimal criticalRate,
+                                            int     criticalDamage,
+                                            int     accuracy,
+                                            decimal partialDamage,
+                                            decimal armorBreak,
+                                            decimal extraDamage);
     }
 
     internal class AttackComputeService : IAttackComputeService
     {
-        public (decimal Top, decimal Bottom) Get(int enemyLevel,
-            int                                      enemyDefense,
-            decimal                                  enemyCriticalResistance,
-            int                                      enemyEvade,
-            int                                      maxAttack,
-            decimal                                  criticalRate,
-            int                                      criticalDamage,
-            int                                      accuracy,
-            decimal                                  partialDamage,
-            decimal                                  armorBreak,
-            decimal                                  extraDamage)
+        public (decimal Top, decimal Bottom) Get(int     enemyLevel,
+                                                 int     enemyDefense,
+                                                 decimal enemyCriticalResistance,
+                                                 int     enemyEvade,
+                                                 int     maxAttack,
+                                                 decimal criticalRate,
+                                                 int     criticalDamage,
+                                                 int     accuracy,
+                                                 decimal partialDamage,
+                                                 decimal armorBreak,
+                                                 decimal extraDamage)
         {
             if (accuracy > enemyEvade) { criticalRate += (accuracy - enemyEvade) / 50m; }
 
@@ -93,13 +93,13 @@ namespace SoulWorkerPropertySimulator.Services
             }
         }
 
-        public (decimal Top, decimal Bottom) Get65(int maxAttack,
-            decimal                                    criticalRate,
-            int                                        criticalDamage,
-            int                                        accuracy,
-            decimal                                    partialDamage,
-            decimal                                    armorBreak,
-            decimal                                    extraDamage) =>
+        public (decimal Top, decimal Bottom) Get65(int     maxAttack,
+                                                   decimal criticalRate,
+                                                   int     criticalDamage,
+                                                   int     accuracy,
+                                                   decimal partialDamage,
+                                                   decimal armorBreak,
+                                                   decimal extraDamage) =>
             Get(68,
                 2600,
                 0,
@@ -112,13 +112,13 @@ namespace SoulWorkerPropertySimulator.Services
                 armorBreak,
                 extraDamage);
 
-        public (decimal Top, decimal Bottom) Get68(int maxAttack,
-            decimal                                    criticalRate,
-            int                                        criticalDamage,
-            int                                        accuracy,
-            decimal                                    partialDamage,
-            decimal                                    armorBreak,
-            decimal                                    extraDamage) =>
+        public (decimal Top, decimal Bottom) Get68(int     maxAttack,
+                                                   decimal criticalRate,
+                                                   int     criticalDamage,
+                                                   int     accuracy,
+                                                   decimal partialDamage,
+                                                   decimal armorBreak,
+                                                   decimal extraDamage) =>
             Get(72,
                 2850,
                 0,
@@ -131,13 +131,13 @@ namespace SoulWorkerPropertySimulator.Services
                 armorBreak,
                 extraDamage);
 
-        public (decimal Top, decimal Bottom) Get72(int maxAttack,
-            decimal                                    criticalRate,
-            int                                        criticalDamage,
-            int                                        accuracy,
-            decimal                                    partialDamage,
-            decimal                                    armorBreak,
-            decimal                                    extraDamage) =>
+        public (decimal Top, decimal Bottom) Get72(int     maxAttack,
+                                                   decimal criticalRate,
+                                                   int     criticalDamage,
+                                                   int     accuracy,
+                                                   decimal partialDamage,
+                                                   decimal armorBreak,
+                                                   decimal extraDamage) =>
             Get(677,
                 4510,
                 10,

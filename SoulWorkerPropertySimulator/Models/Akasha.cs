@@ -20,10 +20,11 @@ namespace SoulWorkerPropertySimulator.Models
             Skill    = skill;
         }
 
-        public          bool                        IsSecret { get; }
-        public          int                         Step     { get; }
-        public override IReadOnlyCollection<Effect> Effects  { get; } = Array.Empty<Effect>();
-        public          string?                     Skill    { get; }
+        public override IReadOnlyCollection<Effect> Effects { get; } = Array.Empty<Effect>();
+
+        public bool    IsSecret { get; }
+        public int     Step     { get; }
+        public string? Skill    { get; }
 
         public bool IsPassive => Skill == null;
     }

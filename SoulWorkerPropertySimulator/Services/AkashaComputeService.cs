@@ -30,6 +30,6 @@ namespace SoulWorkerPropertySimulator.Services
         }
 
 
-        public void Change(int index, Akasha? newItem) { NotifyChange(ComputeAffect(_akasha[index], newItem)); }
+        public void Change(int index, Akasha? newItem) => NotifyChange(ComputeAffect(_akasha[index], newItem));
     }
 }

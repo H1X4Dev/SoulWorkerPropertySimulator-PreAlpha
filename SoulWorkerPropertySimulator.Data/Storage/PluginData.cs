@@ -34,7 +34,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(new(Property.DamageReductionRateBasic), .03m, .04m),
                         new(new(Property.DamageReductionRateBoss), .03m, .04m),
                         new(new(Property.Stamina), 7, 1),
-                        new(new(Property.SoulNovaVolumeRate), .02m, .08m),
+                        new(new(Property.SoulNovaVolumeRate), .02m, .08m)
                     },
                     1),
                 new("警戒的聖巡",
@@ -47,7 +47,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(new(Property.SuperArmorBreakPowerRate), .04m, .07m),
                         new(new(Property.ExtraDamageRateBasic), .03m, .05m),
                         new(new(Property.ExtraDamageRateBoss), .03m, .05m),
-                        new(new(Property.DefenseBreakRate), .01m, .02m),
+                        new(new(Property.DefenseBreakRate), .01m, .02m)
                     },
                     1),
                 new("暗躍的聖巡",
@@ -60,7 +60,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(new(Property.CriticalResistanceRate), .02m, .08m),
                         new(new(Property.Evade), 24, 59),
                         new(new(Property.ExpVolumeRateEnemy), .02m, .08m),
-                        new(new(Property.MoneyVolumeRateEnemy), .02m, .08m),
+                        new(new(Property.MoneyVolumeRateEnemy), .02m, .08m)
                     },
                     1),
                 new("黎明的聖巡",
@@ -73,7 +73,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(new(Property.AttackSpeedRate), .01m, .02m),
                         new(new(Property.MoveSpaceRate), .01m, .02m),
                         new(new(Property.MoveSpaceRateBattle), .02m, .03m),
-                        new(new(Property.MoveSpaceRateTown), .02m, .03m),
+                        new(new(Property.MoveSpaceRateTown), .02m, .03m)
                     },
                     1)
             };

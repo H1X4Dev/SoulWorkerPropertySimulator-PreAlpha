@@ -24,7 +24,7 @@ namespace SoulWorkerPropertySimulator.Services
             ComputeAffect(before, after?.Effects ?? Array.Empty<Effect>());
 
         protected IDictionary<EffectContext, decimal> ComputeAffect(IEnumerable<Effect> before,
-            IEnumerable<Effect>                                                         after)
+                                                                    IEnumerable<Effect> after)
         {
             var result = new Dictionary<EffectContext, decimal>();
 
@@ -50,6 +50,6 @@ namespace SoulWorkerPropertySimulator.Services
             }
         }
 
-        protected void Invoke(EffectContext context, decimal value) { OnChange?.Invoke(context, value); }
+        protected void Invoke(EffectContext context, decimal value) => OnChange?.Invoke(context, value);
     }
 }

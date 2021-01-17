@@ -52,7 +52,7 @@
 
     public ICollection<PluginBlueprint> Options { get; set; } = new List<PluginBlueprint>();
     public ICollection<PluginPicker> Pickers { get; } = new List<PluginPicker>();
-    public IReadOnlyCollection<Plugin> Plugins => Pickers.Select(x => x.Item).Where(x => x != null)!.ToList<Plugin>();
+    public IReadOnlyCollection<Plugin> Plugins => Pickers.Select(x => x.Item).Where(x => x != null).ToList()!;
 
     private bool _notInitializePhase;
 

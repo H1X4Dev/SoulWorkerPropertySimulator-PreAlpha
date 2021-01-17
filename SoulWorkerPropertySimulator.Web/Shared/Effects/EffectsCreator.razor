@@ -4,7 +4,7 @@
     {
         @foreach (var item in Contexts)
         {
-            <EffectPicker NotifyUpdate="NotifyUpdate" Options="new[] {item}" DefaultEffect="_defaultEffects?.FirstOrDefault()" />
+            <EffectPicker NotifyUpdate="NotifyUpdate" Options="new[] {item}" DefaultEffect="_defaultEffects?.FirstOrDefault()"/>
         }
     }
     else
@@ -37,8 +37,8 @@
 
     private int Count => Blueprint.RandomEffectCount;
     private IReadOnlyCollection<EffectRandomContext> Contexts => Blueprint.RandomEffects;
-    public IReadOnlyCollection<Effect> Effects => Pickers.Select(x => x.Effect).Where(x => x != null)!.ToList();
-    private IReadOnlyCollection<EffectRandomContext> this[int key] => Pickers.Where(x => x.Key.HasValue && x.Key != key && x.Effect != null).Select(x => x.SelectedContext)!.ToList();
+    public IReadOnlyCollection<Effect> Effects => Pickers.Select(x => x.Effect).Where(x => x != null).ToList()!;
+    private IReadOnlyCollection<EffectRandomContext> this[int key] => Pickers.Where(x => x.Key.HasValue && x.Key != key && x.Effect != null).Select(x => x.SelectedContext).ToList()!;
 
     private void RefreshOther(EffectPicker self)
     {

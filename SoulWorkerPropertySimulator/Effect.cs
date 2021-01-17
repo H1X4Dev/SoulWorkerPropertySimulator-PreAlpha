@@ -292,16 +292,10 @@ namespace SoulWorkerPropertySimulator
 
     public record EffectContext
     {
-        public Property     Property    { get; }
-        public Opportunity? Opportunity { get; }
-        public decimal?     Probability { get; }
-        public decimal?     Duration    { get; }
-        public bool         IsPercent   { get; }
-
-        public EffectContext(Property property,
-            Opportunity?              opportunity = null,
-            decimal?                  probability = null,
-            decimal?                  duration    = null)
+        public EffectContext(Property     property,
+                             Opportunity? opportunity = null,
+                             decimal?     probability = null,
+                             decimal?     duration    = null)
         {
             Property    = property;
             Opportunity = opportunity;
@@ -310,12 +304,18 @@ namespace SoulWorkerPropertySimulator
             IsPercent   = Percent.Contains(Property);
         }
 
+        public Property     Property    { get; }
+        public Opportunity? Opportunity { get; }
+        public decimal?     Probability { get; }
+        public decimal?     Duration    { get; }
+        public bool         IsPercent   { get; }
+
         public string Description =>
             $"{Opportunity?.GetDescription()}{(Probability != null ? $"{Probability}%機率" : "")}{(Duration != null ? $"{Duration}秒內" : "")}{Property.GetDescription()}";
 
-        // public bool IsStatic => Opportunity == null && Duration == null && Probability == null;
-
-        private static readonly HashSet<Property> Percent = new()
+        #region
+        
+        private static HashSet<Property> Percent { get; } = new()
         {
             Property.HPRecoveryRate,
             Property.SuperArmorBreakPowerRate,
@@ -347,8 +347,10 @@ namespace SoulWorkerPropertySimulator
             Property.ExtraDamageRateFall,
             Property.CriticalResistanceRate,
             Property.CriticalRate,
-            Property.DamageReductionRateCritical,
+            Property.DamageReductionRateCritical
         };
+
+        #endregion
     }
 
     public record EffectRandomContext(EffectContext Context, decimal Min, decimal Max)
@@ -360,7 +362,7 @@ namespace SoulWorkerPropertySimulator
         {
             if (value < Min || value > Max) { throw new IndexOutOfRangeException(); }
 
-            return new Effect(Context, value);
+            return new(Context, value);
         }
     }
 

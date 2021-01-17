@@ -19,12 +19,12 @@ namespace SoulWorkerPropertySimulator.Services
         private readonly IAttackComputeService _attack;
 
         public PanelComputeService(IAccessoryComputeService accessory,
-            IAkashaComputeService                           akasha,
-            IArmorComputeService                            armor,
-            IBroochesComputeService                         brooches,
-            ICharacterComputeService                        character,
-            ITitleComputeService                            title,
-            IAttackComputeService                           attack)
+                                   IAkashaComputeService    akasha,
+                                   IArmorComputeService     armor,
+                                   IBroochesComputeService  brooches,
+                                   ICharacterComputeService character,
+                                   ITitleComputeService     title,
+                                   IAttackComputeService    attack)
         {
             // _accessory = accessory;
             // _akasha    = akasha;

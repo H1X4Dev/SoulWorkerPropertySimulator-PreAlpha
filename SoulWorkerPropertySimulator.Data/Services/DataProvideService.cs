@@ -27,8 +27,11 @@ namespace SoulWorkerPropertySimulator.Data.Services
         public IReadOnlyCollection<PluginBlueprint> GetPluginBlueprints(PluginField field) => PluginData.Get(field);
 
         public IReadOnlyCollection<Tag> GetTags(TagField field, TagRare rare) => throw new NotImplementedException();
+
         public IReadOnlyCollection<Title> GetTitles(TitleField field) => throw new NotImplementedException();
+
         public IReadOnlyCollection<Character> GetCharacters() => throw new NotImplementedException();
+
         public IReadOnlyCollection<Akasha> GetAkashas() => throw new NotImplementedException();
     }
 }

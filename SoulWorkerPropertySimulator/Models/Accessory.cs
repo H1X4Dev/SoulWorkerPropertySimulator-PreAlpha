@@ -6,13 +6,13 @@ namespace SoulWorkerPropertySimulator.Models
 {
     public record AccessoryBlueprint : Blueprint<Accessory>
     {
-        public AccessoryBlueprint(string             name,
-            int                                      level,
-            AccessoryField                           field,
-            IReadOnlyCollection<EffectRandomContext> randomEffects,
-            int                                      randomEffectCount,
-            string?                                  setName      = null,
-            IReadOnlyCollection<Effect>?             fixedEffects = null) : base(name,
+        public AccessoryBlueprint(string                                   name,
+                                  int                                      level,
+                                  AccessoryField                           field,
+                                  IReadOnlyCollection<EffectRandomContext> randomEffects,
+                                  int                                      randomEffectCount,
+                                  string?                                  setName      = null,
+                                  IReadOnlyCollection<Effect>?             fixedEffects = null) : base(name,
             level,
             randomEffects,
             randomEffectCount,
@@ -39,17 +39,18 @@ namespace SoulWorkerPropertySimulator.Models
             SelectedEffect = randomEffects;
         }
 
-        public          AccessoryField              Field => Blueprint.Field;
         public override IReadOnlyCollection<Effect> Effects => Blueprint.FixedEffects.Concat(SelectedEffect).ToList();
-        public          AccessoryBlueprint          Blueprint { get; }
-        public          IReadOnlyCollection<Effect> SelectedEffect { get; }
+
+        public AccessoryField              Field          => Blueprint.Field;
+        public AccessoryBlueprint          Blueprint      { get; }
+        public IReadOnlyCollection<Effect> SelectedEffect { get; }
     }
 
     public record AccessorySetEffect : Item, IUpgradeable
     {
         internal AccessorySetEffect(IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffect,
-            string name,
-            string? setName = null) : base(name, Classify.Accessory, setName)
+                                    string name,
+                                    string? setName = null) : base(name, Classify.Accessory, setName)
         {
             StepEffects = stepEffect;
             ValidStep   = Enumerable.Range(0, stepEffect.Select(x => x.Key).Max()).ToList();
