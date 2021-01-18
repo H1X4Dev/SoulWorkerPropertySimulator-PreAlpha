@@ -8,78 +8,84 @@
 
 @if (Options.Any())
 {
-    <div>
-        <select @bind="Selected">
-            <option></option>
-            @foreach (var item in Options)
-            {
-                <option value="@item.GetHashCode()">@item.FullName</option>
-            }
-        </select>
-    </div>
-    <div>
-        <div>品質</div>
-        <div>
-            <input type="number" min="0" max="100" @bind="SelectedQuality" disabled="@(SelectedBlueprint == null)"/>
-        </div>
-    </div>
-    <div>
-        <div>強化 +</div>
-        <div>
-            <select @bind="SelectedStep" disabled="@(SelectedBlueprint == null || SelectedBlueprint.ValidStep.Count <= 1)">
-                @if (SelectedBlueprint == null || !SelectedBlueprint.ValidStep.Any())
+    <div class="card">
+        <div class="card-header d-flex">
+            <select class="form-select" @bind="Selected">
+                <option></option>
+                @foreach (var item in Options)
                 {
-                    <option value="0">0</option>
-                }
-                else
-                {
-                    @foreach (var i in SelectedBlueprint.ValidStep)
-                    {
-                        <option value="@i">@i</option>
-                    }
+                    <option value="@item.GetHashCode()">@item.FullName</option>
                 }
             </select>
-        </div>
-    </div>
-
-    @if (SelectedBlueprint != null)
-    {
-        <EffectsCreator @ref="_effectsCreator" NotifyUpdate="Update" Blueprint="SelectedBlueprint" DefaultEffects="DefaultArmor?.SelectedEffect"/>
-
-        @if (SelectedBlueprint!.PluginLimit > 0)
-        {
-            <PluginsCreator @ref="_pluginsCreator"
-                             NotifyUpdate="Update"
-                             Field="SelectedBlueprint!.Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear"
-                             Limit="SelectedBlueprint.PluginLimit"
-                             Level="SelectedBlueprint.Level"
-                             DefaultPlugins="DefaultArmor?.Plugins"/>
-        }
-
-        <div>
-            <select @bind="SelectedTagHash">
-                <option>無</option>
-                @foreach (var tag in TagOptions)
-                {
-                    <option value="@tag.GetHashCode()">@tag.Name</option>
-                }
-            </select>
-        </div>
-        <div>
-            @if (SelectedTag != null)
+            @if (SelectedBlueprint != null)
             {
-                <select @bind="SelectedTagRare">
-                    @if (SelectedTag != null)
-                    {
-                        @foreach (var rare in SelectedTag.ValidRare)
+                <div class="step">
+                    <div>強化 +</div>
+                    <select class="form-select" disabled="@(SelectedBlueprint == null || SelectedBlueprint.ValidStep.Count <= 1)" @bind="SelectedStep">
+                        @if (SelectedBlueprint == null || !SelectedBlueprint.ValidStep.Any())
                         {
-                            <option value="@rare">@rare.GetDescription()</option>
+                            <option value="0">0</option>
                         }
+                        else
+                        {
+                            @foreach (var i in SelectedBlueprint.ValidStep)
+                            {
+                                <option value="@i">@i</option>
+                            }
+                        }
+                    </select>
+                </div>
+            }
+        </div>
+        <div>
+            <div>品質</div>
+            <div>
+                <input type="number" min="0" max="100" @bind="SelectedQuality" disabled="@(SelectedBlueprint == null)"/>
+            </div>
+        </div>
+        <div>
+
+        </div>
+
+        @if (SelectedBlueprint != null)
+        {
+            <EffectsCreator @ref="_effectsCreator" NotifyUpdate="Update" Blueprint="SelectedBlueprint" DefaultEffects="DefaultArmor?.SelectedEffect"/>
+
+            @if (SelectedBlueprint!.PluginLimit > 0)
+            {
+                <PluginsCreator @ref="_pluginsCreator"
+                                 NotifyUpdate="Update"
+                                 Field="SelectedBlueprint!.Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear"
+                                 Limit="SelectedBlueprint.PluginLimit"
+                                 Level="SelectedBlueprint.Level"
+                                 DefaultPlugins="DefaultArmor?.Plugins"/>
+            }
+
+            <div>
+                <select @bind="SelectedTagHash">
+                    <option>無</option>
+                    @foreach (var tag in TagOptions)
+                    {
+                        <option value="@tag.GetHashCode()">@tag.Name</option>
                     }
                 </select>
-            }
-        </div>
-    }
+            </div>
+            <div>
+                @if (SelectedTag != null)
+                {
+                    <select @bind="SelectedTagRare">
+                        @if (SelectedTag != null)
+                        {
+                            @foreach (var rare in SelectedTag.ValidRare)
+                            {
+                                <option value="@rare">@rare.GetDescription()</option>
+                            }
+                        }
+                    </select>
+                }
+            </div>
+        }
+    </div >
 }
 
 @code
@@ -176,7 +182,7 @@
         {
             var tag = SelectedTag;
             if (tag == null || SelectedTagRare == null) { return null; }
-            return tag with { Rare =  SelectedTagRare.Value};
+            return tag with { Rare = SelectedTagRare.Value };
         }
     }
 
@@ -193,7 +199,8 @@
 
                 var item = SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects);
                 if (item == null) { return null; }
-                return item with {
+                return item with
+                {
                     Plugins = _pluginsCreator?.Plugins ?? Array.Empty<Plugin>(),
                     Tag = Tag,
                     Step = SelectedStep
@@ -233,7 +240,7 @@
             _selected = DefaultArmor.Blueprint.GetHashCode();
             _selectedQuality = DefaultArmor.SelectedRatio;
             _selectedStep = DefaultArmor.Step;
-            _selectedTag = DefaultArmor.Tag == null ? null : (DefaultArmor.Tag with {Rare = TagRare.Heroic}).GetHashCode();
+            _selectedTag = DefaultArmor.Tag == null ? null : (DefaultArmor.Tag with { Rare = TagRare.Heroic }).GetHashCode();
             _selectedTagRare = DefaultArmor.Tag?.Rare;
         }
     }
