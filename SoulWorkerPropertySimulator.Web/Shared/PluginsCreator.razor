@@ -2,16 +2,16 @@
 @using SoulWorkerPropertySimulator.Models
 @inject IDataProvideService Data
 
-<h3>PluginCreator</h3>
-
-<CascadingValue Name="Parents" Value="this">
-    <CascadingValue Name="Options" Value="Options">
-        @for (var i = 0; i < Limit; i++)
-        {
-            <PluginPicker NotifyUpdate="NotifyUpdate" DefaultPlugin="_defaultPlugins?.Count > i ? _defaultPlugins[i] : null"/>
-        }
+<div class="d-flex flex-wrap">
+    <CascadingValue Name="Parents" Value="this">
+        <CascadingValue Name="Options" Value="Options">
+            @for (var i = 0; i < Limit; i++)
+            {
+                <PluginPicker NotifyUpdate="NotifyUpdate" DefaultPlugin="_defaultPlugins?.Count > i ? _defaultPlugins[i] : null"/>
+            }
+        </CascadingValue>
     </CascadingValue>
-</CascadingValue>
+</div>
 
 @code {
 

@@ -1,4 +1,6 @@
-﻿@inherits LayoutComponentBase
+﻿@using SoulWorkerPropertySimulator.Web.Services
+@inherits LayoutComponentBase
+@inject IPageNameService NameService
 
 <div class="page">
     <div class="sidebar">
@@ -6,8 +8,8 @@
     </div>
 
     <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+        <div class="top-row px-4 justify-content-start">
+            <h4 class="mb-0">@Title</h4>
         </div>
 
         <div class="content px-4">
@@ -15,7 +17,22 @@
         </div>
     </div>
 
-    <div class="otherside">
-        <Panel/>
-    </div>
+    @* <div class="panel"> *@
+    @*     <Panel /> *@
+    @* </div> *@
 </div>
+
+@code
+{
+    private string? Title { get; set; }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        NameService.OnChange += name =>
+        {
+            Title = name;
+            StateHasChanged();
+        };
+    }
+}

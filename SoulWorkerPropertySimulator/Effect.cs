@@ -19,22 +19,22 @@ namespace SoulWorkerPropertySimulator
         [Description("SG恢復(%)")]
         SoulGateRecoveryRate,
 
-        [Description("SG消耗量減少(%)")]
+        [Description("SG消耗量減少")]
         SoulGateConsumptionReducedRate,
 
-        [Description("SV獲得量(%)")]
+        [Description("SV獲得量")]
         SoulNovaVolumeRate,
 
-        [Description("下一次攻擊的攻擊力(%)")]
+        [Description("下次攻擊的攻擊力(%)")]
         AttackRateNext,
 
-        [Description("反射傷害量(%)")]
+        [Description("反射傷害量")]
         ReflectionDamageRate,
 
         [Description("回避度")]
         Evade,
 
-        [Description("冷卻時間(%)")]
+        [Description("冷卻時間")]
         CooldownShorterRate,
 
         [Description("攻擊力")]
@@ -49,7 +49,7 @@ namespace SoulWorkerPropertySimulator
         [Description("武器攻擊力(%)")]
         WeaponAttackRate,
 
-        [Description("攻擊失敗傷害(%)")]
+        [Description("攻擊失敗傷害")]
         PartialDamageRate,
 
         [Description("攻擊速度")]
@@ -70,16 +70,16 @@ namespace SoulWorkerPropertySimulator
         [Description("命中度")]
         Accuracy,
 
-        [Description("空裝攻擊力(%)")]
+        [Description("空裝攻擊力")]
         AttackRateOriginal,
 
-        [Description("空裝防禦度(%)")]
+        [Description("空裝防禦度")]
         DefenseRateOriginal,
 
-        [Description("城鎮中移動速度(%)")]
+        [Description("城鎮中移動速度")]
         MoveSpaceRateTown,
 
-        [Description("戰鬥區域中移動速度(%)")]
+        [Description("戰鬥區域中移動速度")]
         MoveSpaceRateBattle,
 
         [Description("耐力回復")]
@@ -103,13 +103,13 @@ namespace SoulWorkerPropertySimulator
         [Description("最大耐力")]
         Stamina,
 
-        [Description("減傷率(%)")]
+        [Description("減傷率")]
         DamageReductionRate,
 
         [Description("無敵(秒)")]
         InvincibleSecond,
 
-        [Description("傷害減少：BOSS/中級怪物")]
+        [Description("傷害減少：BOSS")]
         DamageReductionRateBoss,
 
         [Description("傷害減少：一般怪物")]
@@ -124,16 +124,16 @@ namespace SoulWorkerPropertySimulator
         [Description("防禦貫穿率")]
         DefenseBreakRate,
 
-        [Description("附加傷害：BOSS/中級怪物(%)")]
+        [Description("附加傷害：BOSS")]
         ExtraDamageRateBoss,
 
         [Description("附加傷害：一般")]
         ExtraDamageRateBasic,
 
-        [Description("附加傷害：空中(%)")]
+        [Description("附加傷害：空中")]
         ExtraDamageRateAir,
 
-        [Description("附加傷害：倒地(%)")]
+        [Description("附加傷害：倒地")]
         ExtraDamageRateFall,
 
         [Description("附加傷害：原始勢力")]
@@ -148,7 +148,7 @@ namespace SoulWorkerPropertySimulator
         [Description("暴擊率")]
         CriticalRate,
 
-        [Description("暴擊減傷(%)")]
+        [Description("暴擊減傷")]
         DamageReductionRateCritical,
 
         [Description("暴擊傷害")]

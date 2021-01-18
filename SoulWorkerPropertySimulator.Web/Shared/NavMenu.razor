@@ -1,5 +1,8 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">SoulWorkerPropertySimulator.Web</a>
+﻿@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Web.Pages
+@inject IPanelComputeService PanelCompute
+<div class="top-row ps-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">靈魂行者計算器</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,9 +17,20 @@
         </li>
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="armor">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Armor
+                <span class="oi oi-list-rich" aria-hidden="true"></span> @ArmorSetting.Title
             </NavLink>
         </li>
+    </ul>
+</div>
+<div class="position-absolute bottom-0 w-100">
+    <ul class="list-group list-group-flush">
+        @foreach (var (context, value) in _effects.Where(x => x.Value != 0))
+        {
+            <li class="list-group-item d-flex">
+                <div class="flex-grow-1">@context.Description</div>
+                <div>@(context.IsPercent ? $"{value * 100}%" : (int) value)</div>
+            </li>
+        }
     </ul>
 </div>
 
@@ -25,6 +39,26 @@
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
+    private void ToggleNavMenu() { collapseNavMenu = !collapseNavMenu; }
+
+    private IDictionary<EffectContext, decimal> _effects = null!;
+
+    public void Update(EffectContext context, decimal value)
+    {
+        if (!_effects.ContainsKey(context)) { _effects.Add(context, value); }
+        else
+        { _effects[context] = value; }
+        StateHasChanged();
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+
+        _effects = PanelCompute.Get();
+        PanelCompute.OnChange += Update;
+
+        return Task.CompletedTask;
+    }
 
 }

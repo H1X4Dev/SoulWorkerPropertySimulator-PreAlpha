@@ -1,20 +1,23 @@
 ﻿@using SoulWorkerPropertySimulator.Models
-<CascadingValue Name="Parents" Value="this" IsFixed="true">
-    @if (Count == Contexts.Count)
-    {
-        @foreach (var item in Contexts)
+
+<div class="@(IsFlex ? "d-flex" : "")">
+    <CascadingValue Name="Parents" Value="this" IsFixed="true">
+        @if (Count == Contexts.Count)
         {
-            <EffectPicker Options="new[] {item}" DefaultEffect="_defaultEffects?.FirstOrDefault()"/>
+            @foreach (var item in Contexts)
+            {
+                <EffectPicker Options="new[] {item}" DefaultEffect="_defaultEffects?.FirstOrDefault()"/>
+            }
         }
-    }
-    else
-    {
-        @for (var i = 0; i < Count; i++)
+        else
         {
-            <EffectPicker Key="i" Options="Contexts" DefaultEffect="_defaultEffects?.Count > i ? _defaultEffects[i] : null"/>
+            @for (var i = 0; i < Count; i++)
+            {
+                <EffectPicker Key="i" Options="Contexts" DefaultEffect="_defaultEffects?.Count > i ? _defaultEffects[i] : null"/>
+            }
         }
-    }
-</CascadingValue>
+    </CascadingValue>
+</div>
 
 @code {
 
@@ -23,6 +26,9 @@
 
     [Parameter]
     public Blueprint Blueprint { get; set; } = null!;
+
+    [Parameter]
+    public bool IsFlex { get; set; }
 
     private IReadOnlyList<Effect>? _defaultEffects;
 

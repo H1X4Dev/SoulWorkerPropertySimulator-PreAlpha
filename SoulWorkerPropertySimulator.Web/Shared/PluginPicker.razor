@@ -1,42 +1,49 @@
 ﻿@using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Models
-@using SoulWorkerPropertySimulator.Web.Shared.Effects
 @implements IDisposable
 @inject IDataProvideService Data
 @inject IArmorComputeService ArmorCompute
 
-<div>
-    @if (Options.Any())
-    {
-        <div>
-            <select @bind="Selected">
-                <option></option>
-                @foreach (var item in Options)
-                {
-                    <option value="@item.GetHashCode()">@item.Name</option>
-                }
-            </select>
-        </div>
-        @if (SelectedBlueprint != null && SelectedBlueprint.ValidStep.Count > 1)
+<div class="w-50 pt-3 pe-2">
+    <div class="card">
+        @if (Options.Any())
         {
-            <div>
-                <div>強化 +</div>
-                <div>
-                    <select @bind="SelectedStep">
-                        @foreach (var i in SelectedBlueprint.ValidStep)
+            <div class="card-header d-flex align-items-center">
+                <div>插件</div>
+                <div class="flex-grow-1 ms-2">
+                    <select class="form-select" @bind="Selected">
+                        <option></option>
+                        @foreach (var item in Options)
                         {
-                            <option value="@i">@i</option>
+                            <option value="@item.GetHashCode()">@item.Name</option>
                         }
                     </select>
                 </div>
             </div>
-        }
+            @if (SelectedBlueprint != null)
+            {
+                <div>
+                    @if (SelectedBlueprint.ValidStep.Count > 1)
+                    {
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">等級</span>
+                            <select class="form-control" @bind="SelectedStep">
+                                @foreach (var i in SelectedBlueprint.ValidStep)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </div>
+                    }
 
-        @if (SelectedBlueprint != null && SelectedBlueprint.RandomEffectCount > 0)
-        {
-            <EffectsCreator @ref="_effectsCreator" NotifyUpdate="NotifyUpdate" Blueprint="SelectedBlueprint" DefaultEffects="DefaultPlugin?.SelectedEffect"/>
+                    @if (SelectedBlueprint.RandomEffectCount > 0)
+                    {
+                        <EffectsCreator @ref="_effectsCreator" NotifyUpdate="NotifyUpdate" Blueprint="SelectedBlueprint" DefaultEffects="DefaultPlugin?.SelectedEffect"/>
+                    }
+                </div>
+            }
         }
-    }
+    </div>
 </div>
 
 @code

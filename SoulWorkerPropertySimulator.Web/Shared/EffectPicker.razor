@@ -1,28 +1,41 @@
 ﻿@using SoulWorkerPropertySimulator.Extensions
 @implements IDisposable
 
-<div>
+<div class="card m-3">
     @if (Options?.Any() ?? false)
     {
-        <div>
-            <select @bind="SelectedKey">
-                @if (Options.Count > 1) { <option>效果...</option> }
-                @foreach (var item in Options)
-                {
-                    <option value="@item.GetHashCode()" disabled="@Parents?.IsDisableContext(this, item)">@item.Context.Property.GetDescription()</option>
-                }
-            </select>
+        <div class="card-header d-flex align-items-center">
+            <div>效果</div>
+            <div class="ms-2 flex-grow-1">
+                <select class="form-select" @bind="SelectedKey">
+                    @if (Options.Count > 1)
+                    {
+                        <option></option>
+}
+                    @foreach (var item in Options)
+                    {
+                        <option value="@item.GetHashCode()" disabled="@Parents?.IsDisableContext(this, item)">@item.Context.Property.GetDescription()</option>
+                    }
+                </select>
+            </div>
         </div>
-        <div>
-            @if (SelectedContext != null)
-            {
-                <div>Min: @SelectedContext.DisplayMinValue</div>
-                <div>
-                    <input type="number" min="@SelectedContext.DisplayMinValue" max="@SelectedContext.DisplayMaxValue" @bind="SelectedValue"/>
+        @if (SelectedContext != null)
+        {
+            <div class="card-body">
+                <div class="form-floating">
+                    <input type="number" class="form-control" min="@SelectedContext.DisplayMinValue" max="@SelectedContext.DisplayMaxValue" placeholder="@SelectedContext.DisplayMaxValue" @bind="SelectedValue">
+                    @if (SelectedContext.Context.IsPercent)
+                    {
+                        <label>@SelectedContext.DisplayMinValue% ~ @SelectedContext.DisplayMaxValue%</label>
+                        <span class="input-group-text">%</span>
+                    }
+                    else
+                    {
+                        <label>@SelectedContext.DisplayMinValue ~ @SelectedContext.DisplayMaxValue</label>
+                    }
                 </div>
-                <div>Max: @SelectedContext.DisplayMaxValue</div>
-            }
-        </div>
+            </div>
+        }
     }
 </div>
 
@@ -88,7 +101,7 @@
 
     public int? SelectedValue
     {
-        get => (int?) (SelectedContext == null ? null : SelectedContext.Context.IsPercent ? _selectedValue * 100 : _selectedValue);
+        get => (int?)(SelectedContext == null ? null : SelectedContext.Context.IsPercent ? _selectedValue * 100 : _selectedValue);
         set
         {
             _selectedValue = SelectedContext == null ? null : SelectedContext.Context.IsPercent ? value / 100m : value;

@@ -1,13 +1,13 @@
 ﻿@page "/armor"
 @using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Models
-@using SoulWorkerPropertySimulator.Web.Shared.Armor
+@using SoulWorkerPropertySimulator.Web.Services
 @inject IArmorComputeService ArmorCompute
-
-<h3>ArmorSetting</h3>
+@inject IPageNameService NameService
+@implements IDisposable
 
 <div>
-    <ArmorPicker Field="ArmorField.Weapon" DefaultArmor="Default.FirstOrDefault(x => x.Field == ArmorField.Weapon)" />
+    <ArmorPicker Field="ArmorField.Weapon" DefaultArmor="Default.FirstOrDefault(x => x.Field == ArmorField.Weapon)"/>
     @* @foreach (var field in _fields) *@
     @* { *@
     @*     <ArmorPicker Field="field" DefaultArmor="_default.FirstOrDefault(x => x.Field == field)"/> *@
@@ -15,7 +15,10 @@
 </div>
 
 @code {
+
     // private readonly IReadOnlyCollection<ArmorField> _fields = new[] { ArmorField.Head, ArmorField.Shoulder, ArmorField.Chest, ArmorField.Leg, ArmorField.Weapon };
+
+        public const string Title = "武器與裝備";
 
     private ICollection<Armor> Default { get; set; } = null!;
 
@@ -23,6 +26,9 @@
     {
         base.OnInitialized();
         Default = ArmorCompute.Get().ToList();
+        NameService.Set(Title);
     }
+
+    public void Dispose() => NameService.Set(null);
 
 }
