@@ -7,18 +7,17 @@
 @implements IDisposable
 
 <div>
-    <ArmorPicker Field="ArmorField.Weapon" DefaultArmor="Default.FirstOrDefault(x => x.Field == ArmorField.Weapon)"/>
-    @* @foreach (var field in _fields) *@
-    @* { *@
-    @*     <ArmorPicker Field="field" DefaultArmor="_default.FirstOrDefault(x => x.Field == field)"/> *@
-    @* } *@
+    @foreach (var field in _fields)
+    {
+        <ArmorPicker Field="field" DefaultArmor="Default.FirstOrDefault(x => x.Field == field)"/>
+    }
 </div>
 
 @code {
 
-    // private readonly IReadOnlyCollection<ArmorField> _fields = new[] { ArmorField.Head, ArmorField.Shoulder, ArmorField.Chest, ArmorField.Leg, ArmorField.Weapon };
+    private readonly IReadOnlyCollection<ArmorField> _fields = new[] {ArmorField.Weapon, ArmorField.Head, ArmorField.Shoulder, ArmorField.Chest, ArmorField.Leg};
 
-        public const string Title = "武器與裝備";
+        public const string Title = "武器與防具";
 
     private ICollection<Armor> Default { get; set; } = null!;
 

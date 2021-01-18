@@ -24,7 +24,7 @@
 </div>
 <div class="position-absolute bottom-0 w-100">
     <ul class="list-group list-group-flush">
-        @foreach (var (context, value) in _effects.Where(x => x.Value != 0))
+        @foreach (var (context, value) in _effects.Where(x => x.Key.IsStatic && _mainPanel.Contains(x.Key.Property) && x.Value != 0))
         {
             <li class="list-group-item d-flex">
                 <div class="flex-grow-1">@context.Description</div>
@@ -61,4 +61,5 @@
         return Task.CompletedTask;
     }
 
+    private static Property[] _mainPanel = {Property.Attack, Property.CriticalRate, Property.CriticalDamage, Property.Accuracy, Property.DefenseBreakRate, Property.ExtraDamageRateBoss, Property.AttackSpeedRate, Property.PartialDamageRate};
 }

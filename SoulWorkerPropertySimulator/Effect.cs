@@ -328,6 +328,8 @@ namespace SoulWorkerPropertySimulator
         public decimal?     Duration    { get; }
         public bool         IsPercent   { get; }
 
+        public bool IsStatic => Opportunity == null && Probability == null && Duration == null;
+
         public string Description =>
             $"{Opportunity?.GetDescription()}{(Probability != null ? $"{Probability}%機率" : "")}{(Duration != null ? $"{Duration}秒內" : "")}{Property.GetDescription()}";
 
