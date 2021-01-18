@@ -47,12 +47,12 @@ namespace SoulWorkerPropertySimulator.Data
 
         private static void SafeCall(Action action)
         {
-#if DEBUG
+// #if DEBUG
             try { action.Invoke(); }
             catch (NotImplementedException) { }
-#else
-            action.Invoke();
-#endif
+// #else
+//            action.Invoke();
+// #endif
         }
     }
 }
