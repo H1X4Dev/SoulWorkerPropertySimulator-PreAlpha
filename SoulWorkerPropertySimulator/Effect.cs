@@ -43,6 +43,12 @@ namespace SoulWorkerPropertySimulator
         [Description("攻擊力(%)")]
         AttackRate,
 
+        [Description("武器攻擊力")]
+        WeaponAttack,
+
+        [Description("武器攻擊力(%)")]
+        WeaponAttackRate,
+
         [Description("攻擊失敗傷害(%)")]
         PartialDamageRate,
 
@@ -54,6 +60,12 @@ namespace SoulWorkerPropertySimulator
 
         [Description("防禦度")]
         Defense,
+
+        [Description("防禦防禦度(%)")]
+        GearDefenseRate,
+
+        [Description("防禦防禦度")]
+        GearDefense,
 
         [Description("命中度")]
         Accuracy,
@@ -123,6 +135,12 @@ namespace SoulWorkerPropertySimulator
 
         [Description("附加傷害：倒地(%)")]
         ExtraDamageRateFall,
+
+        [Description("附加傷害：原始勢力")]
+        ExtraDamageRatePrimal,
+
+        [Description("附加傷害：金色城堡")]
+        ExtraDamageRateGolden,
 
         [Description("暴擊抵抗(%)")]
         CriticalResistanceRate,

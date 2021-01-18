@@ -18,14 +18,14 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         {
                             2,
-                            new List<Effect>
+                            new Effect[]
                             {
                                 new(new(Property.CriticalDamage), 9000), new(new(Property.CriticalRate), .15m)
                             }
                         },
                         {
                             3,
-                            new List<Effect>
+                            new Effect[]
                             {
                                 new(new(Property.Attack, Opportunity.HitStamina70Down, duration: 1), 500),
                                 new(new(Property.Attack, Opportunity.HitStamina40Down, duration: 1), 1000),
@@ -34,7 +34,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         },
                         {
                             4,
-                            new List<Effect>
+                            new Effect[]
                             {
                                 new(new(Property.ExtraDamageRateBoss), .4m),
                                 new(new(Property.SoulGateConsumptionReducedRate), .1m),

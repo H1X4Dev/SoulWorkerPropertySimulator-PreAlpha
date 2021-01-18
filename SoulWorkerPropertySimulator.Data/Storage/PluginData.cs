@@ -6,7 +6,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class PluginData
     {
-        private static IReadOnlyCollection<PluginBlueprint> _blueprints = null!;
+        private static IReadOnlyCollection<PluginBlueprint>? _blueprints;
 
         private static readonly IDictionary<PluginField, IReadOnlyCollection<PluginBlueprint>> PluginResult =
             new Dictionary<PluginField, IReadOnlyCollection<PluginBlueprint>>();
@@ -15,22 +15,24 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         {
             if (PluginResult.ContainsKey(field)) { return PluginResult[field]; }
 
+            if (_blueprints != null) { return PluginResult[field] = _blueprints.Where(x => x.Field == field).ToList(); }
+
             _blueprints = new List<PluginBlueprint>
             {
                 new("未知的渴望",
                     PluginField.Weapon,
                     65,
-                    new[] {new EffectRandomContext(new(Property.Attack), 100, 800)},
+                    new EffectRandomContext[] {new(new(Property.Attack), 100, 800)},
                     1),
                 new("未知的絕望",
                     PluginField.Weapon,
                     67,
-                    new[] {new EffectRandomContext(new(Property.Attack), 300, 1_000)},
+                    new EffectRandomContext[] {new(new(Property.Attack), 300, 1_000)},
                     1),
                 new("淨化的聖巡",
                     PluginField.Gear,
                     65,
-                    new List<EffectRandomContext>
+                    new EffectRandomContext[]
                     {
                         new(new(Property.HP), 1_200, 3_000),
                         new(new(Property.Defense), 240, 960),
@@ -43,7 +45,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("警戒的聖巡",
                     PluginField.Gear,
                     65,
-                    new List<EffectRandomContext>
+                    new EffectRandomContext[]
                     {
                         new(new(Property.Accuracy), 48, 108),
                         new(new(Property.Attack), 250, 400),
@@ -56,7 +58,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("暗躍的聖巡",
                     PluginField.Gear,
                     65,
-                    new List<EffectRandomContext>
+                    new EffectRandomContext[]
                     {
                         new(new(Property.CriticalRate), .01m, .02m),
                         new(new(Property.CriticalDamage), 300, 450),
@@ -69,7 +71,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("黎明的聖巡",
                     PluginField.Gear,
                     68,
-                    new List<EffectRandomContext>
+                    new EffectRandomContext[]
                     {
                         new(new(Property.HP), .05m, .1m),
                         new(new(Property.Defense), .07m, .15m),
