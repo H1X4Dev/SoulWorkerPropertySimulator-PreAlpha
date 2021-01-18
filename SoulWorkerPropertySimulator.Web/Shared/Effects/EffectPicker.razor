@@ -9,7 +9,7 @@
                 @if (Options.Count > 1) { <option></option> }
                 @foreach (var item in Options)
                 {
-                    <option value="@item.GetHashCode()" disabled="@DisableContext?.Contains(item)">@item.Context.Property.GetDescription()</option>
+                    <option value="@item.GetHashCode()" disabled="@Parents?.IsDisableContext(this, item)">@item.Context.Property.GetDescription()</option>
                 }
             </select>
         </div>
@@ -43,12 +43,6 @@
     }
 
     [Parameter]
-    public EventCallback NotifyUpdate { get; set; }
-
-    [Parameter]
-    public EventCallback<EffectPicker> RefreshOther { get; set; }
-
-    [Parameter]
     public int? Key { get; set; }
 
     [Parameter]
@@ -75,7 +69,7 @@
         {
             _selectedKey = value;
             SelectedValue = SelectedContext?.DisplayMaxValue;
-            RefreshOther.InvokeAsync(this);
+            Parents?.RefreshOther(this);
         }
     }
 
@@ -87,7 +81,7 @@
         set
         {
             _selectedValue = SelectedContext == null ? null : SelectedContext.Context.IsPercent ? value / 100m : value;
-            NotifyUpdate.InvokeAsync();
+            Parents?.NotifyUpdate.InvokeAsync();
         }
     }
 
@@ -103,7 +97,7 @@
         {
             _selectedKey = Options.First(x => x.Context.Equals(DefaultEffect.Context)).GetHashCode();
             _selectedValue = DefaultEffect.Value;
-            RefreshOther.InvokeAsync(this);
+            Parents?.RefreshOther(this);
         }
     }
 
@@ -112,27 +106,6 @@
         base.OnParametersSet();
         if (Options.Count == 1 && Options.First() != SelectedContext) { SelectedContext = Options.First(); }
     }
-
-    // private bool _processDefault = false;
-    //
-    // protected override void OnInitialized()
-    // {
-    //     base.OnInitializedAsync();
-    //     _processDefault = DefaultEffect != null;
-    // }
-    //
-    // protected override void OnParametersSet()
-    // {
-    //     base.OnParametersSet();
-    //     if (_processDefault && DefaultEffect != null)
-    //     {
-    //         _selectedKey = Options.First(x => x.Context.Equals(DefaultEffect.Context)).GetHashCode();
-    //         _selectedValue = DefaultEffect.Value;
-    //         RefreshOther.InvokeAsync(this);
-    //         _processDefault = false;
-    //     }
-    //     else if (Options.Count == 1 && Options.First() != SelectedContext) { SelectedContext = Options.First(); }
-    // }
 
     public void Dispose() => Parents?.Pickers.Remove(this);
 
