@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using SoulWorkerPropertySimulator.Models;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class PluginData
     {
+        private static IReadOnlyCollection<PluginBlueprint> _blueprints = null!;
+
         private static readonly IDictionary<PluginField, IReadOnlyCollection<PluginBlueprint>> PluginResult =
             new Dictionary<PluginField, IReadOnlyCollection<PluginBlueprint>>();
 
@@ -12,7 +15,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         {
             if (PluginResult.ContainsKey(field)) { return PluginResult[field]; }
 
-            return PluginResult[field] = new List<PluginBlueprint>
+            _blueprints = new List<PluginBlueprint>
             {
                 new("未知的渴望",
                     PluginField.Weapon,
@@ -33,7 +36,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(new(Property.Defense), 240, 960),
                         new(new(Property.DamageReductionRateBasic), .03m, .04m),
                         new(new(Property.DamageReductionRateBoss), .03m, .04m),
-                        new(new(Property.Stamina), 7, 1),
+                        new(new(Property.Stamina), 1, 7),
                         new(new(Property.SoulNovaVolumeRate), .02m, .08m)
                     },
                     1),
@@ -77,6 +80,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     },
                     1)
             };
+
+            return PluginResult[field] = _blueprints.Where(x => x.Field == field).ToList();
         }
     }
 }

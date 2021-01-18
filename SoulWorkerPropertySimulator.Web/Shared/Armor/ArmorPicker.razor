@@ -253,6 +253,6 @@
     //     }
     // }
     //
-    // private IReadOnlyCollection<Tag> TagOptions => _selectedTagRare != null ? Data.GetTags(Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear, (TagRare) _selectedTagRare) : Array.Empty<Tag>();
+    // private IReadOnlyCollection<Tag> TagOptions => _selectedTagRare != null ? Data.GetTagsD(Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear, (TagRare) _selectedTagRare) : Array.Empty<Tag>();
     // private Tag? SelectedTag => TagOptions.FirstOrDefault(x => x.Name.Equals(_selectedTagName));
 }

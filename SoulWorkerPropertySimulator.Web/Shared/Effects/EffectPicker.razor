@@ -2,11 +2,11 @@
 @implements IDisposable
 
 <div>
-    @if (Options.Any())
+    @if (Options?.Any() ?? false)
     {
         <div>
             <select @bind="SelectedKey">
-                @if (Options.Count > 1) { <option></option> }
+                @if (Options.Count > 1) { <option>效果...</option> }
                 @foreach (var item in Options)
                 {
                     <option value="@item.GetHashCode()" disabled="@Parents?.IsDisableContext(this, item)">@item.Context.Property.GetDescription()</option>
@@ -45,8 +45,19 @@
     [Parameter]
     public int? Key { get; set; }
 
+
+    private IReadOnlyCollection<EffectRandomContext>? _options;
+
     [Parameter]
-    public IReadOnlyCollection<EffectRandomContext> Options { get; set; } = null!;
+    public IReadOnlyCollection<EffectRandomContext>? Options
+    {
+        get => _options;
+        set
+        {
+            _options = value;
+            if (!value?.Contains(SelectedContext) ?? true) { _selectedKey = null; }
+        }
+    }
 
     [Parameter]
     public IReadOnlyCollection<EffectRandomContext>? DisableContext { get; set; }
@@ -58,7 +69,7 @@
 
     public EffectRandomContext? SelectedContext
     {
-        get => Options.FirstOrDefault(x => x.GetHashCode() == SelectedKey);
+        get => Options?.FirstOrDefault(x => x.GetHashCode() == SelectedKey);
         set => SelectedKey = value?.GetHashCode();
     }
 
@@ -89,22 +100,22 @@
 
     public void Refresh() => StateHasChanged();
 
-
     protected override void OnInitialized()
     {
         base.OnInitializedAsync();
         if (DefaultEffect != null)
         {
-            _selectedKey = Options.First(x => x.Context.Equals(DefaultEffect.Context)).GetHashCode();
+            _selectedKey = Options?.FirstOrDefault(x => x.Context.Equals(DefaultEffect.Context))?.GetHashCode();
             _selectedValue = DefaultEffect.Value;
             Parents?.RefreshOther(this);
+            DefaultEffect = null;
         }
     }
 
     protected override void OnParametersSet()
     {
         base.OnParametersSet();
-        if (Options.Count == 1 && Options.First() != SelectedContext) { SelectedContext = Options.First(); }
+        if (Options != null && Options.Count == 1 && Options.First() != SelectedContext) { SelectedContext = Options.First(); }
     }
 
     public void Dispose() => Parents?.Pickers.Remove(this);

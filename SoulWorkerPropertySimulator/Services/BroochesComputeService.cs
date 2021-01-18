@@ -7,10 +7,10 @@ namespace SoulWorkerPropertySimulator.Services
 {
     public interface IBroochesComputeService : IComputeService
     {
-        Brooches? Get(BroochesField field, BroochesType type);
+        BroochesD? Get(BroochesField field, BroochesType type);
 
-        // IEnumerable<Brooches?> Get(BroochesField   field);
-        void Change(Brooches?    newItem, BroochesField field);
+        // IEnumerable<BroochesD?> Get(BroochesField   field);
+        void Change(BroochesD?    newItem, BroochesField field);
         void Clear(BroochesField field,   BroochesType? type = null);
 
         event Action<BroochesField, string?>? OnSetChange;
@@ -19,43 +19,43 @@ namespace SoulWorkerPropertySimulator.Services
     internal class BroochesComputeService : ComputeServiceBase, IBroochesComputeService
     {
         private readonly IDataProvideService                                              _provider;
-        private readonly IDictionary<BroochesField, IDictionary<BroochesType, Brooches?>> Brooches;
+        private readonly IDictionary<BroochesField, IDictionary<BroochesType, BroochesD?>> Brooches;
         private readonly IDictionary<BroochesField, BroochesSetEffect?>                   BroochesSet;
 
         public BroochesComputeService(IDataProvideService provider)
         {
             _provider   = provider;
-            Brooches    = new Dictionary<BroochesField, IDictionary<BroochesType, Brooches?>>();
+            Brooches    = new Dictionary<BroochesField, IDictionary<BroochesType, BroochesD?>>();
             BroochesSet = new Dictionary<BroochesField, BroochesSetEffect?>();
         }
 
         public event Action<BroochesField, string?>? OnSetChange;
 
-        public Brooches? Get(BroochesField field, BroochesType type)
+        public BroochesD? Get(BroochesField field, BroochesType type)
         {
             try { return Brooches[field][type]; }
             catch (KeyNotFoundException) { return null; }
         }
 
-        // public IEnumerable<Brooches?> Get(BroochesField field)
+        // public IEnumerable<BroochesD?> Get(BroochesField field)
         // {
-        //     try { return Brooches[field].Values; }
-        //     catch (KeyNotFoundException) { return Array.Empty<Brooches>(); }
+        //     try { return BroochesD[field].Values; }
+        //     catch (KeyNotFoundException) { return Array.Empty<BroochesD>(); }
         // }
 
-        public void Change(Brooches? newItem, BroochesField field)
+        public void Change(BroochesD? newItem, BroochesField field)
         {
             if (newItem == null) { throw new InvalidOperationException(); }
 
-            IDictionary<BroochesType, Brooches?> dict;
+            IDictionary<BroochesType, BroochesD?> dict;
             if (Brooches.ContainsKey(field)) { dict = Brooches[field]; }
             else
             {
-                dict = new Dictionary<BroochesType, Brooches?>();
+                dict = new Dictionary<BroochesType, BroochesD?>();
                 Brooches.Add(field, dict);
             }
 
-            Brooches? before;
+            BroochesD? before;
 
             try { before = dict[newItem.Type]; }
             catch (KeyNotFoundException) { before = null; }
@@ -108,7 +108,7 @@ namespace SoulWorkerPropertySimulator.Services
             try { before = BroochesSet[field]; }
             catch (KeyNotFoundException) { before = null; }
 
-            var brooches = Brooches[field].Select(x => x.Value).Where(x => x != null)!.ToList<Brooches>();
+            var brooches = Brooches[field].Select(x => x.Value).Where(x => x != null)!.ToList<BroochesD>();
             var after = brooches.GroupBy(x => x.BroochesClassify).All(x => x.Count() == 1) &&
                         brooches.Select(x => x.BroochesClassify).Distinct().Count() == 1 &&
                         brooches.Count == Enum.GetValues<BroochesType>().Length

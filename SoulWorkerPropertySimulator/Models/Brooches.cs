@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SoulWorkerPropertySimulator.Models
 {
@@ -6,7 +8,42 @@ namespace SoulWorkerPropertySimulator.Models
 
     public record Brooches : Item
     {
-        public Brooches(string name, BroochesType type, BroochesClassify classify, IReadOnlyCollection<Effect> effects)
+        private readonly IReadOnlyDictionary<BroochesRare, IReadOnlyCollection<Effect>> _effects;
+        private readonly BroochesRare                                                   _rare;
+
+        public Brooches(string name,
+            BroochesType type,
+            BroochesSeries series,
+            IReadOnlyDictionary<BroochesRare, IReadOnlyCollection<Effect>> effects,
+            BroochesRare rare = BroochesRare.Tera) : base(name, Classify.Brooches)
+        {
+            Series   = series;
+            Type     = type;
+            _effects = effects;
+            Rare     = rare;
+        }
+
+        public override IReadOnlyCollection<Effect>       Effects   => _effects[Rare];
+        public          IReadOnlyCollection<BroochesRare> ValidRare => _effects.Keys.ToList();
+
+        public BroochesRare Rare
+        {
+            get => _rare;
+            init
+            {
+                if (!ValidRare.Contains(value)) { throw new IndexOutOfRangeException(); }
+
+                _rare = value;
+            }
+        }
+
+        public BroochesSeries Series { get; }
+        public BroochesType   Type   { get; }
+    }
+
+    public record BroochesD : Item
+    {
+        public BroochesD(string name, BroochesType type, BroochesClassify classify, IReadOnlyCollection<Effect> effects)
             : base(name, Classify.Brooches)
         {
             Type             = type;

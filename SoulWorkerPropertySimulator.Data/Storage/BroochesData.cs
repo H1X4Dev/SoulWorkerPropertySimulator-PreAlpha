@@ -9,13 +9,13 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         private static readonly BroochesClassify               BskTera = new(BroochesSeries.Bsk, BroochesRare.Tera);
         private static readonly BroochesClassify               FotTera = new(BroochesSeries.Fot, BroochesRare.Tera);
         private static readonly BroochesClassify               SinTera = new(BroochesSeries.Sin, BroochesRare.Tera);
-        private static          IReadOnlyCollection<Brooches>? _Brooches;
+        private static          IReadOnlyCollection<BroochesD>? _Brooches;
 
-        internal static IReadOnlyCollection<Brooches> Get()
+        internal static IReadOnlyCollection<BroochesD> Get()
         {
             if (_Brooches != null) { return _Brooches; }
 
-            return _Brooches = new List<Brooches>
+            return _Brooches = new List<BroochesD>
             {
                 new("鷹眼", BroochesType.Attack, SdTera, new List<Effect> {new(new(Property.Accuracy), 52)}),
                 new("致命", BroochesType.Attack, SdTera, new List<Effect> {new(new(Property.CriticalDamage), 700)}),

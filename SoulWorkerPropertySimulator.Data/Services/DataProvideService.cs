@@ -15,7 +15,7 @@ namespace SoulWorkerPropertySimulator.Data.Services
 
         public IReadOnlyCollection<ArmorSetEffect> GetArmorSetEffects() => ArmorSetData.Get();
 
-        public IReadOnlyCollection<Brooches> GetBrooches(BroochesType type) =>
+        public IReadOnlyCollection<BroochesD> GetBrooches(BroochesType type) =>
             BroochesData.Get().Where(x => x.Type == type).ToList();
 
         public IReadOnlyCollection<ArmorBlueprint> GetArmorBlueprints(ArmorField field) =>
@@ -26,7 +26,7 @@ namespace SoulWorkerPropertySimulator.Data.Services
 
         public IReadOnlyCollection<PluginBlueprint> GetPluginBlueprints(PluginField field) => PluginData.Get(field);
 
-        public IReadOnlyCollection<Tag> GetTags(TagField field, TagRare rare) => throw new NotImplementedException();
+        public IReadOnlyCollection<Tag> GetTags(TagField field) => throw new NotImplementedException();
 
         public IReadOnlyCollection<Title> GetTitles(TitleField field) => throw new NotImplementedException();
 

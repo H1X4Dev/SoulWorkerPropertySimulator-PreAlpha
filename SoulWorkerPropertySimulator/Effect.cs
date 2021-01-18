@@ -292,10 +292,10 @@ namespace SoulWorkerPropertySimulator
 
     public record EffectContext
     {
-        public EffectContext(Property     property,
-                             Opportunity? opportunity = null,
-                             decimal?     probability = null,
-                             decimal?     duration    = null)
+        public EffectContext(Property property,
+            Opportunity?              opportunity = null,
+            decimal?                  probability = null,
+            decimal?                  duration    = null)
         {
             Property    = property;
             Opportunity = opportunity;
@@ -314,55 +314,76 @@ namespace SoulWorkerPropertySimulator
             $"{Opportunity?.GetDescription()}{(Probability != null ? $"{Probability}%機率" : "")}{(Duration != null ? $"{Duration}秒內" : "")}{Property.GetDescription()}";
 
         #region
-        
+
         private static HashSet<Property> Percent { get; } = new()
         {
-            Property.HPRecoveryRate,
-            Property.SuperArmorBreakPowerRate,
-            Property.SoulGateRecoveryRate,
-            Property.SoulGateConsumptionReducedRate,
-            Property.SoulNovaVolumeRate,
-            Property.AttackRateNext,
-            Property.ReflectionDamageRate,
-            Property.CooldownShorterRate,
             Property.AttackRate,
-            Property.PartialDamageRate,
-            Property.AttackSpeedRate,
-            Property.DefenseRate,
+            Property.AttackRateNext,
             Property.AttackRateOriginal,
+            Property.AttackSpeedRate,
+            Property.CooldownShorterRate,
+            Property.CriticalRate,
+            Property.CriticalResistanceRate,
+            Property.DamageReductionRate,
+            Property.DamageReductionRateBasic,
+            Property.DamageReductionRateBoss,
+            Property.DamageReductionRateCritical,
+            Property.DamageReductionRatePartialDamage,
+            Property.DefenseBreakRate,
+            Property.DefenseRate,
             Property.DefenseRateOriginal,
-            Property.MoveSpaceRateTown,
+            Property.ExpVolumeRateEnemy,
+            Property.ExtraDamageRateAir,
+            Property.ExtraDamageRateBasic,
+            Property.ExtraDamageRateBoss,
+            Property.ExtraDamageRateFall,
+            Property.HPRate,
+            Property.HPRecoveryRate,
             Property.MoneyVolumeRateEnemy,
             Property.MoveSpaceRate,
-            Property.HPRate,
-            Property.DamageReductionRate,
-            Property.DamageReductionRateBoss,
-            Property.DamageReductionRateBasic,
-            Property.DamageReductionRatePartialDamage,
-            Property.ExpVolumeRateEnemy,
-            Property.DefenseBreakRate,
-            Property.ExtraDamageRateBoss,
-            Property.ExtraDamageRateBasic,
-            Property.ExtraDamageRateAir,
-            Property.ExtraDamageRateFall,
-            Property.CriticalResistanceRate,
-            Property.CriticalRate,
-            Property.DamageReductionRateCritical
+            Property.MoveSpaceRateBattle,
+            Property.MoveSpaceRateTown,
+            Property.PartialDamageRate,
+            Property.ReflectionDamageRate,
+            Property.SoulGateConsumptionReducedRate,
+            Property.SoulGateRecoveryRate,
+            Property.SoulNovaVolumeRate,
+            Property.SuperArmorBreakPowerRate
         };
 
         #endregion
     }
 
-    public record EffectRandomContext(EffectContext Context, decimal Min, decimal Max)
+    public record EffectRandomContext
     {
+        public EffectRandomContext(EffectContext context, decimal min, decimal max)
+        {
+            if (min > max)
+            {
+                throw new InvalidOperationException();
+            }
+
+            Context = context;
+            Min     = min;
+            Max     = max;
+        }
+
+        public EffectContext Context { get; init; }
+        public decimal       Min     { get; init; }
+        public decimal       Max     { get; init; }
+
+
         public int DisplayMinValue => (int) (Context.Property.ToString("G").Contains("Rate") ? Min * 100 : Min);
         public int DisplayMaxValue => (int) (Context.Property.ToString("G").Contains("Rate") ? Max * 100 : Max);
 
         public Effect CreateEffect(decimal value)
         {
-            if (value < Min || value > Max) { throw new IndexOutOfRangeException(); }
+            if (value < Min || value > Max)
+            {
+                throw new IndexOutOfRangeException();
+            }
 
-            return new(Context, value);
+            return new Effect(Context, value);
         }
     }
 
