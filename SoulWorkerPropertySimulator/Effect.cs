@@ -355,6 +355,9 @@ namespace SoulWorkerPropertySimulator
             Property.ExtraDamageRateBasic,
             Property.ExtraDamageRateBoss,
             Property.ExtraDamageRateFall,
+            Property.ExtraDamageRateGolden,
+            Property.ExtraDamageRatePrimal,
+            Property.GearDefenseRate,
             Property.HPRate,
             Property.HPRecoveryRate,
             Property.MoneyVolumeRateEnemy,
@@ -366,7 +369,8 @@ namespace SoulWorkerPropertySimulator
             Property.SoulGateConsumptionReducedRate,
             Property.SoulGateRecoveryRate,
             Property.SoulNovaVolumeRate,
-            Property.SuperArmorBreakPowerRate
+            Property.SuperArmorBreakPowerRate,
+            Property.WeaponAttackRate
         };
 
         #endregion
@@ -376,10 +380,7 @@ namespace SoulWorkerPropertySimulator
     {
         public EffectRandomContext(EffectContext context, decimal min, decimal max)
         {
-            if (min > max)
-            {
-                throw new InvalidOperationException();
-            }
+            if (min > max) { throw new InvalidOperationException(); }
 
             Context = context;
             Min     = min;
@@ -396,10 +397,7 @@ namespace SoulWorkerPropertySimulator
 
         public Effect CreateEffect(decimal value)
         {
-            if (value < Min || value > Max)
-            {
-                throw new IndexOutOfRangeException();
-            }
+            if (value < Min || value > Max) { throw new IndexOutOfRangeException(); }
 
             return new Effect(Context, value);
         }
