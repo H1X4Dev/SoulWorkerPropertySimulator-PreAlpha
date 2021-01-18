@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using SoulWorkerPropertySimulator.Data.Services;
 using SoulWorkerPropertySimulator.Services;
@@ -45,14 +44,19 @@ namespace SoulWorkerPropertySimulator.Data
             return self;
         }
 
+        #region
+
         private static void SafeCall(Action action)
         {
-// #if DEBUG
+            // #if DEBUG
             try { action.Invoke(); }
             catch (NotImplementedException) { }
-// #else
-//            action.Invoke();
-// #endif
+
+            // #else
+            //            action.Invoke();
+            // #endif
         }
+
+        #endregion
     }
 }

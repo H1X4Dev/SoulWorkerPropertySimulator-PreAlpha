@@ -84,9 +84,7 @@ namespace SoulWorkerPropertySimulator.Models
             randomEffectCount,
             stepEffects,
             setName,
-            fixedEffects)
-        {
-        }
+            fixedEffects) { }
 
         public abstract T Create(IReadOnlyCollection<Effect> randomEffects);
     }
@@ -105,9 +103,7 @@ namespace SoulWorkerPropertySimulator.Models
             randomEffectCount,
             stepEffects,
             setName,
-            fixedEffects)
-        {
-        }
+            fixedEffects) { }
 
         // public abstract T Create(decimal ratio, IReadOnlyCollection<Effect> randomEffects);
     }

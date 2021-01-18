@@ -10,7 +10,7 @@ namespace SoulWorkerPropertySimulator.Services
         BroochesD? Get(BroochesField field, BroochesType type);
 
         // IEnumerable<BroochesD?> Get(BroochesField   field);
-        void Change(BroochesD?    newItem, BroochesField field);
+        void Change(BroochesD?   newItem, BroochesField field);
         void Clear(BroochesField field,   BroochesType? type = null);
 
         event Action<BroochesField, string?>? OnSetChange;
@@ -18,9 +18,9 @@ namespace SoulWorkerPropertySimulator.Services
 
     internal class BroochesComputeService : ComputeServiceBase, IBroochesComputeService
     {
-        private readonly IDataProvideService                                              _provider;
+        private readonly IDataProvideService                                               _provider;
         private readonly IDictionary<BroochesField, IDictionary<BroochesType, BroochesD?>> Brooches;
-        private readonly IDictionary<BroochesField, BroochesSetEffect?>                   BroochesSet;
+        private readonly IDictionary<BroochesField, BroochesSetEffect?>                    BroochesSet;
 
         public BroochesComputeService(IDataProvideService provider)
         {

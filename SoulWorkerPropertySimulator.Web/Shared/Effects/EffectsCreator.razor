@@ -11,7 +11,7 @@
     {
         @for (var i = 0; i < Count; i++)
         {
-            <EffectPicker Key="i" Options="Contexts" DefaultEffect="_defaultEffects?.Count > i ? _defaultEffects[i] : null" />
+            <EffectPicker Key="i" Options="Contexts" DefaultEffect="_defaultEffects?.Count > i ? _defaultEffects[i] : null"/>
         }
     }
 </CascadingValue>
@@ -42,7 +42,7 @@
     // private IReadOnlyCollection<EffectRandomContext> this[int key] => Pickers.Where(x => x.Key.HasValue && x.Key != key && x.Effect != null).Select(x => x.SelectedContext).ToList()!;
 
     public bool IsDisableContext(EffectPicker self, EffectRandomContext context) => Pickers.Where(x => x != self).Select(x => x.SelectedContext).Contains(context);
-    
+
     public void RefreshOther(EffectPicker self)
     {
         foreach (var i in Pickers.Where(x => x != self)) { i.Refresh(); }

@@ -310,10 +310,10 @@ namespace SoulWorkerPropertySimulator
 
     public record EffectContext
     {
-        public EffectContext(Property property,
-            Opportunity?              opportunity = null,
-            decimal?                  probability = null,
-            decimal?                  duration    = null)
+        public EffectContext(Property     property,
+                             Opportunity? opportunity = null,
+                             decimal?     probability = null,
+                             decimal?     duration    = null)
         {
             Property    = property;
             Opportunity = opportunity;
@@ -399,7 +399,7 @@ namespace SoulWorkerPropertySimulator
         {
             if (value < Min || value > Max) { throw new IndexOutOfRangeException(); }
 
-            return new Effect(Context, value);
+            return new(Context, value);
         }
     }
 
