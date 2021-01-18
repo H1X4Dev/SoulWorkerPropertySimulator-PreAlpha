@@ -1,3 +1,12 @@
+/* /Shared/EffectPicker.razor.rz.scp.css */
+.form-floating > span[b-fchn0vjgy7] {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-fqdybk26og] {
     display: flex;
