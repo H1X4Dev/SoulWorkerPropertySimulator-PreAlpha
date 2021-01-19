@@ -22,9 +22,9 @@
       "Microsoft.JSInterop.dll": "sha256-N4XAFLJVt3+GYIxtLACFnW1EsfpwbFGztm6A4fVsCKw=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-LkNprID5vhUSogSnLuIsAzYQL4dtKGSGQSGrlWJ+Kos=",
       "System.IO.Pipelines.dll": "sha256-qZYTUS+ga7CydtH54fYPbehFCvx3B49I74G8dxreTog=",
-      "SoulWorkerPropertySimulator.Data.dll": "sha256-cxpcJ\/Bv5cKcBZ6uEUqZrSQ7Ac\/bl8oQ\/Ikygk\/Vqg4=",
-      "SoulWorkerPropertySimulator.dll": "sha256-\/1pUuSCvEPbxPxbsQtWLCpTgN4ZSeJEH+U2TMRCTkTw=",
-      "SoulWorkerPropertySimulator.Web.dll": "sha256-KoGpkzGPxdSAdzCdISIOXJgJ4HYfo6S8YAwLLkxwkrQ=",
+      "SoulWorkerPropertySimulator.Data.dll": "sha256-DyUz0Ftx9N6zRVljRiH3OpCZrllU13Sq86R11bx9Xqo=",
+      "SoulWorkerPropertySimulator.dll": "sha256-5\/ylQD1KR9FwvleNQhCR7DdTBPgwFaPf4hLSWHatZL4=",
+      "SoulWorkerPropertySimulator.Web.dll": "sha256-dbafrNXhnzpTtEOC\/53StSclDwuQcVRf6cwTYrBruhc=",
       "System.Collections.Concurrent.dll": "sha256-RuhEJ8yh0sOSnRApwcPF\/5frHc+pmg0sKxwIvl2GWAc=",
       "System.Collections.Immutable.dll": "sha256-Tjc7UgVjcTIKS6YzKwkkVVcSW66Kjd9IQWjOvslWVf4=",
       "System.Collections.NonGeneric.dll": "sha256-GDr\/lXfA48bVzfR5hb4h6xSbg79mAi+JJFzIhh5DP5E=",
@@ -46,7 +46,7 @@
       "System.Runtime.InteropServices.RuntimeInformation.dll": "sha256-lqH3zHVsKkFfV2Ci6z3k3Cmzb32+z5fEh4JfKPtU5eg=",
       "System.Text.Encodings.Web.dll": "sha256-VXrm\/GOkbDsv+QITY0afU6Vladx3kAXIXEFjVGYw4EM=",
       "System.Text.Json.dll": "sha256-ZWctDXIqfKVKOkl6jFe0qR0QJH08Zg8SWAktacizwD8=",
-      "System.Private.CoreLib.dll": "sha256-8nIh9FFM7qq1TVvRkiBv\/1EpLhlSVJqc\/Ois2zWNebw="
+      "System.Private.CoreLib.dll": "sha256-xpf7svMVzSIFEYCS5GFs8va\/7idirEbR1pTHIEHhQ8M="
     },
     "lazyAssembly": null,
     "pdb": null,
