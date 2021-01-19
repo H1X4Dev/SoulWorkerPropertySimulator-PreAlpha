@@ -7,7 +7,7 @@
 
 <div>
     <ul class="list-group">
-        @foreach (var (context, value) in panel)
+        @foreach (var (context, value) in Panel)
         {
             <li class="list-group-item d-flex">
                 <div class="flex-grow-1">@context.Description</div>
@@ -19,16 +19,16 @@
 
 
 @code {
-    private IDictionary<EffectContext, decimal> panel = null!;
+    private IDictionary<EffectContext, decimal> Panel { get; set; } = null!;
 
         public const string Title = "面板總覽";
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        InfoService.SetTitle(nameof(AccessorySetting), Title);
-        panel = PanelCompute.Get();
+        InfoService.SetTitle(nameof(Detail), Title);
+        Panel = PanelCompute.Get();
     }
 
-    public void Dispose() { InfoService.SetTitle(nameof(AccessorySetting), null); }
+    public void Dispose() { InfoService.SetTitle(nameof(Detail), null); }
 }
