@@ -1,0 +1,34 @@
+﻿@page "/detail"
+@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Web.Services
+@inject IPanelComputeService PanelCompute
+@inject IPageInfoService InfoService
+@implements IDisposable
+
+<div>
+    <ul class="list-group">
+        @foreach (var (context, value) in panel)
+        {
+            <li class="list-group-item d-flex">
+                <div class="flex-grow-1">@context.Description</div>
+                <div>@(context.IsPercent ? $"{value * 100}%" : (int) value)</div>
+            </li>
+        }
+    </ul>
+</div>
+
+
+@code {
+    private IDictionary<EffectContext, decimal> panel = null!;
+
+        public const string Title = "面板總覽";
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        InfoService.SetTitle(nameof(AccessorySetting), Title);
+        panel = PanelCompute.Get();
+    }
+
+    public void Dispose() { InfoService.SetTitle(nameof(AccessorySetting), null); }
+}

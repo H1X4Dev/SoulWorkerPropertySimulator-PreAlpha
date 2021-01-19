@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoulWorkerPropertySimulator.Data", "SoulWorkerPropertySimulator.Data\SoulWorkerPropertySimulator.Data.csproj", "{5267C7C7-9265-4ED2-9DDE-1C3A7D997BCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoulWorkerPropertySimulator.Web", "SoulWorkerPropertySimulator.Web\SoulWorkerPropertySimulator.Web.csproj", "{A387CBA9-65C0-42B7-8EC6-744B40400EA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoulWorkerPropertySimulator.Web", "SoulWorkerPropertySimulator.Web\SoulWorkerPropertySimulator.Web.csproj", "{A387CBA9-65C0-42B7-8EC6-744B40400EA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
