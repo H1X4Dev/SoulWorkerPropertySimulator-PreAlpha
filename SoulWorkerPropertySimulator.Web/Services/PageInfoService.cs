@@ -6,15 +6,30 @@ namespace SoulWorkerPropertySimulator.Web.Services
     {
         event Action<string?>? OnTitleChange;
         event Action<string?>? OnBottomChange;
-        void                   SetTitle(string?  name);
-        void                   SetBottom(string? html);
+        void                   SetTitle(string  caller, string? name);
+        void                   SetBottom(string caller, string? html);
     }
 
     public class PageInfoService : IPageInfoService
     {
         public event Action<string?>? OnTitleChange;
         public event Action<string?>? OnBottomChange;
-        public void                   SetTitle(string?  name) => OnTitleChange?.Invoke(name);
-        public void                   SetBottom(string? html) => OnBottomChange?.Invoke(html);
+        private string?               _lastCaller;
+
+        public void SetTitle(string caller, string? name)
+        {
+            if (name == null && (!_lastCaller?.Equals(caller) ?? false)) { return; }
+
+            _lastCaller = caller;
+            OnTitleChange?.Invoke(name);
+        }
+
+        public void SetBottom(string caller, string? html)
+        {
+            if (html == null && (!_lastCaller?.Equals(caller) ?? false)) { return; }
+
+            _lastCaller = caller;
+            OnBottomChange?.Invoke(html);
+        }
     }
 }

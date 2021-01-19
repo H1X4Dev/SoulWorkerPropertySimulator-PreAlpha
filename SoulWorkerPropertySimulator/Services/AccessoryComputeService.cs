@@ -16,15 +16,13 @@ namespace SoulWorkerPropertySimulator.Services
 
     internal class AccessoryComputeService : ComputeServiceBase<AccessorySetEffect>, IAccessoryComputeService
     {
-        private readonly IList<Accessory>          _accessories;
-        private readonly IDataProvideService       _provider;
-        private readonly IList<AccessorySetEffect> _sets;
+        private readonly IList<Accessory>    _accessories;
+        private readonly IDataProvideService _provider;
 
         public AccessoryComputeService(IDataProvideService provider)
         {
             _provider    = provider;
             _accessories = new List<Accessory>();
-            _sets        = new List<AccessorySetEffect>();
         }
 
         public IEnumerable<Accessory> Get() => _accessories.Where(x => x != null).ToList();
@@ -41,26 +39,21 @@ namespace SoulWorkerPropertySimulator.Services
 
         public void Change(IReadOnlyCollection<Accessory> accessories)
         {
-            var grouping = accessories.GroupBy(x => x.Field).ToList();
-            if (grouping.Where(x => x.Key != AccessoryField.Ring).Any(x => x.Count() > 1) ||
-                (grouping.FirstOrDefault(x => x.Key == AccessoryField.Ring)?.Count() ?? 3) > 2)
-            {
-                throw new IndexOutOfRangeException();
-            }
+            var fields = accessories.GroupBy(x => x.Field).ToList();
 
             var old = new List<Accessory>();
-            foreach (var accessory in accessories)
+            foreach (var field in fields)
             {
-                old.AddRange(_accessories.Where(x => x.Field == accessory.Field));
+                old.AddRange(_accessories.Where(x => x.Field == field.Key));
                 foreach (var a in old) { _accessories.Remove(a); }
             }
 
             foreach (var accessory in accessories) { _accessories.Add(accessory); }
 
-
-            var (setBefore, setAfter) = ProcessSetAffect();
+            var (setBefore, setAfter, changed) = ProcessSetAffect();
             NotifyChange(ComputeAffect(old.SelectMany(x => x.Effects).Concat(setBefore.SelectMany(x => x.Effects)),
                 accessories.SelectMany(x => x.Effects).Concat(setAfter.SelectMany(x => x.Effects))));
+            if (changed) { NotifySetChange(); }
         }
 
         public void Clear(AccessoryField field)
@@ -70,40 +63,43 @@ namespace SoulWorkerPropertySimulator.Services
 
             before.ForEach(x => _accessories.Remove(x));
 
-            var (setBefore, setAfter) = ProcessSetAffect();
+            var (setBefore, setAfter, changed) = ProcessSetAffect();
             NotifyChange(ComputeAffect(before.SelectMany(x => x.Effects).Concat(setBefore.SelectMany(x => x.Effects)),
                 setAfter.SelectMany(x => x.Effects)));
+            if (changed) { NotifySetChange(); }
         }
 
-        private (ICollection<AccessorySetEffect> Before, ICollection<AccessorySetEffect> After) ProcessSetAffect()
+        private (ICollection<AccessorySetEffect> Before, ICollection<AccessorySetEffect> After, bool HasChanged)
+            ProcessSetAffect()
         {
-            var (setBefore, setAfter) = ComputeSetAffect();
+            var (setBefore, setAfter, changed) = ComputeSetAffect();
 
-            _sets.Clear();
-            foreach (var x in setAfter) { _sets.Add(x); }
+            Sets.Clear();
+            foreach (var x in setAfter) { Sets.Add(x); }
 
-            return (setBefore, setAfter);
+            return (setBefore, setAfter, changed);
         }
 
-        private (ICollection<AccessorySetEffect> Before, ICollection<AccessorySetEffect> After) ComputeSetAffect()
+        private (ICollection<AccessorySetEffect> Before, ICollection<AccessorySetEffect> After, bool HasChanged)
+            ComputeSetAffect()
         {
-            var before = _sets.ToList();
+            var before = Sets.ToList();
             var sets   = _provider.GetAccessorySetEffects();
             var data   = _accessories.Where(x => x != null).GroupBy(x => x.SetName);
 
-            var list = new List<AccessorySetEffect?>();
+            var after = new List<AccessorySetEffect>();
             foreach (var set in data)
             {
                 var effect =
                     sets.FirstOrDefault(x => x.Name.Equals(set.Key, StringComparison.InvariantCultureIgnoreCase));
                 if (effect != null) { effect = effect with {Step = set.Select(x => x.Name).Distinct().Count()}; }
 
-                if (!effect?.Effects.Any() ?? false) { list.Add(effect); }
+                if (effect?.Effects.Any() ?? false) { after.Add(effect!); }
             }
 
-            ICollection<AccessorySetEffect> after = list!;
+            var changed = before.Count != after.Count || before.Any(x => !after.Contains(x));
 
-            return (before, after);
+            return (before, after, changed);
         }
     }
 }

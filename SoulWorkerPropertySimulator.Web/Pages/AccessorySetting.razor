@@ -1,0 +1,83 @@
+﻿@page "/accessory"
+@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Web.Services
+@using System.Text
+@inject IAccessoryComputeService AccessoryCompute
+@inject IPageInfoService InfoService
+@implements IDisposable
+
+<div>
+    <CascadingValue Name="Parents" Value="this" IsFixed="true">
+        @foreach (var (field, count) in _fields)
+        {
+            if (count == 1)
+            {
+                <AccessoryPicker NotifyUpdate="Update" Field="field" DefaultAccessory="Default.FirstOrDefault(x => x.Field == field)"/>
+            }
+            else
+            {
+                var d = Default.Where(x => x.Field == field).ToList();
+                for (var i = 0; i < count; i++)
+                {
+                    if (d.Count > i)
+                    {
+                        <AccessoryPicker NotifyUpdate="Update" Field="field" DefaultAccessory="d[i]"/>
+                    }
+                    else
+                    {
+                        <AccessoryPicker NotifyUpdate="Update" Field="field"/>
+                    }
+                }
+            }
+        }
+    </CascadingValue>
+</div>
+
+@code {
+
+        private const string First = @"<ul class=""list-group list-group-horizontal list-group-flush justify-content-evenly""><li class=""list-group list-group-horizontal"">";
+        private const string Last = "</li></ul>";
+
+    private readonly IReadOnlyDictionary<AccessoryField, int> _fields = new Dictionary<AccessoryField, int> {{AccessoryField.Amulet, 1}, {AccessoryField.Earrings, 1}, {AccessoryField.Ring, 2}};
+
+        public const string Title = "飾品";
+
+    private ICollection<Accessory> Default { get; set; } = null!;
+
+    public ICollection<AccessoryPicker> Pickers { get; } = new List<AccessoryPicker>();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        AccessoryCompute.OnSetChange += sets => InfoService.SetBottom(nameof(AccessorySetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
+        Default = AccessoryCompute.Get().ToList();
+        InfoService.SetTitle(nameof(AccessorySetting), Title);
+        InfoService.SetBottom(nameof(AccessorySetting), GetSetDescription(AccessoryCompute.GetSet().ToList()));
+    }
+
+    public void Update(AccessoryField field)
+    {
+        var accessories = Pickers.Select(x => x.Item).Where(x => x != null && x.Field == field).ToList();
+        if (!accessories.Any()) { AccessoryCompute.Clear(field); }
+        else
+        { AccessoryCompute.Change(accessories!); }
+    }
+
+    public void Dispose()
+    {
+        InfoService.SetTitle(nameof(AccessorySetting), null);
+        InfoService.SetBottom(nameof(AccessorySetting), null);
+    }
+
+    private static string? GetSetDescription(IReadOnlyCollection<AccessorySetEffect> sets)
+    {
+        if (!sets.Any()) { return string.Empty; }
+        var builder = new StringBuilder();
+        builder.Append(First);
+        foreach (var set in sets) { builder.Append($"{set.Name}: {set.Step}件效果"); }
+        builder.Append(Last);
+        return builder.ToString();
+    }
+
+}

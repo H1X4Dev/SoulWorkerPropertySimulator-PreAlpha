@@ -1,0 +1,101 @@
+﻿@using SoulWorkerPropertySimulator.Extensions
+@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Web.Pages
+@implements IDisposable
+@inject IDataProvideService Data
+@inject IAccessoryComputeService AccessoryCompute
+
+@if (Options.Any())
+{
+    <div class="card mb-3">
+        <div class="card-header d-flex align-items-center">
+            <div>@Field.GetDescription()</div>
+            <div class="flex-grow-1 ms-2">
+                <select class="form-select" @bind="Selected">
+                    <option></option>
+                    @foreach (var item in Options)
+                    {
+                        <option value="@item.GetHashCode()">@item.FullName</option>
+                    }
+                </select>
+            </div>
+        </div>
+        @if (SelectedBlueprint != null)
+        {
+            <EffectsCreator IsFlex="true" @ref="_effectsCreator" NotifyUpdate="Update" Blueprint="SelectedBlueprint" DefaultEffects="DefaultAccessory?.SelectedEffect"/>
+        }
+    </div>
+}
+
+@code
+{
+    private AccessorySetting? _parents;
+
+    [CascadingParameter(Name = nameof(Parents))]
+    public AccessorySetting? Parents
+    {
+        get => _parents;
+        set
+        {
+            _parents?.Pickers.Remove(this);
+            _parents = value;
+            value?.Pickers.Add(this);
+        }
+    }
+
+    [Parameter]
+    public EventCallback<AccessoryField> NotifyUpdate { get; set; }
+
+    [Parameter]
+    public AccessoryField Field { get; set; }
+
+    [Parameter]
+    public Accessory? DefaultAccessory { get; set; }
+
+    private IReadOnlyCollection<AccessoryBlueprint> Options { get; set; } = null!;
+
+    private int? _selected;
+
+    public AccessoryBlueprint? SelectedBlueprint
+    {
+        set => Selected = value?.GetHashCode();
+        get => Options.FirstOrDefault(x => x.GetHashCode() == _selected);
+    }
+
+    private int? Selected
+    {
+        get => _selected;
+        set
+        {
+            if (_selected == value) { return; }
+            _selected = value;
+            Update();
+        }
+    }
+
+    private EffectsCreator? _effectsCreator;
+
+    public Accessory? Item
+    {
+        get
+        {
+            try { return _effectsCreator == null ? null : SelectedBlueprint?.Create(_effectsCreator.Effects); }
+            catch (InvalidOperationException) {
+                return null;
+            }
+        }
+    }
+
+    public void Update() => NotifyUpdate.InvokeAsync(Field);
+
+    protected override void OnInitialized()
+    {
+        base.OnInitializedAsync();
+        Options = Data.GetAccessoryBlueprints(Field).ToList();
+
+        if (DefaultAccessory != null) { _selected = DefaultAccessory.Blueprint.GetHashCode(); }
+    }
+
+    public void Dispose() => Parents?.Pickers.Remove(this);
+}

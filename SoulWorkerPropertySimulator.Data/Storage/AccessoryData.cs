@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SoulWorkerPropertySimulator.Models;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
@@ -38,7 +35,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(new(Property.MoneyVolumeRateEnemy), .02m, .08m),
                         new(new(Property.SoulNovaVolumeRate), .01m, .04m),
                         new(new(Property.ExtraDamageRateAir), .02m, .12m),
-                        new(new(Property.ExtraDamageRateFall), .02m, .12m),
+                        new(new(Property.ExtraDamageRateFall), .02m, .12m)
                     },
                     4,
                     "暮光"),
@@ -59,7 +56,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(new(Property.MoneyVolumeRateEnemy), .02m, .08m),
                         new(new(Property.SoulNovaVolumeRate), .01m, .04m),
                         new(new(Property.ExtraDamageRateAir), .02m, .12m),
-                        new(new(Property.ExtraDamageRateFall), .02m, .12m),
+                        new(new(Property.ExtraDamageRateFall), .02m, .12m)
                     },
                     4,
                     "暮光")
@@ -80,7 +77,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new(new(Property.DamageReductionRatePartialDamage), .02m, .12m),
                     new(new(Property.ExpVolumeRateEnemy), .02m, .15m),
                     new(new(Property.MoneyVolumeRateEnemy), .02m, .08m),
-                    new(new(Property.SoulNovaVolumeRate), .01m, .04m),
+                    new(new(Property.SoulNovaVolumeRate), .01m, .04m)
                 },
                 4,
                 "暮光");

@@ -13,7 +13,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 
             return _armorSetEffectResult = new List<ArmorSetEffect>
             {
-                new("暮光",
+                new("進階暮光",
                     new Dictionary<int, IReadOnlyCollection<Effect>>
                     {
                         {

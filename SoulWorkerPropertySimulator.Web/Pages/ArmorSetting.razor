@@ -28,21 +28,21 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        ArmorCompute.OnSetChange += sets => InfoService.SetBottom(GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
+        ArmorCompute.OnSetChange += sets => InfoService.SetBottom(nameof(ArmorSetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
         Default = ArmorCompute.Get().ToList();
-        InfoService.SetTitle(Title);
-        InfoService.SetBottom(GetSetDescription(ArmorCompute.GetSet().ToList()));
+        InfoService.SetTitle(nameof(ArmorSetting), Title);
+        InfoService.SetBottom(nameof(ArmorSetting), GetSetDescription(ArmorCompute.GetSet().ToList()));
     }
 
     public void Dispose()
     {
-        InfoService.SetTitle(null);
-        InfoService.SetBottom(null);
+        InfoService.SetTitle(nameof(ArmorSetting), null);
+        InfoService.SetBottom(nameof(ArmorSetting), null);
     }
 
-    private static string? GetSetDescription(IReadOnlyCollection<ArmorSetEffect> sets)
+    private static string GetSetDescription(IReadOnlyCollection<ArmorSetEffect> sets)
     {
-        if (!sets.Any()) { return null; }
+        if (!sets.Any()) { return string.Empty; }
         var builder = new StringBuilder();
         builder.Append(First);
         foreach (var set in sets) { builder.Append($"{set.Name}: {set.Step}件效果"); }
