@@ -5,7 +5,7 @@ using SoulWorkerPropertySimulator.Models;
 
 namespace SoulWorkerPropertySimulator.Services
 {
-    public interface IArmorComputeService : IComputeService
+    public interface IArmorComputeService : IComputeService<ArmorSetEffect>
     {
         IEnumerable<Armor> Get();
         Armor?             Get(ArmorField    field);
@@ -16,17 +16,15 @@ namespace SoulWorkerPropertySimulator.Services
         void               Clear(ArmorField  field);
     }
 
-    internal class ArmorComputeService : ComputeServiceBase, IArmorComputeService
+    internal class ArmorComputeService : ComputeServiceBase<ArmorSetEffect>, IArmorComputeService
     {
         private readonly IDictionary<ArmorField, Armor?> _armors;
-        private readonly IDataProvideService             _provider;
-        private readonly IList<ArmorSetEffect>           _sets;
+        private readonly IDataProvideService             _data;
 
-        public ArmorComputeService(IDataProvideService provider)
+        public ArmorComputeService(IDataProvideService data)
         {
-            _provider = provider;
-            _armors   = new Dictionary<ArmorField, Armor?>();
-            _sets     = new List<ArmorSetEffect>();
+            _data   = data;
+            _armors = new Dictionary<ArmorField, Armor?>();
         }
 
         public IEnumerable<Armor> Get()
@@ -51,10 +49,11 @@ namespace SoulWorkerPropertySimulator.Services
 
             _armors[item.Field] = item;
 
-            var (setBefore, setAfter) = ProcessSetAffect();
+            var (setBefore, setAfter, changed) = ProcessSetAffect();
             NotifyChange(ComputeAffect(
                 (before?.Effects ?? Array.Empty<Effect>()).Concat(setBefore.SelectMany(x => x.Effects)),
                 item.Effects.Concat(setAfter.SelectMany(x => x.Effects))));
+            if (changed) { NotifySetChange(); }
         }
 
         public void Change(ArmorField field, int step)
@@ -65,9 +64,10 @@ namespace SoulWorkerPropertySimulator.Services
             var after  = _armors[field]! with {Step = step};
             _armors[field] = after;
 
-            var (setBefore, setAfter) = ProcessSetAffect();
+            var (setBefore, setAfter, changed) = ProcessSetAffect();
             NotifyChange(ComputeAffect(before.Effects.Concat(setBefore.SelectMany(x => x.Effects)),
                 after.Effects.Concat(setAfter.SelectMany(x => x.Effects))));
+            if (changed) { NotifySetChange(); }
         }
 
         public void Change(ArmorField field, Tag? tag)
@@ -78,9 +78,10 @@ namespace SoulWorkerPropertySimulator.Services
             var after  = _armors[field]! with {Tag = tag};
             _armors[field] = after;
 
-            var (setBefore, setAfter) = ProcessSetAffect();
+            var (setBefore, setAfter, changed) = ProcessSetAffect();
             NotifyChange(ComputeAffect(before.Effects.Concat(setBefore.SelectMany(x => x.Effects)),
                 after.Effects.Concat(setAfter.SelectMany(x => x.Effects))));
+            if (changed) { NotifySetChange(); }
         }
 
         public void Change(ArmorField field, IReadOnlyCollection<Plugin> plugins)
@@ -94,9 +95,10 @@ namespace SoulWorkerPropertySimulator.Services
             var after = _armors[field]! with {Plugins = plugins};
             _armors[field] = after;
 
-            var (setBefore, setAfter) = ProcessSetAffect();
+            var (setBefore, setAfter, changed) = ProcessSetAffect();
             NotifyChange(ComputeAffect(before.Effects.Concat(setBefore.SelectMany(x => x.Effects)),
                 after.Effects.Concat(setAfter.SelectMany(x => x.Effects))));
+            if (changed) { NotifySetChange(); }
         }
 
         public void Clear(ArmorField field)
@@ -106,33 +108,42 @@ namespace SoulWorkerPropertySimulator.Services
             var before = _armors[field]!;
             _armors[field] = null;
 
-            var (setBefore, setAfter) = ProcessSetAffect();
+            var (setBefore, setAfter, changed) = ProcessSetAffect();
             NotifyChange(ComputeAffect(before.Effects.Concat(setBefore.SelectMany(x => x.Effects)),
                 setAfter.SelectMany(x => x.Effects)));
+            if (changed) { NotifySetChange(); }
         }
 
-        private (ICollection<ArmorSetEffect> Before, ICollection<ArmorSetEffect> After) ProcessSetAffect()
+        private (ICollection<ArmorSetEffect> Before, ICollection<ArmorSetEffect> After, bool HasChanged)
+            ProcessSetAffect()
         {
-            var (setBefore, setAfter) = ComputeSetAffect();
+            var (setBefore, setAfter, changed) = ComputeSetAffect();
 
-            _sets.Clear();
-            foreach (var x in setAfter) { _sets.Add(x); }
+            Sets.Clear();
+            foreach (var x in setAfter) { Sets.Add(x); }
 
-            return (setBefore, setAfter);
+            return (setBefore, setAfter, changed);
         }
 
-        private (ICollection<ArmorSetEffect> Before, ICollection<ArmorSetEffect> After) ComputeSetAffect()
+        private (ICollection<ArmorSetEffect> Before, ICollection<ArmorSetEffect> After, bool HasChanged)
+            ComputeSetAffect()
         {
-            var before = _sets.ToList();
-            var sets   = _provider.GetArmorSetEffects();
+            var before = Sets.ToList();
+            var sets   = _data.GetArmorSetEffects();
             var data   = _armors.Where(x => x.Value != null).GroupBy(x => x.Value!.SetName);
 
-            ICollection<ArmorSetEffect> after = (from grouping in data
-                                                 let effect = sets.FirstOrDefault(x => x.Name.Equals(grouping.Key))
-                                                 where effect != null
-                                                 select effect with {Step = grouping.Count()}).ToList()!;
+            var after = new List<ArmorSetEffect>();
+            foreach (var set in data)
+            {
+                var effect = sets.FirstOrDefault(x => x.Name.Equals(set.Key));
+                if (effect != null) { effect = effect with {Step = set.Count()}; }
 
-            return (before, after);
+                if (effect?.Effects.Any() ?? false) { after.Add(effect); }
+            }
+
+            var changed = before.Count != after.Count || before.Any(x => !after.Contains(x));
+
+            return (before, after, changed);
         }
     }
 }

@@ -79,7 +79,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {6, new Effect[] {new(new(Property.DefenseRate), .36m)}},
                     {9, new Effect[] {new(new(Property.ExtraDamageRateBoss), .03m)}}
                 },
-                "進階幕光",
+                "進階暮光",
                 new Effect[]
                 {
                     new(new(Property.SoulNovaVolumeRate), .3m),

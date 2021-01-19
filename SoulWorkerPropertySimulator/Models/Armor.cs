@@ -236,7 +236,7 @@ namespace SoulWorkerPropertySimulator.Models
         #endregion
     }
 
-    public record ArmorSetEffect : Item, IUpgradeable
+    public record ArmorSetEffect : Set, IUpgradeable
     {
         public ArmorSetEffect(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffects) : base(
             name,

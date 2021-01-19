@@ -46,7 +46,7 @@ namespace SoulWorkerPropertySimulator.Models
         public IReadOnlyCollection<Effect> SelectedEffect { get; }
     }
 
-    public record AccessorySetEffect : Item, IUpgradeable
+    public record AccessorySetEffect : Set, IUpgradeable
     {
         internal AccessorySetEffect(IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffect,
                                     string name,

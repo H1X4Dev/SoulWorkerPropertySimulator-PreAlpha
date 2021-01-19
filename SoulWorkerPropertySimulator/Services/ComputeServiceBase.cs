@@ -9,6 +9,11 @@ namespace SoulWorkerPropertySimulator.Services
         event Action<EffectContext, decimal>? OnChange;
     }
 
+    public interface IComputeService<out T> : IComputeService where T : Set
+    {
+        event Action<IReadOnlyCollection<T>>? OnSetChange;
+    }
+
     internal abstract class ComputeServiceBase
     {
         protected readonly IDictionary<EffectContext, decimal> Effect;
@@ -28,7 +33,11 @@ namespace SoulWorkerPropertySimulator.Services
         {
             var result = new Dictionary<EffectContext, decimal>();
 
-            foreach (var (effectContext, value) in before) { result.Add(effectContext, -value); }
+            foreach (var (effectContext, value) in before)
+            {
+                if (result.ContainsKey(effectContext)) { result[effectContext] -= value; }
+                else { result.Add(effectContext, -value); }
+            }
 
             foreach (var (effectContext, value) in after)
             {
@@ -51,5 +60,14 @@ namespace SoulWorkerPropertySimulator.Services
         }
 
         protected void Invoke(EffectContext context, decimal value) => OnChange?.Invoke(context, value);
+    }
+
+    internal abstract class ComputeServiceBase<T> : ComputeServiceBase, IComputeService<T> where T : Set
+    {
+        public event Action<IReadOnlyCollection<T>>? OnSetChange;
+        protected readonly List<T>                   Sets;
+
+        protected ComputeServiceBase() => Sets = new();
+        protected void NotifySetChange() => OnSetChange?.Invoke(Sets);
     }
 }

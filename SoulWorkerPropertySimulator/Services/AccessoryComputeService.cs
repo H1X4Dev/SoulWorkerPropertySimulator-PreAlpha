@@ -5,7 +5,7 @@ using SoulWorkerPropertySimulator.Models;
 
 namespace SoulWorkerPropertySimulator.Services
 {
-    public interface IAccessoryComputeService : IComputeService
+    public interface IAccessoryComputeService : IComputeService<AccessorySetEffect>
     {
         IEnumerable<Accessory?> Get();
         IEnumerable<Accessory?> Get(AccessoryField                    field);
@@ -14,7 +14,7 @@ namespace SoulWorkerPropertySimulator.Services
         void                    Change(IReadOnlyCollection<Accessory> accessories);
     }
 
-    internal class AccessoryComputeService : ComputeServiceBase, IAccessoryComputeService
+    internal class AccessoryComputeService : ComputeServiceBase<AccessorySetEffect>, IAccessoryComputeService
     {
         private readonly IList<Accessory>          _accessories;
         private readonly IDataProvideService       _provider;

@@ -22,6 +22,8 @@ namespace SoulWorkerPropertySimulator.Models
         public abstract IReadOnlyCollection<Effect> Effects { get; }
     }
 
+    public abstract record Set(string Name, Classify Classify, string? SetName = null) : Item(Name, Classify, SetName);
+
     public interface ICreatable<out TBlueprint> where TBlueprint : Blueprint
     {
         TBlueprint                         Blueprint      { get; }

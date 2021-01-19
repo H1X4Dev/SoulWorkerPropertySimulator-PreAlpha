@@ -16,7 +16,7 @@ namespace SoulWorkerPropertySimulator.Web
 
             builder.Services.AddScoped(sp => new HttpClient {BaseAddress = new(builder.HostEnvironment.BaseAddress)});
             builder.Services.AddSoulWorkerPropertySimulator().InjectData();
-            builder.Services.AddSingleton<IPageNameService, PageNameService>();
+            builder.Services.AddSingleton<IPageInfoService, PageInfoService>();
 
             await builder.Build().RunAsync();
         }

@@ -1,37 +1,44 @@
 ﻿@using SoulWorkerPropertySimulator.Web.Services
 @inherits LayoutComponentBase
-@inject IPageNameService NameService
+@inject IPageInfoService InfoService
 
 <div class="page">
     <div class="sidebar">
         <NavMenu/>
     </div>
 
-    <div class="main">
+    <div class="main position-relative">
         <div class="top-row px-4 justify-content-start">
             <h4 class="mb-0">@Title</h4>
         </div>
 
-        <div class="content px-4">
+        <div class="content px-4 position-relative">
             @Body
         </div>
-    </div>
 
-    @* <div class="panel"> *@
-    @*     <Panel /> *@
-    @* </div> *@
+        @if (Bottom != null)
+        {
+            <div class="card position-sticky bottom-0 px-4 py-3 bg-secondary text-light">@((MarkupString) Bottom)</div>
+        }
+    </div>
 </div>
 
 @code
 {
     private string? Title { get; set; }
+    private string? Bottom { get; set; }
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        NameService.OnChange += name =>
+        InfoService.OnTitleChange += title =>
         {
-            Title = name;
+            Title = title;
+            StateHasChanged();
+        };
+        InfoService.OnBottomChange += bottom =>
+        {
+            Bottom = bottom;
             StateHasChanged();
         };
     }
