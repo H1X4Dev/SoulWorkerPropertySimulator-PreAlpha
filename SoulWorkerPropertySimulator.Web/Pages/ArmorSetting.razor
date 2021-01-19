@@ -31,9 +31,14 @@
         ArmorCompute.OnSetChange += sets => InfoService.SetBottom(GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
         Default = ArmorCompute.Get().ToList();
         InfoService.SetTitle(Title);
+        InfoService.SetBottom(GetSetDescription(ArmorCompute.GetSet().ToList()));
     }
 
-    public void Dispose() => InfoService.SetTitle(null);
+    public void Dispose()
+    {
+        InfoService.SetTitle(null);
+        InfoService.SetBottom(null);
+    }
 
     private static string? GetSetDescription(IReadOnlyCollection<ArmorSetEffect> sets)
     {
