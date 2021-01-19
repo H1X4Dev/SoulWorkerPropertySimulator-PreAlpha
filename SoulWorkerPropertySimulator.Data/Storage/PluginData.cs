@@ -8,8 +8,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     {
         private static IReadOnlyCollection<PluginBlueprint>? _blueprints;
 
-        private static readonly IDictionary<PluginField, IReadOnlyCollection<PluginBlueprint>> PluginResult =
-            new Dictionary<PluginField, IReadOnlyCollection<PluginBlueprint>>();
+        private static readonly Dictionary<PluginField, IReadOnlyCollection<PluginBlueprint>> PluginResult = new();
 
         internal static IReadOnlyCollection<PluginBlueprint> Get(PluginField field)
         {

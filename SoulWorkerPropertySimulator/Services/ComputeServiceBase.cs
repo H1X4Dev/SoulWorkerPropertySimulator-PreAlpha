@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using SoulWorkerPropertySimulator.Models;
 
 namespace SoulWorkerPropertySimulator.Services
@@ -12,6 +13,7 @@ namespace SoulWorkerPropertySimulator.Services
     public interface IComputeService<out T> : IComputeService where T : Set
     {
         event Action<IReadOnlyCollection<T>>? OnSetChange;
+        IEnumerable<T>                        GetSet();
     }
 
     internal abstract class ComputeServiceBase
@@ -66,8 +68,8 @@ namespace SoulWorkerPropertySimulator.Services
     {
         public event Action<IReadOnlyCollection<T>>? OnSetChange;
         protected readonly List<T>                   Sets;
-
         protected ComputeServiceBase() => Sets = new();
-        protected void NotifySetChange() => OnSetChange?.Invoke(Sets);
+        public    IEnumerable<T> GetSet()          => Sets.ToList();
+        protected void           NotifySetChange() => OnSetChange?.Invoke(Sets);
     }
 }

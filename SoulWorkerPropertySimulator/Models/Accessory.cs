@@ -48,8 +48,8 @@ namespace SoulWorkerPropertySimulator.Models
 
     public record AccessorySetEffect : Set, IUpgradeable
     {
-        internal AccessorySetEffect(IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffect,
-                                    string name,
+        public AccessorySetEffect(string name,
+                                    IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffect,
                                     string? setName = null) : base(name, Classify.Accessory, setName)
         {
             StepEffects = stepEffect;

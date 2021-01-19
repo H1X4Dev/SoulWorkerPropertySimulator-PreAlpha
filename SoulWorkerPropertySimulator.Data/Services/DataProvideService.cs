@@ -11,18 +11,17 @@ namespace SoulWorkerPropertySimulator.Data.Services
     {
         public BroochesSetEffect GetBroochesSets(BroochesClassify classify) => throw new NotImplementedException();
 
-        public IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects() => throw new NotImplementedException();
+        public IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects() => AccessorySetData.Get();
 
         public IReadOnlyCollection<ArmorSetEffect> GetArmorSetEffects() => ArmorSetData.Get();
 
         public IReadOnlyCollection<BroochesD> GetBrooches(BroochesType type) =>
             BroochesData.Get().Where(x => x.Type == type).ToList();
 
-        public IReadOnlyCollection<ArmorBlueprint> GetArmorBlueprints(ArmorField field) =>
-            ArmorData.Get().Where(x => x.Field == field).ToList();
+        public IReadOnlyCollection<ArmorBlueprint> GetArmorBlueprints(ArmorField field) => ArmorData.Get(field);
 
         public IReadOnlyCollection<AccessoryBlueprint> GetAccessoryBlueprints(AccessoryField field) =>
-            throw new NotImplementedException();
+            AccessoryData.Get(field);
 
         public IReadOnlyCollection<PluginBlueprint> GetPluginBlueprints(PluginField field) => PluginData.Get(field);
 

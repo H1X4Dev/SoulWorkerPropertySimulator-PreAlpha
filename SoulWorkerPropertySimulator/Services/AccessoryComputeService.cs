@@ -7,11 +7,11 @@ namespace SoulWorkerPropertySimulator.Services
 {
     public interface IAccessoryComputeService : IComputeService<AccessorySetEffect>
     {
-        IEnumerable<Accessory?> Get();
-        IEnumerable<Accessory?> Get(AccessoryField                    field);
-        void                    Change(Accessory                      accessory);
-        void                    Clear(AccessoryField                  field);
-        void                    Change(IReadOnlyCollection<Accessory> accessories);
+        IEnumerable<Accessory> Get();
+        IEnumerable<Accessory> Get(AccessoryField                    field);
+        void                   Change(Accessory                      accessory);
+        void                   Clear(AccessoryField                  field);
+        void                   Change(IReadOnlyCollection<Accessory> accessories);
     }
 
     internal class AccessoryComputeService : ComputeServiceBase<AccessorySetEffect>, IAccessoryComputeService
@@ -27,9 +27,10 @@ namespace SoulWorkerPropertySimulator.Services
             _sets        = new List<AccessorySetEffect>();
         }
 
-        public IEnumerable<Accessory?> Get() => _accessories.ToList();
+        public IEnumerable<Accessory> Get() => _accessories.Where(x => x != null).ToList();
 
-        public IEnumerable<Accessory?> Get(AccessoryField field) => _accessories.Where(x => x?.Field == field);
+        public IEnumerable<Accessory> Get(AccessoryField field) =>
+            _accessories.Where(x => x != null && x.Field == field);
 
         public void Change(Accessory? newItem)
         {
@@ -90,12 +91,17 @@ namespace SoulWorkerPropertySimulator.Services
             var sets   = _provider.GetAccessorySetEffects();
             var data   = _accessories.Where(x => x != null).GroupBy(x => x.SetName);
 
-            ICollection<AccessorySetEffect> after = (from grouping in data
-                                                     let effect =
-                                                         sets.FirstOrDefault(x => x.Name.Equals(grouping.Key,
-                                                             StringComparison.InvariantCultureIgnoreCase))
-                                                     where effect != null
-                                                     select effect with {Step = grouping.Count()}).ToList()!;
+            var list = new List<AccessorySetEffect?>();
+            foreach (var set in data)
+            {
+                var effect =
+                    sets.FirstOrDefault(x => x.Name.Equals(set.Key, StringComparison.InvariantCultureIgnoreCase));
+                if (effect != null) { effect = effect with {Step = set.Select(x => x.Name).Distinct().Count()}; }
+
+                if (!effect?.Effects.Any() ?? false) { list.Add(effect); }
+            }
+
+            ICollection<AccessorySetEffect> after = list!;
 
             return (before, after);
         }

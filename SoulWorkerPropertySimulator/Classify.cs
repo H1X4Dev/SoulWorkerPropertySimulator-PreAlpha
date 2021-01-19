@@ -52,7 +52,7 @@ namespace SoulWorkerPropertySimulator
 
     public enum PluginField { Weapon, Gear }
 
-    public enum AccessoryField { Amulet, Earrings, Ring }
+    public enum AccessoryField { [Description("墜子")] Amulet, [Description("耳環")] Earrings, [Description("戒指")] Ring }
 
     public enum BroochesSeries
     {

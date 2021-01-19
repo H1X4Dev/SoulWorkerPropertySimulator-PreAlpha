@@ -13,7 +13,7 @@ namespace SoulWorkerPropertySimulator.Models
             SetName  = setName;
         }
 
-        public string   Name     { get; }
+        public string   Name     { get; init; }
         public string?  SetName  { get; }
         public Classify Classify { get; }
 

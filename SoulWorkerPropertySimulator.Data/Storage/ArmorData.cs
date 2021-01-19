@@ -1,15 +1,20 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using SoulWorkerPropertySimulator.Models;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class ArmorData
     {
-        private static IReadOnlyCollection<ArmorBlueprint>? _armorBlueprintResult;
+        private static IReadOnlyCollection<ArmorBlueprint>? _blueprints;
 
-        internal static IReadOnlyCollection<ArmorBlueprint> Get()
+        private static readonly Dictionary<ArmorField, IReadOnlyCollection<ArmorBlueprint>> _result = new();
+
+        internal static IReadOnlyCollection<ArmorBlueprint> Get(ArmorField field)
         {
-            if (_armorBlueprintResult != null) { return _armorBlueprintResult; }
+            if (_result.ContainsKey(field)) { return _result[field]; }
+
+            if (_blueprints != null) { return _result[field] = _blueprints.Where(x => x.Field == field).ToList(); }
 
             var result = new List<ArmorBlueprint>();
             var weapon68 = new ArmorBlueprint("進階暮光流浪者",
@@ -43,15 +48,15 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new(new(Property.Accuracy), -50)
                 });
             result.Add(weapon68);
-            result.Add(weapon68 with {Name = "進階暮光平流"});
-            result.Add(weapon68 with {Name = "進階暮光榮耀"});
-            result.Add(weapon68 with {Name = "進階暮光憐憫頌"});
-            result.Add(weapon68 with {Name = "進階暮光細緻"});
-            result.Add(weapon68 with {Name = "進階暮光廢墟"});
-            result.Add(weapon68 with {Name = "進階暮光追跡"});
-            result.Add(weapon68 with {Name = "進階暮光畸變"});
+            result.Add(weapon68 with {Name = "進階暮光激鬥者"});
+            result.Add(weapon68 with {Name = "進階暮光收割者"});
+            result.Add(weapon68 with {Name = "進階暮光慈悲者"});
+            result.Add(weapon68 with {Name = "進階暮光修行者"});
+            result.Add(weapon68 with {Name = "進階暮光傾訴者"});
+            result.Add(weapon68 with {Name = "進階暮光追蹤者"});
+            result.Add(weapon68 with {Name = "進階暮光畸變者"});
 
-            var gear68 = new ArmorBlueprint("鳶尾戰盔",
+            var gear68 = new ArmorBlueprint("鳶尾花頭盔",
                 ArmorField.Head,
                 68,
                 ArmorRare.Legendary,
@@ -89,7 +94,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             result.Add(gear68);
             result.Add(gear68 with
             {
-                Name = "光輪護肩",
+                Name = "海洛伊護肩",
                 Field = ArmorField.Shoulder,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
@@ -106,7 +111,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             });
             result.Add(gear68 with
             {
-                Name = "忠心護甲",
+                Name = "之心胸甲",
                 Field = ArmorField.Chest,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
@@ -125,7 +130,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             });
             result.Add(gear68 with
             {
-                Name = "代償護腿",
+                Name = "歌頌護腿",
                 Field = ArmorField.Leg,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
@@ -144,7 +149,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 }
             });
 
-            return _armorBlueprintResult = result;
+            _blueprints = result;
+            return _result[field] = _blueprints.Where(x => x.Field == field).ToList();
         }
     }
 }
