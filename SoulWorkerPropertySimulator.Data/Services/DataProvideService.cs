@@ -15,8 +15,8 @@ namespace SoulWorkerPropertySimulator.Data.Services
 
         public IReadOnlyCollection<ArmorSetEffect> GetArmorSetEffects() => ArmorSetData.Get();
 
-        public IReadOnlyCollection<BroochesD> GetBrooches(BroochesType type) =>
-            BroochesData.Get().Where(x => x.Type == type).ToList();
+        public IReadOnlyCollection<BroochesD> GetBrooches(BroochesType type) => throw new NotImplementedException();
+        // BroochesData.Get().Where(x => x.Type == type).ToList();
 
         public IReadOnlyCollection<ArmorBlueprint> GetArmorBlueprints(ArmorField field) => ArmorData.Get(field);
 

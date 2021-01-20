@@ -12,8 +12,8 @@ namespace SoulWorkerPropertySimulator.Models
         private readonly BroochesRare                                                   _rare;
 
         public Brooches(string name,
-                        BroochesType type,
                         BroochesSeries series,
+                        BroochesType type,
                         IReadOnlyDictionary<BroochesRare, IReadOnlyCollection<Effect>> effects,
                         BroochesRare rare = BroochesRare.Tera) : base(name, Classify.Brooches)
         {
@@ -37,7 +37,7 @@ namespace SoulWorkerPropertySimulator.Models
             }
         }
 
-        public BroochesSeries Series { get; }
+        public BroochesSeries Series { get; init; }
         public BroochesType   Type   { get; }
     }
 

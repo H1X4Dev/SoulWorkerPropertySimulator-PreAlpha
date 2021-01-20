@@ -8,76 +8,76 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         private static IReadOnlyCollection<Character>? _result;
 
         // All character's accuracy now based Erwin's
-        private static readonly int[] AccuracyList =
+        private static readonly Effect[] AccuracyList =
         {
-            804, //1
-            808,
-            811,
-            815,
-            819, //5
-            823,
-            826,
-            830,
-            835,
-            839, //10
-            842,
-            846,
-            850,
-            854,
-            857, //15
-            861,
-            866,
-            870,
-            873,
-            877, //20
-            881,
-            885,
-            888,
-            892,
-            897, //25
-            901,
-            904,
-            908,
-            912,
-            916, //30
-            919,
-            923,
-            928,
-            932,
-            935, //35
-            939,
-            943,
-            947,
-            950,
-            954, //40
-            959,
-            963,
-            966,
-            970,
-            974, //45
-            978,
-            981,
-            985,
-            990,
-            994, //50
-            997,
-            1001,
-            1005,
-            1009,
-            1012, //55
-            1016,
-            1021,
-            1025,
-            1028,
-            1032, //60
-            1036,
-            1040,
-            1043,
-            1047,
-            1051, //65
-            1055,
-            1058,
-            1062
+            new(Static.Accuracy, 804), //1
+            new(Static.Accuracy, 808),
+            new(Static.Accuracy, 811),
+            new(Static.Accuracy, 815),
+            new(Static.Accuracy, 819), //5
+            new(Static.Accuracy, 823),
+            new(Static.Accuracy, 826),
+            new(Static.Accuracy, 830),
+            new(Static.Accuracy, 835),
+            new(Static.Accuracy, 839), //10
+            new(Static.Accuracy, 842),
+            new(Static.Accuracy, 846),
+            new(Static.Accuracy, 850),
+            new(Static.Accuracy, 854),
+            new(Static.Accuracy, 857), //15
+            new(Static.Accuracy, 861),
+            new(Static.Accuracy, 866),
+            new(Static.Accuracy, 870),
+            new(Static.Accuracy, 873),
+            new(Static.Accuracy, 877), //20
+            new(Static.Accuracy, 881),
+            new(Static.Accuracy, 885),
+            new(Static.Accuracy, 888),
+            new(Static.Accuracy, 892),
+            new(Static.Accuracy, 897), //25
+            new(Static.Accuracy, 901),
+            new(Static.Accuracy, 904),
+            new(Static.Accuracy, 908),
+            new(Static.Accuracy, 912),
+            new(Static.Accuracy, 916), //30
+            new(Static.Accuracy, 919),
+            new(Static.Accuracy, 923),
+            new(Static.Accuracy, 928),
+            new(Static.Accuracy, 932),
+            new(Static.Accuracy, 935), //35
+            new(Static.Accuracy, 939),
+            new(Static.Accuracy, 943),
+            new(Static.Accuracy, 947),
+            new(Static.Accuracy, 950),
+            new(Static.Accuracy, 954), //40
+            new(Static.Accuracy, 959),
+            new(Static.Accuracy, 963),
+            new(Static.Accuracy, 966),
+            new(Static.Accuracy, 970),
+            new(Static.Accuracy, 974), //45
+            new(Static.Accuracy, 978),
+            new(Static.Accuracy, 981),
+            new(Static.Accuracy, 985),
+            new(Static.Accuracy, 990),
+            new(Static.Accuracy, 994), //50
+            new(Static.Accuracy, 997),
+            new(Static.Accuracy, 1_001),
+            new(Static.Accuracy, 1_005),
+            new(Static.Accuracy, 1_009),
+            new(Static.Accuracy, 1_012), //55
+            new(Static.Accuracy, 1_016),
+            new(Static.Accuracy, 1_021),
+            new(Static.Accuracy, 1_025),
+            new(Static.Accuracy, 1_028),
+            new(Static.Accuracy, 1_032), //60
+            new(Static.Accuracy, 1_036),
+            new(Static.Accuracy, 1_040),
+            new(Static.Accuracy, 1_043),
+            new(Static.Accuracy, 1_047),
+            new(Static.Accuracy, 1_051), //65
+            new(Static.Accuracy, 1_055),
+            new(Static.Accuracy, 1_058),
+            new(Static.Accuracy, 1_062)
         };
 
         public static IReadOnlyCollection<Character> Get()
