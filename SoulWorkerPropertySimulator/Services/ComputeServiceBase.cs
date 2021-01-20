@@ -47,6 +47,8 @@ namespace SoulWorkerPropertySimulator.Services
                 else { result.Add(effectContext, value); }
             }
 
+            result.Where(x => x.Value == 0).Select(x => x.Key).ToList().ForEach(x => result.Remove(x));
+
             return result;
         }
 
@@ -66,10 +68,10 @@ namespace SoulWorkerPropertySimulator.Services
 
     internal abstract class ComputeServiceBase<T> : ComputeServiceBase, IComputeService<T> where T : Set
     {
-        public event Action<IReadOnlyCollection<T>>? OnSetChange;
-        protected readonly List<T>                   Sets;
+        protected readonly List<T> Sets;
         protected ComputeServiceBase() => Sets = new();
-        public    IEnumerable<T> GetSet()          => Sets.ToList();
-        protected void           NotifySetChange() => OnSetChange?.Invoke(Sets);
+        public event Action<IReadOnlyCollection<T>>? OnSetChange;
+        public    IEnumerable<T>                     GetSet()          => Sets.ToList();
+        protected void                               NotifySetChange() => OnSetChange?.Invoke(Sets);
     }
 }

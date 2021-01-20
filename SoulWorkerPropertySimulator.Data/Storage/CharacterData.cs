@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using SoulWorkerPropertySimulator.Models;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
@@ -10,34 +6,6 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     internal static partial class CharacterData
     {
         private static IReadOnlyCollection<Character>? _result;
-
-        private static readonly EffectContext HP       = new(Property.HP);
-        private static readonly EffectContext Attack   = new(Property.Attack);
-        private static readonly EffectContext CDamage  = new(Property.CriticalDamage);
-        private static readonly EffectContext Evade    = new(Property.Evade);
-        private static readonly EffectContext Defense  = new(Property.Defense);
-        private static readonly EffectContext Accuracy = new(Property.Accuracy);
-
-        public static IReadOnlyCollection<Character> Get()
-        {
-            if (_result != null) { return _result; }
-
-            var result = new List<Character>
-            {
-                Haru,
-                Erwin,
-                Lily,
-                Stella,
-                Jin,
-                Iris,
-                Chii,
-                Erwin,
-                Lee
-            };
-
-            _result = result;
-            return _result;
-        }
 
         // All character's accuracy now based Erwin's
         private static readonly int[] AccuracyList =
@@ -111,5 +79,26 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             1058,
             1062
         };
+
+        public static IReadOnlyCollection<Character> Get()
+        {
+            if (_result != null) { return _result; }
+
+            var result = new List<Character>
+            {
+                Haru,
+                Erwin,
+                Lily,
+                Stella,
+                Jin,
+                Iris,
+                Chii,
+                Erwin,
+                Lee
+            };
+
+            _result = result;
+            return _result;
+        }
     }
 }

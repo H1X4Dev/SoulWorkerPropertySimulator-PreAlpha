@@ -4,17 +4,17 @@ namespace SoulWorkerPropertySimulator.Models
 {
     public record Title : Item
     {
-        internal Title(string name, TitleField field, int index, IReadOnlyCollection<Effect> effects) : base(name,
+        public Title(string name, TitleField field, int id, IReadOnlyCollection<Effect> effects) : base(name,
             Classify.Character)
         {
-            Index   = index;
+            Id      = id;
             Field   = field;
             Effects = effects;
         }
 
         public override IReadOnlyCollection<Effect> Effects { get; }
 
-        public int        Index { get; }
+        public int        Id    { get; }
         public TitleField Field { get; }
     }
 }

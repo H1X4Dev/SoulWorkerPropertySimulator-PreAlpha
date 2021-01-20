@@ -27,9 +27,9 @@ namespace SoulWorkerPropertySimulator.Data.Services
 
         public IReadOnlyCollection<Tag> GetTags(TagField field) => TagData.Get(field);
 
-        public IReadOnlyCollection<Title> GetTitles(TitleField field) => throw new NotImplementedException();
+        public IReadOnlyCollection<Title> GetTitles(TitleField field) => TitleData.Get(field);
 
-        public IReadOnlyCollection<Character> GetCharacters() => throw new NotImplementedException();
+        public IReadOnlyCollection<Character> GetCharacters() => CharacterData.Get();
 
         public IReadOnlyCollection<Akasha> GetAkashas() => throw new NotImplementedException();
     }

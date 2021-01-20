@@ -1,13 +1,13 @@
 ﻿@page "/detail"
-@using SoulWorkerPropertySimulator.Services
-@using SoulWorkerPropertySimulator.Web.Services
 @inject IPanelComputeService PanelCompute
 @inject IPageInfoService InfoService
+@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Web.Services
 @implements IDisposable
 
 <div>
     <ul class="list-group">
-        @foreach (var (context, value) in Panel)
+        @foreach (var (context, value) in Panel.Where(x => x.Value != 0))
         {
             <li class="list-group-item d-flex">
                 <div class="flex-grow-1">@context.Description</div>
@@ -30,5 +30,5 @@
         Panel = PanelCompute.Get();
     }
 
-    public void Dispose() { InfoService.SetTitle(nameof(Detail), null); }
+    public void Dispose() => InfoService.SetTitle(nameof(Detail), null);
 }

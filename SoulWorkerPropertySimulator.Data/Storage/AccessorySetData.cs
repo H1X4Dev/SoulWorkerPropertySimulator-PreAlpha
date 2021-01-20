@@ -16,23 +16,13 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("暮光",
                     new Dictionary<int, IReadOnlyCollection<Effect>>
                     {
-                        {
-                            2,
-                            new Effect[] {new(new(Property.Stamina), 17), new(new(Property.CriticalDamage), 2_200)}
-                        },
-                        {
-                            3,
-                            new Effect[]
-                            {
-                                new(new(Property.Accuracy), 370), new(new(Property.ExtraDamageRateBoss), .35m)
-                            }
-                        },
+                        {2, new Effect[] {new(Static.Stamina, 17), new(Static.CriticalDamage, 2_200)}},
+                        {3, new Effect[] {new(Static.Accuracy, 370), new(Static.ExtraDamageRateBoss, .35m)}},
                         {
                             4,
                             new Effect[]
                             {
-                                new(new(Property.CooldownShorterRate), .8m),
-                                new(new(Property.DefenseBreakRate), .12m)
+                                new(Static.CooldownShorterRate, .8m), new(Static.DefenseBreakRate, .12m)
                             }
                         }
                     })

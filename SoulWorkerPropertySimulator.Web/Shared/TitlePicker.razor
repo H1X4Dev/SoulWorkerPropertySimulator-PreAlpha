@@ -1,0 +1,71 @@
+﻿@using SoulWorkerPropertySimulator.Extensions
+@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Services
+@inject IDataProvideService Data
+@inject ICharacterComputeService CharacterCompute
+
+<div class="input-group mb-3">
+    <label class="input-group-text">@Field.GetDescription()</label>
+    <select class="form-select border-secondary w-25 flex-grow-0" style="min-width: 5rem; z-index: 1;" @bind="SelectedId">
+        <option></option>
+        @foreach (var item in Options)
+        {
+            <option value="@item.Id">@item.Id</option>
+        }
+    </select>
+    <select class="form-select" @bind="SelectedHash">
+        <option></option>
+        @foreach (var item in Options)
+        {
+            <option value="@item.GetHashCode()">@item.Name</option>
+        }
+    </select>
+</div>
+
+@code {
+
+    [Parameter]
+    public TitleField Field { get; set; }
+
+    [Parameter]
+    public Title? DefaultTitle { get; set; }
+
+    private IReadOnlyCollection<Title> Options { get; set; } = null!;
+
+    private int? _selected;
+
+    private int? SelectedHash
+    {
+        get => _selected;
+        set
+        {
+            _selected = value;
+            Update();
+        }
+    }
+
+    private int? SelectedId
+    {
+        get => Item?.Id;
+        set => SelectedHash = Options.FirstOrDefault(x => x.Id == value)?.GetHashCode();
+    }
+
+    public Title? Item => Options.FirstOrDefault(x => x.GetHashCode() == _selected);
+
+    private void Update()
+    {
+        var item = Item;
+        if (item == null) { CharacterCompute.Clear(Field); }
+        else
+        { CharacterCompute.Change(item); }
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        Options = Data.GetTitles(Field);
+        if (DefaultTitle != null) { _selected = DefaultTitle.GetHashCode(); }
+    }
+
+}

@@ -1,10 +1,10 @@
 ﻿@page "/accessory"
-@using SoulWorkerPropertySimulator.Services
-@using SoulWorkerPropertySimulator.Models
-@using SoulWorkerPropertySimulator.Web.Services
-@using System.Text
 @inject IAccessoryComputeService AccessoryCompute
 @inject IPageInfoService InfoService
+@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Web.Services
+@using SoulWorkerPropertySimulator.Models
+@using System.Text
 @implements IDisposable
 
 <div>
@@ -50,11 +50,13 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        AccessoryCompute.OnSetChange += sets => InfoService.SetBottom(nameof(AccessorySetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
+        AccessoryCompute.OnSetChange += SetBottom;
         Default = AccessoryCompute.Get().ToList();
         InfoService.SetTitle(nameof(AccessorySetting), Title);
         InfoService.SetBottom(nameof(AccessorySetting), GetSetDescription(AccessoryCompute.GetSet().ToList()));
     }
+
+    public void SetBottom(IReadOnlyCollection<AccessorySetEffect> sets) => InfoService.SetBottom(nameof(AccessorySetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
 
     public void Update(AccessoryField field)
     {
@@ -68,6 +70,7 @@
     {
         InfoService.SetTitle(nameof(AccessorySetting), null);
         InfoService.SetBottom(nameof(AccessorySetting), null);
+        AccessoryCompute.OnSetChange -= SetBottom;
     }
 
     private static string? GetSetDescription(IReadOnlyCollection<AccessorySetEffect> sets)

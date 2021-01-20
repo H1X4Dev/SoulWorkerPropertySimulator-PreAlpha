@@ -133,5 +133,5 @@ namespace SoulWorkerPropertySimulator
         Shoes
     }
 
-    public enum TitleField { First, Last }
+    public enum TitleField { [Description("前稱")] First, [Description("後稱")] Last }
 }

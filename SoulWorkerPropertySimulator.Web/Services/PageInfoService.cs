@@ -12,9 +12,9 @@ namespace SoulWorkerPropertySimulator.Web.Services
 
     public class PageInfoService : IPageInfoService
     {
+        private string?               _lastCaller;
         public event Action<string?>? OnTitleChange;
         public event Action<string?>? OnBottomChange;
-        private string?               _lastCaller;
 
         public void SetTitle(string caller, string? name)
         {

@@ -1,5 +1,7 @@
 ﻿@using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Web.Pages
+@using Microsoft.AspNetCore.Components.WebAssembly.Hosting
+@inject IWebAssemblyHostEnvironment HostEnvironment
 @inject IPanelComputeService PanelCompute
 <div class="top-row ps-4 navbar navbar-dark">
     <a class="navbar-brand" href="">靈魂行者計算器</a>
@@ -13,6 +15,11 @@
         <li class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="character">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> @CharacterSetting.Title
             </NavLink>
         </li>
         <li class="nav-item px-3">
@@ -34,12 +41,25 @@
 </div>
 <div class="position-absolute bottom-0 w-100">
     <ul class="list-group list-group-flush">
-        @foreach (var (context, value) in _effects.Where(x => x.Key.IsStatic && _mainPanel.Contains(x.Key.Property) && x.Value != 0))
+        @if (HostEnvironment.IsDevelopment())
         {
-            <li class="list-group-item d-flex">
-                <div class="flex-grow-1">@context.Description</div>
-                <div>@(context.IsPercent ? $"{value * 100}%" : (int) value)</div>
-            </li>
+            @foreach (var (context, value) in _effects.Where(x => x.Value != 0))
+            {
+                <li class="list-group-item d-flex">
+                    <div class="flex-grow-1">@context.Description</div>
+                    <div>@(context.IsPercent ? $"{value * 100}%" : (int) value)</div>
+                </li>
+            }
+        }
+        else
+        {
+            @foreach (var (context, value) in _effects.Where(x => x.Key.IsStatic && _mainPanel.Contains(x.Key.Property) && x.Value != 0))
+            {
+                <li class="list-group-item d-flex">
+                    <div class="flex-grow-1">@context.Description</div>
+                    <div>@(context.IsPercent ? $"{value * 100}%" : (int) value)</div>
+                </li>
+            }
         }
     </ul>
 </div>
@@ -49,7 +69,7 @@
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu() { collapseNavMenu = !collapseNavMenu; }
+    private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
 
     private IDictionary<EffectContext, decimal> _effects = null!;
 

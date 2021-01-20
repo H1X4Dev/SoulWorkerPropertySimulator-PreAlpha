@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using SoulWorkerPropertySimulator.Models;
 
 // ReSharper disable once CheckNamespace
@@ -10,6 +6,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static partial class CharacterData
     {
+        #region
+
         private static Character Stella =>
             new("史黛拉",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
@@ -18,818 +16,820 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         1,
                         new Effect[]
                         {
-                            new(HP, 1_100),
-                            new(Attack, 54),
-                            new(CDamage, 43),
-                            new(Evade, 0),
-                            new(Defense, 5),
-                            new(Accuracy, AccuracyList[0])
+                            new(Static.HP, 1_100),
+                            new(Static.Attack, 54),
+                            new(Static.CriticalDamage, 43),
+                            new(Static.Evade, 0),
+                            new(Static.Defense, 5),
+                            new(Static.Accuracy, AccuracyList[0])
                         }
                     },
                     {
                         2,
                         new Effect[]
                         {
-                            new(HP, 1_400),
-                            new(Attack, 72),
-                            new(CDamage, 57),
-                            new(Evade, 1),
-                            new(Defense, 10),
-                            new(Accuracy, AccuracyList[1])
+                            new(Static.HP, 1_400),
+                            new(Static.Attack, 72),
+                            new(Static.CriticalDamage, 57),
+                            new(Static.Evade, 1),
+                            new(Static.Defense, 10),
+                            new(Static.Accuracy, AccuracyList[1])
                         }
                     },
                     {
                         3,
                         new Effect[]
                         {
-                            new(HP, 1_700),
-                            new(Attack, 108),
-                            new(CDamage, 86),
-                            new(Evade, 2),
-                            new(Defense, 15),
-                            new(Accuracy, AccuracyList[2])
+                            new(Static.HP, 1_700),
+                            new(Static.Attack, 108),
+                            new(Static.CriticalDamage, 86),
+                            new(Static.Evade, 2),
+                            new(Static.Defense, 15),
+                            new(Static.Accuracy, AccuracyList[2])
                         }
                     },
                     {
                         4,
                         new Effect[]
                         {
-                            new(HP, 2_000),
-                            new(Attack, 126),
-                            new(CDamage, 100),
-                            new(Evade, 2),
-                            new(Defense, 20),
-                            new(Accuracy, AccuracyList[3])
+                            new(Static.HP, 2_000),
+                            new(Static.Attack, 126),
+                            new(Static.CriticalDamage, 100),
+                            new(Static.Evade, 2),
+                            new(Static.Defense, 20),
+                            new(Static.Accuracy, AccuracyList[3])
                         }
                     },
                     {
                         5,
                         new Effect[]
                         {
-                            new(HP, 2_300),
-                            new(Attack, 144),
-                            new(CDamage, 115),
-                            new(Evade, 3),
-                            new(Defense, 25),
-                            new(Accuracy, AccuracyList[4])
+                            new(Static.HP, 2_300),
+                            new(Static.Attack, 144),
+                            new(Static.CriticalDamage, 115),
+                            new(Static.Evade, 3),
+                            new(Static.Defense, 25),
+                            new(Static.Accuracy, AccuracyList[4])
                         }
                     },
                     {
                         6,
                         new Effect[]
                         {
-                            new(HP, 2_600),
-                            new(Attack, 180),
-                            new(CDamage, 144),
-                            new(Evade, 4),
-                            new(Defense, 30),
-                            new(Accuracy, AccuracyList[5])
+                            new(Static.HP, 2_600),
+                            new(Static.Attack, 180),
+                            new(Static.CriticalDamage, 144),
+                            new(Static.Evade, 4),
+                            new(Static.Defense, 30),
+                            new(Static.Accuracy, AccuracyList[5])
                         }
                     },
                     {
                         7,
                         new Effect[]
                         {
-                            new(HP, 2_900),
-                            new(Attack, 198),
-                            new(CDamage, 158),
-                            new(Evade, 4),
-                            new(Defense, 35),
-                            new(Accuracy, AccuracyList[6])
+                            new(Static.HP, 2_900),
+                            new(Static.Attack, 198),
+                            new(Static.CriticalDamage, 158),
+                            new(Static.Evade, 4),
+                            new(Static.Defense, 35),
+                            new(Static.Accuracy, AccuracyList[6])
                         }
                     },
                     {
                         8,
                         new Effect[]
                         {
-                            new(HP, 3_200),
-                            new(Attack, 216),
-                            new(CDamage, 172),
-                            new(Evade, 5),
-                            new(Defense, 40),
-                            new(Accuracy, AccuracyList[7])
+                            new(Static.HP, 3_200),
+                            new(Static.Attack, 216),
+                            new(Static.CriticalDamage, 172),
+                            new(Static.Evade, 5),
+                            new(Static.Defense, 40),
+                            new(Static.Accuracy, AccuracyList[7])
                         }
                     },
                     {
                         9,
                         new Effect[]
                         {
-                            new(HP, 3_500),
-                            new(Attack, 252),
-                            new(CDamage, 201),
-                            new(Evade, 6),
-                            new(Defense, 45),
-                            new(Accuracy, AccuracyList[8])
+                            new(Static.HP, 3_500),
+                            new(Static.Attack, 252),
+                            new(Static.CriticalDamage, 201),
+                            new(Static.Evade, 6),
+                            new(Static.Defense, 45),
+                            new(Static.Accuracy, AccuracyList[8])
                         }
                     },
                     {
                         10,
                         new Effect[]
                         {
-                            new(HP, 3_800),
-                            new(Attack, 270),
-                            new(CDamage, 216),
-                            new(Evade, 7),
-                            new(Defense, 50),
-                            new(Accuracy, AccuracyList[9])
+                            new(Static.HP, 3_800),
+                            new(Static.Attack, 270),
+                            new(Static.CriticalDamage, 216),
+                            new(Static.Evade, 7),
+                            new(Static.Defense, 50),
+                            new(Static.Accuracy, AccuracyList[9])
                         }
                     },
                     {
                         11,
                         new Effect[]
                         {
-                            new(HP, 4_100),
-                            new(Attack, 306),
-                            new(CDamage, 244),
-                            new(Evade, 7),
-                            new(Defense, 55),
-                            new(Accuracy, AccuracyList[10])
+                            new(Static.HP, 4_100),
+                            new(Static.Attack, 306),
+                            new(Static.CriticalDamage, 244),
+                            new(Static.Evade, 7),
+                            new(Static.Defense, 55),
+                            new(Static.Accuracy, AccuracyList[10])
                         }
                     },
                     {
                         12,
                         new Effect[]
                         {
-                            new(HP, 4_400),
-                            new(Attack, 324),
-                            new(CDamage, 259),
-                            new(Evade, 8),
-                            new(Defense, 60),
-                            new(Accuracy, AccuracyList[11])
+                            new(Static.HP, 4_400),
+                            new(Static.Attack, 324),
+                            new(Static.CriticalDamage, 259),
+                            new(Static.Evade, 8),
+                            new(Static.Defense, 60),
+                            new(Static.Accuracy, AccuracyList[11])
                         }
                     },
                     {
                         13,
                         new Effect[]
                         {
-                            new(HP, 4_700),
-                            new(Attack, 342),
-                            new(CDamage, 273),
-                            new(Evade, 9),
-                            new(Defense, 65),
-                            new(Accuracy, AccuracyList[12])
+                            new(Static.HP, 4_700),
+                            new(Static.Attack, 342),
+                            new(Static.CriticalDamage, 273),
+                            new(Static.Evade, 9),
+                            new(Static.Defense, 65),
+                            new(Static.Accuracy, AccuracyList[12])
                         }
                     },
                     {
                         14,
                         new Effect[]
                         {
-                            new(HP, 5_000),
-                            new(Attack, 378),
-                            new(CDamage, 302),
-                            new(Evade, 9),
-                            new(Defense, 70),
-                            new(Accuracy, AccuracyList[13])
+                            new(Static.HP, 5_000),
+                            new(Static.Attack, 378),
+                            new(Static.CriticalDamage, 302),
+                            new(Static.Evade, 9),
+                            new(Static.Defense, 70),
+                            new(Static.Accuracy, AccuracyList[13])
                         }
                     },
                     {
                         15,
                         new Effect[]
                         {
-                            new(HP, 5_300),
-                            new(Attack, 396),
-                            new(CDamage, 316),
-                            new(Evade, 10),
-                            new(Defense, 75),
-                            new(Accuracy, AccuracyList[14])
+                            new(Static.HP, 5_300),
+                            new(Static.Attack, 396),
+                            new(Static.CriticalDamage, 316),
+                            new(Static.Evade, 10),
+                            new(Static.Defense, 75),
+                            new(Static.Accuracy, AccuracyList[14])
                         }
                     },
                     {
                         16,
                         new Effect[]
                         {
-                            new(HP, 5_600),
-                            new(Attack, 414),
-                            new(CDamage, 331),
-                            new(Evade, 11),
-                            new(Defense, 80),
-                            new(Accuracy, AccuracyList[15])
+                            new(Static.HP, 5_600),
+                            new(Static.Attack, 414),
+                            new(Static.CriticalDamage, 331),
+                            new(Static.Evade, 11),
+                            new(Static.Defense, 80),
+                            new(Static.Accuracy, AccuracyList[15])
                         }
                     },
                     {
                         17,
                         new Effect[]
                         {
-                            new(HP, 5_900),
-                            new(Attack, 450),
-                            new(CDamage, 360),
-                            new(Evade, 11),
-                            new(Defense, 85),
-                            new(Accuracy, AccuracyList[16])
+                            new(Static.HP, 5_900),
+                            new(Static.Attack, 450),
+                            new(Static.CriticalDamage, 360),
+                            new(Static.Evade, 11),
+                            new(Static.Defense, 85),
+                            new(Static.Accuracy, AccuracyList[16])
                         }
                     },
                     {
                         18,
                         new Effect[]
                         {
-                            new(HP, 6_200),
-                            new(Attack, 468),
-                            new(CDamage, 374),
-                            new(Evade, 12),
-                            new(Defense, 90),
-                            new(Accuracy, AccuracyList[17])
+                            new(Static.HP, 6_200),
+                            new(Static.Attack, 468),
+                            new(Static.CriticalDamage, 374),
+                            new(Static.Evade, 12),
+                            new(Static.Defense, 90),
+                            new(Static.Accuracy, AccuracyList[17])
                         }
                     },
                     {
                         19,
                         new Effect[]
                         {
-                            new(HP, 6_500),
-                            new(Attack, 503),
-                            new(CDamage, 403),
-                            new(Evade, 13),
-                            new(Defense, 95),
-                            new(Accuracy, AccuracyList[18])
+                            new(Static.HP, 6_500),
+                            new(Static.Attack, 503),
+                            new(Static.CriticalDamage, 403),
+                            new(Static.Evade, 13),
+                            new(Static.Defense, 95),
+                            new(Static.Accuracy, AccuracyList[18])
                         }
                     },
                     {
                         20,
                         new Effect[]
                         {
-                            new(HP, 6_800),
-                            new(Attack, 521),
-                            new(CDamage, 417),
-                            new(Evade, 13),
-                            new(Defense, 100),
-                            new(Accuracy, AccuracyList[19])
+                            new(Static.HP, 6_800),
+                            new(Static.Attack, 521),
+                            new(Static.CriticalDamage, 417),
+                            new(Static.Evade, 13),
+                            new(Static.Defense, 100),
+                            new(Static.Accuracy, AccuracyList[19])
                         }
                     },
                     {
                         21,
                         new Effect[]
                         {
-                            new(HP, 7_100),
-                            new(Attack, 539),
-                            new(CDamage, 431),
-                            new(Evade, 14),
-                            new(Defense, 105),
-                            new(Accuracy, AccuracyList[20])
+                            new(Static.HP, 7_100),
+                            new(Static.Attack, 539),
+                            new(Static.CriticalDamage, 431),
+                            new(Static.Evade, 14),
+                            new(Static.Defense, 105),
+                            new(Static.Accuracy, AccuracyList[20])
                         }
                     },
                     {
                         22,
                         new Effect[]
                         {
-                            new(HP, 7_400),
-                            new(Attack, 576),
-                            new(CDamage, 460),
-                            new(Evade, 15),
-                            new(Defense, 110),
-                            new(Accuracy, AccuracyList[21])
+                            new(Static.HP, 7_400),
+                            new(Static.Attack, 576),
+                            new(Static.CriticalDamage, 460),
+                            new(Static.Evade, 15),
+                            new(Static.Defense, 110),
+                            new(Static.Accuracy, AccuracyList[21])
                         }
                     },
                     {
                         23,
                         new Effect[]
                         {
-                            new(HP, 7_700),
-                            new(Attack, 594),
-                            new(CDamage, 475),
-                            new(Evade, 15),
-                            new(Defense, 115),
-                            new(Accuracy, AccuracyList[22])
+                            new(Static.HP, 7_700),
+                            new(Static.Attack, 594),
+                            new(Static.CriticalDamage, 475),
+                            new(Static.Evade, 15),
+                            new(Static.Defense, 115),
+                            new(Static.Accuracy, AccuracyList[22])
                         }
                     },
                     {
                         24,
                         new Effect[]
                         {
-                            new(HP, 8_000),
-                            new(Attack, 612),
-                            new(CDamage, 489),
-                            new(Evade, 16),
-                            new(Defense, 120),
-                            new(Accuracy, AccuracyList[23])
+                            new(Static.HP, 8_000),
+                            new(Static.Attack, 612),
+                            new(Static.CriticalDamage, 489),
+                            new(Static.Evade, 16),
+                            new(Static.Defense, 120),
+                            new(Static.Accuracy, AccuracyList[23])
                         }
                     },
                     {
                         25,
                         new Effect[]
                         {
-                            new(HP, 8_300),
-                            new(Attack, 648),
-                            new(CDamage, 518),
-                            new(Evade, 17),
-                            new(Defense, 125),
-                            new(Accuracy, AccuracyList[24])
+                            new(Static.HP, 8_300),
+                            new(Static.Attack, 648),
+                            new(Static.CriticalDamage, 518),
+                            new(Static.Evade, 17),
+                            new(Static.Defense, 125),
+                            new(Static.Accuracy, AccuracyList[24])
                         }
                     },
                     {
                         26,
                         new Effect[]
                         {
-                            new(HP, 8_600),
-                            new(Attack, 666),
-                            new(CDamage, 532),
-                            new(Evade, 18),
-                            new(Defense, 130),
-                            new(Accuracy, AccuracyList[25])
+                            new(Static.HP, 8_600),
+                            new(Static.Attack, 666),
+                            new(Static.CriticalDamage, 532),
+                            new(Static.Evade, 18),
+                            new(Static.Defense, 130),
+                            new(Static.Accuracy, AccuracyList[25])
                         }
                     },
                     {
                         27,
                         new Effect[]
                         {
-                            new(HP, 8_900),
-                            new(Attack, 702),
-                            new(CDamage, 561),
-                            new(Evade, 18),
-                            new(Defense, 135),
-                            new(Accuracy, AccuracyList[26])
+                            new(Static.HP, 8_900),
+                            new(Static.Attack, 702),
+                            new(Static.CriticalDamage, 561),
+                            new(Static.Evade, 18),
+                            new(Static.Defense, 135),
+                            new(Static.Accuracy, AccuracyList[26])
                         }
                     },
                     {
                         28,
                         new Effect[]
                         {
-                            new(HP, 9_200),
-                            new(Attack, 720),
-                            new(CDamage, 576),
-                            new(Evade, 19),
-                            new(Defense, 140),
-                            new(Accuracy, AccuracyList[27])
+                            new(Static.HP, 9_200),
+                            new(Static.Attack, 720),
+                            new(Static.CriticalDamage, 576),
+                            new(Static.Evade, 19),
+                            new(Static.Defense, 140),
+                            new(Static.Accuracy, AccuracyList[27])
                         }
                     },
                     {
                         29,
                         new Effect[]
                         {
-                            new(HP, 9_500),
-                            new(Attack, 738),
-                            new(CDamage, 590),
-                            new(Evade, 20),
-                            new(Defense, 145),
-                            new(Accuracy, AccuracyList[28])
+                            new(Static.HP, 9_500),
+                            new(Static.Attack, 738),
+                            new(Static.CriticalDamage, 590),
+                            new(Static.Evade, 20),
+                            new(Static.Defense, 145),
+                            new(Static.Accuracy, AccuracyList[28])
                         }
                     },
                     {
                         30,
                         new Effect[]
                         {
-                            new(HP, 9_800),
-                            new(Attack, 774),
-                            new(CDamage, 619),
-                            new(Evade, 20),
-                            new(Defense, 150),
-                            new(Accuracy, AccuracyList[29])
+                            new(Static.HP, 9_800),
+                            new(Static.Attack, 774),
+                            new(Static.CriticalDamage, 619),
+                            new(Static.Evade, 20),
+                            new(Static.Defense, 150),
+                            new(Static.Accuracy, AccuracyList[29])
                         }
                     },
                     {
                         31,
                         new Effect[]
                         {
-                            new(HP, 10_100),
-                            new(Attack, 792),
-                            new(CDamage, 633),
-                            new(Evade, 21),
-                            new(Defense, 155),
-                            new(Accuracy, AccuracyList[30])
+                            new(Static.HP, 10_100),
+                            new(Static.Attack, 792),
+                            new(Static.CriticalDamage, 633),
+                            new(Static.Evade, 21),
+                            new(Static.Defense, 155),
+                            new(Static.Accuracy, AccuracyList[30])
                         }
                     },
                     {
                         32,
                         new Effect[]
                         {
-                            new(HP, 10_400),
-                            new(Attack, 809),
-                            new(CDamage, 647),
-                            new(Evade, 22),
-                            new(Defense, 160),
-                            new(Accuracy, AccuracyList[31])
+                            new(Static.HP, 10_400),
+                            new(Static.Attack, 809),
+                            new(Static.CriticalDamage, 647),
+                            new(Static.Evade, 22),
+                            new(Static.Defense, 160),
+                            new(Static.Accuracy, AccuracyList[31])
                         }
                     },
                     {
                         33,
                         new Effect[]
                         {
-                            new(HP, 10_700),
-                            new(Attack, 845),
-                            new(CDamage, 676),
-                            new(Evade, 22),
-                            new(Defense, 165),
-                            new(Accuracy, AccuracyList[32])
+                            new(Static.HP, 10_700),
+                            new(Static.Attack, 845),
+                            new(Static.CriticalDamage, 676),
+                            new(Static.Evade, 22),
+                            new(Static.Defense, 165),
+                            new(Static.Accuracy, AccuracyList[32])
                         }
                     },
                     {
                         34,
                         new Effect[]
                         {
-                            new(HP, 11_000),
-                            new(Attack, 863),
-                            new(CDamage, 691),
-                            new(Evade, 23),
-                            new(Defense, 170),
-                            new(Accuracy, AccuracyList[33])
+                            new(Static.HP, 11_000),
+                            new(Static.Attack, 863),
+                            new(Static.CriticalDamage, 691),
+                            new(Static.Evade, 23),
+                            new(Static.Defense, 170),
+                            new(Static.Accuracy, AccuracyList[33])
                         }
                     },
                     {
                         35,
                         new Effect[]
                         {
-                            new(HP, 11_300),
-                            new(Attack, 899),
-                            new(CDamage, 719),
-                            new(Evade, 24),
-                            new(Defense, 175),
-                            new(Accuracy, AccuracyList[34])
+                            new(Static.HP, 11_300),
+                            new(Static.Attack, 899),
+                            new(Static.CriticalDamage, 719),
+                            new(Static.Evade, 24),
+                            new(Static.Defense, 175),
+                            new(Static.Accuracy, AccuracyList[34])
                         }
                     },
                     {
                         36,
                         new Effect[]
                         {
-                            new(HP, 11_600),
-                            new(Attack, 917),
-                            new(CDamage, 734),
-                            new(Evade, 24),
-                            new(Defense, 180),
-                            new(Accuracy, AccuracyList[35])
+                            new(Static.HP, 11_600),
+                            new(Static.Attack, 917),
+                            new(Static.CriticalDamage, 734),
+                            new(Static.Evade, 24),
+                            new(Static.Defense, 180),
+                            new(Static.Accuracy, AccuracyList[35])
                         }
                     },
                     {
                         37,
                         new Effect[]
                         {
-                            new(HP, 11_900),
-                            new(Attack, 936),
-                            new(CDamage, 748),
-                            new(Evade, 25),
-                            new(Defense, 185),
-                            new(Accuracy, AccuracyList[36])
+                            new(Static.HP, 11_900),
+                            new(Static.Attack, 936),
+                            new(Static.CriticalDamage, 748),
+                            new(Static.Evade, 25),
+                            new(Static.Defense, 185),
+                            new(Static.Accuracy, AccuracyList[36])
                         }
                     },
                     {
                         38,
                         new Effect[]
                         {
-                            new(HP, 12_200),
-                            new(Attack, 971),
-                            new(CDamage, 777),
-                            new(Evade, 26),
-                            new(Defense, 190),
-                            new(Accuracy, AccuracyList[37])
+                            new(Static.HP, 12_200),
+                            new(Static.Attack, 971),
+                            new(Static.CriticalDamage, 777),
+                            new(Static.Evade, 26),
+                            new(Static.Defense, 190),
+                            new(Static.Accuracy, AccuracyList[37])
                         }
                     },
                     {
                         39,
                         new Effect[]
                         {
-                            new(HP, 12_500),
-                            new(Attack, 990),
-                            new(CDamage, 792),
-                            new(Evade, 26),
-                            new(Defense, 195),
-                            new(Accuracy, AccuracyList[38])
+                            new(Static.HP, 12_500),
+                            new(Static.Attack, 990),
+                            new(Static.CriticalDamage, 792),
+                            new(Static.Evade, 26),
+                            new(Static.Defense, 195),
+                            new(Static.Accuracy, AccuracyList[38])
                         }
                     },
                     {
                         40,
                         new Effect[]
                         {
-                            new(HP, 12_800),
-                            new(Attack, 1_008),
-                            new(CDamage, 806),
-                            new(Evade, 27),
-                            new(Defense, 200),
-                            new(Accuracy, AccuracyList[39])
+                            new(Static.HP, 12_800),
+                            new(Static.Attack, 1_008),
+                            new(Static.CriticalDamage, 806),
+                            new(Static.Evade, 27),
+                            new(Static.Defense, 200),
+                            new(Static.Accuracy, AccuracyList[39])
                         }
                     },
                     {
                         41,
                         new Effect[]
                         {
-                            new(HP, 13_100),
-                            new(Attack, 1_044),
-                            new(CDamage, 835),
-                            new(Evade, 28),
-                            new(Defense, 205),
-                            new(Accuracy, AccuracyList[40])
+                            new(Static.HP, 13_100),
+                            new(Static.Attack, 1_044),
+                            new(Static.CriticalDamage, 835),
+                            new(Static.Evade, 28),
+                            new(Static.Defense, 205),
+                            new(Static.Accuracy, AccuracyList[40])
                         }
                     },
                     {
                         42,
                         new Effect[]
                         {
-                            new(HP, 13_400),
-                            new(Attack, 1_062),
-                            new(CDamage, 849),
-                            new(Evade, 29),
-                            new(Defense, 210),
-                            new(Accuracy, AccuracyList[41])
+                            new(Static.HP, 13_400),
+                            new(Static.Attack, 1_062),
+                            new(Static.CriticalDamage, 849),
+                            new(Static.Evade, 29),
+                            new(Static.Defense, 210),
+                            new(Static.Accuracy, AccuracyList[41])
                         }
                     },
                     {
                         43,
                         new Effect[]
                         {
-                            new(HP, 13_700),
-                            new(Attack, 1_098),
-                            new(CDamage, 878),
-                            new(Evade, 29),
-                            new(Defense, 215),
-                            new(Accuracy, AccuracyList[42])
+                            new(Static.HP, 13_700),
+                            new(Static.Attack, 1_098),
+                            new(Static.CriticalDamage, 878),
+                            new(Static.Evade, 29),
+                            new(Static.Defense, 215),
+                            new(Static.Accuracy, AccuracyList[42])
                         }
                     },
                     {
                         44,
                         new Effect[]
                         {
-                            new(HP, 14_000),
-                            new(Attack, 1_116),
-                            new(CDamage, 892),
-                            new(Evade, 30),
-                            new(Defense, 220),
-                            new(Accuracy, AccuracyList[43])
+                            new(Static.HP, 14_000),
+                            new(Static.Attack, 1_116),
+                            new(Static.CriticalDamage, 892),
+                            new(Static.Evade, 30),
+                            new(Static.Defense, 220),
+                            new(Static.Accuracy, AccuracyList[43])
                         }
                     },
                     {
                         45,
                         new Effect[]
                         {
-                            new(HP, 14_300),
-                            new(Attack, 1_134),
-                            new(CDamage, 907),
-                            new(Evade, 31),
-                            new(Defense, 225),
-                            new(Accuracy, AccuracyList[44])
+                            new(Static.HP, 14_300),
+                            new(Static.Attack, 1_134),
+                            new(Static.CriticalDamage, 907),
+                            new(Static.Evade, 31),
+                            new(Static.Defense, 225),
+                            new(Static.Accuracy, AccuracyList[44])
                         }
                     },
                     {
                         46,
                         new Effect[]
                         {
-                            new(HP, 14_600),
-                            new(Attack, 1_170),
-                            new(CDamage, 936),
-                            new(Evade, 31),
-                            new(Defense, 230),
-                            new(Accuracy, AccuracyList[45])
+                            new(Static.HP, 14_600),
+                            new(Static.Attack, 1_170),
+                            new(Static.CriticalDamage, 936),
+                            new(Static.Evade, 31),
+                            new(Static.Defense, 230),
+                            new(Static.Accuracy, AccuracyList[45])
                         }
                     },
                     {
                         47,
                         new Effect[]
                         {
-                            new(HP, 14_900),
-                            new(Attack, 1_188),
-                            new(CDamage, 950),
-                            new(Evade, 32),
-                            new(Defense, 235),
-                            new(Accuracy, AccuracyList[46])
+                            new(Static.HP, 14_900),
+                            new(Static.Attack, 1_188),
+                            new(Static.CriticalDamage, 950),
+                            new(Static.Evade, 32),
+                            new(Static.Defense, 235),
+                            new(Static.Accuracy, AccuracyList[46])
                         }
                     },
                     {
                         48,
                         new Effect[]
                         {
-                            new(HP, 15_200),
-                            new(Attack, 1_206),
-                            new(CDamage, 964),
-                            new(Evade, 33),
-                            new(Defense, 240),
-                            new(Accuracy, AccuracyList[47])
+                            new(Static.HP, 15_200),
+                            new(Static.Attack, 1_206),
+                            new(Static.CriticalDamage, 964),
+                            new(Static.Evade, 33),
+                            new(Static.Defense, 240),
+                            new(Static.Accuracy, AccuracyList[47])
                         }
                     },
                     {
                         49,
                         new Effect[]
                         {
-                            new(HP, 15_500),
-                            new(Attack, 1_242),
-                            new(CDamage, 993),
-                            new(Evade, 33),
-                            new(Defense, 245),
-                            new(Accuracy, AccuracyList[48])
+                            new(Static.HP, 15_500),
+                            new(Static.Attack, 1_242),
+                            new(Static.CriticalDamage, 993),
+                            new(Static.Evade, 33),
+                            new(Static.Defense, 245),
+                            new(Static.Accuracy, AccuracyList[48])
                         }
                     },
                     {
                         50,
                         new Effect[]
                         {
-                            new(HP, 15_800),
-                            new(Attack, 1_260),
-                            new(CDamage, 1_008),
-                            new(Evade, 34),
-                            new(Defense, 250),
-                            new(Accuracy, AccuracyList[49])
+                            new(Static.HP, 15_800),
+                            new(Static.Attack, 1_260),
+                            new(Static.CriticalDamage, 1_008),
+                            new(Static.Evade, 34),
+                            new(Static.Defense, 250),
+                            new(Static.Accuracy, AccuracyList[49])
                         }
                     },
                     {
                         51,
                         new Effect[]
                         {
-                            new(HP, 16_100),
-                            new(Attack, 1_296),
-                            new(CDamage, 1_036),
-                            new(Evade, 35),
-                            new(Defense, 255),
-                            new(Accuracy, AccuracyList[50])
+                            new(Static.HP, 16_100),
+                            new(Static.Attack, 1_296),
+                            new(Static.CriticalDamage, 1_036),
+                            new(Static.Evade, 35),
+                            new(Static.Defense, 255),
+                            new(Static.Accuracy, AccuracyList[50])
                         }
                     },
                     {
                         52,
                         new Effect[]
                         {
-                            new(HP, 16_400),
-                            new(Attack, 1_314),
-                            new(CDamage, 1_051),
-                            new(Evade, 35),
-                            new(Defense, 260),
-                            new(Accuracy, AccuracyList[51])
+                            new(Static.HP, 16_400),
+                            new(Static.Attack, 1_314),
+                            new(Static.CriticalDamage, 1_051),
+                            new(Static.Evade, 35),
+                            new(Static.Defense, 260),
+                            new(Static.Accuracy, AccuracyList[51])
                         }
                     },
                     {
                         53,
                         new Effect[]
                         {
-                            new(HP, 16_700),
-                            new(Attack, 1_331),
-                            new(CDamage, 1_065),
-                            new(Evade, 36),
-                            new(Defense, 265),
-                            new(Accuracy, AccuracyList[52])
+                            new(Static.HP, 16_700),
+                            new(Static.Attack, 1_331),
+                            new(Static.CriticalDamage, 1_065),
+                            new(Static.Evade, 36),
+                            new(Static.Defense, 265),
+                            new(Static.Accuracy, AccuracyList[52])
                         }
                     },
                     {
                         54,
                         new Effect[]
                         {
-                            new(HP, 17_000),
-                            new(Attack, 1_368),
-                            new(CDamage, 1_094),
-                            new(Evade, 37),
-                            new(Defense, 270),
-                            new(Accuracy, AccuracyList[53])
+                            new(Static.HP, 17_000),
+                            new(Static.Attack, 1_368),
+                            new(Static.CriticalDamage, 1_094),
+                            new(Static.Evade, 37),
+                            new(Static.Defense, 270),
+                            new(Static.Accuracy, AccuracyList[53])
                         }
                     },
                     {
                         55,
                         new Effect[]
                         {
-                            new(HP, 17_300),
-                            new(Attack, 1_386),
-                            new(CDamage, 1_108),
-                            new(Evade, 37),
-                            new(Defense, 275),
-                            new(Accuracy, AccuracyList[54])
+                            new(Static.HP, 17_300),
+                            new(Static.Attack, 1_386),
+                            new(Static.CriticalDamage, 1_108),
+                            new(Static.Evade, 37),
+                            new(Static.Defense, 275),
+                            new(Static.Accuracy, AccuracyList[54])
                         }
                     },
                     {
                         56,
                         new Effect[]
                         {
-                            new(HP, 17_600),
-                            new(Attack, 1_404),
-                            new(CDamage, 1_123),
-                            new(Evade, 38),
-                            new(Defense, 279),
-                            new(Accuracy, AccuracyList[55])
+                            new(Static.HP, 17_600),
+                            new(Static.Attack, 1_404),
+                            new(Static.CriticalDamage, 1_123),
+                            new(Static.Evade, 38),
+                            new(Static.Defense, 279),
+                            new(Static.Accuracy, AccuracyList[55])
                         }
                     },
                     {
                         57,
                         new Effect[]
                         {
-                            new(HP, 17_900),
-                            new(Attack, 1_440),
-                            new(CDamage, 1_152),
-                            new(Evade, 39),
-                            new(Defense, 284),
-                            new(Accuracy, AccuracyList[56])
+                            new(Static.HP, 17_900),
+                            new(Static.Attack, 1_440),
+                            new(Static.CriticalDamage, 1_152),
+                            new(Static.Evade, 39),
+                            new(Static.Defense, 284),
+                            new(Static.Accuracy, AccuracyList[56])
                         }
                     },
                     {
                         58,
                         new Effect[]
                         {
-                            new(HP, 18_200),
-                            new(Attack, 1_458),
-                            new(CDamage, 1_166),
-                            new(Evade, 40),
-                            new(Defense, 289),
-                            new(Accuracy, AccuracyList[57])
+                            new(Static.HP, 18_200),
+                            new(Static.Attack, 1_458),
+                            new(Static.CriticalDamage, 1_166),
+                            new(Static.Evade, 40),
+                            new(Static.Defense, 289),
+                            new(Static.Accuracy, AccuracyList[57])
                         }
                     },
                     {
                         59,
                         new Effect[]
                         {
-                            new(HP, 18_500),
-                            new(Attack, 1_494),
-                            new(CDamage, 1_195),
-                            new(Evade, 40),
-                            new(Defense, 294),
-                            new(Accuracy, AccuracyList[58])
+                            new(Static.HP, 18_500),
+                            new(Static.Attack, 1_494),
+                            new(Static.CriticalDamage, 1_195),
+                            new(Static.Evade, 40),
+                            new(Static.Defense, 294),
+                            new(Static.Accuracy, AccuracyList[58])
                         }
                     },
                     {
                         60,
                         new Effect[]
                         {
-                            new(HP, 18_800),
-                            new(Attack, 1_512),
-                            new(CDamage, 1_209),
-                            new(Evade, 41),
-                            new(Defense, 299),
-                            new(Accuracy, AccuracyList[59])
+                            new(Static.HP, 18_800),
+                            new(Static.Attack, 1_512),
+                            new(Static.CriticalDamage, 1_209),
+                            new(Static.Evade, 41),
+                            new(Static.Defense, 299),
+                            new(Static.Accuracy, AccuracyList[59])
                         }
                     },
                     {
                         61,
                         new Effect[]
                         {
-                            new(HP, 19_100),
-                            new(Attack, 1_530),
-                            new(CDamage, 1_224),
-                            new(Evade, 42),
-                            new(Defense, 305),
-                            new(Accuracy, AccuracyList[60])
+                            new(Static.HP, 19_100),
+                            new(Static.Attack, 1_530),
+                            new(Static.CriticalDamage, 1_224),
+                            new(Static.Evade, 42),
+                            new(Static.Defense, 305),
+                            new(Static.Accuracy, AccuracyList[60])
                         }
                     },
                     {
                         62,
                         new Effect[]
                         {
-                            new(HP, 19_400),
-                            new(Attack, 1_566),
-                            new(CDamage, 1_252),
-                            new(Evade, 42),
-                            new(Defense, 310),
-                            new(Accuracy, AccuracyList[61])
+                            new(Static.HP, 19_400),
+                            new(Static.Attack, 1_566),
+                            new(Static.CriticalDamage, 1_252),
+                            new(Static.Evade, 42),
+                            new(Static.Defense, 310),
+                            new(Static.Accuracy, AccuracyList[61])
                         }
                     },
                     {
                         63,
                         new Effect[]
                         {
-                            new(HP, 19_700),
-                            new(Attack, 1_584),
-                            new(CDamage, 1_267),
-                            new(Evade, 43),
-                            new(Defense, 315),
-                            new(Accuracy, AccuracyList[62])
+                            new(Static.HP, 19_700),
+                            new(Static.Attack, 1_584),
+                            new(Static.CriticalDamage, 1_267),
+                            new(Static.Evade, 43),
+                            new(Static.Defense, 315),
+                            new(Static.Accuracy, AccuracyList[62])
                         }
                     },
                     {
                         64,
                         new Effect[]
                         {
-                            new(HP, 20_000),
-                            new(Attack, 1_602),
-                            new(CDamage, 1_281),
-                            new(Evade, 44),
-                            new(Defense, 320),
-                            new(Accuracy, AccuracyList[63])
+                            new(Static.HP, 20_000),
+                            new(Static.Attack, 1_602),
+                            new(Static.CriticalDamage, 1_281),
+                            new(Static.Evade, 44),
+                            new(Static.Defense, 320),
+                            new(Static.Accuracy, AccuracyList[63])
                         }
                     },
                     {
                         65,
                         new Effect[]
                         {
-                            new(HP, 20_300),
-                            new(Attack, 1_638),
-                            new(CDamage, 1_310),
-                            new(Evade, 44),
-                            new(Defense, 325),
-                            new(Accuracy, AccuracyList[64])
+                            new(Static.HP, 20_300),
+                            new(Static.Attack, 1_638),
+                            new(Static.CriticalDamage, 1_310),
+                            new(Static.Evade, 44),
+                            new(Static.Defense, 325),
+                            new(Static.Accuracy, AccuracyList[64])
                         }
                     },
                     {
                         66,
                         new Effect[]
                         {
-                            new(HP, 20_600),
-                            new(Attack, 1_656),
-                            new(CDamage, 1_324),
-                            new(Evade, 45),
-                            new(Defense, 329),
-                            new(Accuracy, AccuracyList[65])
+                            new(Static.HP, 20_600),
+                            new(Static.Attack, 1_656),
+                            new(Static.CriticalDamage, 1_324),
+                            new(Static.Evade, 45),
+                            new(Static.Defense, 329),
+                            new(Static.Accuracy, AccuracyList[65])
                         }
                     },
                     {
                         67,
                         new Effect[]
                         {
-                            new(HP, 20_900),
-                            new(Attack, 1_692),
-                            new(CDamage, 1_353),
-                            new(Evade, 46),
-                            new(Defense, 334),
-                            new(Accuracy, AccuracyList[66])
+                            new(Static.HP, 20_900),
+                            new(Static.Attack, 1_692),
+                            new(Static.CriticalDamage, 1_353),
+                            new(Static.Evade, 46),
+                            new(Static.Defense, 334),
+                            new(Static.Accuracy, AccuracyList[66])
                         }
                     },
                     {
                         68,
                         new Effect[]
                         {
-                            new(HP, 21_200),
-                            new(Attack, 1_710),
-                            new(CDamage, 1_368),
-                            new(Evade, 46),
-                            new(Defense, 339),
-                            new(Accuracy, AccuracyList[67])
+                            new(Static.HP, 21_200),
+                            new(Static.Attack, 1_710),
+                            new(Static.CriticalDamage, 1_368),
+                            new(Static.Evade, 46),
+                            new(Static.Defense, 339),
+                            new(Static.Accuracy, AccuracyList[67])
                         }
                     }
                 });
+
+        #endregion
     }
 }

@@ -23,7 +23,6 @@ namespace SoulWorkerPropertySimulator.Services
                                    IArmorComputeService     armor,
                                    IBroochesComputeService  brooches,
                                    ICharacterComputeService character,
-                                   ITitleComputeService     title,
                                    IAttackComputeService    attack)
         {
             // _accessory = accessory;
@@ -38,7 +37,6 @@ namespace SoulWorkerPropertySimulator.Services
             armor.OnChange     += Change;
             brooches.OnChange  += Change;
             character.OnChange += Change;
-            title.OnChange     += Change;
         }
 
         public IDictionary<EffectContext, decimal> Get() => Effect.ToDictionary(x => x.Key, x => x.Value);

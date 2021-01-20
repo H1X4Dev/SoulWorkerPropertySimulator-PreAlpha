@@ -12,7 +12,6 @@ namespace SoulWorkerPropertySimulator
             self.AddSingleton<IArmorComputeService, ArmorComputeService>();
             self.AddSingleton<IBroochesComputeService, BroochesComputeService>();
             self.AddSingleton<ICharacterComputeService, CharacterComputeService>();
-            self.AddSingleton<ITitleComputeService, TitleComputeService>();
             self.AddSingleton<IAttackComputeService, AttackComputeService>();
             self.AddSingleton<IPanelComputeService, PanelComputeService>();
 

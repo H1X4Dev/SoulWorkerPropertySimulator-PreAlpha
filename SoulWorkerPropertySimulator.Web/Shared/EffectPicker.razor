@@ -8,10 +8,7 @@
             <div>效果</div>
             <div class="ms-2 flex-grow-1">
                 <select class="form-select" @bind="SelectedKey">
-                    @if (Options.Count > 1)
-                    {
-                        <option></option>
-}
+                    @if (Options.Count > 1) { <option></option> }
                     @foreach (var item in Options)
                     {
                         <option value="@item.GetHashCode()" disabled="@Parents?.IsDisableContext(this, item)">@item.Context.Property.GetDescription()</option>
@@ -101,7 +98,7 @@
 
     public int? SelectedValue
     {
-        get => (int?)(SelectedContext == null ? null : SelectedContext.Context.IsPercent ? _selectedValue * 100 : _selectedValue);
+        get => (int?) (SelectedContext == null ? null : SelectedContext.Context.IsPercent ? _selectedValue * 100 : _selectedValue);
         set
         {
             _selectedValue = SelectedContext == null ? null : SelectedContext.Context.IsPercent ? value / 100m : value;

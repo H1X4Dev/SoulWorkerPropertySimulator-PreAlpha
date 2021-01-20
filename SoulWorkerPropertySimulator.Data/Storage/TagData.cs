@@ -8,8 +8,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     {
         private static IReadOnlyCollection<Tag>? _tags;
 
-        private static readonly IDictionary<TagField, IReadOnlyCollection<Tag>> TagResult =
-            new Dictionary<TagField, IReadOnlyCollection<Tag>>();
+        private static readonly Dictionary<TagField, IReadOnlyCollection<Tag>> TagResult = new();
 
         public static IReadOnlyCollection<Tag> Get(TagField field)
         {
@@ -17,13 +16,13 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 
             if (_tags != null) { return TagResult[field] = _tags.Where(x => x.Field == field).ToList(); }
 
-            var wi   = new Effect(new(Property.WeaponAttack), 0);
-            var wr   = new Effect(new(Property.WeaponAttackRate), 0);
-            var gi   = new Effect(new(Property.GearDefense), 0);
-            var gr   = new Effect(new(Property.GearDefenseRate), 0);
+            var wi   = new Effect(Static.WeaponAttack, 0);
+            var wr   = new Effect(Static.WeaponAttackRate, 0);
+            var gi   = new Effect(Static.GearDefense, 0);
+            var gr   = new Effect(Static.GearDefenseRate, 0);
             var tags = new List<Tag>();
 
-            var iAttack = new Effect(new(Property.Attack), 0);
+            var iAttack = new Effect(Static.Attack, 0);
             tags.Add(new("異常的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -46,7 +45,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wi with {Value = 35}, iAttack with {Value = 63}}},
                     {TagRare.Common, new[] {wi with {Value = 18}, iAttack with {Value = 32}}}
                 }));
-            var iAccuracy = new Effect(new(Property.Accuracy), 0);
+            var iAccuracy = new Effect(Static.Accuracy, 0);
             tags.Add(new("挑戰者的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -69,7 +68,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iAccuracy with {Value = 24}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iAccuracy with {Value = 14}}}
                 }));
-            var iAttackRate = new Effect(new(Property.AttackRate), 0);
+            var iAttackRate = new Effect(Static.AttackRate, 0);
             tags.Add(new("怪異的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -92,7 +91,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iAttackRate with {Value = .05m}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iAttackRate with {Value = .03m}}}
                 }));
-            var iCD = new Effect(new(Property.CriticalDamage), 0);
+            var iCD = new Effect(Static.CriticalDamage, 0);
             tags.Add(new("粗糙的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -115,7 +114,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iCD with {Value = 80}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iCD with {Value = 40}}}
                 }));
-            var iCR = new Effect(new(Property.CriticalRate), 0);
+            var iCR = new Effect(Static.CriticalRate, 0);
             tags.Add(new("附加的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -138,7 +137,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iCR with {Value = .02m}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iCR with {Value = .01m}}}
                 }));
-            var iDB = new Effect(new(Property.DefenseBreakRate), 0);
+            var iDB = new Effect(Static.DefenseBreakRate, 0);
             tags.Add(new("狂暴的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -161,7 +160,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iDB with {Value = .01m}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iDB with {Value = .01m}}}
                 }));
-            var iEDBasic = new Effect(new(Property.ExtraDamageRateBasic), 0);
+            var iEDBasic = new Effect(Static.ExtraDamageRateBasic, 0);
             tags.Add(new("遺失的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -184,7 +183,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iEDBasic with {Value = .03m}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iEDBasic with {Value = .01m}}}
                 }));
-            var iEDBoss = new Effect(new(Property.ExtraDamageRateBoss), 0);
+            var iEDBoss = new Effect(Static.ExtraDamageRateBoss, 0);
             tags.Add(new("高喊的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -207,7 +206,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iEDBoss with {Value = .03m}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iEDBoss with {Value = .01m}}}
                 }));
-            var iEDGolden = new Effect(new(Property.ExtraDamageRateGolden), 0);
+            var iEDGolden = new Effect(Static.ExtraDamageRateGolden, 0);
             tags.Add(new("假的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -230,7 +229,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iEDGolden with {Value = .04m}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iEDGolden with {Value = .03m}}}
                 }));
-            var iEDPrimal = new Effect(new(Property.ExtraDamageRatePrimal), 0);
+            var iEDPrimal = new Effect(Static.ExtraDamageRatePrimal, 0);
             tags.Add(new("傲慢的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -253,7 +252,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iEDPrimal with {Value = .04m}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iEDPrimal with {Value = .03m}}}
                 }));
-            var iHP = new Effect(new(Property.HP), 0);
+            var iHP = new Effect(Static.HP, 0);
             tags.Add(new("慈悲的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -276,7 +275,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iHP with {Value = 225}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iHP with {Value = 135}}}
                 }));
-            var iMoveSpace = new Effect(new(Property.MoveSpaceRate), 0);
+            var iMoveSpace = new Effect(Static.MoveSpaceRate, 0);
             tags.Add(new("贖罪的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -299,7 +298,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iMoveSpace with {Value = .01m}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iMoveSpace with {Value = .01m}}}
                 }));
-            var iPDamage = new Effect(new(Property.PartialDamageRate), 0);
+            var iPDamage = new Effect(Static.PartialDamageRate, 0);
             tags.Add(new("生銹的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -322,7 +321,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .05m}, iPDamage with {Value = .11m}}},
                     {TagRare.Common, new[] {wr with {Value = .03m}, iPDamage with {Value = .06m}}}
                 }));
-            var iStamina = new Effect(new(Property.Stamina), 0);
+            var iStamina = new Effect(Static.Stamina, 0);
             tags.Add(new("疲倦者的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -345,7 +344,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iStamina with {Value = 2}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iStamina with {Value = 1}}}
                 }));
-            var iSABreak = new Effect(new(Property.SuperArmorBreakPowerRate), 0);
+            var iSABreak = new Effect(Static.SuperArmorBreakPowerRate, 0);
             tags.Add(new("激流的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -370,7 +369,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 }));
 
 
-            var iDefense = new Effect(new(Property.Defense), 0);
+            var iDefense = new Effect(Static.Defense, 0);
             tags.Add(new("異常的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -415,7 +414,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {gi with {Value = .02m}, iCD with {Value = 32}}},
                     {TagRare.Common, new[] {gi with {Value = .01m}, iCD with {Value = 11}}}
                 }));
-            var iCResist = new Effect(new(Property.CriticalResistanceRate), 0);
+            var iCResist = new Effect(Static.CriticalResistanceRate, 0);
             tags.Add(new("受詛咒的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -436,7 +435,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Valuable, new[] {gi with {Value = .03m}, iCResist with {Value = .02m}}},
                     {TagRare.Magical, new[] {gi with {Value = .02m}, iCResist with {Value = .01m}}}
                 }));
-            var iDRBasic = new Effect(new(Property.DamageReductionRateBasic), 0);
+            var iDRBasic = new Effect(Static.DamageReductionRateBasic, 0);
             tags.Add(new("黎明的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -455,7 +454,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Unique, new[] {gi with {Value = .04m}, iDRBasic with {Value = .01m}}},
                     {TagRare.Valuable, new[] {gi with {Value = .03m}, iDRBasic with {Value = .01m}}}
                 }));
-            var iDRBoss = new Effect(new(Property.DamageReductionRateBoss), 0);
+            var iDRBoss = new Effect(Static.DamageReductionRateBoss, 0);
             tags.Add(new("悲鳴的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -474,7 +473,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Unique, new[] {gi with {Value = .04m}, iDRBoss with {Value = .01m}}},
                     {TagRare.Valuable, new[] {gi with {Value = .03m}, iDRBoss with {Value = .01m}}}
                 }));
-            var iDRPart = new Effect(new(Property.DamageReductionRatePartialDamage), 0);
+            var iDRPart = new Effect(Static.DamageReductionRatePartialDamage, 0);
             tags.Add(new("無謀的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -497,7 +496,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {gi with {Value = .03m}, iDRPart with {Value = .03m}}},
                     {TagRare.Common, new[] {gi with {Value = .02m}, iDRPart with {Value = .02m}}}
                 }));
-            var iDefenseR = new Effect(new(Property.DefenseRate), 0);
+            var iDefenseR = new Effect(Static.DefenseRate, 0);
             tags.Add(new("怪異的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -520,7 +519,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {gi with {Value = .02m}, iDefenseR with {Value = .02m}}},
                     {TagRare.Common, new[] {gi with {Value = .01m}, iDefenseR with {Value = .01m}}}
                 }));
-            var iEvade = new Effect(new(Property.Evade), 0);
+            var iEvade = new Effect(Static.Evade, 0);
             tags.Add(new("探索的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -543,7 +542,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {gi with {Value = .02m}, iEvade with {Value = 12}}},
                     {TagRare.Common, new[] {gi with {Value = .01m}, iEvade with {Value = 6}}}
                 }));
-            var iExp = new Effect(new(Property.ExpVolumeRateEnemy), 0);
+            var iExp = new Effect(Static.ExpVolumeRateEnemy, 0);
             tags.Add(new("偉大的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -588,7 +587,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {gr with {Value = .02m}, iHP with {Value = 100}}},
                     {TagRare.Common, new[] {gr with {Value = .01m}, iHP with {Value = 60}}}
                 }));
-            var iKill = new Effect(new(Property.KillHPRecovery), 0);
+            var iKill = new Effect(Static.KillHPRecovery, 0);
             tags.Add(new("霸氣的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -611,7 +610,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {gr with {Value = .02m}, iKill with {Value = 65}}},
                     {TagRare.Common, new[] {gr with {Value = .01m}, iKill with {Value = 30}}}
                 }));
-            var iMoney = new Effect(new(Property.MoneyVolumeRateEnemy), 0);
+            var iMoney = new Effect(Static.MoneyVolumeRateEnemy, 0);
             tags.Add(new("和睦的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -634,7 +633,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {gr with {Value = .03m}, iMoney with {Value = .05m}}},
                     {TagRare.Common, new[] {gr with {Value = .02m}, iMoney with {Value = .03m}}}
                 }));
-            var iSoulGate = new Effect(new(Property.SoulGateConsumptionReducedRate), 0);
+            var iSoulGate = new Effect(Static.SoulGateConsumptionReducedRate, 0);
             tags.Add(new("非凡的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -653,7 +652,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Unique, new[] {gr with {Value = .05m}, iSoulGate with {Value = .02m}}},
                     {TagRare.Valuable, new[] {gr with {Value = .04m}, iSoulGate with {Value = .02m}}}
                 }));
-            var iSoulNova = new Effect(new(Property.SoulNovaVolumeRate), 0);
+            var iSoulNova = new Effect(Static.SoulNovaVolumeRate, 0);
             tags.Add(new("安平的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
