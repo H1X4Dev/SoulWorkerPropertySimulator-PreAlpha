@@ -55,7 +55,7 @@
                         <div class="d-flex w-50 pe1">
                             <div class="flex-grow-1">
                                 <select class="form-select" @bind="SelectedTagHash">
-                                    <option>無</option>
+                                    <option>無標籤</option>
                                     @foreach (var tag in TagOptions)
                                     {
                                         <option value="@tag.GetHashCode()">@tag.Name</option>
