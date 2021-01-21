@@ -25,7 +25,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     65,
                     new EffectRandomContext[]
                     {
-                        new(Static.HP, 1_200, 3_000),
+                        new(Static.Hp, 1_200, 3_000),
                         new(Static.Defense, 240, 960),
                         new(Static.DamageReductionRateBasic, .03m, .04m),
                         new(Static.DamageReductionRateBoss, .03m, .04m),
@@ -64,7 +64,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     68,
                     new EffectRandomContext[]
                     {
-                        new(Static.HP, .05m, .1m),
+                        new(Static.Hp, .05m, .1m),
                         new(Static.Defense, .07m, .15m),
                         new(Static.AttackSpeedRate, .01m, .02m),
                         new(Static.MoveSpaceRate, .01m, .02m),

@@ -17,56 +17,56 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 
             _titles = new List<Title>
             {
-                new("嶄露頭角的", TitleField.First, 1, new Effect[] {new(Static.HPRate, .0225m)}),
-                new("另一個", TitleField.First, 1, new Effect[] {new(Static.HPRate, .0225m)}),
-                new("另一個", TitleField.First, 1, new Effect[] {new(Static.HPRate, .0225m)}),
+                new("嶄露頭角的", TitleField.First, 1, new Effect[] {new(Static.HpRate, .0225m)}),
+                new("另一個", TitleField.First, 1, new Effect[] {new(Static.HpRate, .0225m)}),
+                new("另一個", TitleField.First, 1, new Effect[] {new(Static.HpRate, .0225m)}),
                 new("神聖的", TitleField.First, 2, new Effect[] {new(Static.Stamina, 4)}),
-                new("漆黑的", TitleField.First, 3, new Effect[] {new(Static.HPRate, .015m)}),
+                new("漆黑的", TitleField.First, 3, new Effect[] {new(Static.HpRate, .015m)}),
                 new("悲歎少女的", TitleField.First, 4, new Effect[] {new(Static.Stamina, 4)}),
                 new("悲歎少年的", TitleField.First, 4, new Effect[] {new(Static.Stamina, 4)}),
-                new("蒼穹的", TitleField.First, 5, new Effect[] {new(Static.HPRate, .0225m), new(Static.Stamina, -4)}),
-                new("懲戒之刃", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HPRate, -.015m)}),
-                new("懲戒之彈", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HPRate, -.015m)}),
-                new("懲戒之鐮", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HPRate, -.015m)}),
-                new("懲戒之拳", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HPRate, -.015m)}),
+                new("蒼穹的", TitleField.First, 5, new Effect[] {new(Static.HpRate, .0225m), new(Static.Stamina, -4)}),
+                new("懲戒之刃", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HpRate, -.015m)}),
+                new("懲戒之彈", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HpRate, -.015m)}),
+                new("懲戒之鐮", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HpRate, -.015m)}),
+                new("懲戒之拳", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HpRate, -.015m)}),
                 new("懲戒之幻想",
                     TitleField.First,
                     6,
-                    new Effect[] {new(Static.Stamina, 5), new(Static.HPRate, -.015m)}),
-                new("懲戒之炮", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HPRate, -.015m)}),
-                new("懲戒之炮", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HPRate, -.015m)}),
-                new("懲戒槍擊", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HPRate, -.015m)}),
-                new("呼風喚雨的", TitleField.First, 7, new Effect[] {new(Static.HPRate, .0225m)}),
+                    new Effect[] {new(Static.Stamina, 5), new(Static.HpRate, -.015m)}),
+                new("懲戒之炮", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HpRate, -.015m)}),
+                new("懲戒之炮", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HpRate, -.015m)}),
+                new("懲戒槍擊", TitleField.First, 6, new Effect[] {new(Static.Stamina, 5), new(Static.HpRate, -.015m)}),
+                new("呼風喚雨的", TitleField.First, 7, new Effect[] {new(Static.HpRate, .0225m)}),
                 new("命運中的", TitleField.First, 8, new Effect[] {new(Static.Stamina, 5)}),
                 new("危機處理",
                     TitleField.First,
                     9,
-                    new Effect[] {new(Static.HPRate, .0375m), new(Static.CooldownShorterRate, .02m)}),
+                    new Effect[] {new(Static.HpRate, .0375m), new(Static.CooldownShorterRate, .02m)}),
                 new("需要檢查的",
                     TitleField.First,
                     10,
-                    new Effect[] {new(Static.HPRate, .045m), new(Static.CooldownShorterRate, .02m)}),
+                    new Effect[] {new(Static.HpRate, .045m), new(Static.CooldownShorterRate, .02m)}),
                 new("美麗的",
                     TitleField.First,
                     11,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0525m),
+                        new(Static.HpRate, .0525m),
                         new(Static.CooldownShorterRate, .02m),
                         new(Static.MoneyVolumeRateEnemy, .0525m)
                     }),
-                new("過度消費的", TitleField.First, 12, new Effect[] {new(Static.HPRate, .03m), new(Static.Evade, 21)}),
+                new("過度消費的", TitleField.First, 12, new Effect[] {new(Static.HpRate, .03m), new(Static.Evade, 21)}),
                 new("商人聯盟的",
                     TitleField.First,
                     13,
-                    new Effect[] {new(Static.HPRate, .0375m), new(Static.Evade, 27)}),
-                new("傑出的", TitleField.First, 14, new Effect[] {new(Static.HPRate, .045m), new(Static.Evade, 32)}),
+                    new Effect[] {new(Static.HpRate, .0375m), new(Static.Evade, 27)}),
+                new("傑出的", TitleField.First, 14, new Effect[] {new(Static.HpRate, .045m), new(Static.Evade, 32)}),
                 new("光榮的",
                     TitleField.First,
                     15,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0525m), new(Static.Evade, 37), new(Static.DamageReductionRate, .02m)
+                        new(Static.HpRate, .0525m), new(Static.Evade, 37), new(Static.DamageReductionRate, .02m)
                     }),
                 new("心軟的",
                     TitleField.First,
@@ -90,27 +90,27 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     19,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0975m),
+                        new(Static.HpRate, .0975m),
                         new(Static.AttackRate, -.0135m),
-                        new(Static.KillHPRecovery, 39.6m)
+                        new(Static.KillHpRecovery, 39.6m)
                     }),
                 new("用報紙當被子的",
                     TitleField.First,
                     20,
                     new Effect[]
                     {
-                        new(Static.HPRate, .105m),
+                        new(Static.HpRate, .105m),
                         new(Static.AttackRate, -.0135m),
-                        new(Static.KillHPRecovery, 42.9m)
+                        new(Static.KillHpRecovery, 42.9m)
                     }),
                 new("復活的",
                     TitleField.First,
                     21,
                     new Effect[]
                     {
-                        new(Static.HPRate, .1125m),
+                        new(Static.HpRate, .1125m),
                         new(Static.AttackRate, -.0135m),
-                        new(Static.KillHPRecovery, 46.2m),
+                        new(Static.KillHpRecovery, 46.2m),
                         new(Static.Stamina, 10)
                     }),
                 new("頑強的",
@@ -118,9 +118,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     22,
                     new Effect[]
                     {
-                        new(Static.HPRate, .12m),
+                        new(Static.HpRate, .12m),
                         new(Static.AttackRate, -.0135m),
-                        new(Static.KillHPRecovery, 49.5m),
+                        new(Static.KillHpRecovery, 49.5m),
                         new(Static.Stamina, 11),
                         new(Static.CooldownShorterRate, .02m)
                     }),
@@ -460,19 +460,19 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("破壞",
                     TitleField.First,
                     75,
-                    new Effect[] {new(Static.HPRate, .015m), new(Static.SuperArmorBreakPowerRate, .01m)}),
+                    new Effect[] {new(Static.HpRate, .015m), new(Static.SuperArmorBreakPowerRate, .01m)}),
                 new("盾牌",
                     TitleField.First,
                     76,
-                    new Effect[] {new(Static.HPRate, .0225m), new(Static.SuperArmorBreakPowerRate, .015m)}),
+                    new Effect[] {new(Static.HpRate, .0225m), new(Static.SuperArmorBreakPowerRate, .015m)}),
                 new("銅牆鐵壁",
                     TitleField.First,
                     77,
-                    new Effect[] {new(Static.HPRate, .03m), new(Static.SuperArmorBreakPowerRate, .02m)}),
+                    new Effect[] {new(Static.HpRate, .03m), new(Static.SuperArmorBreakPowerRate, .02m)}),
                 new("破甲",
                     TitleField.First,
                     78,
-                    new Effect[] {new(Static.HPRate, .0375m), new(Static.SuperArmorBreakPowerRate, .025m)}),
+                    new Effect[] {new(Static.HpRate, .0375m), new(Static.SuperArmorBreakPowerRate, .025m)}),
                 new("手疼",
                     TitleField.First,
                     79,
@@ -531,13 +531,13 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("迷惘",
                     TitleField.First,
                     87,
-                    new Effect[] {new(Static.HPRate, .03m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
+                    new Effect[] {new(Static.HpRate, .03m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
                 new("在迷宮中的",
                     TitleField.First,
                     88,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0525m),
+                        new(Static.HpRate, .0525m),
                         new(Static.SoulGateConsumptionReducedRate, .03m),
                         new(Static.ExpVolumeRateEnemy, .0525m)
                     }),
@@ -546,7 +546,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     89,
                     new Effect[]
                     {
-                        new(Static.HPRate, .075m),
+                        new(Static.HpRate, .075m),
                         new(Static.SoulGateConsumptionReducedRate, .03m),
                         new(Static.ExpVolumeRateEnemy, .075m),
                         new(Static.DefenseBreakRate, .02m)
@@ -598,7 +598,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackRate, .0405m),
                         new(Static.Accuracy, 42.3m),
-                        new(Static.KillHPRecovery, 29.7m)
+                        new(Static.KillHpRecovery, 29.7m)
                     }),
                 new("榮耀的",
                     TitleField.First,
@@ -607,7 +607,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackRate, .045m),
                         new(Static.Accuracy, 47),
-                        new(Static.KillHPRecovery, 33),
+                        new(Static.KillHpRecovery, 33),
                         new(Static.CriticalDamage, 645)
                     }),
                 new("第一",
@@ -617,7 +617,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackRate, .0495m),
                         new(Static.Accuracy, 51.7m),
-                        new(Static.KillHPRecovery, 36.3m),
+                        new(Static.KillHpRecovery, 36.3m),
                         new(Static.CriticalDamage, 710)
                     }),
                 new("神一般的",
@@ -627,7 +627,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackRate, .054m),
                         new(Static.Accuracy, 56.4m),
-                        new(Static.KillHPRecovery, 39.6m),
+                        new(Static.KillHpRecovery, 39.6m),
                         new(Static.CriticalDamage, 774),
                         new(Static.AttackSpeedRate, .05m)
                     }),
@@ -674,13 +674,13 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("遊樂園的",
                     TitleField.First,
                     102,
-                    new Effect[] {new(Static.HPRate, .03m), new(Static.MoneyVolumeRateEnemy, .03m)}),
+                    new Effect[] {new(Static.HpRate, .03m), new(Static.MoneyVolumeRateEnemy, .03m)}),
                 new("富礦",
                     TitleField.First,
                     103,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0525m),
+                        new(Static.HpRate, .0525m),
                         new(Static.MoneyVolumeRateEnemy, .0525m),
                         new(Static.SoulNovaVolumeRate, .03m)
                     }),
@@ -689,7 +689,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     104,
                     new Effect[]
                     {
-                        new(Static.HPRate, .075m),
+                        new(Static.HpRate, .075m),
                         new(Static.MoneyVolumeRateEnemy, .075m),
                         new(Static.SoulNovaVolumeRate, .03m),
                         new(Static.DefenseBreakRate, .02m)
@@ -699,7 +699,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     105,
                     new Effect[]
                     {
-                        new(Static.HPRate, .09m),
+                        new(Static.HpRate, .09m),
                         new(Static.MoneyVolumeRateEnemy, .09m),
                         new(Static.SoulNovaVolumeRate, .03m),
                         new(Static.DefenseBreakRate, .02m),
@@ -708,17 +708,17 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("固執的",
                     TitleField.First,
                     106,
-                    new Effect[] {new(Static.HPRate, .045m), new(Static.SoulNovaVolumeRate, .03m)}),
+                    new Effect[] {new(Static.HpRate, .045m), new(Static.SoulNovaVolumeRate, .03m)}),
                 new("需要強化的",
                     TitleField.First,
                     107,
-                    new Effect[] {new(Static.HPRate, .0525m), new(Static.SoulNovaVolumeRate, .03m)}),
+                    new Effect[] {new(Static.HpRate, .0525m), new(Static.SoulNovaVolumeRate, .03m)}),
                 new("圓形",
                     TitleField.First,
                     108,
                     new Effect[]
                     {
-                        new(Static.HPRate, .06m),
+                        new(Static.HpRate, .06m),
                         new(Static.SoulNovaVolumeRate, .03m),
                         new(Static.SuperArmorBreakPowerRate, .025m)
                     }),
@@ -727,7 +727,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     109,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0675m),
+                        new(Static.HpRate, .0675m),
                         new(Static.SoulNovaVolumeRate, .03m),
                         new(Static.SuperArmorBreakPowerRate, .03m)
                     }),
@@ -737,7 +737,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[]
                     {
                         new(Static.AttackRate, .0765m),
-                        new(Static.HPRate, -.0675m),
+                        new(Static.HpRate, -.0675m),
                         new(Static.ExtraDamageRateSix, .05m),
                         new(Static.CriticalRate, .05m)
                     }),
@@ -747,7 +747,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[]
                     {
                         new(Static.AttackRate, .081m),
-                        new(Static.HPRate, -.06m),
+                        new(Static.HpRate, -.06m),
                         new(Static.ExtraDamageRateSix, .05m),
                         new(Static.CriticalRate, .05m)
                     }),
@@ -757,7 +757,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[]
                     {
                         new(Static.AttackRate, .0855m),
-                        new(Static.HPRate, -.0525m),
+                        new(Static.HpRate, -.0525m),
                         new(Static.ExtraDamageRateSix, .05m),
                         new(Static.CriticalRate, .05m),
                         new(Static.ExtraDamageRateBoss, .05m)
@@ -768,7 +768,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[]
                     {
                         new(Static.AttackRate, .09m),
-                        new(Static.HPRate, -.045m),
+                        new(Static.HpRate, -.045m),
                         new(Static.ExtraDamageRateSix, .05m),
                         new(Static.CriticalRate, .05m),
                         new(Static.ExtraDamageRateBoss, .05m)
@@ -828,25 +828,25 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("神秘的",
                     TitleField.First,
                     126,
-                    new Effect[] {new(Static.HPRate, .0225m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
+                    new Effect[] {new(Static.HpRate, .0225m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
                 new("無法",
                     TitleField.First,
                     127,
-                    new Effect[] {new(Static.HPRate, .03m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
+                    new Effect[] {new(Static.HpRate, .03m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
                 new("分解是",
                     TitleField.First,
                     128,
-                    new Effect[] {new(Static.HPRate, .0375m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
+                    new Effect[] {new(Static.HpRate, .0375m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
                 new("庖丁",
                     TitleField.First,
                     129,
-                    new Effect[] {new(Static.HPRate, .045m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
+                    new Effect[] {new(Static.HpRate, .045m), new(Static.SoulGateConsumptionReducedRate, .03m)}),
                 new("徹底的",
                     TitleField.First,
                     130,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0525m),
+                        new(Static.HpRate, .0525m),
                         new(Static.DefenseRate, .0315m),
                         new(Static.CriticalRate, .025m)
                     }),
@@ -855,7 +855,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     131,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0675m),
+                        new(Static.HpRate, .0675m),
                         new(Static.DefenseRate, .0405m),
                         new(Static.CriticalRate, .025m)
                     }),
@@ -864,7 +864,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     132,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0675m),
+                        new(Static.HpRate, .0675m),
                         new(Static.DefenseRate, .0405m),
                         new(Static.CriticalRate, .03m)
                     }),
@@ -873,7 +873,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     133,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0825m),
+                        new(Static.HpRate, .0825m),
                         new(Static.DefenseRate, .0495m),
                         new(Static.CriticalRate, .035m)
                     }),
@@ -896,7 +896,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     137,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0975m),
+                        new(Static.HpRate, .0975m),
                         new(Static.DefenseRate, .0585m),
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.DamageReductionRate, .03m)
@@ -904,12 +904,12 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("花錢的",
                     TitleField.First,
                     138,
-                    new Effect[] {new(Static.HPRate, .045m), new(Static.MoveSpaceRate, .05m)}),
-                new("齋藤的", TitleField.First, 139, new Effect[] {new(Static.HPRate, .0375m)}),
-                new("由美的", TitleField.First, 140, new Effect[] {new(Static.HPRate, .0375m)}),
-                new("珍妮絲的", TitleField.First, 141, new Effect[] {new(Static.HPRate, .0375m)}),
-                new("特麗莎的", TitleField.First, 142, new Effect[] {new(Static.HPRate, .0375m)}),
-                new("阿珍的", TitleField.First, 143, new Effect[] {new(Static.HPRate, .0375m)}),
+                    new Effect[] {new(Static.HpRate, .045m), new(Static.MoveSpaceRate, .05m)}),
+                new("齋藤的", TitleField.First, 139, new Effect[] {new(Static.HpRate, .0375m)}),
+                new("由美的", TitleField.First, 140, new Effect[] {new(Static.HpRate, .0375m)}),
+                new("珍妮絲的", TitleField.First, 141, new Effect[] {new(Static.HpRate, .0375m)}),
+                new("特麗莎的", TitleField.First, 142, new Effect[] {new(Static.HpRate, .0375m)}),
+                new("阿珍的", TitleField.First, 143, new Effect[] {new(Static.HpRate, .0375m)}),
                 new("扭曲幻境",
                     TitleField.First,
                     144,
@@ -1080,14 +1080,14 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     177,
                     new Effect[]
                     {
-                        new(Static.HP, 2500), new(Static.Evade, 80), new(Static.CooldownShorterRate, .02m)
+                        new(Static.Hp, 2500), new(Static.Evade, 80), new(Static.CooldownShorterRate, .02m)
                     }),
                 new("史無前例",
                     TitleField.First,
                     178,
                     new Effect[]
                     {
-                        new(Static.HPRate, .08m),
+                        new(Static.HpRate, .08m),
                         new(Static.CriticalRate, .03m),
                         new(Static.CriticalDamage, 750),
                         new(Static.AttackRate, -.05m)
@@ -1111,12 +1111,12 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(Static.MoveSpaceRate, -.05m),
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.DamageReductionRate, .03m),
-                        new(Static.HP, 500)
+                        new(Static.Hp, 500)
                     }),
                 new("天然",
                     TitleField.First,
                     181,
-                    new Effect[] {new(Static.HPRate, .10m), new(Static.DefenseRate, .05m)}),
+                    new Effect[] {new(Static.HpRate, .10m), new(Static.DefenseRate, .05m)}),
                 new("到達",
                     TitleField.First,
                     182,
@@ -1134,7 +1134,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackSpeedRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .045m),
-                        new(Static.HP, 1500),
+                        new(Static.Hp, 1500),
                         new(Static.DefenseBreakRate, .02m)
                     }),
                 new("永續的",
@@ -1144,7 +1144,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackSpeedRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .045m),
-                        new(Static.HP, 1500),
+                        new(Static.Hp, 1500),
                         new(Static.DefenseBreakRate, .02m)
                     }),
                 new("搶先的",
@@ -1154,7 +1154,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackSpeedRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .045m),
-                        new(Static.HP, 1500),
+                        new(Static.Hp, 1500),
                         new(Static.DefenseBreakRate, .02m)
                     }),
                 new("熱情的",
@@ -1164,7 +1164,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackSpeedRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .045m),
-                        new(Static.HP, 1500),
+                        new(Static.Hp, 1500),
                         new(Static.DefenseBreakRate, .02m)
                     }),
                 new("非凡的",
@@ -1174,7 +1174,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackSpeedRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .045m),
-                        new(Static.HP, 1500),
+                        new(Static.Hp, 1500),
                         new(Static.DefenseBreakRate, .02m)
                     }),
                 new("橫行",
@@ -1184,7 +1184,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackSpeedRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .045m),
-                        new(Static.HP, 1500),
+                        new(Static.Hp, 1500),
                         new(Static.DefenseBreakRate, .02m)
                     }),
                 new("突變的",
@@ -1194,13 +1194,13 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.AttackSpeedRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .045m),
-                        new(Static.HP, 1500),
+                        new(Static.Hp, 1500),
                         new(Static.DefenseBreakRate, .02m)
                     }),
                 new("殘存的",
                     TitleField.First,
                     190,
-                    new Effect[] {new(Static.HP, 2200), new(Static.KillHPRecovery, 50)}),
+                    new Effect[] {new(Static.Hp, 2200), new(Static.KillHpRecovery, 50)}),
                 new("清高地 理想的",
                     TitleField.First,
                     206,
@@ -1266,17 +1266,17 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("高手",
                     TitleField.Last,
                     9,
-                    new Effect[] {new(Static.HPRate, .0225m), new(Static.CooldownShorterRate, .02m)}),
+                    new Effect[] {new(Static.HpRate, .0225m), new(Static.CooldownShorterRate, .02m)}),
                 new("傷患",
                     TitleField.Last,
                     10,
-                    new Effect[] {new(Static.HPRate, .0375m), new(Static.CooldownShorterRate, .02m)}),
+                    new Effect[] {new(Static.HpRate, .0375m), new(Static.CooldownShorterRate, .02m)}),
                 new("消費者",
                     TitleField.Last,
                     11,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0525m),
+                        new(Static.HpRate, .0525m),
                         new(Static.CooldownShorterRate, .02m),
                         new(Static.MoneyVolumeRateEnemy, .0525m)
                     }),
@@ -1312,27 +1312,27 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     19,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0975m),
+                        new(Static.HpRate, .0975m),
                         new(Static.AttackRate, -.0225m),
-                        new(Static.KillHPRecovery, 42.9m)
+                        new(Static.KillHpRecovery, 42.9m)
                     }),
                 new("露宿者",
                     TitleField.Last,
                     20,
                     new Effect[]
                     {
-                        new(Static.HPRate, .105m),
+                        new(Static.HpRate, .105m),
                         new(Static.AttackRate, -.0225m),
-                        new(Static.KillHPRecovery, 46.2m)
+                        new(Static.KillHpRecovery, 46.2m)
                     }),
                 new("屍體",
                     TitleField.Last,
                     21,
                     new Effect[]
                     {
-                        new(Static.HPRate, .1125m),
+                        new(Static.HpRate, .1125m),
                         new(Static.AttackRate, -.0225m),
-                        new(Static.KillHPRecovery, 49.5m),
+                        new(Static.KillHpRecovery, 49.5m),
                         new(Static.Stamina, 11)
                     }),
                 new("不死之身",
@@ -1340,9 +1340,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     22,
                     new Effect[]
                     {
-                        new(Static.HPRate, .12m),
+                        new(Static.HpRate, .12m),
                         new(Static.AttackRate, -.0225m),
-                        new(Static.KillHPRecovery, 52.8m),
+                        new(Static.KillHpRecovery, 52.8m),
                         new(Static.Stamina, 11),
                         new(Static.CooldownShorterRate, .02m)
                     }),
@@ -1820,7 +1820,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.DefenseRate, .0405m),
                         new(Static.Accuracy, 42.3m),
-                        new(Static.KillHPRecovery, 29.7m)
+                        new(Static.KillHpRecovery, 29.7m)
                     }),
                 new("記錄",
                     TitleField.Last,
@@ -1829,7 +1829,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.DefenseRate, .045m),
                         new(Static.Accuracy, 47),
-                        new(Static.KillHPRecovery, 33),
+                        new(Static.KillHpRecovery, 33),
                         new(Static.CriticalDamage, 645)
                     }),
                 new("階層",
@@ -1839,7 +1839,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.DefenseRate, .0495m),
                         new(Static.Accuracy, 51.7m),
-                        new(Static.KillHPRecovery, 36.3m),
+                        new(Static.KillHpRecovery, 36.3m),
                         new(Static.CriticalDamage, 710)
                     }),
                 new("操作",
@@ -1849,7 +1849,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.DefenseRate, .0495m),
                         new(Static.Accuracy, 51.7m),
-                        new(Static.KillHPRecovery, 36.3m),
+                        new(Static.KillHpRecovery, 36.3m),
                         new(Static.CriticalDamage, 710),
                         new(Static.AttackSpeedRate, .05m)
                     }),
@@ -1959,7 +1959,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[]
                     {
                         new(Static.AttackRate, .0765m),
-                        new(Static.HPRate, -.0675m),
+                        new(Static.HpRate, -.0675m),
                         new(Static.DamageReductionRateSix, .05m),
                         new(Static.CriticalRate, .05m)
                     }),
@@ -1969,7 +1969,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[]
                     {
                         new(Static.AttackRate, .081m),
-                        new(Static.HPRate, -.06m),
+                        new(Static.HpRate, -.06m),
                         new(Static.DamageReductionRateSix, .05m),
                         new(Static.CriticalRate, .05m)
                     }),
@@ -1979,7 +1979,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[]
                     {
                         new(Static.AttackRate, .081m),
-                        new(Static.HPRate, -.0525m),
+                        new(Static.HpRate, -.0525m),
                         new(Static.DamageReductionRateSix, .05m),
                         new(Static.CriticalRate, .05m),
                         new(Static.DamageReductionRateBoss, .04m)
@@ -1990,7 +1990,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[]
                     {
                         new(Static.AttackRate, .0855m),
-                        new(Static.HPRate, -.045m),
+                        new(Static.HpRate, -.045m),
                         new(Static.DamageReductionRateSix, .05m),
                         new(Static.CriticalRate, .05m),
                         new(Static.DamageReductionRateBoss, .045m)
@@ -2068,7 +2068,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     130,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0525m),
+                        new(Static.HpRate, .0525m),
                         new(Static.DefenseRate, .0315m),
                         new(Static.CriticalRate, .025m)
                     }),
@@ -2077,7 +2077,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     131,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0675m),
+                        new(Static.HpRate, .0675m),
                         new(Static.DefenseRate, .0405m),
                         new(Static.CriticalRate, .025m)
                     }),
@@ -2086,7 +2086,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     132,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0675m),
+                        new(Static.HpRate, .0675m),
                         new(Static.DefenseRate, .0405m),
                         new(Static.CriticalRate, .03m)
                     }),
@@ -2095,7 +2095,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     133,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0825m),
+                        new(Static.HpRate, .0825m),
                         new(Static.DefenseRate, .0495m),
                         new(Static.CriticalRate, .035m)
                     }),
@@ -2118,7 +2118,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     137,
                     new Effect[]
                     {
-                        new(Static.HPRate, .0975m),
+                        new(Static.HpRate, .0975m),
                         new(Static.DefenseRate, .0585m),
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.DamageReductionRate, .03m)
@@ -2126,12 +2126,12 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("滋味",
                     TitleField.Last,
                     138,
-                    new Effect[] {new(Static.HPRate, .045m), new(Static.MoveSpaceRate, .05m)}),
-                new("老顧客", TitleField.Last, 139, new Effect[] {new(Static.HPRate, .0375m)}),
-                new("貴客", TitleField.Last, 140, new Effect[] {new(Static.HPRate, .0375m)}),
-                new("開心果", TitleField.Last, 141, new Effect[] {new(Static.HPRate, .0375m)}),
-                new("暴徒朋友", TitleField.Last, 142, new Effect[] {new(Static.HPRate, .0375m)}),
-                new("超級貴賓", TitleField.Last, 143, new Effect[] {new(Static.HPRate, .0375m)}),
+                    new Effect[] {new(Static.HpRate, .045m), new(Static.MoveSpaceRate, .05m)}),
+                new("老顧客", TitleField.Last, 139, new Effect[] {new(Static.HpRate, .0375m)}),
+                new("貴客", TitleField.Last, 140, new Effect[] {new(Static.HpRate, .0375m)}),
+                new("開心果", TitleField.Last, 141, new Effect[] {new(Static.HpRate, .0375m)}),
+                new("暴徒朋友", TitleField.Last, 142, new Effect[] {new(Static.HpRate, .0375m)}),
+                new("超級貴賓", TitleField.Last, 143, new Effect[] {new(Static.HpRate, .0375m)}),
                 new("驅動者",
                     TitleField.Last,
                     144,
@@ -2341,7 +2341,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[]
                     {
                         new(Static.Stamina, 7.2m),
-                        new(Static.HP, 550),
+                        new(Static.Hp, 550),
                         new(Static.SuperArmorBreakPowerRate, .025m),
                         new(Static.CriticalRate, .02m)
                     }),
@@ -2363,7 +2363,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.CooldownShorterRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .05m),
-                        new(Static.HPRate, .0375m),
+                        new(Static.HpRate, .0375m),
                         new(Static.DefenseRate, -.03m)
                     }),
                 new("炮彈",
@@ -2374,7 +2374,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.CooldownShorterRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .05m),
-                        new(Static.HPRate, .0375m),
+                        new(Static.HpRate, .0375m),
                         new(Static.DefenseRate, -.03m)
                     }),
                 new("鎖鏈",
@@ -2385,7 +2385,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.CooldownShorterRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .05m),
-                        new(Static.HPRate, .0375m),
+                        new(Static.HpRate, .0375m),
                         new(Static.DefenseRate, -.03m)
                     }),
                 new("護盾",
@@ -2396,7 +2396,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.CooldownShorterRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .05m),
-                        new(Static.HPRate, .0375m),
+                        new(Static.HpRate, .0375m),
                         new(Static.DefenseRate, -.03m)
                     }),
                 new("鬥魂",
@@ -2407,7 +2407,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.CooldownShorterRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .05m),
-                        new(Static.HPRate, .0375m),
+                        new(Static.HpRate, .0375m),
                         new(Static.DefenseRate, -.03m)
                     }),
                 new("兵器",
@@ -2418,7 +2418,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.CooldownShorterRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .05m),
-                        new(Static.HPRate, .0375m),
+                        new(Static.HpRate, .0375m),
                         new(Static.DefenseRate, -.03m)
                     }),
                 new("光槍",
@@ -2429,7 +2429,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         new(Static.DefenseBreakRate, .02m),
                         new(Static.CooldownShorterRate, .02m),
                         new(Static.SuperArmorBreakPowerRate, .05m),
-                        new(Static.HPRate, .0375m),
+                        new(Static.HpRate, .0375m),
                         new(Static.DefenseRate, -.03m)
                     }),
                 new("傷痕",
@@ -2448,7 +2448,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.CooldownShorterRate, .03m),
                         new(Static.SoulGateConsumptionReducedRate, .045m),
-                        new(Static.HPRate, .10m),
+                        new(Static.HpRate, .10m),
                         new(Static.DamageReductionRateBoss, .05m)
                     }),
                 new("渴望者行者",

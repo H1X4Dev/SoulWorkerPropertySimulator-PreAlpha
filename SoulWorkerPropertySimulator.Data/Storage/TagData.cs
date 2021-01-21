@@ -252,7 +252,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {wr with {Value = .04m}, iEDPrimal with {Value = .04m}}},
                     {TagRare.Common, new[] {wr with {Value = .02m}, iEDPrimal with {Value = .03m}}}
                 }));
-            var iHP = new Effect(Static.HP, 0);
+            var iHP = new Effect(Static.Hp, 0);
             tags.Add(new("慈悲的",
                 TagField.Weapon,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>
@@ -587,7 +587,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {TagRare.Magical, new[] {gr with {Value = .02m}, iHP with {Value = 100}}},
                     {TagRare.Common, new[] {gr with {Value = .01m}, iHP with {Value = 60}}}
                 }));
-            var iKill = new Effect(Static.KillHPRecovery, 0);
+            var iKill = new Effect(Static.KillHpRecovery, 0);
             tags.Add(new("霸氣的",
                 TagField.Gear,
                 new Dictionary<TagRare, IReadOnlyCollection<Effect>>

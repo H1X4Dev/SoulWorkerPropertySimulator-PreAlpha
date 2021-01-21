@@ -8,7 +8,7 @@ namespace SoulWorkerPropertySimulator.Services
         BroochesSetEffect                       GetBroochesSets(BroochesClassify classify);
         IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects();
         IReadOnlyCollection<ArmorSetEffect>     GetArmorSetEffects();
-        IReadOnlyCollection<BroochesD>          GetBrooches(BroochesType              type);
+        IReadOnlyCollection<Brooches>           GetBrooches(BroochesSeries            series, BroochesType type);
         IReadOnlyCollection<ArmorBlueprint>     GetArmorBlueprints(ArmorField         field);
         IReadOnlyCollection<AccessoryBlueprint> GetAccessoryBlueprints(AccessoryField field);
         IReadOnlyCollection<PluginBlueprint>    GetPluginBlueprints(PluginField       field);

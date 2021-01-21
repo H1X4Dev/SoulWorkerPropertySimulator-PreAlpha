@@ -20,7 +20,13 @@ namespace SoulWorkerPropertySimulator.Data
             SafeCall(() => dataProvider.GetCharacters());
             SafeCall(() => dataProvider.GetAkashas());
 
-            foreach (var type in Enum.GetValues<BroochesType>()) { SafeCall(() => dataProvider.GetBrooches(type)); }
+            foreach (var series in Enum.GetValues<BroochesSeries>())
+            {
+                foreach (var type in Enum.GetValues<BroochesType>())
+                {
+                    SafeCall(() => dataProvider.GetBrooches(series, type));
+                }
+            }
 
             foreach (var field in Enum.GetValues<ArmorField>())
             {

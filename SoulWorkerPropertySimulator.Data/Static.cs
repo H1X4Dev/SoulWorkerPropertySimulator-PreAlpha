@@ -53,12 +53,12 @@
         public static EffectContext ExtraDamageRateSoul       { get; } = new(Property.ExtraDamageRateSoul);
         public static EffectContext GearDefense               { get; } = new(Property.GearDefense);
         public static EffectContext GearDefenseRate           { get; } = new(Property.GearDefenseRate);
-        public static EffectContext HP                        { get; } = new(Property.HP);
-        public static EffectContext HPRate                    { get; } = new(Property.HPRate);
-        public static EffectContext HPRecovery                { get; } = new(Property.HPRecovery);
-        public static EffectContext HPRecoveryRate            { get; } = new(Property.HPRecoveryRate);
+        public static EffectContext Hp                        { get; } = new(Property.Hp);
+        public static EffectContext HpRate                    { get; } = new(Property.HpRate);
+        public static EffectContext HpRecovery                { get; } = new(Property.HpRecovery);
+        public static EffectContext HpRecoveryRate            { get; } = new(Property.HpRecoveryRate);
         public static EffectContext InvincibleSecond          { get; } = new(Property.InvincibleSecond);
-        public static EffectContext KillHPRecovery            { get; } = new(Property.KillHPRecovery);
+        public static EffectContext KillHpRecovery            { get; } = new(Property.KillHpRecovery);
         public static EffectContext MoneyVolumeRateEnemy      { get; } = new(Property.MoneyVolumeRateEnemy);
         public static EffectContext MoveSpaceRate             { get; } = new(Property.MoveSpaceRate);
         public static EffectContext MoveSpaceRateBattle       { get; } = new(Property.MoveSpaceRateBattle);

@@ -152,22 +152,22 @@ namespace SoulWorkerPropertySimulator
         GearDefenseRate,
 
         [Description("最大HP")]
-        HP,
+        Hp,
 
         [Description("最大HP(%)")]
-        HPRate,
+        HpRate,
 
         [Description("HP恢復")]
-        HPRecovery,
+        HpRecovery,
 
         [Description("HP恢復(%)")]
-        HPRecoveryRate,
+        HpRecoveryRate,
 
         [Description("無敵(秒)")]
         InvincibleSecond,
 
         [Description("擊殺效果：HP恢復")]
-        KillHPRecovery,
+        KillHpRecovery,
 
         [Description("從敵人獲得金幣量")]
         MoneyVolumeRateEnemy,
@@ -212,7 +212,7 @@ namespace SoulWorkerPropertySimulator
         WeaponAttackRate
     }
 
-    public enum Opportunity
+    public enum Ppportunity
     {
         [Description("空中命中時")]
         AirHit,
@@ -368,7 +368,7 @@ namespace SoulWorkerPropertySimulator
     public record EffectContext
     {
         public EffectContext(Property     property,
-                             Opportunity? opportunity = null,
+                             Ppportunity? opportunity = null,
                              decimal?     probability = null,
                              decimal?     duration    = null)
         {
@@ -380,7 +380,7 @@ namespace SoulWorkerPropertySimulator
         }
 
         public Property     Property    { get; }
-        public Opportunity? Opportunity { get; }
+        public Ppportunity? Opportunity { get; }
         public decimal?     Probability { get; }
         public decimal?     Duration    { get; }
         public bool         IsPercent   { get; }
@@ -435,8 +435,8 @@ namespace SoulWorkerPropertySimulator
             Property.ExtraDamageRatePuppet,
             Property.ExtraDamageRateSoul,
             Property.GearDefenseRate,
-            Property.HPRate,
-            Property.HPRecoveryRate,
+            Property.HpRate,
+            Property.HpRecoveryRate,
             Property.MoneyVolumeRateEnemy,
             Property.MoveSpaceRate,
             Property.MoveSpaceRateBattle,
@@ -457,7 +457,9 @@ namespace SoulWorkerPropertySimulator
     {
         public EffectRandomContext(EffectContext context, decimal min, decimal max)
         {
+#if DEBUG
             if (min > max) { throw new InvalidOperationException(); }
+#endif
 
             Context = context;
             Min     = min;

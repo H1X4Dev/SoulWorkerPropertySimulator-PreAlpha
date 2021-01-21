@@ -33,7 +33,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new(Static.SuperArmorBreakPowerRate, .02m, .11m),
                     new(Static.DefenseBreakRate, .01m, .06m),
                     new(Static.SoulNovaVolumeRate, .01m, .07m),
-                    new(Static.KillHPRecovery, 28, 217)
+                    new(Static.KillHpRecovery, 28, 217)
                 },
                 3,
                 Property.Attack,
@@ -66,7 +66,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new(Static.Attack, 36, 198),
                     new(Static.Accuracy, 7, 37),
                     new(Static.CriticalDamage, 140, 659),
-                    new(Static.HP, 2_365, 11_100),
+                    new(Static.Hp, 2_365, 11_100),
                     new(Static.CriticalRate, .01m, .07m),
                     new(Static.CooldownShorterRate, .01m, .05m),
                     new(Static.Defense, 66, 250),
@@ -80,7 +80,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 3234,
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
-                    {3, new Effect[] {new(new(Property.AttackRate, Opportunity.HitCommon, .1m, 2), .07m)}},
+                    {3, new Effect[] {new(new(Property.AttackRate, Ppportunity.HitCommon, .1m, 2), .07m)}},
                     {6, new Effect[] {new(Static.DefenseRate, .36m)}},
                     {9, new Effect[] {new(Static.ExtraDamageRateBoss, .03m)}}
                 },
@@ -98,7 +98,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 Field = ArmorField.Shoulder,
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
-                    {3, new Effect[] {new(new(Property.AttackRate, Opportunity.HitBoss, .1m, 2), .06m)}},
+                    {3, new Effect[] {new(new(Property.AttackRate, Ppportunity.HitBoss, .1m, 2), .06m)}},
                     {6, new Effect[] {new(Static.Evade, 120)}},
                     {9, new Effect[] {new(Static.Accuracy, 390)}}
                 },
@@ -116,14 +116,14 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {
-                        3, new Effect[] {new(new(Property.SoulGateRecoveryRate, Opportunity.UseAvoid, .05m), .12m)}
+                        3, new Effect[] {new(new(Property.SoulGateRecoveryRate, Ppportunity.UseAvoid, .05m), .12m)}
                     },
-                    {6, new Effect[] {new(Static.HP, 2_500)}},
+                    {6, new Effect[] {new(Static.Hp, 2_500)}},
                     {9, new Effect[] {new(Static.CriticalRate, .06m)}}
                 },
                 FixedEffects = new Effect[]
                 {
-                    new(Static.HP, 5_994), new(Static.KillHPRecovery, 80), new(Static.Defense, -10000)
+                    new(Static.Hp, 5_994), new(Static.KillHpRecovery, 80), new(Static.Defense, -10000)
                 }
             });
             result.Add(gear68 with
@@ -134,7 +134,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 {
                     {
                         3,
-                        new Effect[] {new(new(Property.CriticalDamage, Opportunity.SuperArmorBreak, .1m, 3), .65m)}
+                        new Effect[] {new(new(Property.CriticalDamage, Ppportunity.SuperArmorBreak, .1m, 3), .65m)}
                     },
                     {6, new Effect[] {new(Static.DamageReductionRate, .06m)}},
                     {9, new Effect[] {new(Static.DefenseBreakRate, .06m)}}
