@@ -56,9 +56,16 @@ namespace SoulWorkerPropertySimulator
 
     public enum BroochesSeries
     {
+        [Description("SD")]
         Sd,
-        Fot,
+
+        [Description("BSK")]
         Bsk,
+
+        [Description("FOT")]
+        Fot,
+
+        [Description("SIN")]
         Sin
     }
 

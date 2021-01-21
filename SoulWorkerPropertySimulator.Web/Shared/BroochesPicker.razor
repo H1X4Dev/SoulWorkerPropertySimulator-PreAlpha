@@ -1,0 +1,86 @@
+﻿@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Models
+@inject IDataProvideService Data
+@inject IBroochesComputeService BroochesCompute
+
+<div>
+    <div>
+        <select @bind="Selected">
+            <option></option>
+            @foreach (var item in Options)
+            {
+                <option value="@item.Name">@item.DisplayName</option>
+            }
+        </select>
+    </div>
+    <div>
+        @if (Item != null)
+        {
+            <select @bind="SelectedRare">
+                @foreach (var rare in Item.ValidRare.OrderByDescending(x => x))
+                {
+                    <option value="@rare">@rare</option>
+                }
+            </select>
+        }
+    </div>
+</div>
+
+@code {
+
+    [CascadingParameter(Name = nameof(Field))]
+    public BroochesField Field { get; set; }
+
+    [Parameter]
+    public BroochesType Type { get; set; }
+
+    private IReadOnlyCollection<Brooches> Options { get; set; } = null!;
+
+    private string? _selected;
+
+    private string? Selected
+    {
+        get => _selected;
+        set
+        {
+            _selected = value;
+            SelectedRare = Item?.ValidRare.Max();
+        }
+    }
+
+    private BroochesRare? _selectedRare;
+
+    private BroochesRare? SelectedRare
+    {
+        get => _selectedRare;
+        set
+        {
+            _selectedRare = value;
+            Update();
+        }
+    }
+
+    public Brooches? Item => Options.FirstOrDefault(x => x.Name.Equals(Selected));
+
+    private void Update()
+    {
+        var item = Item;
+        if (item == null) { BroochesCompute.Clear(Field, Type); }
+        else
+        { BroochesCompute.Change(Field, item); }
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Options = Data.GetBrooches(Type).OrderBy(x => x.Series).ThenBy(x => x.Name).ToList();
+
+        var defaultItem = BroochesCompute.Get(Field, Type);
+        if (defaultItem != null)
+        {
+            _selected = defaultItem.Name;
+            _selectedRare = defaultItem.Rare;
+        }
+    }
+
+}

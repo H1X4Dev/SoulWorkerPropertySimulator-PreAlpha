@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SoulWorkerPropertySimulator.Extensions;
 
 namespace SoulWorkerPropertySimulator.Models
 {
-    public record BroochesClassify(BroochesSeries Series, BroochesRare Rare);
-
     public record Brooches : Item
     {
         private readonly IReadOnlyDictionary<BroochesRare, IReadOnlyCollection<Effect>> _effects;
@@ -15,7 +14,7 @@ namespace SoulWorkerPropertySimulator.Models
                         BroochesSeries series,
                         BroochesType type,
                         IReadOnlyDictionary<BroochesRare, IReadOnlyCollection<Effect>> effects,
-                        BroochesRare rare = BroochesRare.Tera) : base(name, Classify.Brooches)
+                        BroochesRare rare = BroochesRare.Tera) : base(name)
         {
 #if DEBUG
             if (!name.Equals("對策"))
@@ -61,40 +60,24 @@ namespace SoulWorkerPropertySimulator.Models
 
         public BroochesSeries Series { get; init; }
         public BroochesType   Type   { get; }
-    }
 
-    public record BroochesD : Item
-    {
-        public BroochesD(string name, BroochesType type, BroochesClassify classify, IReadOnlyCollection<Effect> effects)
-            : base(name, Classify.Brooches)
-        {
-            Type             = type;
-            BroochesClassify = classify;
-            Effects          = effects;
-
-            Id = $"{{ Name:{Name}, {BroochesClassify} }}";
-        }
-
-        public override IReadOnlyCollection<Effect> Effects { get; }
-
-        public BroochesType     Type             { get; }
-        public BroochesClassify BroochesClassify { get; }
-
-        public string Id { get; }
+        public string DisplayName => $"{Series.GetDescription()}：{Name}";
     }
 
     public record BroochesSetEffect : Item
     {
-        public BroochesSetEffect(string name, BroochesClassify classify, IReadOnlyCollection<Effect> effects) : base(
-            name,
-            Classify.Brooches)
+        public BroochesSetEffect(string                      name,
+                                 BroochesSeries              series,
+                                 BroochesRare                rare,
+                                 IReadOnlyCollection<Effect> effects) : base(name)
         {
-            Class   = classify;
+            Series  = series;
+            Rare    = rare;
             Effects = effects;
         }
 
+        BroochesSeries                              Series  { get; }
+        BroochesRare                                Rare    { get; }
         public override IReadOnlyCollection<Effect> Effects { get; }
-
-        public BroochesClassify Class { get; }
     }
 }

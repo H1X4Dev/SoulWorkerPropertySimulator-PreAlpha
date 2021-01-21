@@ -7,115 +7,110 @@ namespace SoulWorkerPropertySimulator.Services
 {
     public interface IBroochesComputeService : IComputeService
     {
-        BroochesD? Get(BroochesField field, BroochesType type);
-
-        // IEnumerable<BroochesD?> Get(BroochesField   field);
-        void Change(BroochesD?   newItem, BroochesField field);
-        void Clear(BroochesField field,   BroochesType? type = null);
+        Brooches? Get(BroochesField    field, BroochesType  type);
+        void      Change(BroochesField field, Brooches      newItem);
+        void      Clear(BroochesField  field, BroochesType? type = null);
 
         event Action<BroochesField, string?>? OnSetChange;
     }
 
     internal class BroochesComputeService : ComputeServiceBase, IBroochesComputeService
     {
-        private readonly IDataProvideService                                               _provider;
-        private readonly IDictionary<BroochesField, IDictionary<BroochesType, BroochesD?>> Brooches;
-        private readonly IDictionary<BroochesField, BroochesSetEffect?>                    BroochesSet;
+        private readonly IDataProvideService                                             _provider;
+        private readonly Dictionary<BroochesField, IDictionary<BroochesType, Brooches?>> _brooches    = new();
+        private readonly Dictionary<BroochesField, BroochesSetEffect?>                   _broochesSet = new();
 
-        public BroochesComputeService(IDataProvideService provider)
-        {
-            _provider   = provider;
-            Brooches    = new Dictionary<BroochesField, IDictionary<BroochesType, BroochesD?>>();
-            BroochesSet = new Dictionary<BroochesField, BroochesSetEffect?>();
-        }
+        public BroochesComputeService(IDataProvideService provider) => _provider = provider;
 
         public event Action<BroochesField, string?>? OnSetChange;
 
-        public BroochesD? Get(BroochesField field, BroochesType type)
+        public Brooches? Get(BroochesField field, BroochesType type)
         {
-            try { return Brooches[field][type]; }
+            try { return _brooches[field][type]; }
             catch (KeyNotFoundException) { return null; }
         }
 
-        // public IEnumerable<BroochesD?> Get(BroochesField field)
-        // {
-        //     try { return BroochesD[field].Values; }
-        //     catch (KeyNotFoundException) { return Array.Empty<BroochesD>(); }
-        // }
-
-        public void Change(BroochesD? newItem, BroochesField field)
+        public void Change(BroochesField field, Brooches newItem)
         {
             if (newItem == null) { throw new InvalidOperationException(); }
 
-            IDictionary<BroochesType, BroochesD?> dict;
-            if (Brooches.ContainsKey(field)) { dict = Brooches[field]; }
+            IDictionary<BroochesType, Brooches?> dict;
+            if (_brooches.ContainsKey(field)) { dict = _brooches[field]; }
             else
             {
-                dict = new Dictionary<BroochesType, BroochesD?>();
-                Brooches.Add(field, dict);
+                dict = new Dictionary<BroochesType, Brooches?>();
+                _brooches.Add(field, dict);
             }
 
-            BroochesD? before;
+            Brooches? before;
 
             try { before = dict[newItem.Type]; }
             catch (KeyNotFoundException) { before = null; }
 
             dict[newItem.Type] = newItem;
 
-            var (setBefore, setAfter) = ComputeSetAffect(field);
-            BroochesSet[field]        = setAfter;
+            var setResult = ComputeSetAffect(field);
 
             NotifyChange(ComputeAffect(
-                (before?.Effects ?? Array.Empty<Effect>()).Concat(setBefore?.Effects ?? Array.Empty<Effect>()),
-                newItem.Effects.Concat(setAfter?.Effects                             ?? Array.Empty<Effect>())));
+                (before?.Effects ?? Array.Empty<Effect>()).Concat(setResult?.Before?.Effects ?? Array.Empty<Effect>()),
+                newItem.Effects.Concat(setResult?.After?.Effects ?? Array.Empty<Effect>())));
 
-            if (setBefore?.Classify != setAfter?.Classify) { OnSetChange?.Invoke(field, setAfter?.Name); }
+            if (setResult != null)
+            {
+                _broochesSet[field] = setResult.Value.After;
+
+                OnSetChange?.Invoke(field, setResult.Value.After?.Name);
+            }
         }
 
         public void Clear(BroochesField field, BroochesType? type = null)
         {
-            if (!Brooches.ContainsKey(field)) { return; }
+            if (!_brooches.ContainsKey(field)) { return; }
 
             IEnumerable<Effect> before;
             if (type == null)
             {
-                before = Brooches[field].Where(x => x.Value != null).SelectMany(x => x.Value!.Effects);
-                Brooches[field].Clear();
+                before = _brooches[field].Where(x => x.Value != null).SelectMany(x => x.Value!.Effects);
+                _brooches[field].Clear();
             }
-            else if (Brooches[field].ContainsKey(type.Value) && Brooches[field][type.Value] != null)
+            else if (_brooches[field].ContainsKey(type.Value) && _brooches[field][type.Value] != null)
             {
-                before                      = Brooches[field][type.Value]!.Effects;
-                Brooches[field][type.Value] = null;
+                before                       = _brooches[field][type.Value]!.Effects;
+                _brooches[field][type.Value] = null;
             }
             else { return; }
 
             BroochesSetEffect? setBefore;
-            try { setBefore = BroochesSet[field]; }
+            try { setBefore = _broochesSet[field]; }
             catch (KeyNotFoundException) { setBefore = null; }
 
-            BroochesSet[field] = null;
+            _broochesSet[field] = null;
             NotifyChange(ComputeAffect(before.Concat(setBefore?.Effects ?? Array.Empty<Effect>()),
                 Array.Empty<Effect>()));
 
             if (setBefore != null) { OnSetChange?.Invoke(field, null); }
         }
 
-        private (BroochesSetEffect? Before, BroochesSetEffect? After) ComputeSetAffect(BroochesField field)
+        private (BroochesSetEffect? Before, BroochesSetEffect? After)? ComputeSetAffect(BroochesField field)
         {
-            if (!Brooches.ContainsKey(field)) { throw new InvalidOperationException(); }
+            if (!_brooches.ContainsKey(field)) { throw new InvalidOperationException(); }
 
             BroochesSetEffect? before;
-            try { before = BroochesSet[field]; }
+            try { before = _broochesSet[field]; }
             catch (KeyNotFoundException) { before = null; }
 
-            var brooches = Brooches[field].Select(x => x.Value).Where(x => x != null)!.ToList<BroochesD>();
-            var after = brooches.GroupBy(x => x.BroochesClassify).All(x => x.Count() == 1) &&
-                        brooches.Select(x => x.BroochesClassify).Distinct().Count() == 1 &&
-                        brooches.Count == Enum.GetValues<BroochesType>().Length
-                ? _provider.GetBroochesSets(brooches.First().BroochesClassify)
-                : null;
+            var                brooches = _brooches[field].Select(x => x.Value).Where(x => x != null).ToList();
+            BroochesSetEffect? after    = null;
+            var                first    = brooches.FirstOrDefault();
+            if (first          != null                                  &&
+                brooches.Count == Enum.GetValues<BroochesType>().Length &&
+                brooches.All(x => x!.Series == first.Series)            &&
+                brooches.All(x => x!.Rare   == first.Rare))
+            {
+                after = _provider.GetBroochesSets(field, first.Series, first.Rare);
+            }
 
-            return (before, after);
+            return before?.Name.Equals(after?.Name) ?? false ? null : (before, after);
         }
     }
 }
