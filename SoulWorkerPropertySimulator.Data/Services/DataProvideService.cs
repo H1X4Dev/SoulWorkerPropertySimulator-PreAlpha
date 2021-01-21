@@ -9,14 +9,13 @@ namespace SoulWorkerPropertySimulator.Data.Services
 {
     internal class DataProvideService : IDataProvideService
     {
-        public BroochesSetEffect GetBroochesSets(BroochesClassify classify) => throw new NotImplementedException();
+        public BroochesSetEffect GetBroochesSets(BroochesField field, BroochesSeries series, BroochesRare rare) => throw new NotImplementedException();
 
         public IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects() => AccessorySetData.Get();
 
         public IReadOnlyCollection<ArmorSetEffect> GetArmorSetEffects() => ArmorSetData.Get();
 
-        public IReadOnlyCollection<Brooches> GetBrooches(BroochesSeries series, BroochesType type) =>
-            BroochesData.Get(series, type);
+        public IReadOnlyCollection<Brooches> GetBrooches(BroochesType type) => BroochesData.Get(type);
 
         public IReadOnlyCollection<ArmorBlueprint> GetArmorBlueprints(ArmorField field) => ArmorData.Get(field);
 

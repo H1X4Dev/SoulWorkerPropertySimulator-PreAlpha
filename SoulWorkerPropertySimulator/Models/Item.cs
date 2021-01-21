@@ -6,23 +6,21 @@ namespace SoulWorkerPropertySimulator.Models
 {
     public abstract record Item
     {
-        protected Item(string name, Classify classify, string? setName = null)
+        protected Item(string name, string? setName = null)
         {
             Name     = name;
-            Classify = classify;
             SetName  = setName;
         }
 
         public string   Name     { get; init; }
         public string?  SetName  { get; }
-        public Classify Classify { get; }
 
         public string FullName => $"{SetName}{Name}";
 
         public abstract IReadOnlyCollection<Effect> Effects { get; }
     }
 
-    public abstract record Set(string Name, Classify Classify, string? SetName = null) : Item(Name, Classify, SetName);
+    public abstract record Set(string Name, string? SetName = null) : Item(Name, SetName);
 
     public interface ICreatable<out TBlueprint> where TBlueprint : Blueprint
     {

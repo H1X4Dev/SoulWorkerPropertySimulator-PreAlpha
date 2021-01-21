@@ -4,8 +4,7 @@ namespace SoulWorkerPropertySimulator.Models
 {
     public record Title : Item
     {
-        public Title(string name, TitleField field, int id, IReadOnlyCollection<Effect> effects) : base(name,
-            Classify.Character)
+        public Title(string name, TitleField field, int id, IReadOnlyCollection<Effect> effects) : base(name)
         {
             Id      = id;
             Field   = field;

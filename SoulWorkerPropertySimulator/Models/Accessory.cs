@@ -30,7 +30,6 @@ namespace SoulWorkerPropertySimulator.Models
     {
         internal Accessory(AccessoryBlueprint blueprint, IReadOnlyCollection<Effect> randomEffects) : base(
             blueprint.Name,
-            Classify.Accessory,
             blueprint.SetName)
         {
             if (!blueprint.CheckEffectAllowed(randomEffects)) { throw new InvalidOperationException(); }
@@ -48,9 +47,8 @@ namespace SoulWorkerPropertySimulator.Models
 
     public record AccessorySetEffect : Set, IUpgradeable
     {
-        public AccessorySetEffect(string name,
-                                  IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffect,
-                                  string? setName = null) : base(name, Classify.Accessory, setName)
+        public AccessorySetEffect(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffect) :
+            base(name)
         {
             StepEffects = stepEffect;
             ValidStep   = Enumerable.Range(0, stepEffect.Select(x => x.Key).Max()).ToList();

@@ -212,7 +212,7 @@ namespace SoulWorkerPropertySimulator
         WeaponAttackRate
     }
 
-    public enum Ppportunity
+    public enum Opportunity
     {
         [Description("空中命中時")]
         AirHit,
@@ -368,7 +368,7 @@ namespace SoulWorkerPropertySimulator
     public record EffectContext
     {
         public EffectContext(Property     property,
-                             Ppportunity? opportunity = null,
+                             Opportunity? opportunity = null,
                              decimal?     probability = null,
                              decimal?     duration    = null)
         {
@@ -380,7 +380,7 @@ namespace SoulWorkerPropertySimulator
         }
 
         public Property     Property    { get; }
-        public Ppportunity? Opportunity { get; }
+        public Opportunity? Opportunity { get; }
         public decimal?     Probability { get; }
         public decimal?     Duration    { get; }
         public bool         IsPercent   { get; }

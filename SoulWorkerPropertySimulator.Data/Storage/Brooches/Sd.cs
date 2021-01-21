@@ -561,9 +561,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 {
                     {
                         BroochesRare.Tera,
-                        new Effect[] {new(new(Property.HpRecoveryRate, Ppportunity.UseAvoid, .15m), 5)}
+                        new Effect[] {new(new(Property.HpRecoveryRate, Opportunity.UseAvoid, .15m), 5)}
                     },
-                    {BroochesRare.Giga, new Effect[] {new(new(Property.HpRecoveryRate, Ppportunity.UseAvoid, .1m), 3)}}
+                    {BroochesRare.Giga, new Effect[] {new(new(Property.HpRecoveryRate, Opportunity.UseAvoid, .1m), 3)}}
                 });
 
             _sdE14 = new("行者",

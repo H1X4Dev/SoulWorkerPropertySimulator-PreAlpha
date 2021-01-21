@@ -21,9 +21,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                             3,
                             new Effect[]
                             {
-                                new(new(Property.Attack, Ppportunity.HitStamina70Down, duration: 1), 500),
-                                new(new(Property.Attack, Ppportunity.HitStamina40Down, duration: 1), 1000),
-                                new(new(Property.Attack, Ppportunity.HitStamina10Down, duration: 1), 3000)
+                                new(new(Property.Attack, Opportunity.HitStamina70Down, duration: 1), 500),
+                                new(new(Property.Attack, Opportunity.HitStamina40Down, duration: 1), 1000),
+                                new(new(Property.Attack, Opportunity.HitStamina10Down, duration: 1), 3000)
                             }
                         },
                         {

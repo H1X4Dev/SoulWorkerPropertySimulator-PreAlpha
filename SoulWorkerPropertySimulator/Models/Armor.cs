@@ -154,7 +154,6 @@ namespace SoulWorkerPropertySimulator.Models
     {
         internal Armor(ArmorBlueprint blueprint, decimal ratio, IReadOnlyCollection<Effect> randomEffects) : base(
             blueprint.Name,
-            Classify.Armor,
             blueprint.SetName)
         {
             if (!blueprint.CheckEffectAllowed(randomEffects) || ratio < 0 || ratio > 1)
@@ -238,10 +237,8 @@ namespace SoulWorkerPropertySimulator.Models
 
     public record ArmorSetEffect : Set, IUpgradeable
     {
-        public ArmorSetEffect(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffects) : base(
-            name,
-            Classify.Accessory,
-            name)
+        public ArmorSetEffect(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffects) :
+            base(name)
         {
             StepEffects = stepEffects;
             ValidStep   = Enumerable.Range(0, stepEffects.Select(x => x.Key).Max()).ToList();

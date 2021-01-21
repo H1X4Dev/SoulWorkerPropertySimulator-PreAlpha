@@ -5,15 +5,14 @@ namespace SoulWorkerPropertySimulator.Models
 {
     public record Akasha : Item
     {
-        internal Akasha(string name, bool isSecret, int step, IReadOnlyCollection<Effect> effects) : base(name,
-            Classify.Akasha)
+        internal Akasha(string name, bool isSecret, int step, IReadOnlyCollection<Effect> effects) : base(name)
         {
             Step     = step;
             IsSecret = isSecret;
             Effects  = effects;
         }
 
-        internal Akasha(string name, bool isSecret, int step, string skill) : base(name, Classify.Akasha)
+        internal Akasha(string name, bool isSecret, int step, string skill) : base(name)
         {
             Step     = step;
             IsSecret = isSecret;

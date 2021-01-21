@@ -36,7 +36,6 @@ namespace SoulWorkerPropertySimulator.Models
 
         internal Plugin(PluginBlueprint blueprint, IReadOnlyCollection<Effect>? randomEffects = null) : base(
             blueprint.Name,
-            Classify.Armor,
             blueprint.SetName)
         {
             if (!blueprint.CheckEffectAllowed(randomEffects)) { throw new InvalidOperationException(); }

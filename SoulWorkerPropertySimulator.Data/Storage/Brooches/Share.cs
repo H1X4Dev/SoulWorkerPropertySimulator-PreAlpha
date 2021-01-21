@@ -4,205 +4,205 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static partial class BroochesData
     {
-        private static readonly EffectContext AccuracyOAvoidP3D5  = new(Property.Accuracy, Ppportunity.Avoid, .3m, 5);
-        private static readonly EffectContext AccuracyOSufferP3D5 = new(Property.Accuracy, Ppportunity.Suffer, .3m, 5);
+        private static readonly EffectContext AccuracyOAvoidP3D5  = new(Property.Accuracy, Opportunity.Avoid, .3m, 5);
+        private static readonly EffectContext AccuracyOSufferP3D5 = new(Property.Accuracy, Opportunity.Suffer, .3m, 5);
 
         private static readonly EffectContext AccuracyOUseSkillP1D5 =
-            new(Property.Accuracy, Ppportunity.UseSkill, .1m, 5);
+            new(Property.Accuracy, Opportunity.UseSkill, .1m, 5);
 
-        private static readonly EffectContext AttackOAvoidP3D5 = new(Property.Attack, Ppportunity.Avoid, .3m, 5);
+        private static readonly EffectContext AttackOAvoidP3D5 = new(Property.Attack, Opportunity.Avoid, .3m, 5);
 
         private static readonly EffectContext AttackOCriticalHitP1D5 =
-            new(Property.Attack, Ppportunity.CriticalHit, .1m, 5);
+            new(Property.Attack, Opportunity.CriticalHit, .1m, 5);
 
-        private static readonly EffectContext AttackOHitP1D5 = new(Property.Attack, Ppportunity.Hit, .1m, 5);
-        private static readonly EffectContext AttackOKillD5 = new(Property.Attack, Ppportunity.Kill, duration: 5);
-        private static readonly EffectContext AttackORunP3D5 = new(Property.Attack, Ppportunity.Run, .3m, 5);
-        private static readonly EffectContext AttackOSufferP3D5 = new(Property.Attack, Ppportunity.Suffer, .3m, 5);
-        private static readonly EffectContext AttackOUseItemP2D5 = new(Property.Attack, Ppportunity.UseItem, .2m, 5);
-        private static readonly EffectContext AttackOUseSkillP1D5 = new(Property.Attack, Ppportunity.UseSkill, .1m, 5);
-        private static readonly EffectContext AttackRateOAvoid = new(Property.AttackRate, Ppportunity.Avoid);
-        private static readonly EffectContext AttackRateOHitP1D5 = new(Property.AttackRate, Ppportunity.Hit, .1m, 5);
-        private static readonly EffectContext AttackRateOHitP3D3 = new(Property.AttackRate, Ppportunity.Hit, .3m, 3);
-        private static readonly EffectContext AttackSpeedRateOAvoid = new(Property.AttackRateNext, Ppportunity.Avoid);
+        private static readonly EffectContext AttackOHitP1D5 = new(Property.Attack, Opportunity.Hit, .1m, 5);
+        private static readonly EffectContext AttackOKillD5 = new(Property.Attack, Opportunity.Kill, duration: 5);
+        private static readonly EffectContext AttackORunP3D5 = new(Property.Attack, Opportunity.Run, .3m, 5);
+        private static readonly EffectContext AttackOSufferP3D5 = new(Property.Attack, Opportunity.Suffer, .3m, 5);
+        private static readonly EffectContext AttackOUseItemP2D5 = new(Property.Attack, Opportunity.UseItem, .2m, 5);
+        private static readonly EffectContext AttackOUseSkillP1D5 = new(Property.Attack, Opportunity.UseSkill, .1m, 5);
+        private static readonly EffectContext AttackRateOAvoid = new(Property.AttackRate, Opportunity.Avoid);
+        private static readonly EffectContext AttackRateOHitP1D5 = new(Property.AttackRate, Opportunity.Hit, .1m, 5);
+        private static readonly EffectContext AttackRateOHitP3D3 = new(Property.AttackRate, Opportunity.Hit, .3m, 3);
+        private static readonly EffectContext AttackSpeedRateOAvoid = new(Property.AttackRateNext, Opportunity.Avoid);
 
         private static readonly EffectContext AttackSpeedRateOCriticalHitP1D2 =
-            new(Property.AttackSpeedRate, Ppportunity.CriticalHit, .1m, 2);
+            new(Property.AttackSpeedRate, Opportunity.CriticalHit, .1m, 2);
 
         private static readonly EffectContext AttackSpeedRateOSufferCriticalP5D2 =
-            new(Property.AttackSpeedRate, Ppportunity.SufferCritical, .5m, 2);
+            new(Property.AttackSpeedRate, Opportunity.SufferCritical, .5m, 2);
 
         private static readonly EffectContext AttackSpeedRateOSufferP3D15M =
-            new(Property.AttackSpeedRate, Ppportunity.Suffer, .3m, 1.5m);
+            new(Property.AttackSpeedRate, Opportunity.Suffer, .3m, 1.5m);
 
         private static readonly EffectContext CooldownShorterRateOUseSkillP2 =
-            new(Property.CooldownShorterRate, Ppportunity.UseSkill, .2m);
+            new(Property.CooldownShorterRate, Opportunity.UseSkill, .2m);
 
         private static readonly EffectContext CriticalDamageOAvoidP3D5 =
-            new(Property.CriticalDamage, Ppportunity.Avoid, .3m, 5);
+            new(Property.CriticalDamage, Opportunity.Avoid, .3m, 5);
 
         private static readonly EffectContext CriticalDamageOCriticalD3 =
-            new(Property.CriticalDamage, Ppportunity.Critical, duration: 3);
+            new(Property.CriticalDamage, Opportunity.Critical, duration: 3);
 
         private static readonly EffectContext CriticalDamageOCriticalHitP1D2 =
-            new(Property.CriticalDamage, Ppportunity.CriticalHit, .1m, 2);
+            new(Property.CriticalDamage, Opportunity.CriticalHit, .1m, 2);
 
         private static readonly EffectContext CriticalDamageOhp30DownThenHitD3 =
-            new(Property.CriticalDamage, Ppportunity.HP30DownThenHit, duration: 3);
+            new(Property.CriticalDamage, Opportunity.HP30DownThenHit, duration: 3);
 
         private static readonly EffectContext CriticalDamageORunP2D3 =
-            new(Property.CriticalDamage, Ppportunity.Run, .2m, 3);
+            new(Property.CriticalDamage, Opportunity.Run, .2m, 3);
 
         private static readonly EffectContext CriticalDamageOSufferCriticalP5D2 =
-            new(Property.CriticalDamage, Ppportunity.SufferCritical, .5m, 2);
+            new(Property.CriticalDamage, Opportunity.SufferCritical, .5m, 2);
 
         private static readonly EffectContext CriticalDamageOSufferP3D5 =
-            new(Property.CriticalDamage, Ppportunity.Suffer, .3m, 5);
+            new(Property.CriticalDamage, Opportunity.Suffer, .3m, 5);
 
         private static readonly EffectContext CriticalDamageOSufferP5D3 =
-            new(Property.CriticalDamage, Ppportunity.Suffer, .5m, 3);
+            new(Property.CriticalDamage, Opportunity.Suffer, .5m, 3);
 
         private static readonly EffectContext CriticalDamageOSufferStamina50UpD5 =
-            new(Property.CriticalDamage, Ppportunity.SufferStamina50Up, duration: 5);
+            new(Property.CriticalDamage, Opportunity.SufferStamina50Up, duration: 5);
 
         private static readonly EffectContext CriticalDamageOUseAvoidP1D5 =
-            new(Property.CriticalDamage, Ppportunity.UseAvoid, .1m, 5);
+            new(Property.CriticalDamage, Opportunity.UseAvoid, .1m, 5);
 
         private static readonly EffectContext CriticalDamageOUseItemP2D5 =
-            new(Property.CriticalDamage, Ppportunity.UseItem, .2m, 5);
+            new(Property.CriticalDamage, Opportunity.UseItem, .2m, 5);
 
         private static readonly EffectContext CriticalDamageOUseSkillP3D5 =
-            new(Property.CriticalDamage, Ppportunity.UseSkill, .3m, 5);
+            new(Property.CriticalDamage, Opportunity.UseSkill, .3m, 5);
 
         private static readonly EffectContext CriticalDamageOUseSkillP5D5 =
-            new(Property.CriticalDamage, Ppportunity.UseSkill, .5m, 5);
+            new(Property.CriticalDamage, Opportunity.UseSkill, .5m, 5);
 
         private static readonly EffectContext CriticalRateOAvoidP3D2 =
-            new(Property.CriticalRate, Ppportunity.Avoid, .3m, 2);
+            new(Property.CriticalRate, Opportunity.Avoid, .3m, 2);
 
         private static readonly EffectContext
-            CriticalRateORunP3D5 = new(Property.CriticalRate, Ppportunity.Run, .3m, 5);
+            CriticalRateORunP3D5 = new(Property.CriticalRate, Opportunity.Run, .3m, 5);
 
         private static readonly EffectContext CriticalRateOUseAvoidP1D5 =
-            new(Property.CriticalRate, Ppportunity.UseAvoid, .1m, 5);
+            new(Property.CriticalRate, Opportunity.UseAvoid, .1m, 5);
 
         private static readonly EffectContext CriticalRateOUseSkillP5D5 =
-            new(Property.CriticalRate, Ppportunity.UseSkill, .5m, 5);
+            new(Property.CriticalRate, Opportunity.UseSkill, .5m, 5);
 
         private static readonly EffectContext CriticalResistanceRateOHP50DownD10 =
-            new(Property.CriticalResistanceRate, Ppportunity.HP50Down, duration: 10);
+            new(Property.CriticalResistanceRate, Opportunity.HP50Down, duration: 10);
 
         private static readonly EffectContext CriticalResistanceRateOSufferP8D10 =
-            new(Property.CriticalResistanceRate, Ppportunity.Suffer, .8m, 10);
+            new(Property.CriticalResistanceRate, Opportunity.Suffer, .8m, 10);
 
         private static readonly EffectContext DamageReductionRateOAirHitD5 =
-            new(Property.DamageReductionRate, Ppportunity.AirHit, duration: 5);
+            new(Property.DamageReductionRate, Opportunity.AirHit, duration: 5);
 
         private static readonly EffectContext DamageReductionRateOAirSufferD5 =
-            new(Property.DamageReductionRate, Ppportunity.AirSuffer, duration: 5);
+            new(Property.DamageReductionRate, Opportunity.AirSuffer, duration: 5);
 
         private static readonly EffectContext DamageReductionRateOAvoidD5 =
-            new(Property.DamageReductionRate, Ppportunity.Avoid, duration: 5);
+            new(Property.DamageReductionRate, Opportunity.Avoid, duration: 5);
 
         private static readonly EffectContext DamageReductionRateOFallD5 =
-            new(Property.DamageReductionRate, Ppportunity.Fall, duration: 5);
+            new(Property.DamageReductionRate, Opportunity.Fall, duration: 5);
 
         private static readonly EffectContext damageReductionRateOFallSufferD5 =
-            new(Property.DamageReductionRate, Ppportunity.FallSuffer, duration: 5);
+            new(Property.DamageReductionRate, Opportunity.FallSuffer, duration: 5);
 
         private static readonly EffectContext DamageReductionRateOKillD5 =
-            new(Property.DamageReductionRate, Ppportunity.Kill, duration: 5);
+            new(Property.DamageReductionRate, Opportunity.Kill, duration: 5);
 
         private static readonly EffectContext DamageReductionRateOSufferBossP1D5 =
-            new(Property.DamageReductionRate, Ppportunity.SufferBoss, .1m, 5);
+            new(Property.DamageReductionRate, Opportunity.SufferBoss, .1m, 5);
 
         private static readonly EffectContext DefenseBreakRateOCriticalP3D5 =
-            new(Property.DefenseBreakRate, Ppportunity.Critical, .3m, 5);
+            new(Property.DefenseBreakRate, Opportunity.Critical, .3m, 5);
 
         private static readonly EffectContext DefenseBreakRateOCriticalP5D3 =
-            new(Property.DefenseBreakRate, Ppportunity.Critical, .5m, 3);
+            new(Property.DefenseBreakRate, Opportunity.Critical, .5m, 3);
 
         private static readonly EffectContext DefenseBreakRateOKillD5 =
-            new(Property.DefenseBreakRate, Ppportunity.Kill, duration: 5);
+            new(Property.DefenseBreakRate, Opportunity.Kill, duration: 5);
 
         private static readonly EffectContext DefenseBreakRateORunP1D5 =
-            new(Property.DefenseBreakRate, Ppportunity.Run, .1m, 5);
+            new(Property.DefenseBreakRate, Opportunity.Run, .1m, 5);
 
         private static readonly EffectContext DefenseOHp50DownD10 =
-            new(Property.Defense, Ppportunity.HP50Down, duration: 10);
+            new(Property.Defense, Opportunity.HP50Down, duration: 10);
 
-        private static readonly EffectContext DefenseOKillD5 = new(Property.Defense, Ppportunity.Kill, duration: 5);
-        private static readonly EffectContext DefenseORunP1D5 = new(Property.Defense, Ppportunity.Run, .1m, 5);
-        private static readonly EffectContext DefenseOSufferP5D10 = new(Property.Defense, Ppportunity.Suffer, .5m, 10);
+        private static readonly EffectContext DefenseOKillD5 = new(Property.Defense, Opportunity.Kill, duration: 5);
+        private static readonly EffectContext DefenseORunP1D5 = new(Property.Defense, Opportunity.Run, .1m, 5);
+        private static readonly EffectContext DefenseOSufferP5D10 = new(Property.Defense, Opportunity.Suffer, .5m, 10);
 
         private static readonly EffectContext
-            DefenseOUseSkillP1D5 = new(Property.Defense, Ppportunity.UseSkill, .1m, 5);
+            DefenseOUseSkillP1D5 = new(Property.Defense, Opportunity.UseSkill, .1m, 5);
 
         private static readonly EffectContext DefenseRateOSufferHp50DownP1D5 =
-            new(Property.DefenseRate, Ppportunity.SufferHP50Down, .1m, 5);
+            new(Property.DefenseRate, Opportunity.SufferHP50Down, .1m, 5);
 
         private static readonly EffectContext DefenseRateOSufferP15D5 =
-            new(Property.DefenseRate, Ppportunity.Suffer, .15m, 5);
+            new(Property.DefenseRate, Opportunity.Suffer, .15m, 5);
 
-        private static readonly EffectContext EvadeOSufferP15D3 = new(Property.Evade, Ppportunity.Suffer, .15m, 3);
+        private static readonly EffectContext EvadeOSufferP15D3 = new(Property.Evade, Opportunity.Suffer, .15m, 3);
 
         private static readonly EffectContext EndureSecondOSufferP2 =
-            new(Property.EndureSecond, Ppportunity.Suffer, .2m);
+            new(Property.EndureSecond, Opportunity.Suffer, .2m);
 
-        private static readonly EffectContext EvadeOSufferP4D3   = new(Property.Evade, Ppportunity.Suffer, .4m, 3);
-        private static readonly EffectContext HpRecoveryOAvoidP1 = new(Property.HpRecovery, Ppportunity.Avoid, .1m);
-        private static readonly EffectContext HpRecoveryOHitP15  = new(Property.HpRecovery, Ppportunity.Hit, .15m);
-        private static readonly EffectContext HpRecoveryOKill    = new(Property.HpRecovery, Ppportunity.Kill);
+        private static readonly EffectContext EvadeOSufferP4D3   = new(Property.Evade, Opportunity.Suffer, .4m, 3);
+        private static readonly EffectContext HpRecoveryOAvoidP1 = new(Property.HpRecovery, Opportunity.Avoid, .1m);
+        private static readonly EffectContext HpRecoveryOHitP15  = new(Property.HpRecovery, Opportunity.Hit, .15m);
+        private static readonly EffectContext HpRecoveryOKill    = new(Property.HpRecovery, Opportunity.Kill);
 
         private static readonly EffectContext HpRecoveryOSufferCriticalD50 =
-            new(Property.HpRecovery, Ppportunity.SufferCritical, duration: 50);
+            new(Property.HpRecovery, Opportunity.SufferCritical, duration: 50);
 
-        private static readonly EffectContext HpRecoveryOSufferP3 = new(Property.HpRecovery, Ppportunity.Suffer, .3m);
+        private static readonly EffectContext HpRecoveryOSufferP3 = new(Property.HpRecovery, Opportunity.Suffer, .3m);
 
         private static readonly EffectContext HpRecoveryOSufferStamina50Up =
-            new(Property.HpRecovery, Ppportunity.SufferStamina50Up);
+            new(Property.HpRecovery, Opportunity.SufferStamina50Up);
 
         private static readonly EffectContext HpRecoveryRateOUseAvoidP1 =
-            new(Property.HpRecoveryRate, Ppportunity.UseAvoid, .1m);
+            new(Property.HpRecoveryRate, Opportunity.UseAvoid, .1m);
 
         private static readonly EffectContext InvincibleSecondOHp20DownP1 =
-            new(Property.InvincibleSecond, Ppportunity.HP20Down, .1m);
+            new(Property.InvincibleSecond, Opportunity.HP20Down, .1m);
 
         private static readonly EffectContext MoveSpaceRateORunP15D5 =
-            new(Property.MoveSpaceRate, Ppportunity.Run, .15m, 5);
+            new(Property.MoveSpaceRate, Opportunity.Run, .15m, 5);
 
         private static readonly EffectContext MoveSpaceRateOSufferP2D6 =
-            new(Property.MoveSpaceRate, Ppportunity.Suffer, .2m, 6);
+            new(Property.MoveSpaceRate, Opportunity.Suffer, .2m, 6);
 
         private static readonly EffectContext PartialDamageRateOAvoidP1D10 =
-            new(Property.PartialDamageRate, Ppportunity.Avoid, .1m, 10);
+            new(Property.PartialDamageRate, Opportunity.Avoid, .1m, 10);
 
         private static readonly EffectContext PartialDamageRateOAvoidP3D5 =
-            new(Property.PartialDamageRate, Ppportunity.Avoid, .3m, 5);
+            new(Property.PartialDamageRate, Opportunity.Avoid, .3m, 5);
 
         private static readonly EffectContext PartialDamageRateOSufferP3D5 =
-            new(Property.PartialDamageRate, Ppportunity.Suffer, .3m, 5);
+            new(Property.PartialDamageRate, Opportunity.Suffer, .3m, 5);
 
         private static readonly EffectContext SoulGateRecoveryRateOUseSkillP1 =
-            new(Property.SoulGateRecoveryRate, Ppportunity.UseSkill, .1m);
+            new(Property.SoulGateRecoveryRate, Opportunity.UseSkill, .1m);
 
         private static readonly EffectContext StaminaRecoveryOHitP2 =
-            new(Property.StaminaRecovery, Ppportunity.Hit, .2m);
+            new(Property.StaminaRecovery, Opportunity.Hit, .2m);
 
         private static readonly EffectContext SuperArmorBreakPowerRateOAvoidP3D5 =
-            new(Property.SuperArmorBreakPowerRate, Ppportunity.Avoid, .3m, 5);
+            new(Property.SuperArmorBreakPowerRate, Opportunity.Avoid, .3m, 5);
 
         private static readonly EffectContext SuperArmorBreakPowerRateOHitP5D5 =
-            new(Property.SuperArmorBreakPowerRate, Ppportunity.Hit, .5m, 5);
+            new(Property.SuperArmorBreakPowerRate, Opportunity.Hit, .5m, 5);
 
         private static readonly EffectContext SuperArmorBreakPowerRateOKillD5 =
-            new(Property.SuperArmorBreakPowerRate, Ppportunity.Kill, duration: 5);
+            new(Property.SuperArmorBreakPowerRate, Opportunity.Kill, duration: 5);
 
         private static readonly EffectContext SuperArmorBreakPowerRateORunP1D5 =
-            new(Property.SuperArmorBreakPowerRate, Ppportunity.Run, .1m, 5);
+            new(Property.SuperArmorBreakPowerRate, Opportunity.Run, .1m, 5);
 
         private static readonly EffectContext SuperArmorBreakPowerRateOSufferP3D5 =
-            new(Property.SuperArmorBreakPowerRate, Ppportunity.Suffer, .3m, 5);
+            new(Property.SuperArmorBreakPowerRate, Opportunity.Suffer, .3m, 5);
 
         private static readonly Effect Accuracy50                  = new(Static.Accuracy, 50);
         private static readonly Effect Accuracy60                  = new(Static.Accuracy, 60);

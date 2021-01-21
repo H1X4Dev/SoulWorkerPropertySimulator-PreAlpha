@@ -7,8 +7,7 @@ namespace SoulWorkerPropertySimulator.Models
 {
     public record Character : Item, IUpgradeable
     {
-        public Character(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffect) : base(name,
-            Classify.Character)
+        public Character(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> stepEffect) : base(name)
         {
             if (!stepEffect.Any()) { throw new DataException(); }
 

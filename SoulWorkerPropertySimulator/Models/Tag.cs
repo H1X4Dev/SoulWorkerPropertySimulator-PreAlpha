@@ -9,10 +9,10 @@ namespace SoulWorkerPropertySimulator.Models
         private readonly IReadOnlyDictionary<TagRare, IReadOnlyCollection<Effect>> _effects;
         private readonly TagRare                                                   _rare;
 
-        public Tag(string name,
-                   TagField field,
+        public Tag(string                                                    name,
+                   TagField                                                  field,
                    IReadOnlyDictionary<TagRare, IReadOnlyCollection<Effect>> effects,
-                   TagRare rare = TagRare.Heroic) : base(name, Classify.Armor)
+                   TagRare                                                   rare = TagRare.Heroic) : base(name)
         {
             Field    = field;
             _effects = effects;
@@ -38,8 +38,7 @@ namespace SoulWorkerPropertySimulator.Models
 
     public record TagD : Item
     {
-        public TagD(string name, TagRare rare, TagField field, IReadOnlyCollection<Effect> effects) : base(name,
-            Classify.Armor)
+        public TagD(string name, TagRare rare, TagField field, IReadOnlyCollection<Effect> effects) : base(name)
         {
             Rare    = rare;
             Field   = field;
