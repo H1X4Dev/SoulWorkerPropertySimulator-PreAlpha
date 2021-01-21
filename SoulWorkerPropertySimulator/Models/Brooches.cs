@@ -17,6 +17,28 @@ namespace SoulWorkerPropertySimulator.Models
                         IReadOnlyDictionary<BroochesRare, IReadOnlyCollection<Effect>> effects,
                         BroochesRare rare = BroochesRare.Tera) : base(name, Classify.Brooches)
         {
+#if DEBUG
+            if (!name.Equals("對策"))
+            {
+                var cache = 0m;
+                foreach (var (_, effect) in effects.OrderBy(x => x.Key))
+                {
+                    if (cache == 0m) { cache = effect.First().Value; }
+                    else
+                    {
+                        if (cache > effect.First().Value) { throw new IndexOutOfRangeException(); }
+
+                        if (cache == effect.First().Value && effect.Count != 2)
+                        {
+                            throw new InvalidOperationException();
+                        }
+
+                        cache = effect.First().Value;
+                    }
+                }
+            }
+#endif
+
             Series   = series;
             Type     = type;
             _effects = effects;
