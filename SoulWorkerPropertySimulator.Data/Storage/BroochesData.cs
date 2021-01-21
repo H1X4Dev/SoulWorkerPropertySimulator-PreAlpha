@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using SoulWorkerPropertySimulator.Models;
 
@@ -12,6 +13,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 #pragma warning restore CS0649
 
 #pragma warning disable CS8618
+#pragma warning disable CS8604
         static BroochesData()
         {
             SetupSd();
@@ -197,7 +199,18 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 
                 #endregion
             };
+
+#if DEBUG
+            if (Brooches.Count != 45 + 17 * 3 + 30 + 30)
+            {
+                Console.WriteLine(Brooches.Count);
+                throw new IndexOutOfRangeException();
+            }
+
+            if (Brooches.Any(x => x == null)) { throw new InvalidOperationException(); }
+#endif
         }
+#pragma warning restore CS8604
 #pragma warning restore CS8618
 
         internal static IReadOnlyCollection<Brooches> Get(BroochesSeries series, BroochesType type)
