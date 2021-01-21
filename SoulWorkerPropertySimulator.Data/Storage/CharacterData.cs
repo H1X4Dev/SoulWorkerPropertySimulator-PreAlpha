@@ -5,7 +5,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static partial class CharacterData
     {
-        private static IReadOnlyCollection<Character>? _result;
+        private static readonly IReadOnlyCollection<Character> Result;
 
         // All character's accuracy now based Erwin's
         private static readonly Effect[] AccuracyList =
@@ -80,11 +80,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new(Static.Accuracy, 1_062)
         };
 
-        public static IReadOnlyCollection<Character> Get()
-        {
-            if (_result != null) { return _result; }
-
-            var result = new List<Character>
+        static CharacterData() =>
+            Result = new List<Character>
             {
                 Haru,
                 Erwin,
@@ -97,8 +94,6 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 Lee
             };
 
-            _result = result;
-            return _result;
-        }
+        public static IReadOnlyCollection<Character> Get() => Result;
     }
 }

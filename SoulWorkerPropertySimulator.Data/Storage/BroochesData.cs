@@ -7,11 +7,6 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static partial class BroochesData
     {
-#pragma warning disable CS0649
-        private static readonly IReadOnlyCollection<Brooches>                           Brooches;
-        private static readonly Dictionary<BroochesType, IReadOnlyCollection<Brooches>> Result = new();
-#pragma warning restore CS0649
-
 #pragma warning disable CS8618
 #pragma warning disable CS8604
         static BroochesData()
@@ -219,5 +214,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 
             return Result[type] = Brooches.Where(x => x.Type == type).ToList();
         }
+#pragma warning disable CS0649
+        private static readonly IReadOnlyCollection<Brooches>                           Brooches;
+        private static readonly Dictionary<BroochesType, IReadOnlyCollection<Brooches>> Result = new();
+#pragma warning restore CS0649
     }
 }

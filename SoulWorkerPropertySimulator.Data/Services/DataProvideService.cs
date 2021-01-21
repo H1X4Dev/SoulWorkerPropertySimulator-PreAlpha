@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using SoulWorkerPropertySimulator.Data.Storage;
 using SoulWorkerPropertySimulator.Models;
 using SoulWorkerPropertySimulator.Services;
@@ -9,7 +8,8 @@ namespace SoulWorkerPropertySimulator.Data.Services
 {
     internal class DataProvideService : IDataProvideService
     {
-        public BroochesSetEffect GetBroochesSets(BroochesField field, BroochesSeries series, BroochesRare rare) => throw new NotImplementedException();
+        public BroochesSetEffect GetBroochesSets(BroochesField field, BroochesSeries series, BroochesRare rare) =>
+            throw new NotImplementedException();
 
         public IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects() => AccessorySetData.Get();
 
