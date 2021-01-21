@@ -388,11 +388,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 BroochesType.Defense,
                 new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                 {
-                    {BroochesRare.Tera, new Effect[] {new(ShareEffect.SABreakRateOAvoidP3D5, .21m)}},
-                    {BroochesRare.Giga, new Effect[] {new(ShareEffect.SABreakRateOAvoidP3D5, .16m)}},
-                    {BroochesRare.Mega, new Effect[] {new(ShareEffect.SABreakRateOAvoidP3D5, .12m)}},
-                    {BroochesRare.Kilo, new Effect[] {new(ShareEffect.SABreakRateOAvoidP3D5, .08m)}},
-                    {BroochesRare.Byte, new Effect[] {new(ShareEffect.SABreakRateOAvoidP3D5, .04m)}}
+                    {BroochesRare.Tera, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOAvoidP3D5, .21m)}},
+                    {BroochesRare.Giga, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOAvoidP3D5, .16m)}},
+                    {BroochesRare.Mega, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOAvoidP3D5, .12m)}},
+                    {BroochesRare.Kilo, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOAvoidP3D5, .08m)}},
+                    {BroochesRare.Byte, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOAvoidP3D5, .04m)}}
                 });
 
             #endregion
@@ -416,11 +416,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 BroochesType.Effect,
                 new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                 {
-                    {BroochesRare.Tera, new Effect[] {new(ShareEffect.SABreakPowerRateOHitP5D5, .21m)}},
-                    {BroochesRare.Giga, new Effect[] {new(ShareEffect.SABreakPowerRateOHitP5D5, .19m)}},
-                    {BroochesRare.Mega, new Effect[] {new(ShareEffect.SABreakPowerRateOHitP5D5, .18m)}},
-                    {BroochesRare.Kilo, new Effect[] {new(ShareEffect.SABreakPowerRateOHitP5D5, .16m)}},
-                    {BroochesRare.Byte, new Effect[] {new(ShareEffect.SABreakPowerRateOHitP5D5, .15m)}}
+                    {BroochesRare.Tera, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOHitP5D5, .21m)}},
+                    {BroochesRare.Giga, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOHitP5D5, .19m)}},
+                    {BroochesRare.Mega, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOHitP5D5, .18m)}},
+                    {BroochesRare.Kilo, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOHitP5D5, .16m)}},
+                    {BroochesRare.Byte, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOHitP5D5, .15m)}}
                 });
 
             _bskE3 = _sdE3 with {Series = BroochesSeries.Bsk};
@@ -528,11 +528,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 BroochesType.Effect,
                 new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                 {
-                    {BroochesRare.Tera, new Effect[] {new(ShareEffect.SABreakPowerRateORunP1D5, .1m)}},
-                    {BroochesRare.Giga, new Effect[] {new(ShareEffect.SABreakPowerRateORunP1D5, .08m)}},
-                    {BroochesRare.Mega, new Effect[] {new(ShareEffect.SABreakPowerRateORunP1D5, .06m)}},
-                    {BroochesRare.Kilo, new Effect[] {new(ShareEffect.SABreakPowerRateORunP1D5, .04m)}},
-                    {BroochesRare.Byte, new Effect[] {new(ShareEffect.SABreakPowerRateORunP1D5, .02m)}}
+                    {BroochesRare.Tera, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateORunP1D5, .1m)}},
+                    {BroochesRare.Giga, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateORunP1D5, .08m)}},
+                    {BroochesRare.Mega, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateORunP1D5, .06m)}},
+                    {BroochesRare.Kilo, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateORunP1D5, .04m)}},
+                    {BroochesRare.Byte, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateORunP1D5, .02m)}}
                 });
 
             _bskE14 = new("充電",
@@ -564,11 +564,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 BroochesType.Effect,
                 new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                 {
-                    {BroochesRare.Tera, new Effect[] {new(ShareEffect.SABreakPowerRateOKillD5, .16m)}},
-                    {BroochesRare.Giga, new Effect[] {new(ShareEffect.SABreakPowerRateOKillD5, .12m)}},
-                    {BroochesRare.Mega, new Effect[] {new(ShareEffect.SABreakPowerRateOKillD5, .08m)}},
-                    {BroochesRare.Kilo, new Effect[] {new(ShareEffect.SABreakPowerRateOKillD5, .05m)}},
-                    {BroochesRare.Byte, new Effect[] {new(ShareEffect.SABreakPowerRateOKillD5, .03m)}}
+                    {BroochesRare.Tera, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOKillD5, .16m)}},
+                    {BroochesRare.Giga, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOKillD5, .12m)}},
+                    {BroochesRare.Mega, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOKillD5, .08m)}},
+                    {BroochesRare.Kilo, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOKillD5, .05m)}},
+                    {BroochesRare.Byte, new Effect[] {new(ShareEffect.SuperArmorBreakPowerRateOKillD5, .03m)}}
                 });
 
             _bskE17 = new("感覺",

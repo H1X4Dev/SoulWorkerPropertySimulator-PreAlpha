@@ -64,20 +64,12 @@ namespace SoulWorkerPropertySimulator.Models
         public string DisplayName => $"{Series.GetDescription()}：{Name}";
     }
 
-    public record BroochesSetEffect : Item
+    public record BroochesSetEffect(BroochesField Field,
+                                    BroochesSeries Series,
+                                    IReadOnlyDictionary<BroochesRare, IReadOnlyCollection<Effect>> RareEffects,
+                                    BroochesRare Rare = BroochesRare.Tera) : Item(
+        $"{Field.GetDescription()}{Series.GetDescription()}套裝")
     {
-        public BroochesSetEffect(string                      name,
-                                 BroochesSeries              series,
-                                 BroochesRare                rare,
-                                 IReadOnlyCollection<Effect> effects) : base(name)
-        {
-            Series  = series;
-            Rare    = rare;
-            Effects = effects;
-        }
-
-        BroochesSeries                              Series  { get; }
-        BroochesRare                                Rare    { get; }
-        public override IReadOnlyCollection<Effect> Effects { get; }
+        public override IReadOnlyCollection<Effect> Effects => RareEffects[Rare];
     }
 }
