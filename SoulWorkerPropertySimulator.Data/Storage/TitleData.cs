@@ -1579,22 +1579,22 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new("信任",
                     TitleField.Last,
                     59,
-                    new Effect[] {new(Static.MoveSpaceRate, .05m), new(Static.DamageReductionRateNED, .01m)}),
+                    new Effect[] {new(Static.MoveSpaceRate, .05m), new(Static.DamageReductionRateNed, .01m)}),
                 new("憤怒",
                     TitleField.Last,
                     60,
-                    new Effect[] {new(Static.MoveSpaceRate, .05m), new(Static.DamageReductionRateNED, .015m)}),
+                    new Effect[] {new(Static.MoveSpaceRate, .05m), new(Static.DamageReductionRateNed, .015m)}),
                 new("復仇者",
                     TitleField.Last,
                     61,
-                    new Effect[] {new(Static.MoveSpaceRate, .05m), new(Static.DamageReductionRateNED, .02m)}),
+                    new Effect[] {new(Static.MoveSpaceRate, .05m), new(Static.DamageReductionRateNed, .02m)}),
                 new("復仇者",
                     TitleField.Last,
                     62,
                     new Effect[]
                     {
                         new(Static.MoveSpaceRate, .05m),
-                        new(Static.DamageReductionRateNED, .025m),
+                        new(Static.DamageReductionRateNed, .025m),
                         new(Static.DamageReductionRateFlame, .025m)
                     }),
                 new("消防員",
@@ -1616,7 +1616,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         new(Static.MoveSpaceRate, .05m),
                         new(Static.DamageReductionRateFlame, .025m),
-                        new(Static.DamageReductionRateNED, .025m)
+                        new(Static.DamageReductionRateNed, .025m)
                     }),
                 new("破壞犯",
                     TitleField.Last,

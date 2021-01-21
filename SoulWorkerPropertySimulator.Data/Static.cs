@@ -22,7 +22,7 @@
         public static EffectContext DamageReductionRateFlame    { get; } = new(Property.DamageReductionRateFlame);
         public static EffectContext DamageReductionRateIron     { get; } = new(Property.DamageReductionRateIron);
         public static EffectContext DamageReductionRateJunk     { get; } = new(Property.DamageReductionRateJunk);
-        public static EffectContext DamageReductionRateNED      { get; } = new(Property.DamageReductionRateNED);
+        public static EffectContext DamageReductionRateNed      { get; } = new(Property.DamageReductionRateNed);
 
         public static EffectContext DamageReductionRatePartialDamage { get; } =
             new(Property.DamageReductionRatePartialDamage);

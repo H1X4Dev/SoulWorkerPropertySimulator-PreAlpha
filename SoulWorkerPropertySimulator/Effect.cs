@@ -68,7 +68,7 @@ namespace SoulWorkerPropertySimulator
         DamageReductionRateJunk,
 
         [Description("傷害減少：NED")]
-        DamageReductionRateNED,
+        DamageReductionRateNed,
 
         [Description("傷害減少：攻擊失敗")]
         DamageReductionRatePartialDamage,
@@ -411,7 +411,7 @@ namespace SoulWorkerPropertySimulator
             Property.DamageReductionRateFlame,
             Property.DamageReductionRateIron,
             Property.DamageReductionRateJunk,
-            Property.DamageReductionRateNED,
+            Property.DamageReductionRateNed,
             Property.DamageReductionRatePartialDamage,
             Property.DamageReductionRatePrimal,
             Property.DamageReductionRatePuppet,
