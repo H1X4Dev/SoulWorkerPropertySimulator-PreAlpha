@@ -5,7 +5,7 @@ namespace SoulWorkerPropertySimulator.Services
 {
     public interface IDataProvideService
     {
-        BroochesSetEffect GetBroochesSets(BroochesField field, BroochesSeries series, BroochesRare rare);
+        BroochesSetEffect GetBroochesSets(BroochesField field, BroochesSeries series);
         IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects();
         IReadOnlyCollection<ArmorSetEffect> GetArmorSetEffects();
         IReadOnlyCollection<Brooches> GetBrooches(BroochesType type);

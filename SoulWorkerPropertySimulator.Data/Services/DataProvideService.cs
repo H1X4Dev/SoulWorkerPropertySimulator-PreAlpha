@@ -8,8 +8,8 @@ namespace SoulWorkerPropertySimulator.Data.Services
 {
     internal class DataProvideService : IDataProvideService
     {
-        public BroochesSetEffect GetBroochesSets(BroochesField field, BroochesSeries series, BroochesRare rare) =>
-            throw new NotImplementedException();
+        public BroochesSetEffect GetBroochesSets(BroochesField field, BroochesSeries series) =>
+            BroochesSetData.Get(field, series);
 
         public IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects() => AccessorySetData.Get();
 
