@@ -5,8 +5,8 @@
 @inject IDataProvideService Data
 @inject IBroochesComputeService BroochesCompute
 
-<div class="input-group mb-3 me-3">
-    <label class="input-group-text">@Field.GetDescription()</label>
+<div class="input-group my-1">
+    <label class="input-group-text">@Type.GetDescription()</label>
     <select class="form-select" @bind="Selected">
         <option></option>
         @foreach (var item in Options)
