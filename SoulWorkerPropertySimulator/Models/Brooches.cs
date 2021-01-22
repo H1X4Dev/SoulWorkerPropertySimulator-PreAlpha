@@ -67,7 +67,7 @@ namespace SoulWorkerPropertySimulator.Models
     public record BroochesSetEffect(BroochesField Field,
                                     BroochesSeries Series,
                                     IReadOnlyDictionary<BroochesRare, IReadOnlyCollection<Effect>> RareEffects,
-                                    BroochesRare Rare = BroochesRare.Tera) : Item(
+                                    BroochesRare Rare = BroochesRare.Tera) : Set(
         $"{Field.GetDescription()}{Series.GetDescription()}套裝")
     {
         public override IReadOnlyCollection<Effect> Effects => RareEffects[Rare];

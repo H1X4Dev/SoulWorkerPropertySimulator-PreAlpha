@@ -5,24 +5,22 @@ using SoulWorkerPropertySimulator.Models;
 
 namespace SoulWorkerPropertySimulator.Services
 {
-    public interface IBroochesComputeService : IComputeService
+    public interface IBroochesComputeService : IComputeService<BroochesSetEffect>
     {
         Brooches? Get(BroochesField    field, BroochesType  type);
         void      Change(BroochesField field, Brooches      newItem);
         void      Clear(BroochesField  field, BroochesType? type = null);
-
-        event Action<BroochesField, string?>? OnSetChange;
     }
 
-    internal class BroochesComputeService : ComputeServiceBase, IBroochesComputeService
+    internal class BroochesComputeService : ComputeServiceBase<BroochesSetEffect>, IBroochesComputeService
     {
         private readonly IDataProvideService                                             _provider;
         private readonly Dictionary<BroochesField, IDictionary<BroochesType, Brooches?>> _brooches    = new();
         private readonly Dictionary<BroochesField, BroochesSetEffect?>                   _broochesSet = new();
 
-        public BroochesComputeService(IDataProvideService provider) => _provider = provider;
+        protected override List<BroochesSetEffect> Sets => _broochesSet.Values.Where(x => x != null).ToList()!;
 
-        public event Action<BroochesField, string?>? OnSetChange;
+        public BroochesComputeService(IDataProvideService provider) => _provider = provider;
 
         public Brooches? Get(BroochesField field, BroochesType type)
         {
@@ -59,7 +57,7 @@ namespace SoulWorkerPropertySimulator.Services
             {
                 _broochesSet[field] = setResult.Value.After;
 
-                OnSetChange?.Invoke(field, setResult.Value.After?.Name);
+                NotifySetChange();
             }
         }
 
@@ -88,7 +86,7 @@ namespace SoulWorkerPropertySimulator.Services
             NotifyChange(ComputeAffect(before.Concat(setBefore?.Effects ?? Array.Empty<Effect>()),
                 Array.Empty<Effect>()));
 
-            if (setBefore != null) { OnSetChange?.Invoke(field, null); }
+            if (setBefore != null) { NotifySetChange(); }
         }
 
         private (BroochesSetEffect? Before, BroochesSetEffect? After)? ComputeSetAffect(BroochesField field)
@@ -107,10 +105,11 @@ namespace SoulWorkerPropertySimulator.Services
                 brooches.All(x => x!.Series == first.Series)            &&
                 brooches.All(x => x!.Rare   == first.Rare))
             {
-                after = _provider.GetBroochesSets(field, first.Series, first.Rare);
+                after = _provider.GetBroochesSets(field, first.Series) with {Rare = first.Rare};
             }
 
-            return before?.Name.Equals(after?.Name) ?? false ? null : (before, after);
+            return before == null && after == null ? ((BroochesSetEffect? Before, BroochesSetEffect? After)?) null :
+                before?.Name.Equals(after?.Name) ?? false ? null : (before, after);
         }
     }
 }

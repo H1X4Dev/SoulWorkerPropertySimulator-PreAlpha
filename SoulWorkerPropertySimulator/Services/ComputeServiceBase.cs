@@ -68,7 +68,7 @@ namespace SoulWorkerPropertySimulator.Services
 
     internal abstract class ComputeServiceBase<T> : ComputeServiceBase, IComputeService<T> where T : Set
     {
-        protected readonly List<T> Sets;
+        protected virtual List<T> Sets { get; }
         protected ComputeServiceBase() => Sets = new();
         public event Action<IReadOnlyCollection<T>>? OnSetChange;
         public    IEnumerable<T>                     GetSet()          => Sets.ToList();

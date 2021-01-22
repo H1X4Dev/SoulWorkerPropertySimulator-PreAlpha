@@ -20,7 +20,7 @@ namespace SoulWorkerPropertySimulator.Models
         public abstract IReadOnlyCollection<Effect> Effects { get; }
     }
 
-    public abstract record Set(string Name, string? SetName = null) : Item(Name, SetName);
+    public abstract record Set(string Name) : Item(Name);
 
     public interface ICreatable<out TBlueprint> where TBlueprint : Blueprint
     {
