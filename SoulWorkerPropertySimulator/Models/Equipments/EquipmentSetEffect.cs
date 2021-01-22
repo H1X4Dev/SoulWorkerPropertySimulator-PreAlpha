@@ -5,7 +5,7 @@ using SoulWorkerPropertySimulator.Models.Scaffolding;
 
 namespace SoulWorkerPropertySimulator.Models.Equipments
 {
-    public record ArmorSetEffect
+    public record EquipmentSetEffect
         (string Name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> StepEffects) : Set(Name)
     {
         public override IReadOnlyCollection<Effect> Effects =>

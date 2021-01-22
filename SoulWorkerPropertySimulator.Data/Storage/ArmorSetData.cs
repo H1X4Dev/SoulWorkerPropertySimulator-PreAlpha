@@ -7,7 +7,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class ArmorSetData
     {
-        private static readonly IReadOnlyCollection<ArmorSetEffect> Result = new List<ArmorSetEffect>
+        private static readonly IReadOnlyCollection<EquipmentSetEffect> Result = new List<EquipmentSetEffect>
         {
             new("進階暮光",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
@@ -38,6 +38,6 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 })
         };
 
-        internal static IReadOnlyCollection<ArmorSetEffect> Get() => Result;
+        internal static IReadOnlyCollection<EquipmentSetEffect> Get() => Result;
     }
 }

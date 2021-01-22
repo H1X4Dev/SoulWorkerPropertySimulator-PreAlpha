@@ -24,7 +24,7 @@ namespace SoulWorkerPropertySimulator.Models.Scaffolding
              {
                  var (context, value) = x;
                  var target = RandomEffects.FirstOrDefault(y => y.Context.Equals(context));
-                 return target == null || value >= target.Min || value <= target.Max;
+                 return target == null || value < target.Min || value > target.Max;
              }));
     }
 

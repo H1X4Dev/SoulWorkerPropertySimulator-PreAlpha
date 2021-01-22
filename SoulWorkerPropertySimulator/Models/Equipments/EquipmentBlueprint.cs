@@ -7,19 +7,19 @@ using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Models.Equipments
 {
-    public sealed record ArmorBlueprint : Blueprint<Armor>
+    public sealed record EquipmentBlueprint : Blueprint<Equipment>
     {
-        public ArmorBlueprint(string                                                 name,
-                              ArmorField                                             field,
-                              int                                                    level,
-                              int                                                    randomAmount,
-                              IReadOnlyCollection<RandomEffect>                      randomEffects,
-                              int                                                    pluginLimit,
-                              RandomEffect                                           randomQuality,
-                              IReadOnlyCollection<Effect>                            fixedEffects,
-                              ItemRare                                               rare,
-                              IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects = null,
-                              string?                                                setName     = null) : base(name,
+        public EquipmentBlueprint(string                                                 name,
+                                  ArmorField                                             field,
+                                  int                                                    level,
+                                  int                                                    randomAmount,
+                                  IReadOnlyCollection<RandomEffect>                      randomEffects,
+                                  int                                                    pluginLimit,
+                                  RandomEffect                                           randomQuality,
+                                  IReadOnlyCollection<Effect>                            fixedEffects,
+                                  ItemRare                                               rare,
+                                  IReadOnlyDictionary<int, IReadOnlyCollection<Effect>>? stepEffects = null,
+                                  string?                                                setName = null) : base(name,
             level,
             randomAmount,
             randomEffects,
@@ -48,7 +48,7 @@ namespace SoulWorkerPropertySimulator.Models.Equipments
             }
         }
 
-        public override Armor Create(IReadOnlyCollection<Effect> randomEffects) => new(this, 1, randomEffects);
+        public override Equipment Create(IReadOnlyCollection<Effect> randomEffects) => new(this, 1, randomEffects);
 
         public decimal GetStepMagnification(int step)
         {

@@ -102,9 +102,9 @@
     public ArmorField Field { get; set; }
 
     [Parameter]
-    public Armor? DefaultArmor { get; set; }
+    public Equipment? DefaultArmor { get; set; }
 
-    private IReadOnlyCollection<ArmorBlueprint> Options { get; set; } = null!;
+    private IReadOnlyCollection<EquipmentBlueprint> Options { get; set; } = null!;
 
     private IReadOnlyCollection<Tag> TagOptions { get; set; } = null!;
 
@@ -112,7 +112,7 @@
 
     private int? _selected;
 
-    public ArmorBlueprint? SelectedBlueprint
+    public EquipmentBlueprint? SelectedBlueprint
     {
         set => Selected = value?.GetHashCode();
         get => Options.FirstOrDefault(x => x.GetHashCode() == _selected);
@@ -199,7 +199,7 @@
     private EffectsCreator? _effectsCreator;
     private PluginsCreator? _pluginsCreator;
 
-    private Armor? Item
+    private Equipment? Item
     {
         get
         {

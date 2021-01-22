@@ -24,7 +24,7 @@
 
         public const string Title = "武器與防具";
 
-    private ICollection<Armor> Default { get; set; } = null!;
+    private ICollection<Equipment> Default { get; set; } = null!;
 
     protected override void OnInitialized()
     {
@@ -35,7 +35,7 @@
         InfoService.SetBottom(nameof(ArmorSetting), GetSetDescription(ArmorCompute.GetSet().ToList()));
     }
 
-    public void SetBottom(IReadOnlyCollection<ArmorSetEffect> sets) => InfoService.SetBottom(nameof(ArmorSetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
+    public void SetBottom(IReadOnlyCollection<EquipmentSetEffect> sets) => InfoService.SetBottom(nameof(ArmorSetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
 
     public void Dispose()
     {
@@ -44,7 +44,7 @@
         ArmorCompute.OnSetChange -= SetBottom;
     }
 
-    private static string GetSetDescription(IReadOnlyCollection<ArmorSetEffect> sets)
+    private static string GetSetDescription(IReadOnlyCollection<EquipmentSetEffect> sets)
     {
         if (!sets.Any()) { return string.Empty; }
         var builder = new StringBuilder();

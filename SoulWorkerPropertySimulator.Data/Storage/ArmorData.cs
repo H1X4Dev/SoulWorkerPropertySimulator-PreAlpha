@@ -8,18 +8,18 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class ArmorData
     {
-        private static IReadOnlyCollection<ArmorBlueprint>? _blueprints;
+        private static IReadOnlyCollection<EquipmentBlueprint>? _blueprints;
 
-        private static readonly Dictionary<ArmorField, IReadOnlyCollection<ArmorBlueprint>> Result = new();
+        private static readonly Dictionary<ArmorField, IReadOnlyCollection<EquipmentBlueprint>> Result = new();
 
-        internal static IReadOnlyCollection<ArmorBlueprint> Get(ArmorField field)
+        internal static IReadOnlyCollection<EquipmentBlueprint> Get(ArmorField field)
         {
             if (Result.ContainsKey(field)) { return Result[field]; }
 
             if (_blueprints != null) { return Result[field] = _blueprints.Where(x => x.Field == field).ToList(); }
 
-            var result = new List<ArmorBlueprint>();
-            var weapon68 = new ArmorBlueprint("進階暮光流浪者",
+            var result = new List<EquipmentBlueprint>();
+            var weapon68 = new EquipmentBlueprint("進階暮光流浪者",
                 ArmorField.Weapon,
                 68,
                 3,
@@ -56,7 +56,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             result.Add(weapon68 with {Name = "進階暮光追蹤者"});
             result.Add(weapon68 with {Name = "進階暮光畸變者"});
 
-            var gear68 = new ArmorBlueprint("鳶尾花頭盔",
+            var gear68 = new EquipmentBlueprint("鳶尾花頭盔",
                 ArmorField.Head,
                 68,
                 3,

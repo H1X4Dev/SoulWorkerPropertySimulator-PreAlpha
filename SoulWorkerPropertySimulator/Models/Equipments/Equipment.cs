@@ -8,14 +8,13 @@ using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Models.Equipments
 {
-    public record Armor : Item
+    public record Equipment : Item
     {
         private readonly decimal _ratio;
         private readonly int?    _step;
 
-        internal Armor(ArmorBlueprint blueprint, decimal ratio, IReadOnlyCollection<Effect> randomEffects) : base(
-            blueprint.Name,
-            blueprint.SetName)
+        internal Equipment(EquipmentBlueprint blueprint, decimal ratio, IReadOnlyCollection<Effect> randomEffects) :
+            base(blueprint.Name, blueprint.SetName)
         {
             if (!blueprint.CheckEffectAllowed(randomEffects) || ratio < 0 || ratio > 1)
             {
@@ -24,13 +23,13 @@ namespace SoulWorkerPropertySimulator.Models.Equipments
 
             Blueprint      = blueprint;
             SelectedEffect = randomEffects;
-            Step           = blueprint.ValidStep?.Max();
+            _step          = blueprint.ValidStep?.Max();
             _ratio         = ratio;
         }
 
         public IReadOnlyCollection<Plugin> Plugins        { get; init; } = Array.Empty<Plugin>();
         public Tag?                        Tag            { get; init; }
-        public ArmorBlueprint              Blueprint      { get; }
+        public EquipmentBlueprint          Blueprint      { get; }
         public IReadOnlyCollection<Effect> SelectedEffect { get; }
 
         public ArmorField Field       => Blueprint.Field;
