@@ -1,0 +1,73 @@
+﻿@page "/brooches"
+@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Extensions
+@using SoulWorkerPropertySimulator.Web.Services
+@inject IPageInfoService InfoService
+@inject IBroochesComputeService BroochesCompute
+@implements IDisposable
+
+<div class="d-flex flex-wrap">
+    @foreach (var field in Enum.GetValues<BroochesField>())
+    {
+        <div class="card text-center mb-2 me-2" style="min-width: 256pt">
+            <div class="card-header">
+                @field.GetDescription()
+            </div>
+            <div class="card-body">
+                <CascadingValue Value="field" Name="Field">
+                    @foreach (var type in Enum.GetValues<BroochesType>())
+                    {
+                        <BroochesPicker Type="type"/>
+                    }
+                </CascadingValue>
+            </div>
+            <div class="card-footer text-muted">
+                @if (_set.ContainsKey(field) && _set[field] != null)
+                {
+                    <div>@(_set[field]!.Name)(@_set[field]!.Rare.GetDescription())</div>
+                }
+                else
+                {
+                    <div>無套裝效果</div>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+        public const string Title = "勳章";
+
+    private readonly Dictionary<BroochesField, BroochesSetEffect?> _set = new();
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        InfoService.SetTitle(nameof(Detail), Title);
+        BroochesCompute.OnSetChange += SetChange;
+        foreach (var field in Enum.GetValues<BroochesField>()) { _set[field] = null; }
+    }
+
+    public void SetChange(IReadOnlyCollection<BroochesSetEffect> sets)
+    {
+        var hasChange = false;
+        foreach (var field in Enum.GetValues<BroochesField>())
+        {
+            if (_set.ContainsKey(field) && _set[field] == sets.FirstOrDefault(x => x.Field == field)) { continue; }
+
+            _set[field] = sets.FirstOrDefault(x => x.Field == field);
+            hasChange = true;
+        }
+
+        if (hasChange) { StateHasChanged(); }
+    }
+
+    public void Dispose()
+    {
+        InfoService.SetTitle(nameof(Detail), null);
+        BroochesCompute.OnSetChange -= SetChange;
+    }
+
+}

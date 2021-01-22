@@ -1,30 +1,31 @@
 ﻿@using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Extensions
+@using System.Diagnostics
 @inject IDataProvideService Data
 @inject IBroochesComputeService BroochesCompute
 
-<div>
-    <div>
-        <select @bind="Selected">
-            <option></option>
-            @foreach (var item in Options)
+<div class="input-group mb-3 me-3">
+    <label class="input-group-text">@Field.GetDescription()</label>
+    <select class="form-select" @bind="Selected">
+        <option></option>
+        @foreach (var item in Options)
+        {
+            <option value="@item.DisplayName">@item.DisplayName</option>
+        }
+    </select>
+    @if (Item != null)
+    {
+        <select class="form-select w-25 flex-grow-0" style="min-width: 5rem; z-index: 1;" @bind="SelectedRare">
+            @foreach (var rare in Item.ValidRare.OrderByDescending(x => x))
             {
-                <option value="@item.Name">@item.DisplayName</option>
+                <option value="@rare">@rare.GetDescription()</option>
             }
         </select>
-    </div>
-    <div>
-        @if (Item != null)
-        {
-            <select @bind="SelectedRare">
-                @foreach (var rare in Item.ValidRare.OrderByDescending(x => x))
-                {
-                    <option value="@rare">@rare</option>
-                }
-            </select>
-        }
-    </div>
+    }
 </div>
+
+
 
 @code {
 
@@ -44,7 +45,7 @@
         set
         {
             _selected = value;
-            SelectedRare = Item?.ValidRare.Max();
+            SelectedRare = SelectBrooches?.ValidRare.Max();
         }
     }
 
@@ -60,7 +61,16 @@
         }
     }
 
-    public Brooches? Item => Options.FirstOrDefault(x => x.Name.Equals(Selected));
+    private Brooches? SelectBrooches => Options.FirstOrDefault(x => x.DisplayName.Equals(Selected));
+
+    public Brooches? Item
+    {
+        get
+        {
+            var item = SelectBrooches;
+            return item == null ? null : item with { Rare = SelectedRare!.Value };
+        }
+    }
 
     private void Update()
     {
@@ -78,9 +88,20 @@
         var defaultItem = BroochesCompute.Get(Field, Type);
         if (defaultItem != null)
         {
-            _selected = defaultItem.Name;
+            _selected = defaultItem.DisplayName;
             _selectedRare = defaultItem.Rare;
         }
+
+        Check(Options);
+    }
+
+    [Conditional("DEBUG")]
+    private static void Check(IReadOnlyCollection<Brooches> option)
+    {
+        var sd = option.Count(x => x.Series == BroochesSeries.Sd);
+        var b = option.Count(x => x.Series == BroochesSeries.Bsk);
+        var f = option.Count(x => x.Series == BroochesSeries.Fot);
+        var si = option.Count(x => x.Series == BroochesSeries.Sin);
     }
 
 }
