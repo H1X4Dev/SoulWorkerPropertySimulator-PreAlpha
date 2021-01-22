@@ -10,7 +10,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     {
         #region
 
-        private static IReadOnlyCollection<Brooch> SetupFot() =>
+        private static IReadOnlyCollection<Brooch> SetupFot(ShareEffect share) =>
             new List<Brooch>
             {
                 #region Attack
@@ -21,11 +21,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.DefenseBreakRate005, ShareEffect.EvadeM45}},
-                        {BroochesRare.Giga, new[] {ShareEffect.DefenseBreakRate004, ShareEffect.EvadeM45}},
-                        {BroochesRare.Mega, new[] {ShareEffect.DefenseBreakRate003, ShareEffect.EvadeM45}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.DefenseBreakRate002, ShareEffect.EvadeM45}},
-                        {BroochesRare.Byte, new[] {ShareEffect.DefenseBreakRate001, ShareEffect.EvadeM45}}
+                        {BroochesRare.Tera, new[] {share.DefenseBreakRate005, share.EvadeM45}},
+                        {BroochesRare.Giga, new[] {share.DefenseBreakRate004, share.EvadeM45}},
+                        {BroochesRare.Mega, new[] {share.DefenseBreakRate003, share.EvadeM45}},
+                        {BroochesRare.Kilo, new[] {share.DefenseBreakRate002, share.EvadeM45}},
+                        {BroochesRare.Byte, new[] {share.DefenseBreakRate001, share.EvadeM45}}
                     }),
 
                 // fotA2
@@ -34,11 +34,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.DefenseBreakRate005, ShareEffect.AccuracyM45}},
-                        {BroochesRare.Giga, new[] {ShareEffect.DefenseBreakRate004, ShareEffect.AccuracyM45}},
-                        {BroochesRare.Mega, new[] {ShareEffect.DefenseBreakRate003, ShareEffect.AccuracyM45}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.DefenseBreakRate002, ShareEffect.AccuracyM45}},
-                        {BroochesRare.Byte, new[] {ShareEffect.DefenseBreakRate001, ShareEffect.AccuracyM45}}
+                        {BroochesRare.Tera, new[] {share.DefenseBreakRate005, share.AccuracyM45}},
+                        {BroochesRare.Giga, new[] {share.DefenseBreakRate004, share.AccuracyM45}},
+                        {BroochesRare.Mega, new[] {share.DefenseBreakRate003, share.AccuracyM45}},
+                        {BroochesRare.Kilo, new[] {share.DefenseBreakRate002, share.AccuracyM45}},
+                        {BroochesRare.Byte, new[] {share.DefenseBreakRate001, share.AccuracyM45}}
                     }),
 
                 // fotA3
@@ -47,11 +47,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.CriticalDamage720, ShareEffect.AccuracyM25}},
-                        {BroochesRare.Giga, new[] {ShareEffect.CriticalDamage480, ShareEffect.AccuracyM25}},
-                        {BroochesRare.Mega, new[] {ShareEffect.CriticalDamage270, ShareEffect.AccuracyM25}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.CriticalDamage180, ShareEffect.AccuracyM25}},
-                        {BroochesRare.Byte, new[] {ShareEffect.CriticalDamage90, ShareEffect.AccuracyM25}}
+                        {BroochesRare.Tera, new[] {share.CriticalDamage720, share.AccuracyM25}},
+                        {BroochesRare.Giga, new[] {share.CriticalDamage480, share.AccuracyM25}},
+                        {BroochesRare.Mega, new[] {share.CriticalDamage270, share.AccuracyM25}},
+                        {BroochesRare.Kilo, new[] {share.CriticalDamage180, share.AccuracyM25}},
+                        {BroochesRare.Byte, new[] {share.CriticalDamage90, share.AccuracyM25}}
                     }),
 
                 // fotA4
@@ -60,11 +60,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.CriticalDamage720, ShareEffect.EvadeM38}},
-                        {BroochesRare.Giga, new[] {ShareEffect.CriticalDamage480, ShareEffect.EvadeM38}},
-                        {BroochesRare.Mega, new[] {ShareEffect.CriticalDamage270, ShareEffect.EvadeM38}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.CriticalDamage180, ShareEffect.EvadeM38}},
-                        {BroochesRare.Byte, new[] {ShareEffect.CriticalDamage90, ShareEffect.EvadeM38}}
+                        {BroochesRare.Tera, new[] {share.CriticalDamage720, share.EvadeM38}},
+                        {BroochesRare.Giga, new[] {share.CriticalDamage480, share.EvadeM38}},
+                        {BroochesRare.Mega, new[] {share.CriticalDamage270, share.EvadeM38}},
+                        {BroochesRare.Kilo, new[] {share.CriticalDamage180, share.EvadeM38}},
+                        {BroochesRare.Byte, new[] {share.CriticalDamage90, share.EvadeM38}}
                     }),
 
                 // fotA5
@@ -73,11 +73,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.Attack600, ShareEffect.AccuracyM25}},
-                        {BroochesRare.Giga, new[] {ShareEffect.Attack420, ShareEffect.AccuracyM25}},
-                        {BroochesRare.Mega, new[] {ShareEffect.Attack240, ShareEffect.AccuracyM25}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.Attack120, ShareEffect.AccuracyM25}},
-                        {BroochesRare.Byte, new[] {ShareEffect.Attack60, ShareEffect.AccuracyM25}}
+                        {BroochesRare.Tera, new[] {share.Attack600, share.AccuracyM25}},
+                        {BroochesRare.Giga, new[] {share.Attack420, share.AccuracyM25}},
+                        {BroochesRare.Mega, new[] {share.Attack240, share.AccuracyM25}},
+                        {BroochesRare.Kilo, new[] {share.Attack120, share.AccuracyM25}},
+                        {BroochesRare.Byte, new[] {share.Attack60, share.AccuracyM25}}
                     }),
 
                 // fotA6
@@ -86,11 +86,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.Attack600, ShareEffect.EvadeM38}},
-                        {BroochesRare.Giga, new[] {ShareEffect.Attack420, ShareEffect.EvadeM38}},
-                        {BroochesRare.Mega, new[] {ShareEffect.Attack240, ShareEffect.EvadeM38}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.Attack120, ShareEffect.EvadeM38}},
-                        {BroochesRare.Byte, new[] {ShareEffect.Attack60, ShareEffect.EvadeM38}}
+                        {BroochesRare.Tera, new[] {share.Attack600, share.EvadeM38}},
+                        {BroochesRare.Giga, new[] {share.Attack420, share.EvadeM38}},
+                        {BroochesRare.Mega, new[] {share.Attack240, share.EvadeM38}},
+                        {BroochesRare.Kilo, new[] {share.Attack120, share.EvadeM38}},
+                        {BroochesRare.Byte, new[] {share.Attack60, share.EvadeM38}}
                     }),
 
                 // fotA7
@@ -99,11 +99,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {new(StaticEffect.CriticalRate, .08m), ShareEffect.EvadeM38}},
-                        {BroochesRare.Giga, new[] {ShareEffect.CriticalRate004, ShareEffect.EvadeM38}},
-                        {BroochesRare.Mega, new[] {ShareEffect.CriticalRate003, ShareEffect.EvadeM38}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.CriticalRate002, ShareEffect.EvadeM38}},
-                        {BroochesRare.Byte, new[] {ShareEffect.CriticalRate001, ShareEffect.EvadeM38}}
+                        {BroochesRare.Tera, new[] {new(StaticEffect.CriticalRate, .08m), share.EvadeM38}},
+                        {BroochesRare.Giga, new[] {share.CriticalRate004, share.EvadeM38}},
+                        {BroochesRare.Mega, new[] {share.CriticalRate003, share.EvadeM38}},
+                        {BroochesRare.Kilo, new[] {share.CriticalRate002, share.EvadeM38}},
+                        {BroochesRare.Byte, new[] {share.CriticalRate001, share.EvadeM38}}
                     }),
 
                 // fotA8
@@ -112,11 +112,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.CriticalDamageOCriticalD3, 870)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.CriticalDamageOCriticalD3, 560)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.CriticalDamageOCriticalD3, 336)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.CriticalDamageOCriticalD3, 280)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.CriticalDamageOCriticalD3, 140)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.CriticalDamageOCriticalD3, 870)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.CriticalDamageOCriticalD3, 560)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.CriticalDamageOCriticalD3, 336)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.CriticalDamageOCriticalD3, 280)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.CriticalDamageOCriticalD3, 140)}}
                     }),
 
                 // fotA9
@@ -125,13 +125,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {
-                            BroochesRare.Tera, new Effect[] {new(ShareEffect.CriticalDamageOhp30DownThenHitD3, 1_260)}
-                        },
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.CriticalDamageOhp30DownThenHitD3, 810)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.CriticalDamageOhp30DownThenHitD3, 450)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.CriticalDamageOhp30DownThenHitD3, 360)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.CriticalDamageOhp30DownThenHitD3, 180)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.CriticalDamageOhp30DownThenHitD3, 1_260)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.CriticalDamageOhp30DownThenHitD3, 810)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.CriticalDamageOhp30DownThenHitD3, 450)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.CriticalDamageOhp30DownThenHitD3, 360)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.CriticalDamageOhp30DownThenHitD3, 180)}}
                     }),
 
                 // fotA10
@@ -140,11 +138,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.HpRecoveryOHitP15, 320)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.HpRecoveryOHitP15, 220)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.HpRecoveryOHitP15, 160)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.HpRecoveryOHitP15, 100)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.HpRecoveryOHitP15, 40)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.HpRecoveryOHitP15, 320)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.HpRecoveryOHitP15, 220)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.HpRecoveryOHitP15, 160)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.HpRecoveryOHitP15, 100)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.HpRecoveryOHitP15, 40)}}
                     }),
 
                 #endregion
@@ -157,11 +155,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.Defense720, ShareEffect.MoveSpaceRateM001}},
-                        {BroochesRare.Giga, new[] {ShareEffect.Defense480, ShareEffect.MoveSpaceRateM001}},
-                        {BroochesRare.Mega, new[] {ShareEffect.Defense312, ShareEffect.MoveSpaceRateM001}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.Defense144, ShareEffect.MoveSpaceRateM001}},
-                        {BroochesRare.Byte, new[] {ShareEffect.Defense72, ShareEffect.MoveSpaceRateM001}}
+                        {BroochesRare.Tera, new[] {share.Defense720, share.MoveSpaceRateM001}},
+                        {BroochesRare.Giga, new[] {share.Defense480, share.MoveSpaceRateM001}},
+                        {BroochesRare.Mega, new[] {share.Defense312, share.MoveSpaceRateM001}},
+                        {BroochesRare.Kilo, new[] {share.Defense144, share.MoveSpaceRateM001}},
+                        {BroochesRare.Byte, new[] {share.Defense72, share.MoveSpaceRateM001}}
                     }),
 
                 // fotD2
@@ -170,11 +168,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.Defense720, ShareEffect.AttackSpeedRateM001}},
-                        {BroochesRare.Giga, new[] {ShareEffect.Defense480, ShareEffect.AttackSpeedRateM001}},
-                        {BroochesRare.Mega, new[] {ShareEffect.Defense312, ShareEffect.AttackSpeedRateM001}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.Defense144, ShareEffect.AttackSpeedRateM001}},
-                        {BroochesRare.Byte, new[] {ShareEffect.Defense72, ShareEffect.AttackSpeedRateM001}}
+                        {BroochesRare.Tera, new[] {share.Defense720, share.AttackSpeedRateM001}},
+                        {BroochesRare.Giga, new[] {share.Defense480, share.AttackSpeedRateM001}},
+                        {BroochesRare.Mega, new[] {share.Defense312, share.AttackSpeedRateM001}},
+                        {BroochesRare.Kilo, new[] {share.Defense144, share.AttackSpeedRateM001}},
+                        {BroochesRare.Byte, new[] {share.Defense72, share.AttackSpeedRateM001}}
                     }),
 
                 // fotD3
@@ -183,11 +181,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.Defense720, ShareEffect.AccuracyM30}},
-                        {BroochesRare.Giga, new[] {ShareEffect.Defense480, ShareEffect.AccuracyM30}},
-                        {BroochesRare.Mega, new[] {ShareEffect.Defense312, ShareEffect.AccuracyM30}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.Defense144, ShareEffect.AccuracyM30}},
-                        {BroochesRare.Byte, new[] {ShareEffect.Defense72, ShareEffect.AccuracyM30}}
+                        {BroochesRare.Tera, new[] {share.Defense720, share.AccuracyM30}},
+                        {BroochesRare.Giga, new[] {share.Defense480, share.AccuracyM30}},
+                        {BroochesRare.Mega, new[] {share.Defense312, share.AccuracyM30}},
+                        {BroochesRare.Kilo, new[] {share.Defense144, share.AccuracyM30}},
+                        {BroochesRare.Byte, new[] {share.Defense72, share.AccuracyM30}}
                     }),
 
                 // fotD4
@@ -196,11 +194,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.HpRate015, ShareEffect.MoveSpaceRateM001}},
-                        {BroochesRare.Giga, new[] {ShareEffect.HpRate011, ShareEffect.MoveSpaceRateM001}},
-                        {BroochesRare.Mega, new[] {ShareEffect.HpRate006, ShareEffect.MoveSpaceRateM001}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.HpRate004, ShareEffect.MoveSpaceRateM001}},
-                        {BroochesRare.Byte, new[] {ShareEffect.HpRate002, ShareEffect.MoveSpaceRateM001}}
+                        {BroochesRare.Tera, new[] {share.HpRate015, share.MoveSpaceRateM001}},
+                        {BroochesRare.Giga, new[] {share.HpRate011, share.MoveSpaceRateM001}},
+                        {BroochesRare.Mega, new[] {share.HpRate006, share.MoveSpaceRateM001}},
+                        {BroochesRare.Kilo, new[] {share.HpRate004, share.MoveSpaceRateM001}},
+                        {BroochesRare.Byte, new[] {share.HpRate002, share.MoveSpaceRateM001}}
                     }),
 
                 // fotD5
@@ -209,11 +207,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.HpRate015, ShareEffect.AttackSpeedRateM001}},
-                        {BroochesRare.Giga, new[] {ShareEffect.HpRate011, ShareEffect.AttackSpeedRateM001}},
-                        {BroochesRare.Mega, new[] {ShareEffect.HpRate006, ShareEffect.AttackSpeedRateM001}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.HpRate004, ShareEffect.AttackSpeedRateM001}},
-                        {BroochesRare.Byte, new[] {ShareEffect.HpRate002, ShareEffect.AttackSpeedRateM001}}
+                        {BroochesRare.Tera, new[] {share.HpRate015, share.AttackSpeedRateM001}},
+                        {BroochesRare.Giga, new[] {share.HpRate011, share.AttackSpeedRateM001}},
+                        {BroochesRare.Mega, new[] {share.HpRate006, share.AttackSpeedRateM001}},
+                        {BroochesRare.Kilo, new[] {share.HpRate004, share.AttackSpeedRateM001}},
+                        {BroochesRare.Byte, new[] {share.HpRate002, share.AttackSpeedRateM001}}
                     }),
 
                 // fotD6
@@ -222,11 +220,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.HpRate015, ShareEffect.AccuracyM30}},
-                        {BroochesRare.Giga, new[] {ShareEffect.HpRate011, ShareEffect.AccuracyM30}},
-                        {BroochesRare.Mega, new[] {ShareEffect.HpRate006, ShareEffect.AccuracyM30}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.HpRate004, ShareEffect.AccuracyM30}},
-                        {BroochesRare.Byte, new[] {ShareEffect.HpRate002, ShareEffect.AccuracyM30}}
+                        {BroochesRare.Tera, new[] {share.HpRate015, share.AccuracyM30}},
+                        {BroochesRare.Giga, new[] {share.HpRate011, share.AccuracyM30}},
+                        {BroochesRare.Mega, new[] {share.HpRate006, share.AccuracyM30}},
+                        {BroochesRare.Kilo, new[] {share.HpRate004, share.AccuracyM30}},
+                        {BroochesRare.Byte, new[] {share.HpRate002, share.AccuracyM30}}
                     }),
 
                 // fotD7
@@ -235,11 +233,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {ShareEffect.HpRate015, ShareEffect.EvadeM50}},
-                        {BroochesRare.Giga, new[] {ShareEffect.HpRate011, ShareEffect.EvadeM50}},
-                        {BroochesRare.Mega, new[] {ShareEffect.HpRate006, ShareEffect.EvadeM50}},
-                        {BroochesRare.Kilo, new[] {ShareEffect.HpRate004, ShareEffect.EvadeM50}},
-                        {BroochesRare.Byte, new[] {ShareEffect.HpRate002, ShareEffect.EvadeM50}}
+                        {BroochesRare.Tera, new[] {share.HpRate015, share.EvadeM50}},
+                        {BroochesRare.Giga, new[] {share.HpRate011, share.EvadeM50}},
+                        {BroochesRare.Mega, new[] {share.HpRate006, share.EvadeM50}},
+                        {BroochesRare.Kilo, new[] {share.HpRate004, share.EvadeM50}},
+                        {BroochesRare.Byte, new[] {share.HpRate002, share.EvadeM50}}
                     }),
 
                 // fotD8
@@ -248,11 +246,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.HpRecoveryOSufferP3, 1_000)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.HpRecoveryOSufferP3, 660)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.HpRecoveryOSufferP3, 500)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.HpRecoveryOSufferP3, 330)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.HpRecoveryOSufferP3, 160)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.HpRecoveryOSufferP3, 1_000)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.HpRecoveryOSufferP3, 660)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.HpRecoveryOSufferP3, 500)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.HpRecoveryOSufferP3, 330)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.HpRecoveryOSufferP3, 160)}}
                     }),
 
                 // fotD9
@@ -261,11 +259,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.DefenseOHp50DownD10, 770)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.DefenseOHp50DownD10, 490)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.DefenseOHp50DownD10, 280)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.DefenseOHp50DownD10, 140)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.DefenseOHp50DownD10, 70)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.DefenseOHp50DownD10, 770)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.DefenseOHp50DownD10, 490)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.DefenseOHp50DownD10, 280)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.DefenseOHp50DownD10, 140)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.DefenseOHp50DownD10, 70)}}
                     }),
 
                 // fotD10
@@ -274,13 +272,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {
-                            BroochesRare.Tera, new Effect[] {new(ShareEffect.CriticalResistanceRateOHp50DownD10, .27m)}
-                        },
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.CriticalResistanceRateOHp50DownD10, .18m)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.CriticalResistanceRateOHp50DownD10, .12m)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.CriticalResistanceRateOHp50DownD10, .06m)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.CriticalResistanceRateOHp50DownD10, .03m)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.CriticalResistanceRateOHp50DownD10, .27m)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.CriticalResistanceRateOHp50DownD10, .18m)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.CriticalResistanceRateOHp50DownD10, .12m)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.CriticalResistanceRateOHp50DownD10, .06m)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.CriticalResistanceRateOHp50DownD10, .03m)}}
                     }),
 
                 #endregion
@@ -293,11 +289,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.DefenseORunP1D5, 400)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.DefenseORunP1D5, 300)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.DefenseORunP1D5, 220)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.DefenseORunP1D5, 80)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.DefenseORunP1D5, 40)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.DefenseORunP1D5, 400)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.DefenseORunP1D5, 300)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.DefenseORunP1D5, 220)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.DefenseORunP1D5, 80)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.DefenseORunP1D5, 40)}}
                     }),
 
                 // fotE2
@@ -306,11 +302,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.AttackOKillD5, 1_200)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.AttackOKillD5, 1_000)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.AttackOKillD5, 800)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.AttackOKillD5, 500)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.AttackOKillD5, 200)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.AttackOKillD5, 1_200)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.AttackOKillD5, 1_000)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.AttackOKillD5, 800)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.AttackOKillD5, 500)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.AttackOKillD5, 200)}}
                     }),
 
                 // fotE3
@@ -319,11 +315,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.DefenseOKillD5, 850)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.DefenseOKillD5, 575)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.DefenseOKillD5, 400)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.DefenseOKillD5, 250)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.DefenseOKillD5, 100)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.DefenseOKillD5, 850)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.DefenseOKillD5, 575)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.DefenseOKillD5, 400)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.DefenseOKillD5, 250)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.DefenseOKillD5, 100)}}
                     }),
 
                 // fotE4
@@ -332,11 +328,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.HpRecoveryRateOUseAvoidP1, .15m)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.HpRecoveryRateOUseAvoidP1, .11m)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.HpRecoveryRateOUseAvoidP1, .08m)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.HpRecoveryRateOUseAvoidP1, .05m)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.HpRecoveryRateOUseAvoidP1, .02m)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.HpRecoveryRateOUseAvoidP1, .15m)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.HpRecoveryRateOUseAvoidP1, .11m)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.HpRecoveryRateOUseAvoidP1, .08m)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.HpRecoveryRateOUseAvoidP1, .05m)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.HpRecoveryRateOUseAvoidP1, .02m)}}
                     }),
 
                 // fotE5
@@ -345,11 +341,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.DamageReductionRateOKillD5, .12m)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.DamageReductionRateOKillD5, .09m)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.DamageReductionRateOKillD5, .06m)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.DamageReductionRateOKillD5, .03m)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.DamageReductionRateOKillD5, .01m)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.DamageReductionRateOKillD5, .12m)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.DamageReductionRateOKillD5, .09m)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.DamageReductionRateOKillD5, .06m)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.DamageReductionRateOKillD5, .03m)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.DamageReductionRateOKillD5, .01m)}}
                     }),
 
                 // fotE6
@@ -358,11 +354,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.SoulGateRecoveryRateOUseSkillP1, .15m)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.SoulGateRecoveryRateOUseSkillP1, .12m)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.SoulGateRecoveryRateOUseSkillP1, .09m)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.SoulGateRecoveryRateOUseSkillP1, .06m)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.SoulGateRecoveryRateOUseSkillP1, .03m)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.SoulGateRecoveryRateOUseSkillP1, .15m)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.SoulGateRecoveryRateOUseSkillP1, .12m)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.SoulGateRecoveryRateOUseSkillP1, .09m)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.SoulGateRecoveryRateOUseSkillP1, .06m)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.SoulGateRecoveryRateOUseSkillP1, .03m)}}
                     }),
 
                 // fotE7
@@ -371,11 +367,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.DefenseOSufferP5D10, 150)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.DefenseOSufferP5D10, 100)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.DefenseOSufferP5D10, 60)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.DefenseOSufferP5D10, 30)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.DefenseOSufferP5D10, 10)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.DefenseOSufferP5D10, 150)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.DefenseOSufferP5D10, 100)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.DefenseOSufferP5D10, 60)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.DefenseOSufferP5D10, 30)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.DefenseOSufferP5D10, 10)}}
                     }),
 
                 // fotE8
@@ -384,11 +380,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.AttackOHitP1D5, 400)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.AttackOHitP1D5, 300)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.AttackOHitP1D5, 175)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.AttackOHitP1D5, 75)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.AttackOHitP1D5, 25)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.AttackOHitP1D5, 400)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.AttackOHitP1D5, 300)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.AttackOHitP1D5, 175)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.AttackOHitP1D5, 75)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.AttackOHitP1D5, 25)}}
                     }),
 
                 // fotE9
@@ -397,9 +393,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.InvincibleSecondOHp20DownP1, 1.5m)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.InvincibleSecondOHp20DownP1, 1.25m)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.InvincibleSecondOHp20DownP1, 1)}},
+                        {BroochesRare.Tera, new Effect[] {new(share.InvincibleSecondOHp20DownP1, 1.5m)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.InvincibleSecondOHp20DownP1, 1.25m)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.InvincibleSecondOHp20DownP1, 1)}},
                         {
                             BroochesRare.Kilo,
                             new Effect[] {new(new(Property.InvincibleSecond, Opportunity.Hp15Down, .1m), 1)}
@@ -416,11 +412,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Effect,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(ShareEffect.DefenseOUseSkillP1D5, 800)}},
-                        {BroochesRare.Giga, new Effect[] {new(ShareEffect.DefenseOUseSkillP1D5, 600)}},
-                        {BroochesRare.Mega, new Effect[] {new(ShareEffect.DefenseOUseSkillP1D5, 440)}},
-                        {BroochesRare.Kilo, new Effect[] {new(ShareEffect.DefenseOUseSkillP1D5, 280)}},
-                        {BroochesRare.Byte, new Effect[] {new(ShareEffect.DefenseOUseSkillP1D5, 140)}}
+                        {BroochesRare.Tera, new Effect[] {new(share.DefenseOUseSkillP1D5, 800)}},
+                        {BroochesRare.Giga, new Effect[] {new(share.DefenseOUseSkillP1D5, 600)}},
+                        {BroochesRare.Mega, new Effect[] {new(share.DefenseOUseSkillP1D5, 440)}},
+                        {BroochesRare.Kilo, new Effect[] {new(share.DefenseOUseSkillP1D5, 280)}},
+                        {BroochesRare.Byte, new Effect[] {new(share.DefenseOUseSkillP1D5, 140)}}
                     })
 
                 #endregion

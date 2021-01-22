@@ -8,11 +8,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static partial class BroochesData
     {
-#pragma warning disable CS8618
-#pragma warning disable CS8604
-        static BroochesData()
+        private static readonly Dictionary<BroochesType, IReadOnlyCollection<Brooch>> Result = new();
+
+        internal static void Create(ShareEffect share)
         {
-            Brooches = SetupSd().Concat(SetupBsk()).Concat(SetupFot()).Concat(SetupSin()).ToList();
+            Brooches = SetupSd(share).Concat(SetupBsk(share)).Concat(SetupFot(share)).Concat(SetupSin(share)).ToList();
 
 #if DEBUG
             if (Brooches.Count != 45 + 17 * 3 + 30 + 30)
@@ -24,8 +24,6 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             if (Brooches.Any(x => x == null)) { throw new InvalidOperationException(); }
 #endif
         }
-#pragma warning restore CS8604
-#pragma warning restore CS8618
 
         internal static IReadOnlyCollection<Brooch> Get(BroochesType type)
         {
@@ -33,9 +31,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 
             return Result[type] = Brooches.Where(x => x.Type == type).ToList();
         }
-#pragma warning disable CS0649
-        private static readonly IReadOnlyCollection<Brooch>                           Brooches;
-        private static readonly Dictionary<BroochesType, IReadOnlyCollection<Brooch>> Result = new();
-#pragma warning restore CS0649
+
+        #region
+
+        private static IReadOnlyCollection<Brooch> Brooches { get; set; } = null!;
+
+        #endregion
     }
 }

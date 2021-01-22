@@ -14,5 +14,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 TitleField.Last  => LastTitle,
                 _                => throw new ArgumentOutOfRangeException(nameof(field), field, null)
             };
+
+        public static void Create(ShareEffect share)
+        {
+            CreateFirst(share);
+            CreateLast(share);
+        }
     }
 }

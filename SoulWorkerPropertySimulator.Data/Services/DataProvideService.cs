@@ -36,5 +36,40 @@ namespace SoulWorkerPropertySimulator.Data.Services
         public IReadOnlyCollection<Character> GetCharacters() => CharacterData.Get();
 
         public IReadOnlyCollection<Akasha> GetAkashas() => throw new NotImplementedException();
+
+        public static void Create()
+        {
+            SafeCall(() => AccessorySetData.Get());
+            SafeCall(() => EquipmentSetData.Get());
+            SafeCall(() => CharacterData.Get());
+            // SafeCall(() => GetAkashas());
+
+            var share = new ShareEffect();
+            SafeCall(() => BroochesData.Create(share));
+            SafeCall(() => TitleData.Create(share));
+
+            foreach (var field in Enum.GetValues<ArmorField>()) { SafeCall(() => EquipmentData.Get(field)); }
+
+            foreach (var field in Enum.GetValues<AccessoryField>()) { SafeCall(() => AccessoryData.Get(field)); }
+
+            foreach (var field in Enum.GetValues<PluginField>()) { SafeCall(() => PluginData.Get(field)); }
+
+            foreach (var field in Enum.GetValues<TagField>()) { SafeCall(() => TagData.Get(field)); }
+        }
+
+        #region
+
+        private static void SafeCall(Action action)
+        {
+            // #if DEBUG
+            try { action.Invoke(); }
+            catch (NotImplementedException) { }
+
+            // #else
+            //            action.Invoke();
+            // #endif
+        }
+
+        #endregion
     }
 }
