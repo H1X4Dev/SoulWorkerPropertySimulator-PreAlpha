@@ -8,7 +8,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     {
         #region
 
-        private static Character Iris { get; } = new("伊莉絲",
+        private static Character SetupIris() => new("伊莉絲",
             new Dictionary<int, IReadOnlyCollection<Effect>>
             {
                 {

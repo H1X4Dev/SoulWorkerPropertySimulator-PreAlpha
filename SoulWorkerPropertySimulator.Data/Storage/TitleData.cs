@@ -9,8 +9,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         public static IReadOnlyCollection<Title> Get(TitleField field) =>
             field switch
             {
-                TitleField.First => _firstTitle,
-                TitleField.Last  => _lastTitle,
+                TitleField.First => FirstTitle,
+                TitleField.Last  => LastTitle,
                 _                => throw new ArgumentOutOfRangeException(nameof(field), field, null)
             };
     }

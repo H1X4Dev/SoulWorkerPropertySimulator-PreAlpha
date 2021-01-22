@@ -80,19 +80,22 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new(Static.Accuracy, 1_062)
         };
 
-        static CharacterData() =>
+        static CharacterData()
+        {
+
             Result = new List<Character>
             {
-                Haru,
-                Erwin,
-                Lily,
-                Stella,
-                Jin,
-                Iris,
-                Chii,
-                Erwin,
-                Lee
+                SetupHaru(),
+                SetupErwin(),
+                SetupLily(),
+                SetupStella(),
+                SetupJin(),
+                SetupIris(),
+                SetupChii(),
+                SetupErwin(),
+                SetupLee()
             };
+        }
 
         public static IReadOnlyCollection<Character> Get() => Result;
     }

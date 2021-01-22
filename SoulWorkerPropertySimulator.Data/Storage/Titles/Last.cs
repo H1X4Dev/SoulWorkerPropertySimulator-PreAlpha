@@ -6,7 +6,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static partial class TitleData
     {
-        private static readonly IReadOnlyCollection<Title> _lastTitle = new Title[]
+        private static readonly IReadOnlyCollection<Title> LastTitle = new Title[]
         {
             new("靈魂行者", TitleField.Last, 1, ShareEffect.ArrayAttackRate00135),
             new("安排", TitleField.Last, 1, ShareEffect.ArrayAttackRate00135),
