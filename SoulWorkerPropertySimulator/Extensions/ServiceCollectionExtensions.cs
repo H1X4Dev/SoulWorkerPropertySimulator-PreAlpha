@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SoulWorkerPropertySimulator.Services;
 
-namespace SoulWorkerPropertySimulator
+namespace SoulWorkerPropertySimulator.Extensions
 {
     public static class ServiceCollectionExtensions
     {

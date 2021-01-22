@@ -1,5 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Components.WebAssembly.Hosting
+@using SoulWorkerPropertySimulator.Extensions
+@using SoulWorkerPropertySimulator.Models.Effects
 @using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Types
 @using SoulWorkerPropertySimulator.Web.Pages
 @inject IWebAssemblyHostEnvironment HostEnvironment
 @inject IPanelComputeService PanelCompute
@@ -52,7 +55,7 @@
             {
                 <li class="list-group-item d-flex">
                     <div class="flex-grow-1">@context.Description</div>
-                    <div>@(context.IsPercent ? $"{value * 100}%" : (int) value)</div>
+                    <div>@(context.Property.IsPercent() ? $"{value * 100}%" : (int) value)</div>
                 </li>
             }
         }
@@ -62,7 +65,7 @@
             {
                 <li class="list-group-item d-flex">
                     <div class="flex-grow-1">@context.Description</div>
-                    <div>@(context.IsPercent ? $"{value * 100}%" : (int) value)</div>
+                    <div>@(context.Property.IsPercent() ? $"{value * 100}%" : (int) value)</div>
                 </li>
             }
         }

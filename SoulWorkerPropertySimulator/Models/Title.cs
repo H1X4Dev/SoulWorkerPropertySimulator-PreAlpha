@@ -1,13 +1,16 @@
 ﻿using System.Collections.Generic;
+using SoulWorkerPropertySimulator.Models.Effects;
+using SoulWorkerPropertySimulator.Models.Scaffolding;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Models
 {
     public record Title : Item
     {
-        public Title(string name, TitleField field, int id, IReadOnlyCollection<Effect> effects) : base(name)
+        public Title(TitleField field, int id, string name, IReadOnlyCollection<Effect> effects) : base(name)
         {
-            Id      = id;
             Field   = field;
+            Id      = id;
             Effects = effects;
         }
 

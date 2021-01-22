@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Models.Brooches;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
 {
@@ -26,15 +27,15 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 #pragma warning restore CS8604
 #pragma warning restore CS8618
 
-        internal static IReadOnlyCollection<Brooches> Get(BroochesType type)
+        internal static IReadOnlyCollection<Brooch> Get(BroochesType type)
         {
             if (Result.ContainsKey(type)) { return Result[type]; }
 
             return Result[type] = Brooches.Where(x => x.Type == type).ToList();
         }
 #pragma warning disable CS0649
-        private static readonly IReadOnlyCollection<Brooches>                           Brooches;
-        private static readonly Dictionary<BroochesType, IReadOnlyCollection<Brooches>> Result = new();
+        private static readonly IReadOnlyCollection<Brooch>                           Brooches;
+        private static readonly Dictionary<BroochesType, IReadOnlyCollection<Brooch>> Result = new();
 #pragma warning restore CS0649
     }
 }

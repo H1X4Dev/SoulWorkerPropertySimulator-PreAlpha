@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
-using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Models.Effects;
+using SoulWorkerPropertySimulator.Models.Equipments;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
 {
@@ -10,7 +12,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new("進階暮光",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
-                    {2, new Effect[] {new(Static.CriticalDamage, 9_000), new(Static.CriticalRate, .15m)}},
+                    {
+                        2,
+                        new Effect[] {new(StaticEffect.CriticalDamage, 9_000), new(StaticEffect.CriticalRate, .15m)}
+                    },
                     {
                         3,
                         new Effect[]
@@ -24,10 +29,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         4,
                         new Effect[]
                         {
-                            new(Static.ExtraDamageRateBoss, .4m),
-                            new(Static.SoulGateConsumptionReducedRate, .1m),
-                            new(Static.SuperArmorBreakPowerRate, .5m),
-                            new(Static.AttackSpeedRate, .14m)
+                            new(StaticEffect.ExtraDamageRateBoss, .4m),
+                            new(StaticEffect.SoulGateConsumptionReducedRate, .1m),
+                            new(StaticEffect.SuperArmorBreakPowerRate, .5m),
+                            new(StaticEffect.AttackSpeedRate, .14m)
                         }
                     }
                 })

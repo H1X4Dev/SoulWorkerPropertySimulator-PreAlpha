@@ -13,12 +13,8 @@
 
 @code
 {
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-        // WaitDebugger();
-    }
-
+    protected override void OnInitialized() => base.OnInitialized();
+    // WaitDebugger();
     [Conditional("DEBUG")]
     private static void WaitDebugger() => Thread.Sleep(5_000);
 }

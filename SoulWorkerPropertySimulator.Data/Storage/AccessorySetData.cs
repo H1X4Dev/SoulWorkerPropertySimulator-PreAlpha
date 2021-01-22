@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
-using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Models.Accessory;
+using SoulWorkerPropertySimulator.Models.Effects;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
 {
@@ -10,9 +11,22 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new("暮光",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
-                    {2, new Effect[] {new(Static.Stamina, 17), new(Static.CriticalDamage, 2_200)}},
-                    {3, new Effect[] {new(Static.Accuracy, 370), new(Static.ExtraDamageRateBoss, .35m)}},
-                    {4, new Effect[] {new(Static.CooldownShorterRate, .8m), new(Static.DefenseBreakRate, .12m)}}
+                    {2, new Effect[] {new(StaticEffect.Stamina, 17), new(StaticEffect.CriticalDamage, 2_200)}},
+                    {
+                        3,
+                        new Effect[]
+                        {
+                            new(StaticEffect.Accuracy, 370), new(StaticEffect.ExtraDamageRateBoss, .35m)
+                        }
+                    },
+                    {
+                        4,
+                        new Effect[]
+                        {
+                            new(StaticEffect.CooldownShorterRate, .8m),
+                            new(StaticEffect.DefenseBreakRate, .12m)
+                        }
+                    }
                 })
         };
 

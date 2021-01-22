@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
-using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Models.Brooches;
+using SoulWorkerPropertySimulator.Models.Effects;
+using SoulWorkerPropertySimulator.Types;
 
 // ReSharper disable once CheckNamespace
 namespace SoulWorkerPropertySimulator.Data.Storage
@@ -8,8 +10,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     {
         #region
 
-        private static IReadOnlyCollection<Brooches> SetupFot() =>
-            new List<Brooches>
+        private static IReadOnlyCollection<Brooch> SetupFot() =>
+            new List<Brooch>
             {
                 #region Attack
 
@@ -97,7 +99,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {new(Static.CriticalRate, .08m), ShareEffect.EvadeM38}},
+                        {BroochesRare.Tera, new[] {new(StaticEffect.CriticalRate, .08m), ShareEffect.EvadeM38}},
                         {BroochesRare.Giga, new[] {ShareEffect.CriticalRate004, ShareEffect.EvadeM38}},
                         {BroochesRare.Mega, new[] {ShareEffect.CriticalRate003, ShareEffect.EvadeM38}},
                         {BroochesRare.Kilo, new[] {ShareEffect.CriticalRate002, ShareEffect.EvadeM38}},

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
 {

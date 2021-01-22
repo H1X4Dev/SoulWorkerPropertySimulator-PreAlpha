@@ -1,4 +1,5 @@
 ﻿@using SoulWorkerPropertySimulator.Extensions
+@using SoulWorkerPropertySimulator.Models.Effects
 @implements IDisposable
 
 <div class="card m-3">
@@ -21,7 +22,7 @@
             <div class="card-body">
                 <div class="form-floating">
                     <input type="number" class="form-control" min="@SelectedContext.DisplayMinValue" max="@SelectedContext.DisplayMaxValue" placeholder="@SelectedContext.DisplayMaxValue" @bind="SelectedValue">
-                    @if (SelectedContext.Context.IsPercent)
+                    @if (SelectedContext.Context.Property.IsPercent())
                     {
                         <label>@SelectedContext.DisplayMinValue% ~ @SelectedContext.DisplayMaxValue%</label>
                         <span class="input-group-text">%</span>
@@ -56,10 +57,10 @@
     public int? Key { get; set; }
 
 
-    private IReadOnlyCollection<EffectRandomContext>? _options;
+    private IReadOnlyCollection<RandomEffect>? _options;
 
     [Parameter]
-    public IReadOnlyCollection<EffectRandomContext>? Options
+    public IReadOnlyCollection<RandomEffect>? Options
     {
         get => _options;
         set
@@ -70,14 +71,14 @@
     }
 
     [Parameter]
-    public IReadOnlyCollection<EffectRandomContext>? DisableContext { get; set; }
+    public IReadOnlyCollection<RandomEffect>? DisableContext { get; set; }
 
     [Parameter]
     public Effect? DefaultEffect { get; set; }
 
     private int? _selectedKey;
 
-    public EffectRandomContext? SelectedContext
+    public RandomEffect? SelectedContext
     {
         get => Options?.FirstOrDefault(x => x.GetHashCode() == SelectedKey);
         set => SelectedKey = value?.GetHashCode();
@@ -98,10 +99,10 @@
 
     public int? SelectedValue
     {
-        get => (int?) (SelectedContext == null ? null : SelectedContext.Context.IsPercent ? _selectedValue * 100 : _selectedValue);
+        get => (int?) (SelectedContext == null ? null : SelectedContext.Context.Property.IsPercent() ? _selectedValue * 100 : _selectedValue);
         set
         {
-            _selectedValue = SelectedContext == null ? null : SelectedContext.Context.IsPercent ? value / 100m : value;
+            _selectedValue = SelectedContext == null ? null : SelectedContext.Context.Property.IsPercent() ? value / 100m : value;
             Parents?.NotifyUpdate.InvokeAsync();
         }
     }

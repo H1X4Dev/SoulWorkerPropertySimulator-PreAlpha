@@ -1,14 +1,19 @@
 ﻿using System.Collections.Generic;
 using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Models.Accessory;
+using SoulWorkerPropertySimulator.Models.Brooches;
+using SoulWorkerPropertySimulator.Models.Equipments;
+using SoulWorkerPropertySimulator.Models.Plugins;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Services
 {
     public interface IDataProvideService
     {
-        BroochesSetEffect                       GetBroochesSets(BroochesField field, BroochesSeries series);
+        BroochSet                               GetBroochesSets(BroochesField field, BroochesSeries series);
         IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects();
         IReadOnlyCollection<ArmorSetEffect>     GetArmorSetEffects();
-        IReadOnlyCollection<Brooches>           GetBrooches(BroochesType              type);
+        IReadOnlyCollection<Brooch>             GetBrooches(BroochesType              type);
         IReadOnlyCollection<ArmorBlueprint>     GetArmorBlueprints(ArmorField         field);
         IReadOnlyCollection<AccessoryBlueprint> GetAccessoryBlueprints(AccessoryField field);
         IReadOnlyCollection<PluginBlueprint>    GetPluginBlueprints(PluginField       field);

@@ -1,30 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using SoulWorkerPropertySimulator.Models.Effects;
+using SoulWorkerPropertySimulator.Models.Scaffolding;
 
 namespace SoulWorkerPropertySimulator.Models
 {
     public record Akasha : Item
     {
-        internal Akasha(string name, bool isSecret, int step, IReadOnlyCollection<Effect> effects) : base(name)
+        private readonly TagBase _base;
+
+        private readonly int _step;
+
+        internal Akasha(string name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> effects) : base(name)
         {
-            Step     = step;
-            IsSecret = isSecret;
-            Effects  = effects;
+            _base = new(name, effects);
+            _step = effects.Keys.Min();
         }
 
-        internal Akasha(string name, bool isSecret, int step, string skill) : base(name)
+        public bool IsSecret
         {
-            Step     = step;
-            IsSecret = isSecret;
-            Skill    = skill;
+            get => _step < 0;
+            init
+            {
+                if (_base.Effects.Keys.Min() > 0) { throw new InvalidOperationException(); }
+
+                _step = GetValidValue(-(_step - 1));
+            }
         }
 
-        public override IReadOnlyCollection<Effect> Effects { get; } = Array.Empty<Effect>();
+        public int Step
+        {
+            get => Math.Abs(_step);
+            init => _step = GetValidValue(_step * (IsSecret ? -1 : 1));
+        }
 
-        public bool    IsSecret { get; }
-        public int     Step     { get; }
-        public string? Skill    { get; }
+        public override IReadOnlyCollection<Effect> Effects => _base.Effects[_step];
 
-        public bool IsPassive => Skill == null;
+
+        private int GetValidValue(int target)
+        {
+            if (target > 0 && target > _base.Effects.Keys.Max()) { return _base.Effects.Keys.Max(); }
+
+            if (target < 0 && target < _base.Effects.Keys.Min()) { return _base.Effects.Keys.Min(); }
+
+            return target;
+        }
+
+        private record TagBase(string Name, IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> Effects);
     }
 }

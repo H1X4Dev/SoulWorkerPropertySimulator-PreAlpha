@@ -1,4 +1,6 @@
-﻿@using SoulWorkerPropertySimulator.Services
+﻿@using SoulWorkerPropertySimulator.Extensions
+@using SoulWorkerPropertySimulator.Models.Effects
+@using SoulWorkerPropertySimulator.Services
 @inject IPanelComputeService PanelCompute
 
 <div>
@@ -6,7 +8,7 @@
     {
         <div>
             <div>@context.Description:</div>
-            <div>@(context.IsPercent ? $"{value * 100}%" : (int) value)</div>
+            <div>@(context.Property.IsPercent() ? $"{value * 100}%" : (int) value)</div>
         </div>
     }
 </div>

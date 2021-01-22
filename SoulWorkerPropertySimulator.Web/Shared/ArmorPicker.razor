@@ -1,6 +1,9 @@
 ﻿@using SoulWorkerPropertySimulator.Extensions
 @using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Models.Equipments
+@using SoulWorkerPropertySimulator.Models.Plugins
 @using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Types
 @inject IDataProvideService Data
 @inject IArmorComputeService ArmorCompute
 
@@ -22,8 +25,8 @@
             {
                 <div class="ms-4 me-2">+</div>
                 <div>
-                    <select class="form-select" disabled="@(SelectedBlueprint == null || SelectedBlueprint.ValidStep.Count <= 1)" @bind="SelectedStep">
-                        @if (SelectedBlueprint == null || !SelectedBlueprint.ValidStep.Any())
+                    <select class="form-select" disabled="@(SelectedBlueprint == null || SelectedBlueprint.ValidStep?.Count <= 1)" @bind="SelectedStep">
+                        @if (!(SelectedBlueprint.ValidStep?.Any() ?? false))
                         {
                             <option value="0">0</option>
                         }
@@ -123,7 +126,7 @@
             if (_selected == value) { return; }
             _selected = value;
             _selectedQuality = 1;
-            _selectedStep = SelectedBlueprint?.ValidStep.Max() ?? 0;
+            _selectedStep = SelectedBlueprint?.ValidStep?.Max() ?? 0;
             Update();
         }
     }
@@ -140,9 +143,9 @@
         }
     }
 
-    private int _selectedStep;
+    private int? _selectedStep;
 
-    public int SelectedStep
+    public int? SelectedStep
     {
         get => _selectedStep;
         set
@@ -171,9 +174,9 @@
         }
     }
 
-    private TagRare? _selectedTagRare;
+    private ItemRare? _selectedTagRare;
 
-    private TagRare? SelectedTagRare
+    private ItemRare? SelectedTagRare
     {
         get => _selectedTagRare;
         set
@@ -204,10 +207,11 @@
             {
                 if (_effectsCreator == null) { return null; }
 
-                var item = SelectedBlueprint?.Create(_selectedQuality, _effectsCreator.Effects);
+                var item = SelectedBlueprint?.Create(_effectsCreator.Effects);
                 if (item == null) { return null; }
                 return item with
                 {
+                    Ratio = _selectedQuality,
                     Plugins = _pluginsCreator?.Plugins ?? Array.Empty<Plugin>(),
                     Tag = Tag,
                     Step = SelectedStep
@@ -245,9 +249,9 @@
         if (DefaultArmor != null)
         {
             _selected = DefaultArmor.Blueprint.GetHashCode();
-            _selectedQuality = DefaultArmor.SelectedRatio;
+            _selectedQuality = DefaultArmor.Ratio;
             _selectedStep = DefaultArmor.Step;
-            _selectedTag = DefaultArmor.Tag == null ? null : (DefaultArmor.Tag with { Rare = TagRare.Heroic }).GetHashCode();
+            _selectedTag = DefaultArmor.Tag == null ? null : (DefaultArmor.Tag with { Rare = ItemRare.Heroic }).GetHashCode();
             _selectedTagRare = DefaultArmor.Tag?.Rare;
         }
     }

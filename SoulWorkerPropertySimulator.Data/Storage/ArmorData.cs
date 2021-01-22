@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Models.Effects;
+using SoulWorkerPropertySimulator.Models.Equipments;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
 {
@@ -20,33 +22,31 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             var weapon68 = new ArmorBlueprint("進階暮光流浪者",
                 ArmorField.Weapon,
                 68,
-                ArmorRare.Legendary,
-                4,
-                new List<EffectRandomContext>
-                {
-                    new(Static.AttackSpeedRate, .01m, .06m),
-                    new(Static.Accuracy, 16, 65),
-                    new(Static.ExtraDamageRateBasic, .02m, .09m),
-                    new(Static.ExtraDamageRateBoss, .02m, .09m),
-                    new(Static.CriticalRate, .02m, .07m),
-                    new(Static.CriticalDamage, 1_743, 1_885),
-                    new(Static.SuperArmorBreakPowerRate, .02m, .11m),
-                    new(Static.DefenseBreakRate, .01m, .06m),
-                    new(Static.SoulNovaVolumeRate, .01m, .07m),
-                    new(Static.KillHpRecovery, 28, 217)
-                },
                 3,
-                Property.Attack,
-                2175,
-                3234,
-                fixedEffects: new Effect[]
+                new List<RandomEffect>
                 {
-                    new(Static.Attack, 3_726),
-                    new(Static.AttackSpeedRate, .07m),
-                    new(Static.ExtraDamageRateBoss, .3m),
-                    new(Static.CriticalDamage, 2_000),
-                    new(Static.Accuracy, -50)
-                });
+                    new(StaticEffect.AttackSpeedRate, .01m, .06m),
+                    new(StaticEffect.Accuracy, 16, 65),
+                    new(StaticEffect.ExtraDamageRateBasic, .02m, .09m),
+                    new(StaticEffect.ExtraDamageRateBoss, .02m, .09m),
+                    new(StaticEffect.CriticalRate, .02m, .07m),
+                    new(StaticEffect.CriticalDamage, 1_743, 1_885),
+                    new(StaticEffect.SuperArmorBreakPowerRate, .02m, .11m),
+                    new(StaticEffect.DefenseBreakRate, .01m, .06m),
+                    new(StaticEffect.SoulNovaVolumeRate, .01m, .07m),
+                    new(StaticEffect.KillHpRecovery, 28, 217)
+                },
+                4,
+                new(StaticEffect.Attack, 2_175, 3_234),
+                new Effect[]
+                {
+                    new(StaticEffect.Attack, 3_726),
+                    new(StaticEffect.AttackSpeedRate, .07m),
+                    new(StaticEffect.ExtraDamageRateBoss, .3m),
+                    new(StaticEffect.CriticalDamage, 2_000),
+                    new(StaticEffect.Accuracy, -50)
+                },
+                ItemRare.Legendary);
             result.Add(weapon68);
             result.Add(weapon68 with {Name = "進階暮光激鬥者"});
             result.Add(weapon68 with {Name = "進階暮光收割者"});
@@ -59,38 +59,36 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             var gear68 = new ArmorBlueprint("鳶尾花頭盔",
                 ArmorField.Head,
                 68,
-                ArmorRare.Legendary,
-                4,
-                new List<EffectRandomContext>
-                {
-                    new(Static.Attack, 36, 198),
-                    new(Static.Accuracy, 7, 37),
-                    new(Static.CriticalDamage, 140, 659),
-                    new(Static.Hp, 2_365, 11_100),
-                    new(Static.CriticalRate, .01m, .07m),
-                    new(Static.CooldownShorterRate, .01m, .05m),
-                    new(Static.Defense, 66, 250),
-                    new(Static.Evade, 14, 69),
-                    new(Static.ExpVolumeRateEnemy, .02m, .12m),
-                    new(Static.PartialDamageRate, .01m, .09m)
-                },
                 3,
-                Property.Defense,
-                2175,
-                3234,
+                new List<RandomEffect>
+                {
+                    new(StaticEffect.Attack, 36, 198),
+                    new(StaticEffect.Accuracy, 7, 37),
+                    new(StaticEffect.CriticalDamage, 140, 659),
+                    new(StaticEffect.Hp, 2_365, 11_100),
+                    new(StaticEffect.CriticalRate, .01m, .07m),
+                    new(StaticEffect.CooldownShorterRate, .01m, .05m),
+                    new(StaticEffect.Defense, 66, 250),
+                    new(StaticEffect.Evade, 14, 69),
+                    new(StaticEffect.ExpVolumeRateEnemy, .02m, .12m),
+                    new(StaticEffect.PartialDamageRate, .01m, .09m)
+                },
+                4,
+                new(StaticEffect.Defense, 2_175, 3_234),
+                new Effect[]
+                {
+                    new(StaticEffect.SoulNovaVolumeRate, .3m),
+                    new(StaticEffect.DamageReductionRateBoss, .08m),
+                    new(StaticEffect.Evade, -100)
+                },
+                ItemRare.Legendary,
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {3, new Effect[] {new(new(Property.AttackRate, Opportunity.HitCommon, .1m, 2), .07m)}},
-                    {6, new Effect[] {new(Static.DefenseRate, .36m)}},
-                    {9, new Effect[] {new(Static.ExtraDamageRateBoss, .03m)}}
+                    {6, new Effect[] {new(StaticEffect.DefenseRate, .36m)}},
+                    {9, new Effect[] {new(StaticEffect.ExtraDamageRateBoss, .03m)}}
                 },
-                "進階暮光",
-                new Effect[]
-                {
-                    new(Static.SoulNovaVolumeRate, .3m),
-                    new(Static.DamageReductionRateBoss, .08m),
-                    new(Static.Evade, -100)
-                });
+                "進階暮光");
             result.Add(gear68);
             result.Add(gear68 with
             {
@@ -99,14 +97,14 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 StepEffects = new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {3, new Effect[] {new(new(Property.AttackRate, Opportunity.HitBoss, .1m, 2), .06m)}},
-                    {6, new Effect[] {new(Static.Evade, 120)}},
-                    {9, new Effect[] {new(Static.Accuracy, 390)}}
+                    {6, new Effect[] {new(StaticEffect.Evade, 120)}},
+                    {9, new Effect[] {new(StaticEffect.Accuracy, 390)}}
                 },
                 FixedEffects = new Effect[]
                 {
-                    new(Static.DamageReductionRateCritical, .18m),
-                    new(Static.Accuracy, 59),
-                    new(Static.Stamina, -20)
+                    new(StaticEffect.DamageReductionRateCritical, .18m),
+                    new(StaticEffect.Accuracy, 59),
+                    new(StaticEffect.Stamina, -20)
                 }
             });
             result.Add(gear68 with
@@ -118,12 +116,14 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         3, new Effect[] {new(new(Property.SoulGateRecoveryRate, Opportunity.UseAvoid, .05m), .12m)}
                     },
-                    {6, new Effect[] {new(Static.Hp, 2_500)}},
-                    {9, new Effect[] {new(Static.CriticalRate, .06m)}}
+                    {6, new Effect[] {new(StaticEffect.Hp, 2_500)}},
+                    {9, new Effect[] {new(StaticEffect.CriticalRate, .06m)}}
                 },
                 FixedEffects = new Effect[]
                 {
-                    new(Static.Hp, 5_994), new(Static.KillHpRecovery, 80), new(Static.Defense, -10000)
+                    new(StaticEffect.Hp, 5_994),
+                    new(StaticEffect.KillHpRecovery, 80),
+                    new(StaticEffect.Defense, -10000)
                 }
             });
             result.Add(gear68 with
@@ -136,14 +136,14 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         3,
                         new Effect[] {new(new(Property.CriticalDamage, Opportunity.SuperArmorBreak, .1m, 3), .65m)}
                     },
-                    {6, new Effect[] {new(Static.DamageReductionRate, .06m)}},
-                    {9, new Effect[] {new(Static.DefenseBreakRate, .06m)}}
+                    {6, new Effect[] {new(StaticEffect.DamageReductionRate, .06m)}},
+                    {9, new Effect[] {new(StaticEffect.DefenseBreakRate, .06m)}}
                 },
                 FixedEffects = new Effect[]
                 {
-                    new(Static.Evade, 89),
-                    new(Static.MoveSpaceRate, .1m),
-                    new(Static.DamageReductionRate, -.05m)
+                    new(StaticEffect.Evade, 89),
+                    new(StaticEffect.MoveSpaceRate, .1m),
+                    new(StaticEffect.DamageReductionRate, -.05m)
                 }
             });
 

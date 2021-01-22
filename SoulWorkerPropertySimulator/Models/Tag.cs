@@ -1,53 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using SoulWorkerPropertySimulator.Models.Effects;
+using SoulWorkerPropertySimulator.Models.Scaffolding;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Models
 {
     public record Tag : Item
     {
-        private readonly IReadOnlyDictionary<TagRare, IReadOnlyCollection<Effect>> _effects;
-        private readonly TagRare                                                   _rare;
+        private readonly TagBase _base;
 
-        public Tag(string                                                    name,
-                   TagField                                                  field,
-                   IReadOnlyDictionary<TagRare, IReadOnlyCollection<Effect>> effects,
-                   TagRare                                                   rare = TagRare.Heroic) : base(name)
+        private readonly ItemRare _rare;
+
+        public Tag(TagField                                                   field,
+                   string                                                     name,
+                   IReadOnlyDictionary<ItemRare, IReadOnlyCollection<Effect>> effects,
+                   ItemRare                                                   rare = ItemRare.Heroic) : base(name)
         {
-            Field    = field;
-            _effects = effects;
-            Rare     = rare;
+            _base = new(field, name, effects);
+            Field = field;
+            Rare  = rare;
         }
 
-        public override IReadOnlyCollection<Effect>  Effects   => _effects[Rare];
-        public          IReadOnlyCollection<TagRare> ValidRare => _effects.Keys.ToList();
+        public override IReadOnlyCollection<Effect>   Effects   => _base.Effects[Rare];
+        public          IReadOnlyCollection<ItemRare> ValidRare => _base.Effects.Keys.ToList();
 
-        public TagField Field { get; }
+        public TagField Field
+        {
+            get => _base.Field;
+            init => _base = _base with {Field = value};
+        }
 
-        public TagRare Rare
+        public ItemRare Rare
         {
             get => _rare;
             init
             {
-                if (!ValidRare.Contains(value)) { throw new IndexOutOfRangeException(); }
+                if (!ValidRare.Contains(value)) { throw new InvalidOperationException(); }
 
                 _rare = value;
             }
         }
-    }
 
-    public record TagD : Item
-    {
-        public TagD(string name, TagRare rare, TagField field, IReadOnlyCollection<Effect> effects) : base(name)
-        {
-            Rare    = rare;
-            Field   = field;
-            Effects = effects;
-        }
+        public virtual bool Equals(Tag? other) => _base.Equals(other?._base);
 
-        public override IReadOnlyCollection<Effect> Effects { get; }
+        public override int GetHashCode() => _base.GetHashCode();
 
-        public TagRare  Rare  { get; }
-        public TagField Field { get; }
+        private record TagBase(TagField                                                   Field,
+                               string                                                     Name,
+                               IReadOnlyDictionary<ItemRare, IReadOnlyCollection<Effect>> Effects);
     }
 }

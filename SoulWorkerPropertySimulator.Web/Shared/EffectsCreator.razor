@@ -1,4 +1,5 @@
-﻿@using SoulWorkerPropertySimulator.Models
+﻿@using SoulWorkerPropertySimulator.Models.Scaffolding
+@using SoulWorkerPropertySimulator.Models.Effects
 <div class="@(IsFlex ? "d-flex" : "")">
     <CascadingValue Name="Parents" Value="this" IsFixed="true">
         @if (Count == Contexts.Count)
@@ -40,13 +41,13 @@
 
     public ICollection<EffectPicker> Pickers { get; } = new List<EffectPicker>();
 
-    private int Count => Blueprint.RandomEffectCount;
-    private IReadOnlyCollection<EffectRandomContext> Contexts => Blueprint.RandomEffects;
+    private int Count => Blueprint.RandomAmount;
+    private IReadOnlyCollection<RandomEffect> Contexts => Blueprint.RandomEffects;
     public IReadOnlyCollection<Effect> Effects => Pickers.Select(x => x.Effect).Where(x => x != null).ToList()!;
 
-    // private IReadOnlyCollection<EffectRandomContext> this[int key] => Pickers.Where(x => x.Key.HasValue && x.Key != key && x.Effect != null).Select(x => x.SelectedContext).ToList()!;
+    // private IReadOnlyCollection<RandomEffect> this[int key] => Pickers.Where(x => x.Key.HasValue && x.Key != key && x.Effect != null).Select(x => x.SelectedContext).ToList()!;
 
-    public bool IsDisableContext(EffectPicker self, EffectRandomContext context) => Pickers.Where(x => x != self).Select(x => x.SelectedContext).Contains(context);
+    public bool IsDisableContext(EffectPicker self, RandomEffect context) => Pickers.Where(x => x != self).Select(x => x.SelectedContext).Contains(context);
 
     public void RefreshOther(EffectPicker self)
     {

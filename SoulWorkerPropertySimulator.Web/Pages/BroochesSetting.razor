@@ -2,8 +2,9 @@
 @inject IPageInfoService InfoService
 @inject IBroochesComputeService BroochesCompute
 @using SoulWorkerPropertySimulator.Extensions
-@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Models.Brooches
 @using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Types
 @using SoulWorkerPropertySimulator.Web.Services
 @implements IDisposable
 
@@ -37,7 +38,7 @@
 @code {
         public const string Title = "勳章";
 
-    private readonly Dictionary<BroochesField, BroochesSetEffect?> _set = new();
+    private readonly Dictionary<BroochesField, BroochSet?> _set = new();
 
     protected override void OnInitialized()
     {
@@ -48,7 +49,7 @@
         foreach (var field in Enum.GetValues<BroochesField>()) { _set[field] = null; }
     }
 
-    public void SetChange(IReadOnlyCollection<BroochesSetEffect> sets)
+    public void SetChange(IReadOnlyCollection<BroochSet> sets)
     {
         var hasChange = false;
         foreach (var field in Enum.GetValues<BroochesField>())

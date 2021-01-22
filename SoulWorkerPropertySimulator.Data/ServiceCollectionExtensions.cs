@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using SoulWorkerPropertySimulator.Data.Services;
 using SoulWorkerPropertySimulator.Services;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Data
 {

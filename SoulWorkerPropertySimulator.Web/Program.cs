@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using SoulWorkerPropertySimulator.Data;
+using SoulWorkerPropertySimulator.Extensions;
 using SoulWorkerPropertySimulator.Web.Services;
 
 namespace SoulWorkerPropertySimulator.Web

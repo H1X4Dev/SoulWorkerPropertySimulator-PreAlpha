@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Models.Effects;
+using SoulWorkerPropertySimulator.Types;
 
 // ReSharper disable once CheckNamespace
 namespace SoulWorkerPropertySimulator.Data.Storage
@@ -8,979 +10,1433 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     {
         private static readonly IReadOnlyCollection<Tag> WeaponTag = new Tag[]
         {
-            new("異常的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
+            new(TagField.Weapon,
+                "異常的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
                 {
                     {
-                        TagRare.Heroic, new[] {new Effect(Static.WeaponAttack, 481), new Effect(Static.Attack, 112)}
+                        ItemRare.Heroic,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 481), new Effect(StaticEffect.Attack, 112)}
                     },
                     {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 359), new Effect(Static.Attack, 96)}
-                    },
-                    {TagRare.Unique, new[] {new Effect(Static.WeaponAttack, 252), new Effect(Static.Attack, 72)}},
-                    {TagRare.Valuable, new[] {new Effect(Static.WeaponAttack, 95), new Effect(Static.Attack, 48)}},
-                    {TagRare.Magical, new[] {new Effect(Static.WeaponAttack, 31), new Effect(Static.Attack, 24)}},
-                    {TagRare.Common, new[] {new Effect(Static.WeaponAttack, 16), new Effect(Static.Attack, 14)}}
-                }),
-            new("放置的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic, new[] {new Effect(Static.WeaponAttack, 541), new Effect(Static.Attack, 315)}
+                        ItemRare.Legendary,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 359), new Effect(StaticEffect.Attack, 96)}
                     },
                     {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 404), new Effect(Static.Attack, 252)}
-                    },
-                    {TagRare.Unique, new[] {new Effect(Static.WeaponAttack, 283), new Effect(Static.Attack, 189)}},
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 107), new Effect(Static.Attack, 126)}
-                    },
-                    {TagRare.Magical, new[] {new Effect(Static.WeaponAttack, 35), new Effect(Static.Attack, 63)}},
-                    {TagRare.Common, new[] {new Effect(Static.WeaponAttack, 18), new Effect(Static.Attack, 32)}}
-                }),
-            new("挑戰者的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttackRate, .13m), new Effect(Static.Accuracy, 315)}
+                        ItemRare.Unique,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 252), new Effect(StaticEffect.Attack, 72)}
                     },
                     {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttackRate, .1m), new Effect(Static.Accuracy, 252)}
+                        ItemRare.Valuable,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 95), new Effect(StaticEffect.Attack, 48)}
                     },
                     {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttackRate, .09m), new Effect(Static.Accuracy, 189)}
+                        ItemRare.Magical,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 31), new Effect(StaticEffect.Attack, 24)}
                     },
                     {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttackRate, .06m), new Effect(Static.Accuracy, 126)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttackRate, .04m), new Effect(Static.Accuracy, 63)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttackRate, .02m), new Effect(Static.Accuracy, 32)}
+                        ItemRare.Common,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 16), new Effect(StaticEffect.Attack, 14)}
                     }
                 }),
-            new("剛直的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
+            new(TagField.Weapon,
+                "放置的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
                 {
                     {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttackRate, .12m), new Effect(Static.Accuracy, 112)}
+                        ItemRare.Heroic,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 541), new Effect(StaticEffect.Attack, 315)}
                     },
                     {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttackRate, .09m), new Effect(Static.Accuracy, 96)}
+                        ItemRare.Legendary,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 404), new Effect(StaticEffect.Attack, 252)}
                     },
                     {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttackRate, .08m), new Effect(Static.Accuracy, 72)}
+                        ItemRare.Unique,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 283), new Effect(StaticEffect.Attack, 189)}
                     },
                     {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttackRate, .05m), new Effect(Static.Accuracy, 48)}
+                        ItemRare.Valuable,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 107), new Effect(StaticEffect.Attack, 126)}
                     },
                     {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttackRate, .04m), new Effect(Static.Accuracy, 24)}
+                        ItemRare.Magical,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 35), new Effect(StaticEffect.Attack, 63)}
                     },
                     {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttackRate, .02m), new Effect(Static.Accuracy, 14)}
+                        ItemRare.Common,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 18), new Effect(StaticEffect.Attack, 32)}
                     }
                 }),
-            new("怪異的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
+            new(TagField.Weapon,
+                "挑戰者的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
                 {
                     {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 481), new Effect(Static.AttackRate, .15m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 359), new Effect(Static.AttackRate, .12m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 252), new Effect(Static.AttackRate, .1m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 95), new Effect(Static.AttackRate, .08m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 31), new Effect(Static.AttackRate, .05m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 16), new Effect(Static.AttackRate, .03m)}
-                    }
-                }),
-            new("鋼鐵的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttackRate, .12m), new Effect(Static.AttackRate, .15m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttackRate, .09m), new Effect(Static.AttackRate, .12m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttackRate, .08m), new Effect(Static.AttackRate, .1m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttackRate, .05m), new Effect(Static.AttackRate, .08m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttackRate, .04m), new Effect(Static.AttackRate, .05m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttackRate, .02m), new Effect(Static.AttackRate, .03m)}
-                    }
-                }),
-            new("粗糙的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 481), new Effect(Static.CriticalDamage, 384)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 359), new Effect(Static.CriticalDamage, 240)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 252), new Effect(Static.CriticalDamage, 200)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 95), new Effect(Static.CriticalDamage, 140)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 31), new Effect(Static.CriticalDamage, 80)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 16), new Effect(Static.CriticalDamage, 40)}
-                    }
-                }),
-            new("炙熱的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttackRate, .12m), new Effect(Static.CriticalDamage, 384)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttackRate, .09m), new Effect(Static.CriticalDamage, 240)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttackRate, .08m), new Effect(Static.CriticalDamage, 200)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttackRate, .05m), new Effect(Static.CriticalDamage, 140)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttackRate, .04m), new Effect(Static.CriticalDamage, 80)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttackRate, .02m), new Effect(Static.CriticalDamage, 40)}
-                    }
-                }),
-            new("附加的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 481), new Effect(Static.CriticalRate, .07m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 359), new Effect(Static.CriticalRate, .05m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 252), new Effect(Static.CriticalRate, .04m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 95), new Effect(Static.CriticalRate, .03m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 31), new Effect(Static.CriticalRate, .02m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 16), new Effect(Static.CriticalRate, .01m)}
-                    }
-                }),
-            new("火山的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttackRate, .12m), new Effect(Static.CriticalRate, .07m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttackRate, .09m), new Effect(Static.CriticalRate, .05m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttackRate, .08m), new Effect(Static.CriticalRate, .04m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttackRate, .05m), new Effect(Static.CriticalRate, .03m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttackRate, .04m), new Effect(Static.CriticalRate, .02m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttackRate, .02m), new Effect(Static.CriticalRate, .01m)}
-                    }
-                }),
-            new("狂暴的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 481), new Effect(Static.DefenseBreakRate, .04m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 359), new Effect(Static.DefenseBreakRate, .04m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 252), new Effect(Static.DefenseBreakRate, .03m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 95), new Effect(Static.DefenseBreakRate, .02m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 31), new Effect(Static.DefenseBreakRate, .01m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 16), new Effect(Static.DefenseBreakRate, .01m)}
-                    }
-                }),
-            new("刺眼的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttackRate, .12m), new Effect(Static.DefenseBreakRate, .04m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttackRate, .09m), new Effect(Static.DefenseBreakRate, .04m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttackRate, .08m), new Effect(Static.DefenseBreakRate, .03m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttackRate, .05m), new Effect(Static.DefenseBreakRate, .02m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttackRate, .04m), new Effect(Static.DefenseBreakRate, .01m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttackRate, .02m), new Effect(Static.DefenseBreakRate, .01m)}
-                    }
-                }),
-            new("遺失的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 511), new Effect(Static.ExtraDamageRateBasic, .12m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 381), new Effect(Static.ExtraDamageRateBasic, .09m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 267), new Effect(Static.ExtraDamageRateBasic, .06m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 101), new Effect(Static.ExtraDamageRateBasic, .05m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 33), new Effect(Static.ExtraDamageRateBasic, .03m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 17), new Effect(Static.ExtraDamageRateBasic, .01m)}
-                    }
-                }),
-            new("閃電的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
+                        ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .12m),
-                            new Effect(Static.ExtraDamageRateBasic, .12m)
+                            new Effect(StaticEffect.WeaponAttackRate, .13m),
+                            new Effect(StaticEffect.Accuracy, 315)
                         }
                     },
                     {
-                        TagRare.Legendary,
+                        ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .1m),
-                            new Effect(Static.ExtraDamageRateBasic, .09m)
+                            new Effect(StaticEffect.WeaponAttackRate, .1m),
+                            new Effect(StaticEffect.Accuracy, 252)
                         }
                     },
                     {
-                        TagRare.Unique,
+                        ItemRare.Unique,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .08m),
-                            new Effect(Static.ExtraDamageRateBasic, .06m)
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.Accuracy, 189)
                         }
                     },
                     {
-                        TagRare.Valuable,
+                        ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .06m),
-                            new Effect(Static.ExtraDamageRateBasic, .05m)
+                            new Effect(StaticEffect.WeaponAttackRate, .06m),
+                            new Effect(StaticEffect.Accuracy, 126)
                         }
                     },
                     {
-                        TagRare.Magical,
+                        ItemRare.Magical,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .04m),
-                            new Effect(Static.ExtraDamageRateBasic, .03m)
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.Accuracy, 63)
                         }
                     },
                     {
-                        TagRare.Common,
+                        ItemRare.Common,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .02m),
-                            new Effect(Static.ExtraDamageRateBasic, .01m)
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.Accuracy, 32)
                         }
                     }
                 }),
-            new("高喊的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
+            new(TagField.Weapon,
+                "剛直的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
                 {
                     {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 511), new Effect(Static.ExtraDamageRateBoss, .12m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 381), new Effect(Static.ExtraDamageRateBoss, .09m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 267), new Effect(Static.ExtraDamageRateBoss, .06m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 101), new Effect(Static.ExtraDamageRateBoss, .05m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 33), new Effect(Static.ExtraDamageRateBoss, .03m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 17), new Effect(Static.ExtraDamageRateBoss, .01m)}
-                    }
-                }),
-            new("凌晨的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
+                        ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .12m),
-                            new Effect(Static.ExtraDamageRateBoss, .12m)
+                            new Effect(StaticEffect.WeaponAttackRate, .12m),
+                            new Effect(StaticEffect.Accuracy, 112)
                         }
                     },
                     {
-                        TagRare.Legendary,
+                        ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .1m),
-                            new Effect(Static.ExtraDamageRateBoss, .09m)
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.Accuracy, 96)
                         }
                     },
                     {
-                        TagRare.Unique,
+                        ItemRare.Unique,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .08m),
-                            new Effect(Static.ExtraDamageRateBoss, .06m)
+                            new Effect(StaticEffect.WeaponAttackRate, .08m),
+                            new Effect(StaticEffect.Accuracy, 72)
                         }
                     },
                     {
-                        TagRare.Valuable,
+                        ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .06m),
-                            new Effect(Static.ExtraDamageRateBoss, .05m)
+                            new Effect(StaticEffect.WeaponAttackRate, .05m),
+                            new Effect(StaticEffect.Accuracy, 48)
                         }
                     },
                     {
-                        TagRare.Magical,
+                        ItemRare.Magical,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .04m),
-                            new Effect(Static.ExtraDamageRateBoss, .03m)
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.Accuracy, 24)
                         }
                     },
                     {
-                        TagRare.Common,
+                        ItemRare.Common,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .02m),
-                            new Effect(Static.ExtraDamageRateBoss, .01m)
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.Accuracy, 14)
                         }
                     }
                 }),
-            new("假的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
+            new(TagField.Weapon,
+                "怪異的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
                 {
                     {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 481), new Effect(Static.ExtraDamageRateGolden, .16m)}
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 481),
+                            new Effect(StaticEffect.AttackRate, .15m)
+                        }
                     },
                     {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 359), new Effect(Static.ExtraDamageRateGolden, .12m)}
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 359),
+                            new Effect(StaticEffect.AttackRate, .12m)
+                        }
                     },
                     {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 252), new Effect(Static.ExtraDamageRateGolden, .09m)}
+                        ItemRare.Unique,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 252), new Effect(StaticEffect.AttackRate, .1m)}
                     },
                     {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 95), new Effect(Static.ExtraDamageRateGolden, .06m)}
+                        ItemRare.Valuable,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 95), new Effect(StaticEffect.AttackRate, .08m)}
                     },
                     {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 31), new Effect(Static.ExtraDamageRateGolden, .04m)}
+                        ItemRare.Magical,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 31), new Effect(StaticEffect.AttackRate, .05m)}
                     },
                     {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 16), new Effect(Static.ExtraDamageRateGolden, .03m)}
+                        ItemRare.Common,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 16), new Effect(StaticEffect.AttackRate, .03m)}
                     }
                 }),
-            new("假的(%)",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
+            new(TagField.Weapon,
+                "鋼鐵的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
                 {
                     {
-                        TagRare.Heroic,
+                        ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .12m),
-                            new Effect(Static.ExtraDamageRateGolden, .16m)
+                            new Effect(StaticEffect.WeaponAttackRate, .12m),
+                            new Effect(StaticEffect.AttackRate, .15m)
                         }
                     },
                     {
-                        TagRare.Legendary,
+                        ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .09m),
-                            new Effect(Static.ExtraDamageRateGolden, .12m)
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.AttackRate, .12m)
                         }
                     },
                     {
-                        TagRare.Unique,
+                        ItemRare.Unique,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .08m),
-                            new Effect(Static.ExtraDamageRateGolden, .09m)
+                            new Effect(StaticEffect.WeaponAttackRate, .08m),
+                            new Effect(StaticEffect.AttackRate, .1m)
                         }
                     },
                     {
-                        TagRare.Valuable,
+                        ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .05m),
-                            new Effect(Static.ExtraDamageRateGolden, .06m)
+                            new Effect(StaticEffect.WeaponAttackRate, .05m),
+                            new Effect(StaticEffect.AttackRate, .08m)
                         }
                     },
                     {
-                        TagRare.Magical,
+                        ItemRare.Magical,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .04m),
-                            new Effect(Static.ExtraDamageRateGolden, .04m)
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.AttackRate, .05m)
                         }
                     },
                     {
-                        TagRare.Common,
+                        ItemRare.Common,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .02m),
-                            new Effect(Static.ExtraDamageRateGolden, .03m)
-                        }
-                    }
-                }),
-            new("傲慢的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 481), new Effect(Static.ExtraDamageRatePrimal, .16m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 359), new Effect(Static.ExtraDamageRatePrimal, .12m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 252), new Effect(Static.ExtraDamageRatePrimal, .09m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 95), new Effect(Static.ExtraDamageRatePrimal, .06m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 31), new Effect(Static.ExtraDamageRatePrimal, .04m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 16), new Effect(Static.ExtraDamageRatePrimal, .03m)}
-                    }
-                }),
-            new("傲慢的(%)",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[]
-                        {
-                            new Effect(Static.WeaponAttackRate, .12m),
-                            new Effect(Static.ExtraDamageRatePrimal, .16m)
-                        }
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[]
-                        {
-                            new Effect(Static.WeaponAttackRate, .09m),
-                            new Effect(Static.ExtraDamageRatePrimal, .12m)
-                        }
-                    },
-                    {
-                        TagRare.Unique,
-                        new[]
-                        {
-                            new Effect(Static.WeaponAttackRate, .08m),
-                            new Effect(Static.ExtraDamageRatePrimal, .09m)
-                        }
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[]
-                        {
-                            new Effect(Static.WeaponAttackRate, .05m),
-                            new Effect(Static.ExtraDamageRatePrimal, .06m)
-                        }
-                    },
-                    {
-                        TagRare.Magical,
-                        new[]
-                        {
-                            new Effect(Static.WeaponAttackRate, .04m),
-                            new Effect(Static.ExtraDamageRatePrimal, .04m)
-                        }
-                    },
-                    {
-                        TagRare.Common,
-                        new[]
-                        {
-                            new Effect(Static.WeaponAttackRate, .02m),
-                            new Effect(Static.ExtraDamageRatePrimal, .03m)
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.AttackRate, .03m)
                         }
                     }
                 }),
-            new("慈悲的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
+            new(TagField.Weapon,
+                "粗糙的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
                 {
                     {
-                        TagRare.Heroic, new[] {new Effect(Static.WeaponAttack, 541), new Effect(Static.Hp, 1_800)}
-                    },
-                    {TagRare.Legendary, new[] {new Effect(Static.WeaponAttack, 404), new Effect(Static.Hp, 1_260)}},
-                    {TagRare.Unique, new[] {new Effect(Static.WeaponAttack, 283), new Effect(Static.Hp, 810)}},
-                    {TagRare.Valuable, new[] {new Effect(Static.WeaponAttack, 107), new Effect(Static.Hp, 450)}},
-                    {TagRare.Magical, new[] {new Effect(Static.WeaponAttack, 35), new Effect(Static.Hp, 225)}},
-                    {TagRare.Common, new[] {new Effect(Static.WeaponAttack, 18), new Effect(Static.Hp, 135)}}
-                }),
-            new("執著的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttackRate, .13m), new Effect(Static.Hp, 1_800)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttackRate, .1m), new Effect(Static.Hp, 1_260)}
-                    },
-                    {TagRare.Unique, new[] {new Effect(Static.WeaponAttackRate, .09m), new Effect(Static.Hp, 810)}},
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttackRate, .06m), new Effect(Static.Hp, 450)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttackRate, .04m), new Effect(Static.Hp, 225)}
-                    },
-                    {TagRare.Common, new[] {new Effect(Static.WeaponAttackRate, .02m), new Effect(Static.Hp, 135)}}
-                }),
-            new("贖罪的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 541), new Effect(Static.MoveSpaceRate, .05m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 404), new Effect(Static.MoveSpaceRate, .04m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 283), new Effect(Static.MoveSpaceRate, .03m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 107), new Effect(Static.MoveSpaceRate, .02m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 35), new Effect(Static.MoveSpaceRate, .01m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 18), new Effect(Static.MoveSpaceRate, .01m)}
-                    }
-                }),
-            new("多雲的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttackRate, .13m), new Effect(Static.MoveSpaceRate, .05m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttackRate, .1m), new Effect(Static.MoveSpaceRate, .04m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttackRate, .09m), new Effect(Static.MoveSpaceRate, .03m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttackRate, .06m), new Effect(Static.MoveSpaceRate, .02m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttackRate, .04m), new Effect(Static.MoveSpaceRate, .01m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttackRate, .02m), new Effect(Static.MoveSpaceRate, .01m)}
-                    }
-                }),
-            new("生銹的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttack, 662), new Effect(Static.PartialDamageRate, .55m)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 493), new Effect(Static.PartialDamageRate, .44m)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttack, 346), new Effect(Static.PartialDamageRate, .33m)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttack, 130), new Effect(Static.PartialDamageRate, .22m)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttack, 42), new Effect(Static.PartialDamageRate, .11m)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttack, 22), new Effect(Static.PartialDamageRate, .06m)}
-                    }
-                }),
-            new("螺旋的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
+                        ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .16m),
-                            new Effect(Static.PartialDamageRate, .55m)
+                            new Effect(StaticEffect.WeaponAttack, 481),
+                            new Effect(StaticEffect.CriticalDamage, 384)
                         }
                     },
                     {
-                        TagRare.Legendary,
+                        ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .13m),
-                            new Effect(Static.PartialDamageRate, .44m)
+                            new Effect(StaticEffect.WeaponAttack, 359),
+                            new Effect(StaticEffect.CriticalDamage, 240)
                         }
                     },
                     {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttackRate, .1m), new Effect(Static.PartialDamageRate, .33m)}
-                    },
-                    {
-                        TagRare.Valuable,
+                        ItemRare.Unique,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .07m),
-                            new Effect(Static.PartialDamageRate, .22m)
+                            new Effect(StaticEffect.WeaponAttack, 252),
+                            new Effect(StaticEffect.CriticalDamage, 200)
                         }
                     },
                     {
-                        TagRare.Magical,
+                        ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .05m),
-                            new Effect(Static.PartialDamageRate, .11m)
+                            new Effect(StaticEffect.WeaponAttack, 95),
+                            new Effect(StaticEffect.CriticalDamage, 140)
                         }
                     },
                     {
-                        TagRare.Common,
+                        ItemRare.Magical,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .03m),
-                            new Effect(Static.PartialDamageRate, .06m)
+                            new Effect(StaticEffect.WeaponAttack, 31),
+                            new Effect(StaticEffect.CriticalDamage, 80)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 16),
+                            new Effect(StaticEffect.CriticalDamage, 40)
                         }
                     }
                 }),
-            new("疲倦者的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
+            new(TagField.Weapon,
+                "炙熱的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
                 {
                     {
-                        TagRare.Heroic, new[] {new Effect(Static.WeaponAttack, 541), new Effect(Static.Stamina, 6)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttack, 404), new Effect(Static.Stamina, 5)}
-                    },
-                    {TagRare.Unique, new[] {new Effect(Static.WeaponAttack, 283), new Effect(Static.Stamina, 4)}},
-                    {TagRare.Valuable, new[] {new Effect(Static.WeaponAttack, 107), new Effect(Static.Stamina, 3)}},
-                    {TagRare.Magical, new[] {new Effect(Static.WeaponAttack, 35), new Effect(Static.Stamina, 2)}},
-                    {TagRare.Common, new[] {new Effect(Static.WeaponAttack, 18), new Effect(Static.Stamina, 1)}}
-                }),
-            new("幹練的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
-                        new[] {new Effect(Static.WeaponAttackRate, .13m), new Effect(Static.Stamina, 6)}
-                    },
-                    {
-                        TagRare.Legendary,
-                        new[] {new Effect(Static.WeaponAttackRate, .1m), new Effect(Static.Stamina, 5)}
-                    },
-                    {
-                        TagRare.Unique,
-                        new[] {new Effect(Static.WeaponAttackRate, .09m), new Effect(Static.Stamina, 4)}
-                    },
-                    {
-                        TagRare.Valuable,
-                        new[] {new Effect(Static.WeaponAttackRate, .06m), new Effect(Static.Stamina, 3)}
-                    },
-                    {
-                        TagRare.Magical,
-                        new[] {new Effect(Static.WeaponAttackRate, .04m), new Effect(Static.Stamina, 2)}
-                    },
-                    {
-                        TagRare.Common,
-                        new[] {new Effect(Static.WeaponAttackRate, .02m), new Effect(Static.Stamina, 1)}
-                    }
-                }),
-            new("激流的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
-                {
-                    {
-                        TagRare.Heroic,
+                        ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(Static.WeaponAttack, 601),
-                            new Effect(Static.SuperArmorBreakPowerRate, .22m)
+                            new Effect(StaticEffect.WeaponAttackRate, .12m),
+                            new Effect(StaticEffect.CriticalDamage, 384)
                         }
                     },
                     {
-                        TagRare.Legendary,
+                        ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(Static.WeaponAttack, 448),
-                            new Effect(Static.SuperArmorBreakPowerRate, .16m)
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.CriticalDamage, 240)
                         }
                     },
                     {
-                        TagRare.Unique,
+                        ItemRare.Unique,
                         new[]
                         {
-                            new Effect(Static.WeaponAttack, 314),
-                            new Effect(Static.SuperArmorBreakPowerRate, .12m)
+                            new Effect(StaticEffect.WeaponAttackRate, .08m),
+                            new Effect(StaticEffect.CriticalDamage, 200)
                         }
                     },
                     {
-                        TagRare.Valuable,
+                        ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(Static.WeaponAttack, 118),
-                            new Effect(Static.SuperArmorBreakPowerRate, .08m)
+                            new Effect(StaticEffect.WeaponAttackRate, .05m),
+                            new Effect(StaticEffect.CriticalDamage, 140)
                         }
                     },
                     {
-                        TagRare.Magical,
+                        ItemRare.Magical,
                         new[]
                         {
-                            new Effect(Static.WeaponAttack, 38),
-                            new Effect(Static.SuperArmorBreakPowerRate, .05m)
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.CriticalDamage, 80)
                         }
                     },
                     {
-                        TagRare.Common,
+                        ItemRare.Common,
                         new[]
                         {
-                            new Effect(Static.WeaponAttack, 20),
-                            new Effect(Static.SuperArmorBreakPowerRate, .03m)
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.CriticalDamage, 40)
                         }
                     }
                 }),
-            new("颱風的",
-                TagField.Weapon,
-                new Dictionary<TagRare, IReadOnlyCollection<Effect>>
+            new(TagField.Weapon,
+                "附加的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
                 {
                     {
-                        TagRare.Heroic,
+                        ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .14m),
-                            new Effect(Static.SuperArmorBreakPowerRate, .22m)
+                            new Effect(StaticEffect.WeaponAttack, 481),
+                            new Effect(StaticEffect.CriticalRate, .07m)
                         }
                     },
                     {
-                        TagRare.Legendary,
+                        ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .11m),
-                            new Effect(Static.SuperArmorBreakPowerRate, .16m)
+                            new Effect(StaticEffect.WeaponAttack, 359),
+                            new Effect(StaticEffect.CriticalRate, .05m)
                         }
                     },
                     {
-                        TagRare.Unique,
+                        ItemRare.Unique,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .09m),
-                            new Effect(Static.SuperArmorBreakPowerRate, .12m)
+                            new Effect(StaticEffect.WeaponAttack, 252),
+                            new Effect(StaticEffect.CriticalRate, .04m)
                         }
                     },
                     {
-                        TagRare.Valuable,
+                        ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .06m),
-                            new Effect(Static.SuperArmorBreakPowerRate, .08m)
+                            new Effect(StaticEffect.WeaponAttack, 95),
+                            new Effect(StaticEffect.CriticalRate, .03m)
                         }
                     },
                     {
-                        TagRare.Magical,
+                        ItemRare.Magical,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .04m),
-                            new Effect(Static.SuperArmorBreakPowerRate, .05m)
+                            new Effect(StaticEffect.WeaponAttack, 31),
+                            new Effect(StaticEffect.CriticalRate, .02m)
                         }
                     },
                     {
-                        TagRare.Common,
+                        ItemRare.Common,
                         new[]
                         {
-                            new Effect(Static.WeaponAttackRate, .02m),
-                            new Effect(Static.SuperArmorBreakPowerRate, .03m)
+                            new Effect(StaticEffect.WeaponAttack, 16),
+                            new Effect(StaticEffect.CriticalRate, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "火山的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .12m),
+                            new Effect(StaticEffect.CriticalRate, .07m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.CriticalRate, .05m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .08m),
+                            new Effect(StaticEffect.CriticalRate, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .05m),
+                            new Effect(StaticEffect.CriticalRate, .03m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.CriticalRate, .02m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.CriticalRate, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "狂暴的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 481),
+                            new Effect(StaticEffect.DefenseBreakRate, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 359),
+                            new Effect(StaticEffect.DefenseBreakRate, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 252),
+                            new Effect(StaticEffect.DefenseBreakRate, .03m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 95),
+                            new Effect(StaticEffect.DefenseBreakRate, .02m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 31),
+                            new Effect(StaticEffect.DefenseBreakRate, .01m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 16),
+                            new Effect(StaticEffect.DefenseBreakRate, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "刺眼的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .12m),
+                            new Effect(StaticEffect.DefenseBreakRate, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.DefenseBreakRate, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .08m),
+                            new Effect(StaticEffect.DefenseBreakRate, .03m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .05m),
+                            new Effect(StaticEffect.DefenseBreakRate, .02m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.DefenseBreakRate, .01m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.DefenseBreakRate, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "遺失的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 511),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 381),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .09m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 267),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .06m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 101),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .05m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 33),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .03m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 17),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "閃電的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .12m),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .1m),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .09m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .08m),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .06m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .06m),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .05m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .03m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.ExtraDamageRateBasic, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "高喊的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 511),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 381),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .09m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 267),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .06m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 101),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .05m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 33),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .03m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 17),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "凌晨的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .12m),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .1m),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .09m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .08m),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .06m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .06m),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .05m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .03m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.ExtraDamageRateBoss, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "假的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 481),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .16m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 359),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 252),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .09m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 95),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .06m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 31),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 16),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .03m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "假的(%)",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .12m),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .16m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .08m),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .09m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .05m),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .06m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.ExtraDamageRateGolden, .03m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "傲慢的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 481),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .16m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 359),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 252),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .09m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 95),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .06m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 31),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 16),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .03m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "傲慢的(%)",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .12m),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .16m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .08m),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .09m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .05m),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .06m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.ExtraDamageRatePrimal, .03m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "慈悲的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 541), new Effect(StaticEffect.Hp, 1_800)}
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 404), new Effect(StaticEffect.Hp, 1_260)}
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 283), new Effect(StaticEffect.Hp, 810)}
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 107), new Effect(StaticEffect.Hp, 450)}
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 35), new Effect(StaticEffect.Hp, 225)}
+                    },
+                    {
+                        ItemRare.Common,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 18), new Effect(StaticEffect.Hp, 135)}
+                    }
+                }),
+            new(TagField.Weapon,
+                "執著的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .13m), new Effect(StaticEffect.Hp, 1_800)}
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .1m), new Effect(StaticEffect.Hp, 1_260)}
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .09m), new Effect(StaticEffect.Hp, 810)}
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .06m), new Effect(StaticEffect.Hp, 450)}
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .04m), new Effect(StaticEffect.Hp, 225)}
+                    },
+                    {
+                        ItemRare.Common,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .02m), new Effect(StaticEffect.Hp, 135)}
+                    }
+                }),
+            new(TagField.Weapon,
+                "贖罪的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 541),
+                            new Effect(StaticEffect.MoveSpaceRate, .05m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 404),
+                            new Effect(StaticEffect.MoveSpaceRate, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 283),
+                            new Effect(StaticEffect.MoveSpaceRate, .03m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 107),
+                            new Effect(StaticEffect.MoveSpaceRate, .02m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 35),
+                            new Effect(StaticEffect.MoveSpaceRate, .01m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 18),
+                            new Effect(StaticEffect.MoveSpaceRate, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "多雲的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .13m),
+                            new Effect(StaticEffect.MoveSpaceRate, .05m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .1m),
+                            new Effect(StaticEffect.MoveSpaceRate, .04m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.MoveSpaceRate, .03m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .06m),
+                            new Effect(StaticEffect.MoveSpaceRate, .02m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.MoveSpaceRate, .01m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.MoveSpaceRate, .01m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "生銹的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 662),
+                            new Effect(StaticEffect.PartialDamageRate, .55m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 493),
+                            new Effect(StaticEffect.PartialDamageRate, .44m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 346),
+                            new Effect(StaticEffect.PartialDamageRate, .33m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 130),
+                            new Effect(StaticEffect.PartialDamageRate, .22m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 42),
+                            new Effect(StaticEffect.PartialDamageRate, .11m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 22),
+                            new Effect(StaticEffect.PartialDamageRate, .06m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "螺旋的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .16m),
+                            new Effect(StaticEffect.PartialDamageRate, .55m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .13m),
+                            new Effect(StaticEffect.PartialDamageRate, .44m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .1m),
+                            new Effect(StaticEffect.PartialDamageRate, .33m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .07m),
+                            new Effect(StaticEffect.PartialDamageRate, .22m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .05m),
+                            new Effect(StaticEffect.PartialDamageRate, .11m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .03m),
+                            new Effect(StaticEffect.PartialDamageRate, .06m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "疲倦者的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 541), new Effect(StaticEffect.Stamina, 6)}
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 404), new Effect(StaticEffect.Stamina, 5)}
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 283), new Effect(StaticEffect.Stamina, 4)}
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 107), new Effect(StaticEffect.Stamina, 3)}
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 35), new Effect(StaticEffect.Stamina, 2)}
+                    },
+                    {
+                        ItemRare.Common,
+                        new[] {new Effect(StaticEffect.WeaponAttack, 18), new Effect(StaticEffect.Stamina, 1)}
+                    }
+                }),
+            new(TagField.Weapon,
+                "幹練的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .13m), new Effect(StaticEffect.Stamina, 6)}
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .1m), new Effect(StaticEffect.Stamina, 5)}
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .09m), new Effect(StaticEffect.Stamina, 4)}
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .06m), new Effect(StaticEffect.Stamina, 3)}
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .04m), new Effect(StaticEffect.Stamina, 2)}
+                    },
+                    {
+                        ItemRare.Common,
+                        new[] {new Effect(StaticEffect.WeaponAttackRate, .02m), new Effect(StaticEffect.Stamina, 1)}
+                    }
+                }),
+            new(TagField.Weapon,
+                "激流的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 601),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .22m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 448),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .16m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 314),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 118),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .08m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 38),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .05m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttack, 20),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .03m)
+                        }
+                    }
+                }),
+            new(TagField.Weapon,
+                "颱風的",
+                new Dictionary<ItemRare, IReadOnlyCollection<Effect>>
+                {
+                    {
+                        ItemRare.Heroic,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .14m),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .22m)
+                        }
+                    },
+                    {
+                        ItemRare.Legendary,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .11m),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .16m)
+                        }
+                    },
+                    {
+                        ItemRare.Unique,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .09m),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .12m)
+                        }
+                    },
+                    {
+                        ItemRare.Valuable,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .06m),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .08m)
+                        }
+                    },
+                    {
+                        ItemRare.Magical,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .04m),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .05m)
+                        }
+                    },
+                    {
+                        ItemRare.Common,
+                        new[]
+                        {
+                            new Effect(StaticEffect.WeaponAttackRate, .02m),
+                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .03m)
                         }
                     }
                 })

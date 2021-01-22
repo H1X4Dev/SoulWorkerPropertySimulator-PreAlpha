@@ -1,5 +1,6 @@
 ﻿using System;
 using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Services
 {

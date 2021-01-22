@@ -1,5 +1,5 @@
 ﻿@using SoulWorkerPropertySimulator.Services
-@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Models.Plugins
 @implements IDisposable
 @inject IDataProvideService Data
 @inject IArmorComputeService ArmorCompute
@@ -23,7 +23,7 @@
             @if (SelectedBlueprint != null)
             {
                 <div>
-                    @if (SelectedBlueprint.ValidStep.Count > 1)
+                    @if (SelectedBlueprint.ValidStep?.Count > 1)
                     {
                         <div class="input-group mb-3">
                             <span class="input-group-text">等級</span>
@@ -36,7 +36,7 @@
                         </div>
                     }
 
-                    @if (SelectedBlueprint.RandomEffectCount > 0)
+                    @if (SelectedBlueprint.RandomAmount > 0)
                     {
                         <EffectsCreator @ref="_effectsCreator" NotifyUpdate="NotifyUpdate" Blueprint="SelectedBlueprint" DefaultEffects="DefaultPlugin?.SelectedEffect"/>
                     }
@@ -89,13 +89,13 @@
         {
             if (_selected == value) { return; }
             _selected = value;
-            if (SelectedBlueprint == null || SelectedBlueprint.RandomEffectCount == 0 || SelectedBlueprint.RandomEffects.Count > SelectedBlueprint.RandomEffectCount) { NotifyUpdate.InvokeAsync(); }
+            if (SelectedBlueprint == null || SelectedBlueprint.RandomAmount == 0 || SelectedBlueprint.RandomEffects.Count > SelectedBlueprint.RandomAmount) { NotifyUpdate.InvokeAsync(); }
         }
     }
 
-    private int _selectedStep;
+    private int? _selectedStep;
 
-    public int SelectedStep
+    public int? SelectedStep
     {
         get => _selectedStep;
         set

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Models.Accessory;
+using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Services
 {

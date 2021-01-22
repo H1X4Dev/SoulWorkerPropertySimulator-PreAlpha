@@ -1,6 +1,7 @@
 ﻿@using SoulWorkerPropertySimulator.Extensions
-@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Models.Brooches
 @using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Types
 @using System.Diagnostics
 @inject IDataProvideService Data
 @inject IBroochesComputeService BroochesCompute
@@ -34,7 +35,7 @@
     [Parameter]
     public BroochesType Type { get; set; }
 
-    private IReadOnlyCollection<Brooches> Options { get; set; } = null!;
+    private IReadOnlyCollection<Brooch> Options { get; set; } = null!;
 
     private string? _selected;
 
@@ -60,9 +61,9 @@
         }
     }
 
-    private Brooches? SelectBrooches => Options.FirstOrDefault(x => x.DisplayName.Equals(Selected));
+    private Brooch? SelectBrooches => Options.FirstOrDefault(x => x.DisplayName.Equals(Selected));
 
-    public Brooches? Item
+    public Brooch? Item
     {
         get
         {
@@ -95,7 +96,7 @@
     }
 
     [Conditional("DEBUG")]
-    private static void Check(IReadOnlyCollection<Brooches> option)
+    private static void Check(IReadOnlyCollection<Brooch> option)
     {
         var sd = option.Count(x => x.Series == BroochesSeries.Sd);
         var b = option.Count(x => x.Series == BroochesSeries.Bsk);
