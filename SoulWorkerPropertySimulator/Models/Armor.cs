@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace SoulWorkerPropertySimulator.Models
 {
@@ -52,12 +53,12 @@ namespace SoulWorkerPropertySimulator.Models
                 Plugins = plugins ?? Array.Empty<Plugin>(), Tag = tag, Step = step ?? GetMaxStep(Rare)
             };
 
-        public Effect ComputePropertyValue(int value, int step)
+        public decimal GetStepMagnification(int step)
         {
-            if (Rare == ArmorRare.Common) { return new(new(RandomProperty), value); }
+            if (Rare == ArmorRare.Common) { return 1; }
 
-            try { return new(new(RandomProperty), value * GetMagnification(Rare)[step]); }
-            catch (KeyNotFoundException) { return new(new(RandomProperty), MaxValue); }
+            try { return GetMagnification(Rare)[step]; }
+            catch (KeyNotFoundException) { return 1; }
         }
 
         #region
@@ -169,40 +170,58 @@ namespace SoulWorkerPropertySimulator.Models
             Plugins        = new List<Plugin>();
         }
 
-        public override IReadOnlyCollection<Effect> Effects =>
-            Blueprint.FixedEffects.Concat(SelectedEffect)
-                .Concat(new[] {PropertyEffect})
-                .Concat(StepEffects.Where(x => x.Key <= Step).SelectMany(x => x.Value))
-                .Concat(Plugins.Where(x => x         != null).SelectMany(x => x!.Effects))
-                .Concat(Tag?.Effects ?? Array.Empty<Effect>())
-                .GroupBy(x => x.Context)
-                .Select(x => new Effect(x.Key, x.Sum(y => y.Value)))
-                .ToList();
+        public override IReadOnlyCollection<Effect> Effects
+        {
+            get
+            {
+                var baseEffect = Blueprint.FixedEffects.Concat(SelectedEffect)
+                    .Concat(StepEffects.Where(x => x.Key <= Step).SelectMany(x => x.Value))
+                    .Concat(Plugins.Where(x => x         != null).SelectMany(x => x!.Effects))
+                    .Concat(Tag?.Effects ?? Array.Empty<Effect>())
+                    .ToList();
+
+                var baseValue = SelectedValue;
+                var reg = new Regex(
+                    $"^{(Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear).ToString("G")}{RandomProperty.ToString("G")}(?:Rate)?$");
+                baseEffect.Where(x => x.Context.IsStatic && reg.IsMatch(x.Context.Property.ToString("G")))
+                    .ToList()
+                    .ForEach(x =>
+                    {
+                        if (x.Context.Property.ToString("G")
+                            .Contains("Rate", StringComparison.CurrentCultureIgnoreCase))
+                        {
+                            baseValue = (int) (baseValue * (1 + x.Value));
+                        }
+                        else { baseValue = (int) (baseValue + x.Value); }
+
+                        baseEffect.Remove(x);
+                    });
+                baseEffect.Add(new(new(RandomProperty), baseValue * Blueprint.GetStepMagnification(Step)));
+
+                return baseEffect.GroupBy(x => x.Context).Select(x => new Effect(x.Key, x.Sum(y => y.Value))).ToList();
+            }
+        }
 
         public IReadOnlyCollection<Plugin> Plugins { get; init; }
         public Tag?                        Tag     { get; init; }
 
-        public  ArmorField Field          => Blueprint.Field;
-        public  int        Level          => Blueprint.Level;
-        public  int        PluginLimit    => Blueprint.PluginLimit;
-        private Effect     PropertyEffect => Blueprint.ComputePropertyValue(SelectedValue, Step);
+        public ArmorField Field       => Blueprint.Field;
+        public int        PluginLimit => Blueprint.PluginLimit;
+
 
         public int SelectedValue =>
             (int) Math.Round((Blueprint.MaxValue - Blueprint.MinValue) * SelectedRatio, 0) + Blueprint.MinValue;
 
-        public ArmorBlueprint              Blueprint      { get; }
-        public IReadOnlyCollection<Effect> SelectedEffect { get; init; }
-        public decimal                     SelectedRatio  { get; init; }
+        private Property                    RandomProperty => Blueprint.RandomProperty;
+        public  ArmorBlueprint              Blueprint      { get; }
+        public  IReadOnlyCollection<Effect> SelectedEffect { get; }
+        public  decimal                     SelectedRatio  { get; }
 
         public Property Property => Blueprint.RandomProperty;
         public int      Step     { get; init; }
 
         public IReadOnlyDictionary<int, IReadOnlyCollection<Effect>> StepEffects => Blueprint.StepEffects;
         public IReadOnlyCollection<int>                              ValidStep   => Blueprint.ValidStep;
-
-
-        public int CalcEffectByLevel(int enemyLevel) =>
-            (int) (PropertyEffect.Value * CalcLevelGapWeaken(enemyLevel - Level) * CalcRareWeaken(Blueprint.Rare));
 
         #region
 
@@ -233,6 +252,9 @@ namespace SoulWorkerPropertySimulator.Models
             };
 
         #endregion
+
+        // public int CalcEffectByLevel(int enemyLevel) =>
+        //     (int) (PropertyEffect.Value * CalcLevelGapWeaken(enemyLevel - Level) * CalcRareWeaken(Blueprint.Rare));
     }
 
     public record ArmorSetEffect : Set, IUpgradeable

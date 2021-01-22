@@ -54,7 +54,7 @@
                         <div class="d-flex w-50 pe1">
                             <div class="flex-grow-1">
                                 <select class="form-select" @bind="SelectedTagHash">
-                                    <option>無標籤</option>
+                                    <option value="">無標籤</option>
                                     @foreach (var tag in TagOptions)
                                     {
                                         <option value="@tag.GetHashCode()">@tag.Name</option>
@@ -82,9 +82,9 @@
                     {
                         <PluginsCreator @ref="_pluginsCreator"
                                          NotifyUpdate="Update"
-                                         Field="SelectedBlueprint!.Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear"
-                                         Limit="SelectedBlueprint.PluginLimit"
-                                         Level="SelectedBlueprint.Level"
+                                         Field="PluginField"
+                                         Limit="SelectedBlueprint!.PluginLimit"
+                                         WeaponLevel="SelectedBlueprint.Level"
                                          DefaultPlugins="DefaultArmor?.Plugins"/>
                     }
                 </div>
@@ -104,6 +104,8 @@
     private IReadOnlyCollection<ArmorBlueprint> Options { get; set; } = null!;
 
     private IReadOnlyCollection<Tag> TagOptions { get; set; } = null!;
+
+    private PluginField PluginField { get; set; }
 
     private int? _selected;
 
@@ -238,6 +240,7 @@
         base.OnInitializedAsync();
         Options = Data.GetArmorBlueprints(Field).ToList();
         TagOptions = Data.GetTags(Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear);
+        PluginField = Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear;
 
         if (DefaultArmor != null)
         {

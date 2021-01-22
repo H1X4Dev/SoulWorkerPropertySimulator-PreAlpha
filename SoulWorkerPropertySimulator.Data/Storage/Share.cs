@@ -4,6 +4,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class ShareEffect
     {
+        // ReSharper disable InconsistentNaming
         internal static readonly EffectContext AccuracyOAvoidP3D5  = new(Property.Accuracy, Opportunity.Avoid, .3m, 5);
         internal static readonly EffectContext AccuracyOSufferP3D5 = new(Property.Accuracy, Opportunity.Suffer, .3m, 5);
 
@@ -448,5 +449,6 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         internal static readonly Effect[] ArrayStamina5_HpRateM0015 = {Stamina5, HpRateM0015};
         internal static readonly Effect[] ArrayAttackRate00135      = {AttackRate00135};
         internal static readonly Effect[] ArrayDefenseRate00135     = {new(Static.DefenseRate, .0135m)};
+        // ReSharper restore InconsistentNaming
     }
 }

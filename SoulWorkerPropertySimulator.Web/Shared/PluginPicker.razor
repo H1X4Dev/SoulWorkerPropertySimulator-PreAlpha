@@ -15,7 +15,7 @@
                         <option></option>
                         @foreach (var item in Options)
                         {
-                            <option value="@item.GetHashCode()">@item.Name</option>
+                            <option value="@item.GetHashCode()" disabled="@(item.Level > WeaponLevel)">@item.Name</option>
                         }
                     </select>
                 </div>
@@ -62,8 +62,11 @@
         }
     }
 
+    [CascadingParameter(Name = nameof(WeaponLevel))]
+    public int WeaponLevel { get; set; }
+
     [CascadingParameter(Name = nameof(Options))]
-    public ICollection<PluginBlueprint> Options { get; set; } = null!;
+    public IReadOnlyCollection<PluginBlueprint> Options { get; set; } = null!;
 
     [Parameter]
     public EventCallback NotifyUpdate { get; set; }
