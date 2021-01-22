@@ -80,9 +80,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new(Static.Accuracy, 1_062)
         };
 
-        static CharacterData()
-        {
-
+        static CharacterData() =>
             Result = new List<Character>
             {
                 SetupHaru(),
@@ -92,10 +90,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 SetupJin(),
                 SetupIris(),
                 SetupChii(),
-                SetupErwin(),
+                SetupEphnel(),
                 SetupLee()
             };
-        }
 
         public static IReadOnlyCollection<Character> Get() => Result;
     }

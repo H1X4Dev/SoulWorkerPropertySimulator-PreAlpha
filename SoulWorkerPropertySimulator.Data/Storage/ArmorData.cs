@@ -8,13 +8,13 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     {
         private static IReadOnlyCollection<ArmorBlueprint>? _blueprints;
 
-        private static readonly Dictionary<ArmorField, IReadOnlyCollection<ArmorBlueprint>> _result = new();
+        private static readonly Dictionary<ArmorField, IReadOnlyCollection<ArmorBlueprint>> Result = new();
 
         internal static IReadOnlyCollection<ArmorBlueprint> Get(ArmorField field)
         {
-            if (_result.ContainsKey(field)) { return _result[field]; }
+            if (Result.ContainsKey(field)) { return Result[field]; }
 
-            if (_blueprints != null) { return _result[field] = _blueprints.Where(x => x.Field == field).ToList(); }
+            if (_blueprints != null) { return Result[field] = _blueprints.Where(x => x.Field == field).ToList(); }
 
             var result = new List<ArmorBlueprint>();
             var weapon68 = new ArmorBlueprint("進階暮光流浪者",
@@ -148,7 +148,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             });
 
             _blueprints = result;
-            return _result[field] = _blueprints.Where(x => x.Field == field).ToList();
+            return Result[field] = _blueprints.Where(x => x.Field == field).ToList();
         }
     }
 }

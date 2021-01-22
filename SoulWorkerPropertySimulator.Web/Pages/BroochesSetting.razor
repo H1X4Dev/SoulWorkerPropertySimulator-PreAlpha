@@ -1,10 +1,10 @@
 ﻿@page "/brooches"
-@using SoulWorkerPropertySimulator.Services
-@using SoulWorkerPropertySimulator.Models
-@using SoulWorkerPropertySimulator.Extensions
-@using SoulWorkerPropertySimulator.Web.Services
 @inject IPageInfoService InfoService
 @inject IBroochesComputeService BroochesCompute
+@using SoulWorkerPropertySimulator.Extensions
+@using SoulWorkerPropertySimulator.Models
+@using SoulWorkerPropertySimulator.Services
+@using SoulWorkerPropertySimulator.Web.Services
 @implements IDisposable
 
 <div class="d-flex flex-wrap">
@@ -28,9 +28,7 @@
                     <div>@(_set[field]!.Name)(@_set[field]!.Rare.GetDescription())</div>
                 }
                 else
-                {
-                    <div>無套裝效果</div>
-                }
+                { <div>無套裝效果</div> }
             </div>
         </div>
     }

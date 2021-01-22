@@ -48,7 +48,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new(Property.CriticalDamage, Opportunity.CriticalHit, .1m, 2);
 
         internal static readonly EffectContext CriticalDamageOhp30DownThenHitD3 =
-            new(Property.CriticalDamage, Opportunity.HP30DownThenHit, duration: 3);
+            new(Property.CriticalDamage, Opportunity.Hp30DownThenHit, duration: 3);
 
         internal static readonly EffectContext CriticalDamageORunP2D3 =
             new(Property.CriticalDamage, Opportunity.Run, .2m, 3);
@@ -90,7 +90,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new(Property.CriticalRate, Opportunity.UseSkill, .5m, 5);
 
         internal static readonly EffectContext CriticalResistanceRateOHp50DownD10 =
-            new(Property.CriticalResistanceRate, Opportunity.HP50Down, duration: 10);
+            new(Property.CriticalResistanceRate, Opportunity.Hp50Down, duration: 10);
 
         internal static readonly EffectContext CriticalResistanceRateOSufferP8D10 =
             new(Property.CriticalResistanceRate, Opportunity.Suffer, .8m, 10);
@@ -129,7 +129,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new(Property.DefenseBreakRate, Opportunity.Run, .1m, 5);
 
         internal static readonly EffectContext DefenseOHp50DownD10 =
-            new(Property.Defense, Opportunity.HP50Down, duration: 10);
+            new(Property.Defense, Opportunity.Hp50Down, duration: 10);
 
         internal static readonly EffectContext DefenseOKillD5 = new(Property.Defense, Opportunity.Kill, duration: 5);
         internal static readonly EffectContext DefenseORunP1D5 = new(Property.Defense, Opportunity.Run, .1m, 5);
@@ -139,7 +139,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new(Property.Defense, Opportunity.UseSkill, .1m, 5);
 
         internal static readonly EffectContext DefenseRateOSufferHp50DownP1D5 =
-            new(Property.DefenseRate, Opportunity.SufferHP50Down, .1m, 5);
+            new(Property.DefenseRate, Opportunity.SufferHp50Down, .1m, 5);
 
         internal static readonly EffectContext DefenseRateOSufferP15D5 =
             new(Property.DefenseRate, Opportunity.Suffer, .15m, 5);
@@ -166,7 +166,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             new(Property.HpRecoveryRate, Opportunity.UseAvoid, .1m);
 
         internal static readonly EffectContext InvincibleSecondOHp20DownP1 =
-            new(Property.InvincibleSecond, Opportunity.HP20Down, .1m);
+            new(Property.InvincibleSecond, Opportunity.Hp20Down, .1m);
 
         internal static readonly EffectContext MoveSpaceRateORunP15D5 =
             new(Property.MoveSpaceRate, Opportunity.Run, .15m, 5);

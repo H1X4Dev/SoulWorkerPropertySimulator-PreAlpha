@@ -47,7 +47,7 @@
         public static EffectContext ExtraDamageRateGolden     { get; } = new(Property.ExtraDamageRateGolden);
         public static EffectContext ExtraDamageRateIron       { get; } = new(Property.ExtraDamageRateIron);
         public static EffectContext ExtraDamageRateJunk       { get; } = new(Property.ExtraDamageRateJunk);
-        public static EffectContext ExtraDamageRateNed        { get; } = new(Property.ExtraDamageRateNED);
+        public static EffectContext ExtraDamageRateNed        { get; } = new(Property.ExtraDamageRateNed);
         public static EffectContext ExtraDamageRatePrimal     { get; } = new(Property.ExtraDamageRatePrimal);
         public static EffectContext ExtraDamageRatePuppet     { get; } = new(Property.ExtraDamageRatePuppet);
         public static EffectContext ExtraDamageRateSoul       { get; } = new(Property.ExtraDamageRateSoul);

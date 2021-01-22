@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using SoulWorkerPropertySimulator.Models;
 
@@ -7,7 +6,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class BroochesSetData
     {
-        private static IReadOnlyCollection<BroochesSetEffect> _setEffects = new List<BroochesSetEffect>
+        private static readonly IReadOnlyCollection<BroochesSetEffect> SetEffects = new List<BroochesSetEffect>
         {
             new(BroochesField.Head,
                 BroochesSeries.Sd,
@@ -108,7 +107,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     },
                     {
                         BroochesRare.Mega,
-                        new Effect[] {new(Static.Evade, 49), new(Static.CriticalResistanceRate, .03m),}
+                        new Effect[] {new(Static.Evade, 49), new(Static.CriticalResistanceRate, .03m)}
                     },
                     {
                         BroochesRare.Kilo,
@@ -533,6 +532,6 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         };
 
         public static BroochesSetEffect Get(BroochesField field, BroochesSeries series) =>
-            _setEffects.First(x => x.Field == field && x.Series == series);
+            SetEffects.First(x => x.Field == field && x.Series == series);
     }
 }

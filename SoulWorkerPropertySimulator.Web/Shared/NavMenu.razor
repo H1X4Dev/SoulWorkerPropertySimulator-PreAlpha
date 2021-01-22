@@ -1,6 +1,6 @@
-﻿@using SoulWorkerPropertySimulator.Services
+﻿@using Microsoft.AspNetCore.Components.WebAssembly.Hosting
+@using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Web.Pages
-@using Microsoft.AspNetCore.Components.WebAssembly.Hosting
 @inject IWebAssemblyHostEnvironment HostEnvironment
 @inject IPanelComputeService PanelCompute
 <div class="top-row ps-4 navbar navbar-dark">
@@ -70,11 +70,11 @@
 </div>
 
 @code {
-    private bool collapseNavMenu = true;
+    private bool _collapseNavMenu = true;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private string? NavMenuCssClass => _collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
+    private void ToggleNavMenu() => _collapseNavMenu = !_collapseNavMenu;
 
     private IDictionary<EffectContext, decimal> _effects = null!;
 

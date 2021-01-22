@@ -400,11 +400,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         {BroochesRare.Mega, new Effect[] {new(ShareEffect.InvincibleSecondOHp20DownP1, 1)}},
                         {
                             BroochesRare.Kilo,
-                            new Effect[] {new(new(Property.InvincibleSecond, Opportunity.HP15Down, .1m), 1)}
+                            new Effect[] {new(new(Property.InvincibleSecond, Opportunity.Hp15Down, .1m), 1)}
                         },
                         {
                             BroochesRare.Byte,
-                            new Effect[] {new(new(Property.InvincibleSecond, Opportunity.HP10Down, .1m), 1)}
+                            new Effect[] {new(new(Property.InvincibleSecond, Opportunity.Hp10Down, .1m), 1)}
                         }
                     }),
 

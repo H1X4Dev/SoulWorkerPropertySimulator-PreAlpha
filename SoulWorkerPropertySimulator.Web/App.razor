@@ -1,5 +1,5 @@
-@using System.Diagnostics
 @using System.Threading
+@using System.Diagnostics
 <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
@@ -20,5 +20,5 @@
     }
 
     [Conditional("DEBUG")]
-    private static void WaitDebugger() { Thread.Sleep(10_000); }
+    private static void WaitDebugger() => Thread.Sleep(10_000);
 }

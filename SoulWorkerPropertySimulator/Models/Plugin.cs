@@ -27,7 +27,7 @@ namespace SoulWorkerPropertySimulator.Models
         public IReadOnlyCollection<int> ValidStep =>
             StepEffects.Any() ? new[] {0} : StepEffects.Keys.OrderBy(x => x).ToList();
 
-        public override Plugin Create(IReadOnlyCollection<Effect>? randomEffects = null) => new(this, randomEffects);
+        public override Plugin Create(IReadOnlyCollection<Effect>? randomEffects) => new(this, randomEffects);
     }
 
     public record Plugin : Item, ICreatable<PluginBlueprint>, IUpgradeable

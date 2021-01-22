@@ -134,7 +134,7 @@ namespace SoulWorkerPropertySimulator
         ExtraDamageRateJunk,
 
         [Description("附加傷害：NED")]
-        ExtraDamageRateNED,
+        ExtraDamageRateNed,
 
         [Description("附加傷害：原始勢力")]
         ExtraDamageRatePrimal,
@@ -260,25 +260,25 @@ namespace SoulWorkerPropertySimulator
         HitStamina70Down,
 
         [Description("HP未滿10%時")]
-        HP10Down,
+        Hp10Down,
 
         [Description("HP未滿15%時")]
-        HP15Down,
+        Hp15Down,
 
         [Description("HP未滿20%時")]
-        HP20Down,
+        Hp20Down,
 
         [Description("HP未滿20%且受擊時")]
-        HP20DownThenHit,
+        Hp20DownThenHit,
 
         [Description("HP未滿30%且受擊時")]
-        HP30DownThenHit,
+        Hp30DownThenHit,
 
         [Description("HP未滿50%時")]
-        HP50Down,
+        Hp50Down,
 
         [Description("恢復體力時")]
-        HPRecover,
+        HpRecover,
 
         [Description("擊敗效果")]
         Kill,
@@ -347,7 +347,7 @@ namespace SoulWorkerPropertySimulator
         SufferCritical,
 
         [Description("受擊且HP未滿50%時")]
-        SufferHP50Down,
+        SufferHp50Down,
 
         [Description("耐力50%以上受擊時")]
         SufferStamina50Up,
@@ -430,7 +430,7 @@ namespace SoulWorkerPropertySimulator
             Property.ExtraDamageRateGolden,
             Property.ExtraDamageRateIron,
             Property.ExtraDamageRateJunk,
-            Property.ExtraDamageRateNED,
+            Property.ExtraDamageRateNed,
             Property.ExtraDamageRatePrimal,
             Property.ExtraDamageRatePuppet,
             Property.ExtraDamageRateSoul,

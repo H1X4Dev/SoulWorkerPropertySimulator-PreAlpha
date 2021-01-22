@@ -8,12 +8,12 @@ namespace SoulWorkerPropertySimulator.Models
     {
         protected Item(string name, string? setName = null)
         {
-            Name     = name;
-            SetName  = setName;
+            Name    = name;
+            SetName = setName;
         }
 
-        public string   Name     { get; init; }
-        public string?  SetName  { get; }
+        public string  Name    { get; init; }
+        public string? SetName { get; }
 
         public string FullName => $"{SetName}{Name}";
 
@@ -89,7 +89,7 @@ namespace SoulWorkerPropertySimulator.Models
         public abstract T Create(IReadOnlyCollection<Effect> randomEffects);
     }
 
-    public abstract record RandomValueBlueprint<T> : Blueprint where T : Item
+    public abstract record RandomValueBlueprint : Blueprint
     {
         protected RandomValueBlueprint(string name,
                                        int level,

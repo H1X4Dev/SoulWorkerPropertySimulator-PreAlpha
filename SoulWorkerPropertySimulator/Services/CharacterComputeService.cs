@@ -31,7 +31,7 @@ namespace SoulWorkerPropertySimulator.Services
             if (_character == null || title == null) { throw new InvalidOperationException(); }
 
             var before = _character;
-            _character = title?.Field switch
+            _character = title.Field switch
             {
                 TitleField.First => _character with {First = title},
                 TitleField.Last  => _character with {Last = title},

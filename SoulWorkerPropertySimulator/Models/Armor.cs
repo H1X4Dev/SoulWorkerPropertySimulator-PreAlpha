@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace SoulWorkerPropertySimulator.Models
 {
-    public sealed record ArmorBlueprint : RandomValueBlueprint<Armor>, IRandomGenerator
+    public sealed record ArmorBlueprint : RandomValueBlueprint, IRandomGenerator
     {
         public ArmorBlueprint(string                                                 name,
                               ArmorField                                             field,

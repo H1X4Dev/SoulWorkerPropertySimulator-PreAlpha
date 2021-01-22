@@ -14,13 +14,13 @@ namespace SoulWorkerPropertySimulator.Services
 
     internal class BroochesComputeService : ComputeServiceBase<BroochesSetEffect>, IBroochesComputeService
     {
-        private readonly IDataProvideService                                             _provider;
         private readonly Dictionary<BroochesField, IDictionary<BroochesType, Brooches?>> _brooches    = new();
         private readonly Dictionary<BroochesField, BroochesSetEffect?>                   _broochesSet = new();
-
-        protected override List<BroochesSetEffect> Sets => _broochesSet.Values.Where(x => x != null).ToList()!;
+        private readonly IDataProvideService                                             _provider;
 
         public BroochesComputeService(IDataProvideService provider) => _provider = provider;
+
+        protected override List<BroochesSetEffect> Sets => _broochesSet.Values.Where(x => x != null).ToList()!;
 
         public Brooches? Get(BroochesField field, BroochesType type)
         {

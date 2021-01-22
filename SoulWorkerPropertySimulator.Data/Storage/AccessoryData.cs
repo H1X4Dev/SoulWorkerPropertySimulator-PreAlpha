@@ -8,13 +8,13 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     {
         private static IReadOnlyCollection<AccessoryBlueprint>? _blueprints;
 
-        private static readonly Dictionary<AccessoryField, IReadOnlyCollection<AccessoryBlueprint>> _result = new();
+        private static readonly Dictionary<AccessoryField, IReadOnlyCollection<AccessoryBlueprint>> Result = new();
 
         internal static IReadOnlyCollection<AccessoryBlueprint> Get(AccessoryField field)
         {
-            if (_result.ContainsKey(field)) { return _result[field]; }
+            if (Result.ContainsKey(field)) { return Result[field]; }
 
-            if (_blueprints != null) { return _result[field] = _blueprints.Where(x => x.Field == field).ToList(); }
+            if (_blueprints != null) { return Result[field] = _blueprints.Where(x => x.Field == field).ToList(); }
 
             var blueprints = new List<AccessoryBlueprint>
             {
@@ -85,7 +85,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
             blueprints.Add(r68 with {Name = "之冠II"});
 
             _blueprints = blueprints;
-            return _result[field] = _blueprints.Where(x => x.Field == field).ToList();
+            return Result[field] = _blueprints.Where(x => x.Field == field).ToList();
         }
     }
 }
