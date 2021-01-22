@@ -5,7 +5,7 @@
 @using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Types
 @inject IDataProvideService Data
-@inject IArmorComputeService ArmorCompute
+@inject IEquipmentComputeService EquipmentCompute
 
 @if (Options.Any())
 {
@@ -226,9 +226,9 @@
     private void Update()
     {
         var item = Item;
-        if (item == null) { ArmorCompute.Clear(Field); }
+        if (item == null) { EquipmentCompute.Clear(Field); }
         else
-        { ArmorCompute.Change(item); }
+        { EquipmentCompute.Change(item); }
     }
 
     private bool _notInitializePhase;

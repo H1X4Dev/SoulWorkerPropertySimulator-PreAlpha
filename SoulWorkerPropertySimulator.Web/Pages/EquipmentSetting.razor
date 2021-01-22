@@ -1,5 +1,5 @@
-﻿@page "/armor"
-@inject IArmorComputeService ArmorCompute
+﻿@page "/equipment"
+@inject IEquipmentComputeService EquipmentCompute
 @inject IPageInfoService InfoService
 @using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Types
@@ -11,7 +11,7 @@
 <div>
     @foreach (var field in _fields)
     {
-        <ArmorPicker Field="field" DefaultArmor="Default.FirstOrDefault(x => x.Field == field)"/>
+        <EquipmentPicker Field="field" DefaultArmor="Default.FirstOrDefault(x => x.Field == field)"/>
     }
 </div>
 
@@ -29,19 +29,19 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        ArmorCompute.OnSetChange += SetBottom;
-        Default = ArmorCompute.Get().ToList();
-        InfoService.SetTitle(nameof(ArmorSetting), Title);
-        InfoService.SetBottom(nameof(ArmorSetting), GetSetDescription(ArmorCompute.GetSet().ToList()));
+        EquipmentCompute.OnSetChange += SetBottom;
+        Default = EquipmentCompute.Get().ToList();
+        InfoService.SetTitle(nameof(EquipmentSetting), Title);
+        InfoService.SetBottom(nameof(EquipmentSetting), GetSetDescription(EquipmentCompute.GetSet().ToList()));
     }
 
-    public void SetBottom(IReadOnlyCollection<EquipmentSetEffect> sets) => InfoService.SetBottom(nameof(ArmorSetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
+    public void SetBottom(IReadOnlyCollection<EquipmentSetEffect> sets) => InfoService.SetBottom(nameof(EquipmentSetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
 
     public void Dispose()
     {
-        InfoService.SetTitle(nameof(ArmorSetting), null);
-        InfoService.SetBottom(nameof(ArmorSetting), null);
-        ArmorCompute.OnSetChange -= SetBottom;
+        InfoService.SetTitle(nameof(EquipmentSetting), null);
+        InfoService.SetBottom(nameof(EquipmentSetting), null);
+        EquipmentCompute.OnSetChange -= SetBottom;
     }
 
     private static string GetSetDescription(IReadOnlyCollection<EquipmentSetEffect> sets)

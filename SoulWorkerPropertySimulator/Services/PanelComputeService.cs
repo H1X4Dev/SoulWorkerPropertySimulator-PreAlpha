@@ -14,28 +14,28 @@ namespace SoulWorkerPropertySimulator.Services
     {
         // private readonly IAccessoryComputeService  _accessory;
         // private readonly IAkashaComputeService     _akasha;
-        // private readonly IArmorComputeService      _armor;
+        // private readonly IEquipmentComputeService      _armor;
         // private readonly IBroochesComputeService   _brooches;
         // private readonly ICharacterComputeService _character;
         private readonly IAttackComputeService _attack;
 
         public PanelComputeService(IAccessoryComputeService accessory,
                                    IAkashaComputeService    akasha,
-                                   IArmorComputeService     armor,
+                                   IEquipmentComputeService equipment,
                                    IBroochesComputeService  brooches,
                                    ICharacterComputeService character,
                                    IAttackComputeService    attack)
         {
             // _accessory = accessory;
             // _akasha    = akasha;
-            // _armor     = armor;
+            // _armor     = equipment;
             // _brooches  = brooches;
             // _character = character;
             _attack = attack;
 
             accessory.OnChange += Change;
             akasha.OnChange    += Change;
-            armor.OnChange     += Change;
+            equipment.OnChange += Change;
             brooches.OnChange  += Change;
             character.OnChange += Change;
         }

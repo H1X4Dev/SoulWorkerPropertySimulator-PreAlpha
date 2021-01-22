@@ -6,7 +6,7 @@ using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
 {
-    internal static class ArmorData
+    internal static class EquipmentData
     {
         private static IReadOnlyCollection<EquipmentBlueprint>? _blueprints;
 

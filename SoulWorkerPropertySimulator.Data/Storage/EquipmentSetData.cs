@@ -5,7 +5,7 @@ using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Data.Storage
 {
-    internal static class ArmorSetData
+    internal static class EquipmentSetData
     {
         private static readonly IReadOnlyCollection<EquipmentSetEffect> Result = new List<EquipmentSetEffect>
         {

@@ -18,11 +18,11 @@ namespace SoulWorkerPropertySimulator.Data.Services
 
         public IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects() => AccessorySetData.Get();
 
-        public IReadOnlyCollection<EquipmentSetEffect> GetArmorSetEffects() => ArmorSetData.Get();
+        public IReadOnlyCollection<EquipmentSetEffect> GetArmorSetEffects() => EquipmentSetData.Get();
 
         public IReadOnlyCollection<Brooch> GetBrooches(BroochesType type) => BroochesData.Get(type);
 
-        public IReadOnlyCollection<EquipmentBlueprint> GetArmorBlueprints(ArmorField field) => ArmorData.Get(field);
+        public IReadOnlyCollection<EquipmentBlueprint> GetArmorBlueprints(ArmorField field) => EquipmentData.Get(field);
 
         public IReadOnlyCollection<AccessoryBlueprint> GetAccessoryBlueprints(AccessoryField field) =>
             AccessoryData.Get(field);

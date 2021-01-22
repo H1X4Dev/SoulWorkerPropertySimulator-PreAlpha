@@ -9,7 +9,7 @@ using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Services
 {
-    public interface IArmorComputeService : IComputeService<EquipmentSetEffect>
+    public interface IEquipmentComputeService : IComputeService<EquipmentSetEffect>
     {
         IEnumerable<Equipment> Get();
         Equipment?             Get(ArmorField    field);
@@ -20,12 +20,12 @@ namespace SoulWorkerPropertySimulator.Services
         void                   Clear(ArmorField  field);
     }
 
-    internal class ArmorComputeService : ComputeServiceBase<EquipmentSetEffect>, IArmorComputeService
+    internal class EquipmentComputeService : ComputeServiceBase<EquipmentSetEffect>, IEquipmentComputeService
     {
         private readonly IDictionary<ArmorField, Equipment?> _armors;
         private readonly IDataProvideService                 _data;
 
-        public ArmorComputeService(IDataProvideService data)
+        public EquipmentComputeService(IDataProvideService data)
         {
             _data   = data;
             _armors = new Dictionary<ArmorField, Equipment?>();
