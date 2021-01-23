@@ -847,7 +847,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Effect[] {new(StaticEffectContext.Hp, 2200), new(StaticEffectContext.KillHpRecovery, 50)}),
                 new(TitleField.First,
                     206,
-                    "清高地?理想的",
+                    "清高地 理想的",
                     new Effect[]
                     {
                         new(StaticEffectContext.CriticalRate, .04m),

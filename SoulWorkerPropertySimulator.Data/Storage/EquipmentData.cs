@@ -30,7 +30,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new(StaticEffectContext.ExtraDamageRateBasic, .02m, .09m),
                     new(StaticEffectContext.ExtraDamageRateBoss, .02m, .09m),
                     new(StaticEffectContext.CriticalRate, .02m, .07m),
-                    new(StaticEffectContext.CriticalDamage, 1_743, 1_885),
+                    new(StaticEffectContext.CriticalDamage, 185, 1_743),
                     new(StaticEffectContext.SuperArmorBreakPowerRate, .02m, .11m),
                     new(StaticEffectContext.DefenseBreakRate, .01m, .06m),
                     new(StaticEffectContext.SoulNovaVolumeRate, .01m, .07m),

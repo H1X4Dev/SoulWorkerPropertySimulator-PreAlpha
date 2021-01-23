@@ -37,9 +37,6 @@ namespace SoulWorkerPropertySimulator.Types
         [Description("減傷率")]
         DamageReductionRate,
 
-        [Description("傷害減少：第六區域")]
-        DamageReductionRateSix,
-
         [Description("傷害減少：空中")]
         DamageReductionRateAir,
 
@@ -79,6 +76,9 @@ namespace SoulWorkerPropertySimulator.Types
         [Description("傷害減少：PvP")]
         DamageReductionRatePvP,
 
+        [Description("傷害減少：第六區域")]
+        DamageReductionRateSix,
+
         [Description("傷害減少：人造靈魂行者")]
         DamageReductionRateSoul,
 
@@ -102,9 +102,6 @@ namespace SoulWorkerPropertySimulator.Types
 
         [Description("從敵人獲得經驗")]
         ExpVolumeRateEnemy,
-
-        [Description("附加傷害：第六區域")]
-        ExtraDamageRateSix,
 
         [Description("附加傷害：空中")]
         ExtraDamageRateAir,
@@ -138,6 +135,9 @@ namespace SoulWorkerPropertySimulator.Types
 
         [Description("附加傷害：傀儡軍隊")]
         ExtraDamageRatePuppet,
+
+        [Description("附加傷害：第六區域")]
+        ExtraDamageRateSix,
 
         [Description("附加傷害：人造靈魂行者")]
         ExtraDamageRateSoul,
