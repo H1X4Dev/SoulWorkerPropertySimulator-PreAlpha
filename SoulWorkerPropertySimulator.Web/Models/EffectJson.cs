@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using SoulWorkerPropertySimulator.Models.Effects;
+﻿using SoulWorkerPropertySimulator.Models.Effects;
 using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Web.Models

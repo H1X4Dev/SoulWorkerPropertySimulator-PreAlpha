@@ -1,0 +1,4782 @@
+[
+  {
+    "field": "Gear",
+    "name": "異常的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 368
+          },
+          {
+            "property": "Defense",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 274
+          },
+          {
+            "property": "Defense",
+            "value": 23
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 192
+          },
+          {
+            "property": "Defense",
+            "value": 17
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 72
+          },
+          {
+            "property": "Defense",
+            "value": 11
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 23
+          },
+          {
+            "property": "Defense",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 12
+          },
+          {
+            "property": "Defense",
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "韌性的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.06
+          },
+          {
+            "property": "Defense",
+            "value": 28
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.05
+          },
+          {
+            "property": "Defense",
+            "value": 23
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.04
+          },
+          {
+            "property": "Defense",
+            "value": 17
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.03
+          },
+          {
+            "property": "Defense",
+            "value": 11
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.02
+          },
+          {
+            "property": "Defense",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.01
+          },
+          {
+            "property": "Defense",
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "火花的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 368
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 158
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 274
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 126
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 192
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 95
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 72
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 63
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 23
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 12
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "混亂的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.06
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 158
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.05
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 126
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.04
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 95
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.03
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 63
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.02
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 32
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.01
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "受詛咒的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 408
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 304
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 213
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 80
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 25
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "本能的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.06
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.05
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.04
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.03
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.02
+          },
+          {
+            "property": "CriticalResistanceRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "黎明的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 347
+          },
+          {
+            "property": "DamageReductionRateBasic",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 259
+          },
+          {
+            "property": "DamageReductionRateBasic",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 182
+          },
+          {
+            "property": "DamageReductionRateBasic",
+            "value": 0.01
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 68
+          },
+          {
+            "property": "DamageReductionRateBasic",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "不屈的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.06
+          },
+          {
+            "property": "DamageReductionRateBasic",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.05
+          },
+          {
+            "property": "DamageReductionRateBasic",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.04
+          },
+          {
+            "property": "DamageReductionRateBasic",
+            "value": 0.01
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.03
+          },
+          {
+            "property": "DamageReductionRateBasic",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "悲鳴的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 347
+          },
+          {
+            "property": "DamageReductionRateBoss",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 259
+          },
+          {
+            "property": "DamageReductionRateBoss",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 182
+          },
+          {
+            "property": "DamageReductionRateBoss",
+            "value": 0.01
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 68
+          },
+          {
+            "property": "DamageReductionRateBoss",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "守護的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.06
+          },
+          {
+            "property": "DamageReductionRateBoss",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.05
+          },
+          {
+            "property": "DamageReductionRateBoss",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.04
+          },
+          {
+            "property": "DamageReductionRateBoss",
+            "value": 0.01
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.03
+          },
+          {
+            "property": "DamageReductionRateBoss",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "無謀的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 449
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.15
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 335
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.11
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 235
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 88
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 28
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 15
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.02
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "光暈的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.07
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.15
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.06
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.11
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.05
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.04
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.03
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.02
+          },
+          {
+            "property": "DamageReductionRatePartialDamage",
+            "value": 0.02
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "怪異的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 327
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 244
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.07
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 171
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 64
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 20
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 11
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "銅牆鐵壁的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.05
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.04
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.07
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.04
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.03
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.02
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.01
+          },
+          {
+            "property": "DefenseRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "探索的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 388
+          },
+          {
+            "property": "Evade",
+            "value": 59
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 289
+          },
+          {
+            "property": "Evade",
+            "value": 48
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 203
+          },
+          {
+            "property": "Evade",
+            "value": 36
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 76
+          },
+          {
+            "property": "Evade",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 24
+          },
+          {
+            "property": "Evade",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 13
+          },
+          {
+            "property": "Evade",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "完美的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.06
+          },
+          {
+            "property": "Evade",
+            "value": 59
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.05
+          },
+          {
+            "property": "Evade",
+            "value": 48
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.04
+          },
+          {
+            "property": "Evade",
+            "value": 36
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.03
+          },
+          {
+            "property": "Evade",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.02
+          },
+          {
+            "property": "Evade",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 0.01
+          },
+          {
+            "property": "Evade",
+            "value": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "偉大的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 449
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.44
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 335
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.33
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 235
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.22
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 88
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.17
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 28
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.11
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 15
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.06
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "旅者的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.07
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.44
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.06
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.33
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.05
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.22
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.04
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.17
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.03
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.11
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.02
+          },
+          {
+            "property": "ExpVolumeRateEnemy",
+            "value": 0.06
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "基礎的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 327
+          },
+          {
+            "property": "Hp",
+            "value": 320
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 244
+          },
+          {
+            "property": "Hp",
+            "value": 240
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 171
+          },
+          {
+            "property": "Hp",
+            "value": 192
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 64
+          },
+          {
+            "property": "Hp",
+            "value": 144
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 20
+          },
+          {
+            "property": "Hp",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 11
+          },
+          {
+            "property": "Hp",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "海邊的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.05
+          },
+          {
+            "property": "Hp",
+            "value": 320
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.04
+          },
+          {
+            "property": "Hp",
+            "value": 240
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.04
+          },
+          {
+            "property": "Hp",
+            "value": 192
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.03
+          },
+          {
+            "property": "Hp",
+            "value": 144
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.02
+          },
+          {
+            "property": "Hp",
+            "value": 100
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.01
+          },
+          {
+            "property": "Hp",
+            "value": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "霸氣的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 408
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 500
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 304
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 350
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 213
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 230
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 80
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 140
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 25
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 65
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 13
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "異能力者的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.06
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 500
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.05
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 350
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.04
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 230
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.03
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 140
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.02
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 65
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.01
+          },
+          {
+            "property": "KillHpRecovery",
+            "value": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "和睦的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 449
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.15
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 335
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.11
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 235
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 88
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.07
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 28
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 15
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "樸素的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.07
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.15
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.06
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.11
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.05
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.04
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.07
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.03
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.02
+          },
+          {
+            "property": "MoneyVolumeRateEnemy",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "非凡的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 449
+          },
+          {
+            "property": "SoulGateConsumptionReducedRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 335
+          },
+          {
+            "property": "SoulGateConsumptionReducedRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 235
+          },
+          {
+            "property": "SoulGateConsumptionReducedRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 88
+          },
+          {
+            "property": "SoulGateConsumptionReducedRate",
+            "value": 0.02
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "鬥志的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.07
+          },
+          {
+            "property": "SoulGateConsumptionReducedRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.06
+          },
+          {
+            "property": "SoulGateConsumptionReducedRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.05
+          },
+          {
+            "property": "SoulGateConsumptionReducedRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.04
+          },
+          {
+            "property": "SoulGateConsumptionReducedRate",
+            "value": 0.02
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "安平的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 388
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.07
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 289
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 203
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 76
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 24
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "野生的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.06
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.07
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.05
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.04
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.03
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.02
+          },
+          {
+            "property": "SoulNovaVolumeRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "寡言的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 368
+          },
+          {
+            "property": "Stamina",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 274
+          },
+          {
+            "property": "Stamina",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 192
+          },
+          {
+            "property": "Stamina",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefense",
+            "value": 72
+          },
+          {
+            "property": "Stamina",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Gear",
+    "name": "閃光的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.06
+          },
+          {
+            "property": "Stamina",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.05
+          },
+          {
+            "property": "Stamina",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.04
+          },
+          {
+            "property": "Stamina",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "GearDefenseRate",
+            "value": 0.03
+          },
+          {
+            "property": "Stamina",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "異常的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 481
+          },
+          {
+            "property": "Attack",
+            "value": 112
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 359
+          },
+          {
+            "property": "Attack",
+            "value": 96
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 252
+          },
+          {
+            "property": "Attack",
+            "value": 72
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 95
+          },
+          {
+            "property": "Attack",
+            "value": 48
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 31
+          },
+          {
+            "property": "Attack",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 16
+          },
+          {
+            "property": "Attack",
+            "value": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "放置的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 541
+          },
+          {
+            "property": "Attack",
+            "value": 315
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 404
+          },
+          {
+            "property": "Attack",
+            "value": 252
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 283
+          },
+          {
+            "property": "Attack",
+            "value": 189
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 107
+          },
+          {
+            "property": "Attack",
+            "value": 126
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 35
+          },
+          {
+            "property": "Attack",
+            "value": 63
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 18
+          },
+          {
+            "property": "Attack",
+            "value": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "挑戰者的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.13
+          },
+          {
+            "property": "Accuracy",
+            "value": 315
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.1
+          },
+          {
+            "property": "Accuracy",
+            "value": 252
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "Accuracy",
+            "value": 189
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.06
+          },
+          {
+            "property": "Accuracy",
+            "value": 126
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "Accuracy",
+            "value": 63
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "Accuracy",
+            "value": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "剛直的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.12
+          },
+          {
+            "property": "Accuracy",
+            "value": 112
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "Accuracy",
+            "value": 96
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.08
+          },
+          {
+            "property": "Accuracy",
+            "value": 72
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.05
+          },
+          {
+            "property": "Accuracy",
+            "value": 48
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "Accuracy",
+            "value": 24
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "Accuracy",
+            "value": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "怪異的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 481
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.15
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 359
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 252
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.1
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 95
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 31
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 16
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "鋼鐵的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.12
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.15
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.08
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.1
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.05
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "AttackRate",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "粗糙的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 481
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 384
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 359
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 240
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 252
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 200
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 95
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 140
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 31
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 16
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "炙熱的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.12
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 384
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 240
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.08
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 200
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.05
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 140
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 80
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "CriticalDamage",
+            "value": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "附加的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 481
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.07
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 359
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 252
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 95
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 31
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 16
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "火山的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.12
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.07
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.08
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.05
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "CriticalRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "狂暴的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 481
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 359
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 252
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 95
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 31
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.01
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 16
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "刺眼的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.12
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.08
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.05
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.01
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "DefenseBreakRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "遺失的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 511
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 381
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 267
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 101
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 33
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 17
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "閃電的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.12
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.1
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.08
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.06
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "ExtraDamageRateBasic",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "高喊的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 511
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 381
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 267
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 101
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 33
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 17
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "凌晨的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.12
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.1
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.08
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.06
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "ExtraDamageRateBoss",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "假的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 481
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.16
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 359
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 252
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 95
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 31
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 16
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "假的(%)",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.12
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.16
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.08
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.05
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "ExtraDamageRateGolden",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "傲慢的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 481
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.16
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 359
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 252
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 95
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 31
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 16
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "傲慢的(%)",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.12
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.16
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.08
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.09
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.05
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.06
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "ExtraDamageRatePrimal",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "慈悲的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 541
+          },
+          {
+            "property": "Hp",
+            "value": 1800
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 404
+          },
+          {
+            "property": "Hp",
+            "value": 1260
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 283
+          },
+          {
+            "property": "Hp",
+            "value": 810
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 107
+          },
+          {
+            "property": "Hp",
+            "value": 450
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 35
+          },
+          {
+            "property": "Hp",
+            "value": 225
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 18
+          },
+          {
+            "property": "Hp",
+            "value": 135
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "執著的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.13
+          },
+          {
+            "property": "Hp",
+            "value": 1800
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.1
+          },
+          {
+            "property": "Hp",
+            "value": 1260
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "Hp",
+            "value": 810
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.06
+          },
+          {
+            "property": "Hp",
+            "value": 450
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "Hp",
+            "value": 225
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "Hp",
+            "value": 135
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "贖罪的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 541
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 404
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 283
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 107
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 35
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.01
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 18
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "多雲的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.13
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.1
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.04
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.03
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.06
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.02
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.01
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "MoveSpaceRate",
+            "value": 0.01
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "生銹的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 662
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.55
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 493
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.44
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 346
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.33
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 130
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.22
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 42
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.11
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 22
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.06
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "螺旋的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.16
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.55
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.13
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.44
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.1
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.33
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.07
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.22
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.05
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.11
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.03
+          },
+          {
+            "property": "PartialDamageRate",
+            "value": 0.06
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "疲倦者的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 541
+          },
+          {
+            "property": "Stamina",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 404
+          },
+          {
+            "property": "Stamina",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 283
+          },
+          {
+            "property": "Stamina",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 107
+          },
+          {
+            "property": "Stamina",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 35
+          },
+          {
+            "property": "Stamina",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 18
+          },
+          {
+            "property": "Stamina",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "幹練的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.13
+          },
+          {
+            "property": "Stamina",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.1
+          },
+          {
+            "property": "Stamina",
+            "value": 5
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "Stamina",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.06
+          },
+          {
+            "property": "Stamina",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "Stamina",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "Stamina",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "激流的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 601
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.22
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 448
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.16
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 314
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 118
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 38
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttack",
+            "value": 20
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "field": "Weapon",
+    "name": "颱風的",
+    "rares": [
+      {
+        "rare": "Heroic",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.14
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.22
+          }
+        ]
+      },
+      {
+        "rare": "Legendary",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.11
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.16
+          }
+        ]
+      },
+      {
+        "rare": "Unique",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.09
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.12
+          }
+        ]
+      },
+      {
+        "rare": "Valuable",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.06
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.08
+          }
+        ]
+      },
+      {
+        "rare": "Magical",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.04
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.05
+          }
+        ]
+      },
+      {
+        "rare": "Common",
+        "effects": [
+          {
+            "property": "WeaponAttackRate",
+            "value": 0.02
+          },
+          {
+            "property": "SuperArmorBreakPowerRate",
+            "value": 0.03
+          }
+        ]
+      }
+    ]
+  }
+]
