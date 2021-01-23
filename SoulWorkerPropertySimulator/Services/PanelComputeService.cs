@@ -98,6 +98,7 @@ namespace SoulWorkerPropertySimulator.Services
                 throw new ApplicationInvalidOperationException(StaticEffectContext.Hp);
             }
 
+            // It should process by equipment itself
             if (context.Equals(StaticEffectContext.WeaponAttack)     ||
                 context.Equals(StaticEffectContext.WeaponAttackRate) ||
                 context.Equals(StaticEffectContext.GearDefense)      ||
@@ -118,6 +119,9 @@ namespace SoulWorkerPropertySimulator.Services
             else { StaticEffect[context]                                    += value; }
 
             Invoke(context);
+
+            if (context == StaticEffectContext.Attack) { Invoke(StaticEffectContext.CriticalDamage); }
+            // We not to need update hp when hp is updated(maybe character change), process already exec in HandleSpecific
 
             void Invoke(EffectContext c)
             {
