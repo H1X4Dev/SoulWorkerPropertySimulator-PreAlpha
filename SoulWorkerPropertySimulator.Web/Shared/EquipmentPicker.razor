@@ -26,7 +26,7 @@
                 <div class="ms-4 me-2">+</div>
                 <div>
                     <select class="form-select" disabled="@(SelectedBlueprint == null || SelectedBlueprint.ValidStep?.Count <= 1)" @bind="SelectedStep">
-                        @if (!(SelectedBlueprint.ValidStep?.Any() ?? false))
+                        @if (!(SelectedBlueprint!.ValidStep?.Any() ?? false))
                         {
                             <option value="0">0</option>
                         }
