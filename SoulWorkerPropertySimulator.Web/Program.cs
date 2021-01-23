@@ -2,7 +2,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using SoulWorkerPropertySimulator.Data;
+using SoulWorkerPropertySimulator.Data.Extensions;
 using SoulWorkerPropertySimulator.Extensions;
 using SoulWorkerPropertySimulator.Web.Services;
 

@@ -16,13 +16,14 @@ namespace SoulWorkerPropertySimulator.Data.Services
         public BroochSet GetBroochesSets(BroochesField field, BroochesSeries series) =>
             BroochesSetData.Get(field, series);
 
-        public IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects() => AccessorySetData.Get();
+        public IReadOnlyCollection<AccessorySet> GetAccessorySets() => AccessorySetData.Get();
 
-        public IReadOnlyCollection<EquipmentSetEffect> GetArmorSetEffects() => EquipmentSetData.Get();
+        public IReadOnlyCollection<EquipmentSet> GetEquipmentSets() => EquipmentSetData.Get();
 
         public IReadOnlyCollection<Brooch> GetBrooches(BroochesType type) => BroochesData.Get(type);
 
-        public IReadOnlyCollection<EquipmentBlueprint> GetArmorBlueprints(ArmorField field) => EquipmentData.Get(field);
+        public IReadOnlyCollection<EquipmentBlueprint> GetEquipmentBlueprints(EquipmentField field) =>
+            EquipmentData.Get(field);
 
         public IReadOnlyCollection<AccessoryBlueprint> GetAccessoryBlueprints(AccessoryField field) =>
             AccessoryData.Get(field);
@@ -48,7 +49,7 @@ namespace SoulWorkerPropertySimulator.Data.Services
             SafeCall(() => BroochesData.Create(share));
             SafeCall(() => TitleData.Create(share));
 
-            foreach (var field in Enum.GetValues<ArmorField>()) { SafeCall(() => EquipmentData.Get(field)); }
+            foreach (var field in Enum.GetValues<EquipmentField>()) { SafeCall(() => EquipmentData.Get(field)); }
 
             foreach (var field in Enum.GetValues<AccessoryField>()) { SafeCall(() => AccessoryData.Get(field)); }
 

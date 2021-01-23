@@ -9,19 +9,30 @@
 
 <div>
     <ul class="list-group">
-        @foreach (var (context, value) in Panel.Where(x => x.Value != 0))
+        @foreach (var (context, value) in Static)
         {
             <li class="list-group-item d-flex">
                 <div class="flex-grow-1">@context.Description</div>
                 <div>@(context.Property.IsPercent() ? $"{value * 100}%" : (int) value)</div>
             </li>
         }
+        @foreach (var (effect, value) in NonStatic)
+        {
+            @for (var i = 0; i < value; i++)
+            {
+                <li class="list-group-item d-flex">
+                    <div class="flex-grow-1">@effect.Context.Description</div>
+                    <div>@effect.Value</div>
+                </li>
+            }
+        }
     </ul>
 </div>
 
 
 @code {
-    private IDictionary<EffectContext, decimal> Panel { get; set; } = null!;
+    private IReadOnlyCollection<Effect> Static { get; set; } = null!;
+    private IReadOnlyDictionary<Effect, int> NonStatic { get; set; } = null!;
 
         public const string Title = "面板總覽";
 
@@ -29,7 +40,8 @@
     {
         base.OnInitialized();
         InfoService.SetTitle(nameof(Detail), Title);
-        Panel = PanelCompute.Get();
+        Static = PanelCompute.GetStatic();
+        NonStatic = PanelCompute.GetNonStatic();
     }
 
     public void Dispose() => InfoService.SetTitle(nameof(Detail), null);

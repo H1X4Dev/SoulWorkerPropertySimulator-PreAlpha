@@ -1,5 +1,7 @@
-@using System.Threading
-@using System.Diagnostics
+@using SoulWorkerPropertySimulator.Services
+@inject IDataProvideService Data
+@inject IPanelComputeService _
+@inject ICharacterComputeService CharacterCompute
 <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
@@ -13,8 +15,10 @@
 
 @code
 {
-    protected override void OnInitialized() => base.OnInitialized();
-    // WaitDebugger();
-    [Conditional("DEBUG")]
-    private static void WaitDebugger() => Thread.Sleep(5_000);
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        CharacterCompute.Change(Data.GetCharacters().First());
+    }
 }

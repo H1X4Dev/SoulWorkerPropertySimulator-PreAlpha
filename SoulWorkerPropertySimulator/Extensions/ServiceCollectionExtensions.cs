@@ -7,10 +7,10 @@ namespace SoulWorkerPropertySimulator.Extensions
     {
         public static IServiceCollection AddSoulWorkerPropertySimulator(this IServiceCollection self)
         {
-            self.AddSingleton<IAccessoryComputeService, AccessoryComputeService>();
+            self.AddSingleton<IAccessorySetComputeService, AccessorySetComputeService>();
             self.AddSingleton<IAkashaComputeService, AkashaComputeService>();
             self.AddSingleton<IEquipmentComputeService, EquipmentComputeService>();
-            self.AddSingleton<IBroochesComputeService, BroochesComputeService>();
+            self.AddSingleton<IBroochesSetComputeService, BroochesSetComputeService>();
             self.AddSingleton<ICharacterComputeService, CharacterComputeService>();
             self.AddSingleton<IAttackComputeService, AttackComputeService>();
             self.AddSingleton<IPanelComputeService, PanelComputeService>();

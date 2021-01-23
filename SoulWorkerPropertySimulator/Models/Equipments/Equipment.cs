@@ -32,8 +32,8 @@ namespace SoulWorkerPropertySimulator.Models.Equipments
         public EquipmentBlueprint          Blueprint      { get; }
         public IReadOnlyCollection<Effect> SelectedEffect { get; }
 
-        public ArmorField Field       => Blueprint.Field;
-        public int        PluginLimit => Blueprint.PluginLimit;
+        public EquipmentField Field       => Blueprint.Field;
+        public int            PluginLimit => Blueprint.PluginLimit;
 
         public decimal Ratio
         {
@@ -71,18 +71,19 @@ namespace SoulWorkerPropertySimulator.Models.Equipments
                             Array.Empty<Effect>())
                     .ToList();
 
-                var magnification = Step == null ? 1 : Blueprint.GetStepMagnification(Step.Value);
-                var propertyName  = $"{Blueprint.TagField:G}{Blueprint.RandomQuality.Context.Property:G}";
-                result.Where(x => x.Context.IsStatic && x.Context.Property.ToString("G").StartsWith(propertyName))
-                    .ToList()
-                    .ForEach(x =>
-                    {
-                        result.Add(x.Context.Property.ToString("G").Contains("Rate")
-                            ? new(Blueprint.RandomQuality.Context, Quality * magnification * (1 + x.Value))
-                            : new(Blueprint.RandomQuality.Context, (Quality + x.Value) * magnification));
+                var propertyName = $"{Blueprint.TagField:G}{Blueprint.RandomQuality.Context.Property:G}";
+                var influentialEffect = result.Where(x =>
+                        x.Context.IsStatic && x.Context.Property.ToString("G").StartsWith(propertyName))
+                    .ToList();
 
-                        result.Remove(x);
-                    });
+                var valueList = influentialEffect.Select(x => (x.Context.Property.ToString("G"), x.Value))
+                    .ToList<(string Name, decimal Value)>();
+                result.Add(new(Blueprint.RandomQuality.Context,
+                    (int) ((Quality + (int) valueList.Where(x => !x.Name.Contains("Rate")).Sum(x => x.Value)) *
+                           (Step == null ? 1 : Blueprint.GetStepMagnification(Step.Value))                    *
+                           (1 + valueList.Where(x => x.Name.Contains("Rate")).Sum(x => x.Value)))));
+
+                influentialEffect.ForEach(x => result.Remove(x));
 
                 return result.GroupBy(x => x.Context).Select(x => new Effect(x.Key, x.Sum(y => y.Value))).ToList();
             }

@@ -2,152 +2,97 @@
 using System.Collections.Generic;
 using System.Linq;
 using SoulWorkerPropertySimulator.Models;
-using SoulWorkerPropertySimulator.Models.Effects;
 using SoulWorkerPropertySimulator.Models.Equipments;
 using SoulWorkerPropertySimulator.Models.Plugins;
+using SoulWorkerPropertySimulator.Models.Scaffolding;
+using SoulWorkerPropertySimulator.Services.Scaffolding;
 using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Services
 {
-    public interface IEquipmentComputeService : IComputeService<EquipmentSetEffect>
+    public interface IEquipmentComputeService : ISetComputeService<EquipmentSet>
     {
         IEnumerable<Equipment> Get();
-        Equipment?             Get(ArmorField    field);
-        void                   Change(Equipment? item);
-        void                   Change(ArmorField field, int                         step);
-        void                   Change(ArmorField field, Tag?                        tag);
-        void                   Change(ArmorField field, IReadOnlyCollection<Plugin> plugins);
-        void                   Clear(ArmorField  field);
+        Equipment?             Get(EquipmentField    field);
+        void                   Change(Equipment      item);
+        void                   Change(EquipmentField field, Tag?                        tag);
+        void                   Change(EquipmentField field, IReadOnlyCollection<Plugin> plugins);
+        void                   Clear(EquipmentField  field);
     }
 
-    internal class EquipmentComputeService : ComputeServiceBase<EquipmentSetEffect>, IEquipmentComputeService
+    internal class EquipmentComputeService : SetComputeServiceBase<EquipmentSet>, IEquipmentComputeService
     {
-        private readonly IDictionary<ArmorField, Equipment?> _armors;
-        private readonly IDataProvideService                 _data;
+        private readonly IDictionary<EquipmentField, Equipment?> _equipments;
+        private readonly IDataProvideService                     _provider;
 
-        public EquipmentComputeService(IDataProvideService data)
+        public EquipmentComputeService(IDataProvideService provider)
         {
-            _data   = data;
-            _armors = new Dictionary<ArmorField, Equipment?>();
+            _provider   = provider;
+            _equipments = new Dictionary<EquipmentField, Equipment?>();
         }
 
         public IEnumerable<Equipment> Get()
         {
-            try { return _armors.Select(x => x.Value).Where(x => x != null)!; }
+            try { return _equipments.Select(x => x.Value).Where(x => x != null)!; }
             catch (KeyNotFoundException) { return Array.Empty<Equipment>(); }
         }
 
-        public Equipment? Get(ArmorField field)
+        public Equipment? Get(EquipmentField field)
         {
-            try { return _armors[field]; }
+            try { return _equipments[field]; }
             catch (KeyNotFoundException) { return null; }
         }
 
-        public void Change(Equipment? item)
+        public void Change(Equipment item)
         {
             if (item == null) { throw new InvalidOperationException(); }
 
             Equipment? before;
-            try { before = _armors[item.Field]; }
+            try { before = _equipments[item.Field]; }
             catch (KeyNotFoundException) { before = null; }
 
-            _armors[item.Field] = item;
-
-            var (setBefore, setAfter, changed) = ProcessSetAffect();
-            NotifyChange(ComputeAffect(
-                (before?.Effects ?? Array.Empty<Effect>()).Concat(setBefore.SelectMany(x => x.Effects)),
-                item.Effects.Concat(setAfter.SelectMany(x => x.Effects))));
-            if (changed) { NotifySetChange(); }
+            _equipments[item.Field] = item;
+            ProcessAffect(before, item);
         }
 
-        public void Change(ArmorField field, int step)
+        public void Change(EquipmentField field, Tag? tag)
         {
-            if (!_armors.ContainsKey(field) || _armors[field] == null) { throw new InvalidOperationException(); }
+            if (!_equipments.ContainsKey(field) || _equipments[field] == null) { return; }
 
-            var before = _armors[field]!;
-            var after  = _armors[field]! with {Step = step};
-            _armors[field] = after;
+            var before = _equipments[field]!;
+            var after  = _equipments[field]! with {Tag = tag};
+            _equipments[field] = after;
 
-            var (setBefore, setAfter, changed) = ProcessSetAffect();
-            NotifyChange(ComputeAffect(before.Effects.Concat(setBefore.SelectMany(x => x.Effects)),
-                after.Effects.Concat(setAfter.SelectMany(x => x.Effects))));
-            if (changed) { NotifySetChange(); }
+            ProcessAffect(before, after);
         }
 
-        public void Change(ArmorField field, Tag? tag)
+        public void Change(EquipmentField field, IReadOnlyCollection<Plugin> plugins)
         {
-            if (!_armors.ContainsKey(field) || _armors[field] == null) { throw new InvalidOperationException(); }
+            if (!_equipments.ContainsKey(field) || _equipments[field] == null) { return; }
 
-            var before = _armors[field]!;
-            var after  = _armors[field]! with {Tag = tag};
-            _armors[field] = after;
-
-            var (setBefore, setAfter, changed) = ProcessSetAffect();
-            NotifyChange(ComputeAffect(before.Effects.Concat(setBefore.SelectMany(x => x.Effects)),
-                after.Effects.Concat(setAfter.SelectMany(x => x.Effects))));
-            if (changed) { NotifySetChange(); }
-        }
-
-        public void Change(ArmorField field, IReadOnlyCollection<Plugin> plugins)
-        {
-            if (!_armors.ContainsKey(field) || _armors[field] == null) { throw new InvalidOperationException(); }
-
-            var before = _armors[field]!;
+            var before = _equipments[field]!;
 
             if (plugins.Count > before.PluginLimit) { throw new InvalidOperationException(); }
 
-            var after = _armors[field]! with {Plugins = plugins};
-            _armors[field] = after;
+            var after = _equipments[field]! with {Plugins = plugins};
+            _equipments[field] = after;
 
-            var (setBefore, setAfter, changed) = ProcessSetAffect();
-            NotifyChange(ComputeAffect(before.Effects.Concat(setBefore.SelectMany(x => x.Effects)),
-                after.Effects.Concat(setAfter.SelectMany(x => x.Effects))));
-            if (changed) { NotifySetChange(); }
+            ProcessAffect(before, after);
         }
 
-        public void Clear(ArmorField field)
+        public void Clear(EquipmentField field)
         {
-            if (!_armors.ContainsKey(field) || _armors[field] == null) { return; }
+            if (!_equipments.ContainsKey(field) || _equipments[field] == null) { return; }
 
-            var before = _armors[field]!;
-            _armors[field] = null;
+            var before = _equipments[field]!;
+            _equipments[field] = null;
 
-            var (setBefore, setAfter, changed) = ProcessSetAffect();
-            NotifyChange(ComputeAffect(before.Effects.Concat(setBefore.SelectMany(x => x.Effects)),
-                setAfter.SelectMany(x => x.Effects)));
-            if (changed) { NotifySetChange(); }
+            ProcessAffect(before, null);
         }
 
-        private (ICollection<EquipmentSetEffect> Before, ICollection<EquipmentSetEffect> After, bool HasChanged)
-            ProcessSetAffect()
-        {
-            var (setBefore, setAfter, changed) = ComputeSetAffect();
+        public override IReadOnlyCollection<EquipmentSet> GetAllSets() => _provider.GetEquipmentSets();
 
-            Sets.Clear();
-            foreach (var x in setAfter) { Sets.Add(x); }
-
-            return (setBefore, setAfter, changed);
-        }
-
-        private (ICollection<EquipmentSetEffect> Before, ICollection<EquipmentSetEffect> After, bool HasChanged)
-            ComputeSetAffect()
-        {
-            var before = Sets.ToList();
-            var sets   = _data.GetArmorSetEffects();
-            var data   = _armors.Where(x => x.Value != null).GroupBy(x => x.Value!.SetName);
-
-            var after = new List<EquipmentSetEffect>();
-            foreach (var set in data)
-            {
-                var effect = sets.FirstOrDefault(x => x.Name.Equals(set.Key));
-                if (effect != null) { effect = effect with {Step = set.Count()}; }
-
-                if (effect?.Effects.Any() ?? false) { after.Add(effect); }
-            }
-
-            var changed = before.Count != after.Count || before.Any(x => !after.Contains(x));
-
-            return (before, after, changed);
-        }
+        protected override IReadOnlyCollection<Item> GetAllItems() =>
+            _equipments.Values.Where(x => x != null).ToList()!;
     }
 }

@@ -33,6 +33,8 @@ namespace SoulWorkerPropertySimulator.Models
                 .Concat(EnableBonus && _base.BonusSkill != null ? _base.BonusSkill : Array.Empty<Effect>())
                 .ToList();
 
+        public IReadOnlyCollection<Effect> BaseEffect => _base.StepEffects[Step];
+
         public bool EnableBonus { get; init; }
 
         public IReadOnlyCollection<int> ValidStep => _base.StepEffects.Keys.ToList();

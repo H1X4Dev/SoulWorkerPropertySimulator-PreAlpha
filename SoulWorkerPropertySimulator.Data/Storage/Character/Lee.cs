@@ -17,324 +17,297 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         46,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 12_350),
-                            new(StaticEffect.Attack, 1_278),
-                            new(StaticEffect.CriticalDamage, 1_022),
-                            new(StaticEffect.Evade, 26),
-                            new(StaticEffect.Defense, 230),
-                            new(StaticEffect.Accuracy, 978)
+                            new(StaticEffectContext.Hp, 12_350),
+                            new(StaticEffectContext.Attack, 1_278),
+                            new(StaticEffectContext.Evade, 26),
+                            new(StaticEffectContext.Defense, 230),
+                            new(StaticEffectContext.Accuracy, 978)
                         }
                     },
                     {
                         47,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 12_600),
-                            new(StaticEffect.Attack, 1_296),
-                            new(StaticEffect.CriticalDamage, 1_036),
-                            new(StaticEffect.Evade, 26),
-                            new(StaticEffect.Defense, 235),
-                            new(StaticEffect.Accuracy, 981)
+                            new(StaticEffectContext.Hp, 12_600),
+                            new(StaticEffectContext.Attack, 1_296),
+                            new(StaticEffectContext.Evade, 26),
+                            new(StaticEffectContext.Defense, 235),
+                            new(StaticEffectContext.Accuracy, 981)
                         }
                     },
                     {
                         48,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 12_850),
-                            new(StaticEffect.Attack, 1_332),
-                            new(StaticEffect.CriticalDamage, 1_065),
-                            new(StaticEffect.Evade, 27),
-                            new(StaticEffect.Defense, 240),
-                            new(StaticEffect.Accuracy, 985)
+                            new(StaticEffectContext.Hp, 12_850),
+                            new(StaticEffectContext.Attack, 1_332),
+                            new(StaticEffectContext.Evade, 27),
+                            new(StaticEffectContext.Defense, 240),
+                            new(StaticEffectContext.Accuracy, 985)
                         }
                     },
                     {
                         49,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 13_100),
-                            new(StaticEffect.Attack, 1_350),
-                            new(StaticEffect.CriticalDamage, 1_080),
-                            new(StaticEffect.Evade, 27),
-                            new(StaticEffect.Defense, 245),
-                            new(StaticEffect.Accuracy, 989)
+                            new(StaticEffectContext.Hp, 13_100),
+                            new(StaticEffectContext.Attack, 1_350),
+                            new(StaticEffectContext.Evade, 27),
+                            new(StaticEffectContext.Defense, 245),
+                            new(StaticEffectContext.Accuracy, 989)
                         }
                     },
                     {
                         50,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 13_350),
-                            new(StaticEffect.Attack, 1_386),
-                            new(StaticEffect.CriticalDamage, 1_108),
-                            new(StaticEffect.Evade, 28),
-                            new(StaticEffect.Defense, 250),
-                            new(StaticEffect.Accuracy, 994)
+                            new(StaticEffectContext.Hp, 13_350),
+                            new(StaticEffectContext.Attack, 1_386),
+                            new(StaticEffectContext.Evade, 28),
+                            new(StaticEffectContext.Defense, 250),
+                            new(StaticEffectContext.Accuracy, 994)
                         }
                     },
                     {
                         51,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 13_600),
-                            new(StaticEffect.Attack, 1_404),
-                            new(StaticEffect.CriticalDamage, 1_123),
-                            new(StaticEffect.Evade, 28),
-                            new(StaticEffect.Defense, 255),
-                            new(StaticEffect.Accuracy, 996)
+                            new(StaticEffectContext.Hp, 13_600),
+                            new(StaticEffectContext.Attack, 1_404),
+                            new(StaticEffectContext.Evade, 28),
+                            new(StaticEffectContext.Defense, 255),
+                            new(StaticEffectContext.Accuracy, 996)
                         }
                     },
                     {
                         52,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 13_850),
-                            new(StaticEffect.Attack, 1_440),
-                            new(StaticEffect.CriticalDamage, 1_152),
-                            new(StaticEffect.Evade, 29),
-                            new(StaticEffect.Defense, 260),
-                            new(StaticEffect.Accuracy, 1_001)
+                            new(StaticEffectContext.Hp, 13_850),
+                            new(StaticEffectContext.Attack, 1_440),
+                            new(StaticEffectContext.Evade, 29),
+                            new(StaticEffectContext.Defense, 260),
+                            new(StaticEffectContext.Accuracy, 1_001)
                         }
                     },
                     {
                         53,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 14_100),
-                            new(StaticEffect.Attack, 1_458),
-                            new(StaticEffect.CriticalDamage, 1_166),
-                            new(StaticEffect.Evade, 29),
-                            new(StaticEffect.Defense, 265),
-                            new(StaticEffect.Accuracy, 1_005)
+                            new(StaticEffectContext.Hp, 14_100),
+                            new(StaticEffectContext.Attack, 1_458),
+                            new(StaticEffectContext.Evade, 29),
+                            new(StaticEffectContext.Defense, 265),
+                            new(StaticEffectContext.Accuracy, 1_005)
                         }
                     },
                     {
                         54,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 14_350),
-                            new(StaticEffect.Attack, 1_494),
-                            new(StaticEffect.CriticalDamage, 1_195),
-                            new(StaticEffect.Evade, 30),
-                            new(StaticEffect.Defense, 270),
-                            new(StaticEffect.Accuracy, 1_009)
+                            new(StaticEffectContext.Hp, 14_350),
+                            new(StaticEffectContext.Attack, 1_494),
+                            new(StaticEffectContext.Evade, 30),
+                            new(StaticEffectContext.Defense, 270),
+                            new(StaticEffectContext.Accuracy, 1_009)
                         }
                     },
                     {
                         55,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 14_600),
-                            new(StaticEffect.Attack, 1_512),
-                            new(StaticEffect.CriticalDamage, 1_209),
-                            new(StaticEffect.Evade, 31),
-                            new(StaticEffect.Defense, 275),
-                            new(StaticEffect.Accuracy, 1_012)
+                            new(StaticEffectContext.Hp, 14_600),
+                            new(StaticEffectContext.Attack, 1_512),
+                            new(StaticEffectContext.Evade, 31),
+                            new(StaticEffectContext.Defense, 275),
+                            new(StaticEffectContext.Accuracy, 1_012)
                         }
                     },
                     {
                         56,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 14_850),
-                            new(StaticEffect.Attack, 1_548),
-                            new(StaticEffect.CriticalDamage, 1_238),
-                            new(StaticEffect.Evade, 31),
-                            new(StaticEffect.Defense, 280),
-                            new(StaticEffect.Accuracy, 1_016)
+                            new(StaticEffectContext.Hp, 14_850),
+                            new(StaticEffectContext.Attack, 1_548),
+                            new(StaticEffectContext.Evade, 31),
+                            new(StaticEffectContext.Defense, 280),
+                            new(StaticEffectContext.Accuracy, 1_016)
                         }
                     },
                     {
                         57,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 15_100),
-                            new(StaticEffect.Attack, 1_566),
-                            new(StaticEffect.CriticalDamage, 1_252),
-                            new(StaticEffect.Evade, 32),
-                            new(StaticEffect.Defense, 285),
-                            new(StaticEffect.Accuracy, 1_020)
+                            new(StaticEffectContext.Hp, 15_100),
+                            new(StaticEffectContext.Attack, 1_566),
+                            new(StaticEffectContext.Evade, 32),
+                            new(StaticEffectContext.Defense, 285),
+                            new(StaticEffectContext.Accuracy, 1_020)
                         }
                     },
                     {
                         58,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 15_350),
-                            new(StaticEffect.Attack, 1_602),
-                            new(StaticEffect.CriticalDamage, 1_281),
-                            new(StaticEffect.Evade, 32),
-                            new(StaticEffect.Defense, 290),
-                            new(StaticEffect.Accuracy, 1_025)
+                            new(StaticEffectContext.Hp, 15_350),
+                            new(StaticEffectContext.Attack, 1_602),
+                            new(StaticEffectContext.Evade, 32),
+                            new(StaticEffectContext.Defense, 290),
+                            new(StaticEffectContext.Accuracy, 1_025)
                         }
                     },
                     {
                         59,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 15_600),
-                            new(StaticEffect.Attack, 1_620),
-                            new(StaticEffect.CriticalDamage, 1_296),
-                            new(StaticEffect.Evade, 33),
-                            new(StaticEffect.Defense, 295),
-                            new(StaticEffect.Accuracy, 1_027)
+                            new(StaticEffectContext.Hp, 15_600),
+                            new(StaticEffectContext.Attack, 1_620),
+                            new(StaticEffectContext.Evade, 33),
+                            new(StaticEffectContext.Defense, 295),
+                            new(StaticEffectContext.Accuracy, 1_027)
                         }
                     },
                     {
                         60,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 15_850),
-                            new(StaticEffect.Attack, 1_656),
-                            new(StaticEffect.CriticalDamage, 1_324),
-                            new(StaticEffect.Evade, 33),
-                            new(StaticEffect.Defense, 300),
-                            new(StaticEffect.Accuracy, 1_032)
+                            new(StaticEffectContext.Hp, 15_850),
+                            new(StaticEffectContext.Attack, 1_656),
+                            new(StaticEffectContext.Evade, 33),
+                            new(StaticEffectContext.Defense, 300),
+                            new(StaticEffectContext.Accuracy, 1_032)
                         }
                     },
                     {
                         61,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 16_100),
-                            new(StaticEffect.Attack, 1_674),
-                            new(StaticEffect.CriticalDamage, 1_339),
-                            new(StaticEffect.Evade, 34),
-                            new(StaticEffect.Defense, 305),
-                            new(StaticEffect.Accuracy, 1_036)
+                            new(StaticEffectContext.Hp, 16_100),
+                            new(StaticEffectContext.Attack, 1_674),
+                            new(StaticEffectContext.Evade, 34),
+                            new(StaticEffectContext.Defense, 305),
+                            new(StaticEffectContext.Accuracy, 1_036)
                         }
                     },
                     {
                         62,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 16_350),
-                            new(StaticEffect.Attack, 1_710),
-                            new(StaticEffect.CriticalDamage, 1_368),
-                            new(StaticEffect.Evade, 35),
-                            new(StaticEffect.Defense, 310),
-                            new(StaticEffect.Accuracy, 1_040)
+                            new(StaticEffectContext.Hp, 16_350),
+                            new(StaticEffectContext.Attack, 1_710),
+                            new(StaticEffectContext.Evade, 35),
+                            new(StaticEffectContext.Defense, 310),
+                            new(StaticEffectContext.Accuracy, 1_040)
                         }
                     },
                     {
                         63,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 16_600),
-                            new(StaticEffect.Attack, 1_728),
-                            new(StaticEffect.CriticalDamage, 1_382),
-                            new(StaticEffect.Evade, 35),
-                            new(StaticEffect.Defense, 315),
-                            new(StaticEffect.Accuracy, 1_043)
+                            new(StaticEffectContext.Hp, 16_600),
+                            new(StaticEffectContext.Attack, 1_728),
+                            new(StaticEffectContext.Evade, 35),
+                            new(StaticEffectContext.Defense, 315),
+                            new(StaticEffectContext.Accuracy, 1_043)
                         }
                     },
                     {
                         64,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 16_850),
-                            new(StaticEffect.Attack, 1_764),
-                            new(StaticEffect.CriticalDamage, 1_411),
-                            new(StaticEffect.Evade, 36),
-                            new(StaticEffect.Defense, 320),
-                            new(StaticEffect.Accuracy, 1_047)
+                            new(StaticEffectContext.Hp, 16_850),
+                            new(StaticEffectContext.Attack, 1_764),
+                            new(StaticEffectContext.Evade, 36),
+                            new(StaticEffectContext.Defense, 320),
+                            new(StaticEffectContext.Accuracy, 1_047)
                         }
                     },
                     {
                         65,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 17_100),
-                            new(StaticEffect.Attack, 1_782),
-                            new(StaticEffect.CriticalDamage, 1_425),
-                            new(StaticEffect.Evade, 36),
-                            new(StaticEffect.Defense, 325),
-                            new(StaticEffect.Accuracy, 1_051)
+                            new(StaticEffectContext.Hp, 17_100),
+                            new(StaticEffectContext.Attack, 1_782),
+                            new(StaticEffectContext.Evade, 36),
+                            new(StaticEffectContext.Defense, 325),
+                            new(StaticEffectContext.Accuracy, 1_051)
                         }
                     },
                     {
                         66,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 17_350),
-                            new(StaticEffect.Attack, 1_818),
-                            new(StaticEffect.CriticalDamage, 1_454),
-                            new(StaticEffect.Evade, 37),
-                            new(StaticEffect.Defense, 330),
-                            new(StaticEffect.Accuracy, 1_055)
+                            new(StaticEffectContext.Hp, 17_350),
+                            new(StaticEffectContext.Attack, 1_818),
+                            new(StaticEffectContext.Evade, 37),
+                            new(StaticEffectContext.Defense, 330),
+                            new(StaticEffectContext.Accuracy, 1_055)
                         }
                     },
                     {
                         67,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 17_600),
-                            new(StaticEffect.Attack, 1_836),
-                            new(StaticEffect.CriticalDamage, 1_468),
-                            new(StaticEffect.Evade, 37),
-                            new(StaticEffect.Defense, 335),
-                            new(StaticEffect.Accuracy, 1_058)
+                            new(StaticEffectContext.Hp, 17_600),
+                            new(StaticEffectContext.Attack, 1_836),
+                            new(StaticEffectContext.Evade, 37),
+                            new(StaticEffectContext.Defense, 335),
+                            new(StaticEffectContext.Accuracy, 1_058)
                         }
                     },
                     {
                         68,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 17_850),
-                            new(StaticEffect.Attack, 1_872),
-                            new(StaticEffect.CriticalDamage, 1_497),
-                            new(StaticEffect.Evade, 38),
-                            new(StaticEffect.Defense, 340),
-                            new(StaticEffect.Accuracy, 1_062)
+                            new(StaticEffectContext.Hp, 17_850),
+                            new(StaticEffectContext.Attack, 1_872),
+                            new(StaticEffectContext.Evade, 38),
+                            new(StaticEffectContext.Defense, 340),
+                            new(StaticEffectContext.Accuracy, 1_062)
                         }
                     },
                     {
                         69,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 18_100),
-                            new(StaticEffect.Attack, 1_890),
-                            new(StaticEffect.CriticalDamage, 1_512),
-                            new(StaticEffect.Evade, 38),
-                            new(StaticEffect.Defense, 345),
-                            new(StaticEffect.Accuracy, 1_067)
+                            new(StaticEffectContext.Hp, 18_100),
+                            new(StaticEffectContext.Attack, 1_890),
+                            new(StaticEffectContext.Evade, 38),
+                            new(StaticEffectContext.Defense, 345),
+                            new(StaticEffectContext.Accuracy, 1_067)
                         }
                     },
                     {
                         70,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 18_350),
-                            new(StaticEffect.Attack, 1_926),
-                            new(StaticEffect.CriticalDamage, 1_540),
-                            new(StaticEffect.Evade, 39),
-                            new(StaticEffect.Defense, 350),
-                            new(StaticEffect.Accuracy, 1_071)
+                            new(StaticEffectContext.Hp, 18_350),
+                            new(StaticEffectContext.Attack, 1_926),
+                            new(StaticEffectContext.Evade, 39),
+                            new(StaticEffectContext.Defense, 350),
+                            new(StaticEffectContext.Accuracy, 1_071)
                         }
                     },
                     {
                         71,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 18_600),
-                            new(StaticEffect.Attack, 1_944),
-                            new(StaticEffect.CriticalDamage, 1_555),
-                            new(StaticEffect.Evade, 40),
-                            new(StaticEffect.Defense, 354),
-                            new(StaticEffect.Accuracy, 1_074)
+                            new(StaticEffectContext.Hp, 18_600),
+                            new(StaticEffectContext.Attack, 1_944),
+                            new(StaticEffectContext.Evade, 40),
+                            new(StaticEffectContext.Defense, 354),
+                            new(StaticEffectContext.Accuracy, 1_074)
                         }
                     },
                     {
                         72,
                         new Effect[]
                         {
-                            new(StaticEffect.Hp, 18_850),
-                            new(StaticEffect.Attack, 1_980),
-                            new(StaticEffect.CriticalDamage, 1_584),
-                            new(StaticEffect.Evade, 40),
-                            new(StaticEffect.Defense, 360),
-                            new(StaticEffect.Accuracy, 1_078)
+                            new(StaticEffectContext.Hp, 18_850),
+                            new(StaticEffectContext.Attack, 1_980),
+                            new(StaticEffectContext.Evade, 40),
+                            new(StaticEffectContext.Defense, 360),
+                            new(StaticEffectContext.Accuracy, 1_078)
                         }
                     }
                 });

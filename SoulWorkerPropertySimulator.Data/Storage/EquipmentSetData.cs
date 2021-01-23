@@ -7,14 +7,18 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class EquipmentSetData
     {
-        private static readonly IReadOnlyCollection<EquipmentSetEffect> Result = new List<EquipmentSetEffect>
+        private static readonly IReadOnlyCollection<EquipmentSet> Result = new List<EquipmentSet>
         {
             new("進階暮光",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {
                         2,
-                        new Effect[] {new(StaticEffect.CriticalDamage, 9_000), new(StaticEffect.CriticalRate, .15m)}
+                        new Effect[]
+                        {
+                            new(StaticEffectContext.CriticalDamage, 9_000),
+                            new(StaticEffectContext.CriticalRate, .15m)
+                        }
                     },
                     {
                         3,
@@ -29,15 +33,15 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         4,
                         new Effect[]
                         {
-                            new(StaticEffect.ExtraDamageRateBoss, .4m),
-                            new(StaticEffect.SoulGateConsumptionReducedRate, .1m),
-                            new(StaticEffect.SuperArmorBreakPowerRate, .5m),
-                            new(StaticEffect.AttackSpeedRate, .14m)
+                            new(StaticEffectContext.ExtraDamageRateBoss, .4m),
+                            new(StaticEffectContext.SoulGateConsumptionReducedRate, .1m),
+                            new(StaticEffectContext.SuperArmorBreakPowerRate, .5m),
+                            new(StaticEffectContext.AttackSpeedRate, .14m)
                         }
                     }
                 })
         };
 
-        internal static IReadOnlyCollection<EquipmentSetEffect> Get() => Result;
+        internal static IReadOnlyCollection<EquipmentSet> Get() => Result;
     }
 }

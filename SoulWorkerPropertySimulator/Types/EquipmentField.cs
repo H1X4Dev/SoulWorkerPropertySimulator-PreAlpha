@@ -2,7 +2,7 @@
 
 namespace SoulWorkerPropertySimulator.Types
 {
-    public enum ArmorField
+    public enum EquipmentField
     {
         [Description("武器")]
         Weapon,

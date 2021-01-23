@@ -17,11 +17,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         1,
                         new[]
                         {
-                            new(StaticEffect.Hp, 1150),
-                            new(StaticEffect.Attack, 54),
-                            new(StaticEffect.CriticalDamage, 43),
-                            new(StaticEffect.Evade, 0),
-                            new(StaticEffect.Defense, 5),
+                            new(StaticEffectContext.Hp, 1150),
+                            new(StaticEffectContext.Attack, 54),
+                            new(StaticEffectContext.Evade, 0),
+                            new(StaticEffectContext.Defense, 5),
                             AccuracyList[0]
                         }
                     },
@@ -29,11 +28,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         2,
                         new[]
                         {
-                            new(StaticEffect.Hp, 1450),
-                            new(StaticEffect.Attack, 72),
-                            new(StaticEffect.CriticalDamage, 57),
-                            new(StaticEffect.Evade, 1),
-                            new(StaticEffect.Defense, 10),
+                            new(StaticEffectContext.Hp, 1450),
+                            new(StaticEffectContext.Attack, 72),
+                            new(StaticEffectContext.Evade, 1),
+                            new(StaticEffectContext.Defense, 10),
                             AccuracyList[1]
                         }
                     },
@@ -41,11 +39,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         3,
                         new[]
                         {
-                            new(StaticEffect.Hp, 1750),
-                            new(StaticEffect.Attack, 108),
-                            new(StaticEffect.CriticalDamage, 86),
-                            new(StaticEffect.Evade, 2),
-                            new(StaticEffect.Defense, 12),
+                            new(StaticEffectContext.Hp, 1750),
+                            new(StaticEffectContext.Attack, 108),
+                            new(StaticEffectContext.Evade, 2),
+                            new(StaticEffectContext.Defense, 12),
                             AccuracyList[2]
                         }
                     },
@@ -53,11 +50,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         4,
                         new[]
                         {
-                            new(StaticEffect.Hp, 2050),
-                            new(StaticEffect.Attack, 126),
-                            new(StaticEffect.CriticalDamage, 100),
-                            new(StaticEffect.Evade, 3),
-                            new(StaticEffect.Defense, 17),
+                            new(StaticEffectContext.Hp, 2050),
+                            new(StaticEffectContext.Attack, 126),
+                            new(StaticEffectContext.Evade, 3),
+                            new(StaticEffectContext.Defense, 17),
                             AccuracyList[3]
                         }
                     },
@@ -65,11 +61,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         5,
                         new[]
                         {
-                            new(StaticEffect.Hp, 2350),
-                            new(StaticEffect.Attack, 144),
-                            new(StaticEffect.CriticalDamage, 115),
-                            new(StaticEffect.Evade, 4),
-                            new(StaticEffect.Defense, 22),
+                            new(StaticEffectContext.Hp, 2350),
+                            new(StaticEffectContext.Attack, 144),
+                            new(StaticEffectContext.Evade, 4),
+                            new(StaticEffectContext.Defense, 22),
                             AccuracyList[4]
                         }
                     },
@@ -77,11 +72,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         6,
                         new[]
                         {
-                            new(StaticEffect.Hp, 2650),
-                            new(StaticEffect.Attack, 180),
-                            new(StaticEffect.CriticalDamage, 144),
-                            new(StaticEffect.Evade, 5),
-                            new(StaticEffect.Defense, 27),
+                            new(StaticEffectContext.Hp, 2650),
+                            new(StaticEffectContext.Attack, 180),
+                            new(StaticEffectContext.Evade, 5),
+                            new(StaticEffectContext.Defense, 27),
                             AccuracyList[5]
                         }
                     },
@@ -89,11 +83,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         7,
                         new[]
                         {
-                            new(StaticEffect.Hp, 2950),
-                            new(StaticEffect.Attack, 198),
-                            new(StaticEffect.CriticalDamage, 158),
-                            new(StaticEffect.Evade, 5),
-                            new(StaticEffect.Defense, 30),
+                            new(StaticEffectContext.Hp, 2950),
+                            new(StaticEffectContext.Attack, 198),
+                            new(StaticEffectContext.Evade, 5),
+                            new(StaticEffectContext.Defense, 30),
                             AccuracyList[6]
                         }
                     },
@@ -101,11 +94,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         8,
                         new[]
                         {
-                            new(StaticEffect.Hp, 3250),
-                            new(StaticEffect.Attack, 216),
-                            new(StaticEffect.CriticalDamage, 172),
-                            new(StaticEffect.Evade, 6),
-                            new(StaticEffect.Defense, 35),
+                            new(StaticEffectContext.Hp, 3250),
+                            new(StaticEffectContext.Attack, 216),
+                            new(StaticEffectContext.Evade, 6),
+                            new(StaticEffectContext.Defense, 35),
                             AccuracyList[7]
                         }
                     },
@@ -113,11 +105,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         9,
                         new[]
                         {
-                            new(StaticEffect.Hp, 3550),
-                            new(StaticEffect.Attack, 252),
-                            new(StaticEffect.CriticalDamage, 201),
-                            new(StaticEffect.Evade, 7),
-                            new(StaticEffect.Defense, 40),
+                            new(StaticEffectContext.Hp, 3550),
+                            new(StaticEffectContext.Attack, 252),
+                            new(StaticEffectContext.Evade, 7),
+                            new(StaticEffectContext.Defense, 40),
                             AccuracyList[8]
                         }
                     },
@@ -125,11 +116,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         10,
                         new[]
                         {
-                            new(StaticEffect.Hp, 3850),
-                            new(StaticEffect.Attack, 270),
-                            new(StaticEffect.CriticalDamage, 216),
-                            new(StaticEffect.Evade, 8),
-                            new(StaticEffect.Defense, 45),
+                            new(StaticEffectContext.Hp, 3850),
+                            new(StaticEffectContext.Attack, 270),
+                            new(StaticEffectContext.Evade, 8),
+                            new(StaticEffectContext.Defense, 45),
                             AccuracyList[9]
                         }
                     },
@@ -137,11 +127,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         11,
                         new[]
                         {
-                            new(StaticEffect.Hp, 4150),
-                            new(StaticEffect.Attack, 306),
-                            new(StaticEffect.CriticalDamage, 244),
-                            new(StaticEffect.Evade, 9),
-                            new(StaticEffect.Defense, 47),
+                            new(StaticEffectContext.Hp, 4150),
+                            new(StaticEffectContext.Attack, 306),
+                            new(StaticEffectContext.Evade, 9),
+                            new(StaticEffectContext.Defense, 47),
                             AccuracyList[10]
                         }
                     },
@@ -149,11 +138,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         12,
                         new[]
                         {
-                            new(StaticEffect.Hp, 4450),
-                            new(StaticEffect.Attack, 324),
-                            new(StaticEffect.CriticalDamage, 259),
-                            new(StaticEffect.Evade, 9),
-                            new(StaticEffect.Defense, 52),
+                            new(StaticEffectContext.Hp, 4450),
+                            new(StaticEffectContext.Attack, 324),
+                            new(StaticEffectContext.Evade, 9),
+                            new(StaticEffectContext.Defense, 52),
                             AccuracyList[11]
                         }
                     },
@@ -161,11 +149,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         13,
                         new[]
                         {
-                            new(StaticEffect.Hp, 4750),
-                            new(StaticEffect.Attack, 342),
-                            new(StaticEffect.CriticalDamage, 273),
-                            new(StaticEffect.Evade, 10),
-                            new(StaticEffect.Defense, 57),
+                            new(StaticEffectContext.Hp, 4750),
+                            new(StaticEffectContext.Attack, 342),
+                            new(StaticEffectContext.Evade, 10),
+                            new(StaticEffectContext.Defense, 57),
                             AccuracyList[12]
                         }
                     },
@@ -173,11 +160,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         14,
                         new[]
                         {
-                            new(StaticEffect.Hp, 5050),
-                            new(StaticEffect.Attack, 378),
-                            new(StaticEffect.CriticalDamage, 302),
-                            new(StaticEffect.Evade, 11),
-                            new(StaticEffect.Defense, 62),
+                            new(StaticEffectContext.Hp, 5050),
+                            new(StaticEffectContext.Attack, 378),
+                            new(StaticEffectContext.Evade, 11),
+                            new(StaticEffectContext.Defense, 62),
                             AccuracyList[13]
                         }
                     },
@@ -185,11 +171,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         15,
                         new[]
                         {
-                            new(StaticEffect.Hp, 5350),
-                            new(StaticEffect.Attack, 396),
-                            new(StaticEffect.CriticalDamage, 316),
-                            new(StaticEffect.Evade, 12),
-                            new(StaticEffect.Defense, 65),
+                            new(StaticEffectContext.Hp, 5350),
+                            new(StaticEffectContext.Attack, 396),
+                            new(StaticEffectContext.Evade, 12),
+                            new(StaticEffectContext.Defense, 65),
                             AccuracyList[14]
                         }
                     },
@@ -197,11 +182,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         16,
                         new[]
                         {
-                            new(StaticEffect.Hp, 5650),
-                            new(StaticEffect.Attack, 414),
-                            new(StaticEffect.CriticalDamage, 331),
-                            new(StaticEffect.Evade, 13),
-                            new(StaticEffect.Defense, 70),
+                            new(StaticEffectContext.Hp, 5650),
+                            new(StaticEffectContext.Attack, 414),
+                            new(StaticEffectContext.Evade, 13),
+                            new(StaticEffectContext.Defense, 70),
                             AccuracyList[15]
                         }
                     },
@@ -209,11 +193,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         17,
                         new[]
                         {
-                            new(StaticEffect.Hp, 5950),
-                            new(StaticEffect.Attack, 450),
-                            new(StaticEffect.CriticalDamage, 360),
-                            new(StaticEffect.Evade, 13),
-                            new(StaticEffect.Defense, 75),
+                            new(StaticEffectContext.Hp, 5950),
+                            new(StaticEffectContext.Attack, 450),
+                            new(StaticEffectContext.Evade, 13),
+                            new(StaticEffectContext.Defense, 75),
                             AccuracyList[16]
                         }
                     },
@@ -221,11 +204,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         18,
                         new[]
                         {
-                            new(StaticEffect.Hp, 6250),
-                            new(StaticEffect.Attack, 468),
-                            new(StaticEffect.CriticalDamage, 374),
-                            new(StaticEffect.Evade, 14),
-                            new(StaticEffect.Defense, 80),
+                            new(StaticEffectContext.Hp, 6250),
+                            new(StaticEffectContext.Attack, 468),
+                            new(StaticEffectContext.Evade, 14),
+                            new(StaticEffectContext.Defense, 80),
                             AccuracyList[17]
                         }
                     },
@@ -233,11 +215,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         19,
                         new[]
                         {
-                            new(StaticEffect.Hp, 6550),
-                            new(StaticEffect.Attack, 504),
-                            new(StaticEffect.CriticalDamage, 403),
-                            new(StaticEffect.Evade, 15),
-                            new(StaticEffect.Defense, 82),
+                            new(StaticEffectContext.Hp, 6550),
+                            new(StaticEffectContext.Attack, 504),
+                            new(StaticEffectContext.Evade, 15),
+                            new(StaticEffectContext.Defense, 82),
                             AccuracyList[18]
                         }
                     },
@@ -245,11 +226,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         20,
                         new[]
                         {
-                            new(StaticEffect.Hp, 6850),
-                            new(StaticEffect.Attack, 522),
-                            new(StaticEffect.CriticalDamage, 417),
-                            new(StaticEffect.Evade, 16),
-                            new(StaticEffect.Defense, 87),
+                            new(StaticEffectContext.Hp, 6850),
+                            new(StaticEffectContext.Attack, 522),
+                            new(StaticEffectContext.Evade, 16),
+                            new(StaticEffectContext.Defense, 87),
                             AccuracyList[19]
                         }
                     },
@@ -257,11 +237,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         21,
                         new[]
                         {
-                            new(StaticEffect.Hp, 7150),
-                            new(StaticEffect.Attack, 540),
-                            new(StaticEffect.CriticalDamage, 432),
-                            new(StaticEffect.Evade, 17),
-                            new(StaticEffect.Defense, 92),
+                            new(StaticEffectContext.Hp, 7150),
+                            new(StaticEffectContext.Attack, 540),
+                            new(StaticEffectContext.Evade, 17),
+                            new(StaticEffectContext.Defense, 92),
                             AccuracyList[20]
                         }
                     },
@@ -269,11 +248,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         22,
                         new[]
                         {
-                            new(StaticEffect.Hp, 7450),
-                            new(StaticEffect.Attack, 576),
-                            new(StaticEffect.CriticalDamage, 460),
-                            new(StaticEffect.Evade, 18),
-                            new(StaticEffect.Defense, 97),
+                            new(StaticEffectContext.Hp, 7450),
+                            new(StaticEffectContext.Attack, 576),
+                            new(StaticEffectContext.Evade, 18),
+                            new(StaticEffectContext.Defense, 97),
                             AccuracyList[21]
                         }
                     },
@@ -281,11 +259,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         23,
                         new[]
                         {
-                            new(StaticEffect.Hp, 7750),
-                            new(StaticEffect.Attack, 594),
-                            new(StaticEffect.CriticalDamage, 475),
-                            new(StaticEffect.Evade, 18),
-                            new(StaticEffect.Defense, 100),
+                            new(StaticEffectContext.Hp, 7750),
+                            new(StaticEffectContext.Attack, 594),
+                            new(StaticEffectContext.Evade, 18),
+                            new(StaticEffectContext.Defense, 100),
                             AccuracyList[22]
                         }
                     },
@@ -293,11 +270,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         24,
                         new[]
                         {
-                            new(StaticEffect.Hp, 8050),
-                            new(StaticEffect.Attack, 612),
-                            new(StaticEffect.CriticalDamage, 489),
-                            new(StaticEffect.Evade, 19),
-                            new(StaticEffect.Defense, 105),
+                            new(StaticEffectContext.Hp, 8050),
+                            new(StaticEffectContext.Attack, 612),
+                            new(StaticEffectContext.Evade, 19),
+                            new(StaticEffectContext.Defense, 105),
                             AccuracyList[23]
                         }
                     },
@@ -305,11 +281,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         25,
                         new[]
                         {
-                            new(StaticEffect.Hp, 8350),
-                            new(StaticEffect.Attack, 648),
-                            new(StaticEffect.CriticalDamage, 518),
-                            new(StaticEffect.Evade, 20),
-                            new(StaticEffect.Defense, 110),
+                            new(StaticEffectContext.Hp, 8350),
+                            new(StaticEffectContext.Attack, 648),
+                            new(StaticEffectContext.Evade, 20),
+                            new(StaticEffectContext.Defense, 110),
                             AccuracyList[24]
                         }
                     },
@@ -317,11 +292,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         26,
                         new[]
                         {
-                            new(StaticEffect.Hp, 8650),
-                            new(StaticEffect.Attack, 666),
-                            new(StaticEffect.CriticalDamage, 532),
-                            new(StaticEffect.Evade, 21),
-                            new(StaticEffect.Defense, 115),
+                            new(StaticEffectContext.Hp, 8650),
+                            new(StaticEffectContext.Attack, 666),
+                            new(StaticEffectContext.Evade, 21),
+                            new(StaticEffectContext.Defense, 115),
                             AccuracyList[25]
                         }
                     },
@@ -329,11 +303,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         27,
                         new[]
                         {
-                            new(StaticEffect.Hp, 8950),
-                            new(StaticEffect.Attack, 702),
-                            new(StaticEffect.CriticalDamage, 561),
-                            new(StaticEffect.Evade, 22),
-                            new(StaticEffect.Defense, 117),
+                            new(StaticEffectContext.Hp, 8950),
+                            new(StaticEffectContext.Attack, 702),
+                            new(StaticEffectContext.Evade, 22),
+                            new(StaticEffectContext.Defense, 117),
                             AccuracyList[26]
                         }
                     },
@@ -341,11 +314,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         28,
                         new[]
                         {
-                            new(StaticEffect.Hp, 9250),
-                            new(StaticEffect.Attack, 720),
-                            new(StaticEffect.CriticalDamage, 576),
-                            new(StaticEffect.Evade, 22),
-                            new(StaticEffect.Defense, 122),
+                            new(StaticEffectContext.Hp, 9250),
+                            new(StaticEffectContext.Attack, 720),
+                            new(StaticEffectContext.Evade, 22),
+                            new(StaticEffectContext.Defense, 122),
                             AccuracyList[27]
                         }
                     },
@@ -353,11 +325,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         29,
                         new[]
                         {
-                            new(StaticEffect.Hp, 9550),
-                            new(StaticEffect.Attack, 738),
-                            new(StaticEffect.CriticalDamage, 590),
-                            new(StaticEffect.Evade, 23),
-                            new(StaticEffect.Defense, 127),
+                            new(StaticEffectContext.Hp, 9550),
+                            new(StaticEffectContext.Attack, 738),
+                            new(StaticEffectContext.Evade, 23),
+                            new(StaticEffectContext.Defense, 127),
                             AccuracyList[28]
                         }
                     },
@@ -365,11 +336,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         30,
                         new[]
                         {
-                            new(StaticEffect.Hp, 9850),
-                            new(StaticEffect.Attack, 774),
-                            new(StaticEffect.CriticalDamage, 619),
-                            new(StaticEffect.Evade, 24),
-                            new(StaticEffect.Defense, 132),
+                            new(StaticEffectContext.Hp, 9850),
+                            new(StaticEffectContext.Attack, 774),
+                            new(StaticEffectContext.Evade, 24),
+                            new(StaticEffectContext.Defense, 132),
                             AccuracyList[29]
                         }
                     },
@@ -377,11 +347,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         31,
                         new[]
                         {
-                            new(StaticEffect.Hp, 10150),
-                            new(StaticEffect.Attack, 792),
-                            new(StaticEffect.CriticalDamage, 633),
-                            new(StaticEffect.Evade, 25),
-                            new(StaticEffect.Defense, 135),
+                            new(StaticEffectContext.Hp, 10150),
+                            new(StaticEffectContext.Attack, 792),
+                            new(StaticEffectContext.Evade, 25),
+                            new(StaticEffectContext.Defense, 135),
                             AccuracyList[30]
                         }
                     },
@@ -389,11 +358,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         32,
                         new[]
                         {
-                            new(StaticEffect.Hp, 10450),
-                            new(StaticEffect.Attack, 810),
-                            new(StaticEffect.CriticalDamage, 648),
-                            new(StaticEffect.Evade, 26),
-                            new(StaticEffect.Defense, 140),
+                            new(StaticEffectContext.Hp, 10450),
+                            new(StaticEffectContext.Attack, 810),
+                            new(StaticEffectContext.Evade, 26),
+                            new(StaticEffectContext.Defense, 140),
                             AccuracyList[31]
                         }
                     },
@@ -401,11 +369,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         33,
                         new[]
                         {
-                            new(StaticEffect.Hp, 10750),
-                            new(StaticEffect.Attack, 846),
-                            new(StaticEffect.CriticalDamage, 676),
-                            new(StaticEffect.Evade, 26),
-                            new(StaticEffect.Defense, 145),
+                            new(StaticEffectContext.Hp, 10750),
+                            new(StaticEffectContext.Attack, 846),
+                            new(StaticEffectContext.Evade, 26),
+                            new(StaticEffectContext.Defense, 145),
                             AccuracyList[32]
                         }
                     },
@@ -413,11 +380,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         34,
                         new[]
                         {
-                            new(StaticEffect.Hp, 11050),
-                            new(StaticEffect.Attack, 864),
-                            new(StaticEffect.CriticalDamage, 691),
-                            new(StaticEffect.Evade, 27),
-                            new(StaticEffect.Defense, 150),
+                            new(StaticEffectContext.Hp, 11050),
+                            new(StaticEffectContext.Attack, 864),
+                            new(StaticEffectContext.Evade, 27),
+                            new(StaticEffectContext.Defense, 150),
                             AccuracyList[33]
                         }
                     },
@@ -425,11 +391,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         35,
                         new[]
                         {
-                            new(StaticEffect.Hp, 11350),
-                            new(StaticEffect.Attack, 900),
-                            new(StaticEffect.CriticalDamage, 720),
-                            new(StaticEffect.Evade, 28),
-                            new(StaticEffect.Defense, 152),
+                            new(StaticEffectContext.Hp, 11350),
+                            new(StaticEffectContext.Attack, 900),
+                            new(StaticEffectContext.Evade, 28),
+                            new(StaticEffectContext.Defense, 152),
                             AccuracyList[34]
                         }
                     },
@@ -437,11 +402,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         36,
                         new[]
                         {
-                            new(StaticEffect.Hp, 11650),
-                            new(StaticEffect.Attack, 918),
-                            new(StaticEffect.CriticalDamage, 734),
-                            new(StaticEffect.Evade, 29),
-                            new(StaticEffect.Defense, 157),
+                            new(StaticEffectContext.Hp, 11650),
+                            new(StaticEffectContext.Attack, 918),
+                            new(StaticEffectContext.Evade, 29),
+                            new(StaticEffectContext.Defense, 157),
                             AccuracyList[35]
                         }
                     },
@@ -449,11 +413,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         37,
                         new[]
                         {
-                            new(StaticEffect.Hp, 11950),
-                            new(StaticEffect.Attack, 936),
-                            new(StaticEffect.CriticalDamage, 748),
-                            new(StaticEffect.Evade, 30),
-                            new(StaticEffect.Defense, 162),
+                            new(StaticEffectContext.Hp, 11950),
+                            new(StaticEffectContext.Attack, 936),
+                            new(StaticEffectContext.Evade, 30),
+                            new(StaticEffectContext.Defense, 162),
                             AccuracyList[36]
                         }
                     },
@@ -461,11 +424,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         38,
                         new[]
                         {
-                            new(StaticEffect.Hp, 12250),
-                            new(StaticEffect.Attack, 972),
-                            new(StaticEffect.CriticalDamage, 777),
-                            new(StaticEffect.Evade, 31),
-                            new(StaticEffect.Defense, 167),
+                            new(StaticEffectContext.Hp, 12250),
+                            new(StaticEffectContext.Attack, 972),
+                            new(StaticEffectContext.Evade, 31),
+                            new(StaticEffectContext.Defense, 167),
                             AccuracyList[37]
                         }
                     },
@@ -473,11 +435,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         39,
                         new[]
                         {
-                            new(StaticEffect.Hp, 12550),
-                            new(StaticEffect.Attack, 990),
-                            new(StaticEffect.CriticalDamage, 792),
-                            new(StaticEffect.Evade, 31),
-                            new(StaticEffect.Defense, 170),
+                            new(StaticEffectContext.Hp, 12550),
+                            new(StaticEffectContext.Attack, 990),
+                            new(StaticEffectContext.Evade, 31),
+                            new(StaticEffectContext.Defense, 170),
                             AccuracyList[38]
                         }
                     },
@@ -485,11 +446,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         40,
                         new[]
                         {
-                            new(StaticEffect.Hp, 12850),
-                            new(StaticEffect.Attack, 1008),
-                            new(StaticEffect.CriticalDamage, 806),
-                            new(StaticEffect.Evade, 32),
-                            new(StaticEffect.Defense, 175),
+                            new(StaticEffectContext.Hp, 12850),
+                            new(StaticEffectContext.Attack, 1008),
+                            new(StaticEffectContext.Evade, 32),
+                            new(StaticEffectContext.Defense, 175),
                             AccuracyList[39]
                         }
                     },
@@ -497,11 +457,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         41,
                         new[]
                         {
-                            new(StaticEffect.Hp, 13150),
-                            new(StaticEffect.Attack, 1044),
-                            new(StaticEffect.CriticalDamage, 835),
-                            new(StaticEffect.Evade, 33),
-                            new(StaticEffect.Defense, 180),
+                            new(StaticEffectContext.Hp, 13150),
+                            new(StaticEffectContext.Attack, 1044),
+                            new(StaticEffectContext.Evade, 33),
+                            new(StaticEffectContext.Defense, 180),
                             AccuracyList[40]
                         }
                     },
@@ -509,11 +468,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         42,
                         new[]
                         {
-                            new(StaticEffect.Hp, 13450),
-                            new(StaticEffect.Attack, 1062),
-                            new(StaticEffect.CriticalDamage, 849),
-                            new(StaticEffect.Evade, 34),
-                            new(StaticEffect.Defense, 185),
+                            new(StaticEffectContext.Hp, 13450),
+                            new(StaticEffectContext.Attack, 1062),
+                            new(StaticEffectContext.Evade, 34),
+                            new(StaticEffectContext.Defense, 185),
                             AccuracyList[41]
                         }
                     },
@@ -521,11 +479,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         43,
                         new[]
                         {
-                            new(StaticEffect.Hp, 13750),
-                            new(StaticEffect.Attack, 1098),
-                            new(StaticEffect.CriticalDamage, 878),
-                            new(StaticEffect.Evade, 35),
-                            new(StaticEffect.Defense, 187),
+                            new(StaticEffectContext.Hp, 13750),
+                            new(StaticEffectContext.Attack, 1098),
+                            new(StaticEffectContext.Evade, 35),
+                            new(StaticEffectContext.Defense, 187),
                             AccuracyList[42]
                         }
                     },
@@ -533,11 +490,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         44,
                         new[]
                         {
-                            new(StaticEffect.Hp, 14050),
-                            new(StaticEffect.Attack, 1116),
-                            new(StaticEffect.CriticalDamage, 892),
-                            new(StaticEffect.Evade, 35),
-                            new(StaticEffect.Defense, 192),
+                            new(StaticEffectContext.Hp, 14050),
+                            new(StaticEffectContext.Attack, 1116),
+                            new(StaticEffectContext.Evade, 35),
+                            new(StaticEffectContext.Defense, 192),
                             AccuracyList[43]
                         }
                     },
@@ -545,11 +501,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         45,
                         new[]
                         {
-                            new(StaticEffect.Hp, 14350),
-                            new(StaticEffect.Attack, 1134),
-                            new(StaticEffect.CriticalDamage, 907),
-                            new(StaticEffect.Evade, 36),
-                            new(StaticEffect.Defense, 197),
+                            new(StaticEffectContext.Hp, 14350),
+                            new(StaticEffectContext.Attack, 1134),
+                            new(StaticEffectContext.Evade, 36),
+                            new(StaticEffectContext.Defense, 197),
                             AccuracyList[44]
                         }
                     },
@@ -557,11 +512,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         46,
                         new[]
                         {
-                            new(StaticEffect.Hp, 14650),
-                            new(StaticEffect.Attack, 1170),
-                            new(StaticEffect.CriticalDamage, 936),
-                            new(StaticEffect.Evade, 37),
-                            new(StaticEffect.Defense, 202),
+                            new(StaticEffectContext.Hp, 14650),
+                            new(StaticEffectContext.Attack, 1170),
+                            new(StaticEffectContext.Evade, 37),
+                            new(StaticEffectContext.Defense, 202),
                             AccuracyList[45]
                         }
                     },
@@ -569,11 +523,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         47,
                         new[]
                         {
-                            new(StaticEffect.Hp, 14950),
-                            new(StaticEffect.Attack, 1188),
-                            new(StaticEffect.CriticalDamage, 950),
-                            new(StaticEffect.Evade, 38),
-                            new(StaticEffect.Defense, 205),
+                            new(StaticEffectContext.Hp, 14950),
+                            new(StaticEffectContext.Attack, 1188),
+                            new(StaticEffectContext.Evade, 38),
+                            new(StaticEffectContext.Defense, 205),
                             AccuracyList[46]
                         }
                     },
@@ -581,11 +534,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         48,
                         new[]
                         {
-                            new(StaticEffect.Hp, 15250),
-                            new(StaticEffect.Attack, 1206),
-                            new(StaticEffect.CriticalDamage, 964),
-                            new(StaticEffect.Evade, 39),
-                            new(StaticEffect.Defense, 210),
+                            new(StaticEffectContext.Hp, 15250),
+                            new(StaticEffectContext.Attack, 1206),
+                            new(StaticEffectContext.Evade, 39),
+                            new(StaticEffectContext.Defense, 210),
                             AccuracyList[47]
                         }
                     },
@@ -593,11 +545,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         49,
                         new[]
                         {
-                            new(StaticEffect.Hp, 15550),
-                            new(StaticEffect.Attack, 1242),
-                            new(StaticEffect.CriticalDamage, 993),
-                            new(StaticEffect.Evade, 39),
-                            new(StaticEffect.Defense, 215),
+                            new(StaticEffectContext.Hp, 15550),
+                            new(StaticEffectContext.Attack, 1242),
+                            new(StaticEffectContext.Evade, 39),
+                            new(StaticEffectContext.Defense, 215),
                             AccuracyList[48]
                         }
                     },
@@ -605,11 +556,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         50,
                         new[]
                         {
-                            new(StaticEffect.Hp, 15850),
-                            new(StaticEffect.Attack, 1260),
-                            new(StaticEffect.CriticalDamage, 1008),
-                            new(StaticEffect.Evade, 40),
-                            new(StaticEffect.Defense, 220),
+                            new(StaticEffectContext.Hp, 15850),
+                            new(StaticEffectContext.Attack, 1260),
+                            new(StaticEffectContext.Evade, 40),
+                            new(StaticEffectContext.Defense, 220),
                             AccuracyList[49]
                         }
                     },
@@ -617,11 +567,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         51,
                         new[]
                         {
-                            new(StaticEffect.Hp, 16150),
-                            new(StaticEffect.Attack, 1295),
-                            new(StaticEffect.CriticalDamage, 1036),
-                            new(StaticEffect.Evade, 41),
-                            new(StaticEffect.Defense, 222),
+                            new(StaticEffectContext.Hp, 16150),
+                            new(StaticEffectContext.Attack, 1295),
+                            new(StaticEffectContext.Evade, 41),
+                            new(StaticEffectContext.Defense, 222),
                             AccuracyList[50]
                         }
                     },
@@ -629,11 +578,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         52,
                         new[]
                         {
-                            new(StaticEffect.Hp, 16450),
-                            new(StaticEffect.Attack, 1314),
-                            new(StaticEffect.CriticalDamage, 1051),
-                            new(StaticEffect.Evade, 42),
-                            new(StaticEffect.Defense, 227),
+                            new(StaticEffectContext.Hp, 16450),
+                            new(StaticEffectContext.Attack, 1314),
+                            new(StaticEffectContext.Evade, 42),
+                            new(StaticEffectContext.Defense, 227),
                             AccuracyList[51]
                         }
                     },
@@ -641,11 +589,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         53,
                         new[]
                         {
-                            new(StaticEffect.Hp, 16750),
-                            new(StaticEffect.Attack, 1331),
-                            new(StaticEffect.CriticalDamage, 1065),
-                            new(StaticEffect.Evade, 43),
-                            new(StaticEffect.Defense, 232),
+                            new(StaticEffectContext.Hp, 16750),
+                            new(StaticEffectContext.Attack, 1331),
+                            new(StaticEffectContext.Evade, 43),
+                            new(StaticEffectContext.Defense, 232),
                             AccuracyList[52]
                         }
                     },
@@ -653,11 +600,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         54,
                         new[]
                         {
-                            new(StaticEffect.Hp, 17050),
-                            new(StaticEffect.Attack, 1368),
-                            new(StaticEffect.CriticalDamage, 1094),
-                            new(StaticEffect.Evade, 44),
-                            new(StaticEffect.Defense, 237),
+                            new(StaticEffectContext.Hp, 17050),
+                            new(StaticEffectContext.Attack, 1368),
+                            new(StaticEffectContext.Evade, 44),
+                            new(StaticEffectContext.Defense, 237),
                             AccuracyList[53]
                         }
                     },
@@ -665,11 +611,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         55,
                         new[]
                         {
-                            new(StaticEffect.Hp, 17350),
-                            new(StaticEffect.Attack, 1386),
-                            new(StaticEffect.CriticalDamage, 1108),
-                            new(StaticEffect.Evade, 44),
-                            new(StaticEffect.Defense, 240),
+                            new(StaticEffectContext.Hp, 17350),
+                            new(StaticEffectContext.Attack, 1386),
+                            new(StaticEffectContext.Evade, 44),
+                            new(StaticEffectContext.Defense, 240),
                             AccuracyList[54]
                         }
                     },
@@ -677,11 +622,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         56,
                         new[]
                         {
-                            new(StaticEffect.Hp, 17650),
-                            new(StaticEffect.Attack, 1404),
-                            new(StaticEffect.CriticalDamage, 1123),
-                            new(StaticEffect.Evade, 45),
-                            new(StaticEffect.Defense, 245),
+                            new(StaticEffectContext.Hp, 17650),
+                            new(StaticEffectContext.Attack, 1404),
+                            new(StaticEffectContext.Evade, 45),
+                            new(StaticEffectContext.Defense, 245),
                             AccuracyList[55]
                         }
                     },
@@ -689,11 +633,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         57,
                         new[]
                         {
-                            new(StaticEffect.Hp, 17950),
-                            new(StaticEffect.Attack, 1440),
-                            new(StaticEffect.CriticalDamage, 1152),
-                            new(StaticEffect.Evade, 46),
-                            new(StaticEffect.Defense, 250),
+                            new(StaticEffectContext.Hp, 17950),
+                            new(StaticEffectContext.Attack, 1440),
+                            new(StaticEffectContext.Evade, 46),
+                            new(StaticEffectContext.Defense, 250),
                             AccuracyList[56]
                         }
                     },
@@ -701,11 +644,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         58,
                         new[]
                         {
-                            new(StaticEffect.Hp, 18250),
-                            new(StaticEffect.Attack, 1458),
-                            new(StaticEffect.CriticalDamage, 1166),
-                            new(StaticEffect.Evade, 47),
-                            new(StaticEffect.Defense, 255),
+                            new(StaticEffectContext.Hp, 18250),
+                            new(StaticEffectContext.Attack, 1458),
+                            new(StaticEffectContext.Evade, 47),
+                            new(StaticEffectContext.Defense, 255),
                             AccuracyList[57]
                         }
                     },
@@ -713,11 +655,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         59,
                         new[]
                         {
-                            new(StaticEffect.Hp, 18550),
-                            new(StaticEffect.Attack, 1494),
-                            new(StaticEffect.CriticalDamage, 1195),
-                            new(StaticEffect.Evade, 48),
-                            new(StaticEffect.Defense, 257),
+                            new(StaticEffectContext.Hp, 18550),
+                            new(StaticEffectContext.Attack, 1494),
+                            new(StaticEffectContext.Evade, 48),
+                            new(StaticEffectContext.Defense, 257),
                             AccuracyList[58]
                         }
                     },
@@ -725,11 +666,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         60,
                         new[]
                         {
-                            new(StaticEffect.Hp, 18850),
-                            new(StaticEffect.Attack, 1512),
-                            new(StaticEffect.CriticalDamage, 1209),
-                            new(StaticEffect.Evade, 48),
-                            new(StaticEffect.Defense, 262),
+                            new(StaticEffectContext.Hp, 18850),
+                            new(StaticEffectContext.Attack, 1512),
+                            new(StaticEffectContext.Evade, 48),
+                            new(StaticEffectContext.Defense, 262),
                             AccuracyList[59]
                         }
                     },
@@ -737,11 +677,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         61,
                         new[]
                         {
-                            new(StaticEffect.Hp, 19150),
-                            new(StaticEffect.Attack, 1530),
-                            new(StaticEffect.CriticalDamage, 1224),
-                            new(StaticEffect.Evade, 49),
-                            new(StaticEffect.Defense, 267),
+                            new(StaticEffectContext.Hp, 19150),
+                            new(StaticEffectContext.Attack, 1530),
+                            new(StaticEffectContext.Evade, 49),
+                            new(StaticEffectContext.Defense, 267),
                             AccuracyList[60]
                         }
                     },
@@ -749,11 +688,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         62,
                         new[]
                         {
-                            new(StaticEffect.Hp, 19450),
-                            new(StaticEffect.Attack, 1566),
-                            new(StaticEffect.CriticalDamage, 1252),
-                            new(StaticEffect.Evade, 50),
-                            new(StaticEffect.Defense, 272),
+                            new(StaticEffectContext.Hp, 19450),
+                            new(StaticEffectContext.Attack, 1566),
+                            new(StaticEffectContext.Evade, 50),
+                            new(StaticEffectContext.Defense, 272),
                             AccuracyList[61]
                         }
                     },
@@ -761,11 +699,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         63,
                         new[]
                         {
-                            new(StaticEffect.Hp, 19750),
-                            new(StaticEffect.Attack, 1584),
-                            new(StaticEffect.CriticalDamage, 1267),
-                            new(StaticEffect.Evade, 51),
-                            new(StaticEffect.Defense, 275),
+                            new(StaticEffectContext.Hp, 19750),
+                            new(StaticEffectContext.Attack, 1584),
+                            new(StaticEffectContext.Evade, 51),
+                            new(StaticEffectContext.Defense, 275),
                             AccuracyList[62]
                         }
                     },
@@ -773,11 +710,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         64,
                         new[]
                         {
-                            new(StaticEffect.Hp, 20050),
-                            new(StaticEffect.Attack, 1601),
-                            new(StaticEffect.CriticalDamage, 1281),
-                            new(StaticEffect.Evade, 52),
-                            new(StaticEffect.Defense, 280),
+                            new(StaticEffectContext.Hp, 20050),
+                            new(StaticEffectContext.Attack, 1601),
+                            new(StaticEffectContext.Evade, 52),
+                            new(StaticEffectContext.Defense, 280),
                             AccuracyList[63]
                         }
                     },
@@ -785,11 +721,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         65,
                         new[]
                         {
-                            new(StaticEffect.Hp, 20350),
-                            new(StaticEffect.Attack, 1638),
-                            new(StaticEffect.CriticalDamage, 1310),
-                            new(StaticEffect.Evade, 52),
-                            new(StaticEffect.Defense, 285),
+                            new(StaticEffectContext.Hp, 20350),
+                            new(StaticEffectContext.Attack, 1638),
+                            new(StaticEffectContext.Evade, 52),
+                            new(StaticEffectContext.Defense, 285),
                             AccuracyList[64]
                         }
                     },
@@ -797,11 +732,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         66,
                         new[]
                         {
-                            new(StaticEffect.Hp, 20650),
-                            new(StaticEffect.Attack, 1656),
-                            new(StaticEffect.CriticalDamage, 1324),
-                            new(StaticEffect.Evade, 53),
-                            new(StaticEffect.Defense, 289),
+                            new(StaticEffectContext.Hp, 20650),
+                            new(StaticEffectContext.Attack, 1656),
+                            new(StaticEffectContext.Evade, 53),
+                            new(StaticEffectContext.Defense, 289),
                             AccuracyList[65]
                         }
                     },
@@ -809,11 +743,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         67,
                         new[]
                         {
-                            new(StaticEffect.Hp, 20950),
-                            new(StaticEffect.Attack, 1692),
-                            new(StaticEffect.CriticalDamage, 1353),
-                            new(StaticEffect.Evade, 54),
-                            new(StaticEffect.Defense, 292),
+                            new(StaticEffectContext.Hp, 20950),
+                            new(StaticEffectContext.Attack, 1692),
+                            new(StaticEffectContext.Evade, 54),
+                            new(StaticEffectContext.Defense, 292),
                             AccuracyList[66]
                         }
                     },
@@ -821,11 +754,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         68,
                         new[]
                         {
-                            new(StaticEffect.Hp, 21250),
-                            new(StaticEffect.Attack, 1710),
-                            new(StaticEffect.CriticalDamage, 1368),
-                            new(StaticEffect.Evade, 55),
-                            new(StaticEffect.Defense, 297),
+                            new(StaticEffectContext.Hp, 21250),
+                            new(StaticEffectContext.Attack, 1710),
+                            new(StaticEffectContext.Evade, 55),
+                            new(StaticEffectContext.Defense, 297),
                             AccuracyList[67]
                         }
                     }

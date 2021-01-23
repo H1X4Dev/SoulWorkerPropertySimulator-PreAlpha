@@ -10,7 +10,7 @@ namespace SoulWorkerPropertySimulator.Models.Equipments
     public sealed record EquipmentBlueprint : Blueprint<Equipment>
     {
         public EquipmentBlueprint(string                                                 name,
-                                  ArmorField                                             field,
+                                  EquipmentField                                         field,
                                   int                                                    level,
                                   int                                                    randomAmount,
                                   IReadOnlyCollection<RandomEffect>                      randomEffects,
@@ -33,11 +33,12 @@ namespace SoulWorkerPropertySimulator.Models.Equipments
             RandomQuality = randomQuality;
         }
 
-        public ArmorField   Field         { get; init; }
-        public int          PluginLimit   { get; }
-        public RandomEffect RandomQuality { get; }
+        public EquipmentField Field         { get; init; }
+        public int            PluginLimit   { get; }
+        public RandomEffect   RandomQuality { get; }
 
-        public TagField TagField => Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear;
+        public TagField    TagField    => Field == EquipmentField.Weapon ? TagField.Weapon : TagField.Gear;
+        public PluginField PluginField => Field == EquipmentField.Weapon ? PluginField.Weapon : PluginField.Gear;
 
         public IReadOnlyCollection<int>? ValidStep
         {

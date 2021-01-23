@@ -84,10 +84,7 @@
                     @if (SelectedBlueprint!.PluginLimit > 0)
                     {
                         <PluginsCreator @ref="_pluginsCreator"
-                                         NotifyUpdate="Update"
-                                         Field="PluginField"
-                                         Limit="SelectedBlueprint!.PluginLimit"
-                                         WeaponLevel="SelectedBlueprint.Level"
+                                         EquipmentBlueprint="SelectedBlueprint"
                                          DefaultPlugins="DefaultArmor?.Plugins"/>
                     }
                 </div>
@@ -99,7 +96,7 @@
 @code
 {
     [Parameter]
-    public ArmorField Field { get; set; }
+    public EquipmentField Field { get; set; }
 
     [Parameter]
     public Equipment? DefaultArmor { get; set; }
@@ -182,7 +179,7 @@
         set
         {
             _selectedTagRare = value;
-            Update();
+            EquipmentCompute.Change(Field, Tag);
         }
     }
 
@@ -242,9 +239,9 @@
     protected override void OnInitialized()
     {
         base.OnInitializedAsync();
-        Options = Data.GetArmorBlueprints(Field).ToList();
-        TagOptions = Data.GetTags(Field == ArmorField.Weapon ? TagField.Weapon : TagField.Gear);
-        PluginField = Field == ArmorField.Weapon ? PluginField.Weapon : PluginField.Gear;
+        Options = Data.GetEquipmentBlueprints(Field).ToList();
+        TagOptions = Data.GetTags(Field == EquipmentField.Weapon ? TagField.Weapon : TagField.Gear);
+        PluginField = Field == EquipmentField.Weapon ? PluginField.Weapon : PluginField.Gear;
 
         if (DefaultArmor != null)
         {

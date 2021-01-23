@@ -20,7 +20,7 @@
         private const string First = @"<ul class=""list-group list-group-horizontal list-group-flush justify-content-evenly""><li class=""list-group list-group-horizontal"">";
         private const string Last = "</li></ul>";
 
-    private readonly IReadOnlyCollection<ArmorField> _fields = new[] {ArmorField.Weapon, ArmorField.Head, ArmorField.Shoulder, ArmorField.Chest, ArmorField.Leg};
+    private readonly IReadOnlyCollection<EquipmentField> _fields = new[] {EquipmentField.Weapon, EquipmentField.Head, EquipmentField.Shoulder, EquipmentField.Chest, EquipmentField.Leg};
 
         public const string Title = "武器與防具";
 
@@ -29,22 +29,22 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        EquipmentCompute.OnSetChange += SetBottom;
+        EquipmentCompute.OnSetChange += Bottom;
         Default = EquipmentCompute.Get().ToList();
         InfoService.SetTitle(nameof(EquipmentSetting), Title);
-        InfoService.SetBottom(nameof(EquipmentSetting), GetSetDescription(EquipmentCompute.GetSet().ToList()));
+        InfoService.SetBottom(nameof(EquipmentSetting), GetSetDescription(EquipmentCompute.GetSets().ToList()));
     }
 
-    public void SetBottom(IReadOnlyCollection<EquipmentSetEffect> sets) => InfoService.SetBottom(nameof(EquipmentSetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
+    public void Bottom(IReadOnlyCollection<EquipmentSet> sets) => InfoService.SetBottom(nameof(EquipmentSetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
 
     public void Dispose()
     {
         InfoService.SetTitle(nameof(EquipmentSetting), null);
         InfoService.SetBottom(nameof(EquipmentSetting), null);
-        EquipmentCompute.OnSetChange -= SetBottom;
+        EquipmentCompute.OnSetChange -= Bottom;
     }
 
-    private static string GetSetDescription(IReadOnlyCollection<EquipmentSetEffect> sets)
+    private static string GetSetDescription(IReadOnlyCollection<EquipmentSet> sets)
     {
         if (!sets.Any()) { return string.Empty; }
         var builder = new StringBuilder();

@@ -4,7 +4,7 @@
 @using SoulWorkerPropertySimulator.Types
 @using System.Diagnostics
 @inject IDataProvideService Data
-@inject IBroochesComputeService BroochesCompute
+@inject IBroochesSetComputeService BroochesSetCompute
 
 <div class="input-group my-1">
     <label class="input-group-text">@Type.GetDescription()</label>
@@ -75,9 +75,9 @@
     private void Update()
     {
         var item = Item;
-        if (item == null) { BroochesCompute.Clear(Field, Type); }
+        if (item == null) { BroochesSetCompute.Clear(Field, Type); }
         else
-        { BroochesCompute.Change(Field, item); }
+        { BroochesSetCompute.Change(Field, item); }
     }
 
     protected override void OnInitialized()
@@ -85,7 +85,7 @@
         base.OnInitialized();
         Options = Data.GetBrooches(Type).OrderBy(x => x.Series).ThenBy(x => x.Name).ToList();
 
-        var defaultItem = BroochesCompute.Get(Field, Type);
+        var defaultItem = BroochesSetCompute.Get(Field, Type);
         if (defaultItem != null)
         {
             _selected = defaultItem.DisplayName;

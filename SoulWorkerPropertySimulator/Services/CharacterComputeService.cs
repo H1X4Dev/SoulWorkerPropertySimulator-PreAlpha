@@ -1,5 +1,6 @@
 ﻿using System;
 using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Services.Scaffolding;
 using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Services
@@ -10,8 +11,6 @@ namespace SoulWorkerPropertySimulator.Services
         void       Change(Character? newItem);
         void       Change(Title?     title);
         void       Clear(TitleField  field);
-
-        // void       Change(int        level);
     }
 
     internal class CharacterComputeService : ComputeServiceBase, ICharacterComputeService
@@ -24,7 +23,7 @@ namespace SoulWorkerPropertySimulator.Services
         {
             var before = _character;
             _character = newItem;
-            NotifyChange(ComputeAffect(before, _character));
+            ProcessAffect(before, _character);
         }
 
         public void Change(Title? title)
@@ -39,7 +38,7 @@ namespace SoulWorkerPropertySimulator.Services
                 _                => throw new ArgumentOutOfRangeException()
             };
 
-            NotifyChange(ComputeAffect(before, _character));
+            ProcessAffect(before, _character);
         }
 
         public void Clear(TitleField field)
@@ -54,7 +53,7 @@ namespace SoulWorkerPropertySimulator.Services
                 _                => throw new ArgumentOutOfRangeException()
             };
 
-            NotifyChange(ComputeAffect(before, _character));
+            ProcessAffect(before, _character);
         }
     }
 }

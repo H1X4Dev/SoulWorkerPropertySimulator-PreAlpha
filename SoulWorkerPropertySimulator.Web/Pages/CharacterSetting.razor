@@ -18,7 +18,7 @@
         </select>
         <label class="input-group-text">等級</label>
         <select class="form-select w-25 flex-grow-0" @bind="Level">
-            @foreach (var level in SelectedCharter.ValidStep)
+            @foreach (var level in SelectedCharter.ValidStep.OrderByDescending(x => x))
             {
                 <option value="@level">@level</option>
             }

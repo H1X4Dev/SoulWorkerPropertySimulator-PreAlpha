@@ -15,7 +15,7 @@
                         <option></option>
                         @foreach (var item in Options)
                         {
-                            <option value="@item.GetHashCode()" disabled="@(item.Level > WeaponLevel)">@item.Name</option>
+                            <option value="@item.GetHashCode()" disabled="@(item.Level > Level)">@item.Name</option>
                         }
                     </select>
                 </div>
@@ -62,8 +62,8 @@
         }
     }
 
-    [CascadingParameter(Name = nameof(WeaponLevel))]
-    public int WeaponLevel { get; set; }
+    [CascadingParameter(Name = nameof(Level))]
+    public int Level { get; set; }
 
     [CascadingParameter(Name = nameof(Options))]
     public IReadOnlyCollection<PluginBlueprint> Options { get; set; } = null!;
@@ -137,7 +137,7 @@
     //     base.OnParametersSet();
     //     if (_processDefault && DefaultPlugin != null)
     //     {
-    //         _selected = DefaultPlugin.Blueprint.GetHashCode();
+    //         _selected = DefaultPlugin.EquipmentBlueprint.GetHashCode();
     //         _selectedStep = DefaultPlugin.Step;
     //         _processDefault = false;
     //     }

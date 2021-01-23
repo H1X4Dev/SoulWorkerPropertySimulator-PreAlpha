@@ -1,5 +1,5 @@
 ﻿@page "/accessory"
-@inject IAccessoryComputeService AccessoryCompute
+@inject IAccessorySetComputeService AccessorySetCompute
 @inject IPageInfoService InfoService
 @using SoulWorkerPropertySimulator.Services
 @using SoulWorkerPropertySimulator.Types
@@ -51,30 +51,30 @@
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        AccessoryCompute.OnSetChange += SetBottom;
-        Default = AccessoryCompute.Get().ToList();
+        AccessorySetCompute.OnSetChange += SetBottom;
+        Default = AccessorySetCompute.Get().ToList();
         InfoService.SetTitle(nameof(AccessorySetting), Title);
-        InfoService.SetBottom(nameof(AccessorySetting), GetSetDescription(AccessoryCompute.GetSet().ToList()));
+        InfoService.SetBottom(nameof(AccessorySetting), GetSetDescription(AccessorySetCompute.GetSets().ToList()));
     }
 
-    public void SetBottom(IReadOnlyCollection<AccessorySetEffect> sets) => InfoService.SetBottom(nameof(AccessorySetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
+    public void SetBottom(IReadOnlyCollection<AccessorySet> sets) => InfoService.SetBottom(nameof(AccessorySetting), GetSetDescription(sets.OrderBy(x => x.Name).ToList()));
 
     public void Update(AccessoryField field)
     {
         var accessories = Pickers.Select(x => x.Item).Where(x => x != null && x.Field == field).ToList();
-        if (!accessories.Any()) { AccessoryCompute.Clear(field); }
+        if (!accessories.Any()) { AccessorySetCompute.Clear(field); }
         else
-        { AccessoryCompute.Change(accessories!); }
+        { AccessorySetCompute.Change(accessories!); }
     }
 
     public void Dispose()
     {
         InfoService.SetTitle(nameof(AccessorySetting), null);
         InfoService.SetBottom(nameof(AccessorySetting), null);
-        AccessoryCompute.OnSetChange -= SetBottom;
+        AccessorySetCompute.OnSetChange -= SetBottom;
     }
 
-    private static string? GetSetDescription(IReadOnlyCollection<AccessorySetEffect> sets)
+    private static string? GetSetDescription(IReadOnlyCollection<AccessorySet> sets)
     {
         if (!sets.Any()) { return string.Empty; }
         var builder = new StringBuilder();

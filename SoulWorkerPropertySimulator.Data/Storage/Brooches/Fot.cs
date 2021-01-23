@@ -99,7 +99,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new[] {new(StaticEffect.CriticalRate, .08m), share.EvadeM38}},
+                        {BroochesRare.Tera, new[] {new(StaticEffectContext.CriticalRate, .08m), share.EvadeM38}},
                         {BroochesRare.Giga, new[] {share.CriticalRate004, share.EvadeM38}},
                         {BroochesRare.Mega, new[] {share.CriticalRate003, share.EvadeM38}},
                         {BroochesRare.Kilo, new[] {share.CriticalRate002, share.EvadeM38}},

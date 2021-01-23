@@ -6,30 +6,37 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static class AccessorySetData
     {
-        private static readonly IReadOnlyCollection<AccessorySetEffect> Result = new List<AccessorySetEffect>
+        private static readonly IReadOnlyCollection<AccessorySet> Result = new List<AccessorySet>
         {
             new("暮光",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
-                    {2, new Effect[] {new(StaticEffect.Stamina, 17), new(StaticEffect.CriticalDamage, 2_200)}},
+                    {
+                        2,
+                        new Effect[]
+                        {
+                            new(StaticEffectContext.Stamina, 17), new(StaticEffectContext.CriticalDamage, 2_200)
+                        }
+                    },
                     {
                         3,
                         new Effect[]
                         {
-                            new(StaticEffect.Accuracy, 370), new(StaticEffect.ExtraDamageRateBoss, .35m)
+                            new(StaticEffectContext.Accuracy, 370),
+                            new(StaticEffectContext.ExtraDamageRateBoss, .35m)
                         }
                     },
                     {
                         4,
                         new Effect[]
                         {
-                            new(StaticEffect.CooldownShorterRate, .8m),
-                            new(StaticEffect.DefenseBreakRate, .12m)
+                            new(StaticEffectContext.CooldownShorterRate, .8m),
+                            new(StaticEffectContext.DefenseBreakRate, .12m)
                         }
                     }
                 })
         };
 
-        internal static IReadOnlyCollection<AccessorySetEffect> Get() => Result;
+        internal static IReadOnlyCollection<AccessorySet> Get() => Result;
     }
 }

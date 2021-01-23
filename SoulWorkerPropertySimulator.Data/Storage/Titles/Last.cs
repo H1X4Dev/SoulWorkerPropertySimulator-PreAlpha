@@ -31,7 +31,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new(TitleField.Last, 4, "炮火", share.ArrayDefenseRate00135),
                 new(TitleField.Last, 4, "炮火", share.ArrayDefenseRate00135),
                 new(TitleField.Last, 4, "槍擊", share.ArrayDefenseRate00135),
-                new(TitleField.Last, 5, "霸王", new[] {share.AttackRate0018, new(StaticEffect.DefenseRate, -.0135m)}),
+                new(TitleField.Last,
+                    5,
+                    "霸王",
+                    new[] {share.AttackRate0018, new(StaticEffectContext.DefenseRate, -.0135m)}),
                 new(TitleField.Last, 6, "降臨者", new[] {share.DefenseRate0018, share.AttackRateM00135}),
                 new(TitleField.Last, 7, "緣分", share.ArrayAttackRate00135),
                 new(TitleField.Last, 8, "彷徨的少女", share.ArrayDefenseRate00135),
@@ -74,7 +77,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         share.HpRate012,
                         share.AttackRateM00225,
-                        new(StaticEffect.KillHpRecovery, 52.8m),
+                        new(StaticEffectContext.KillHpRecovery, 52.8m),
                         share.Stamina11,
                         share.CooldownShorterRate002
                     }),
@@ -104,7 +107,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new[]
                     {
                         share.DefenseRate0054,
-                        new(StaticEffect.DamageReductionRateBasic, .035m),
+                        new(StaticEffectContext.DamageReductionRateBasic, .035m),
                         share.DamageReductionRateBoss0035,
                         share.ExpVolumeRateEnemy009,
                         share.Evade64
@@ -119,7 +122,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new(TitleField.Last,
                     31,
                     "小市民",
-                    new[] {share.DefenseRate0018, new(StaticEffect.DamageReductionRateBasic, .015m)}),
+                    new[] {share.DefenseRate0018, new(StaticEffectContext.DamageReductionRateBasic, .015m)}),
                 new(TitleField.Last, 32, "市民", new[] {share.DefenseRate00225, share.DamageReductionRateBasic002}),
                 new(TitleField.Last, 33, "挑釁者", new[] {share.DefenseRate0027, share.DamageReductionRateBasic002}),
                 new(TitleField.Last,
@@ -146,7 +149,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new[]
                     {
                         share.DefenseRate00315,
-                        new(StaticEffect.DamageReductionRateBoss, .025m),
+                        new(StaticEffectContext.DamageReductionRateBoss, .025m),
                         share.SuperArmorBreakPowerRate0025
                     }),
                 new(TitleField.Last,
@@ -194,9 +197,9 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     "將軍",
                     new[]
                     {
-                        new(StaticEffect.AttackRate, .072m),
+                        new(StaticEffectContext.AttackRate, .072m),
                         share.AttackSpeedRateM003,
-                        new(StaticEffect.CriticalDamage, 1032),
+                        new(StaticEffectContext.CriticalDamage, 1032),
                         share.SuperArmorBreakPowerRate0045
                     }),
                 new(TitleField.Last,
@@ -215,55 +218,55 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new[]
                     {
                         share.AttackRate0081,
-                        new(StaticEffect.AttackSpeedRate, -.025m),
-                        new(StaticEffect.CriticalDamage, 1161),
+                        new(StaticEffectContext.AttackSpeedRate, -.025m),
+                        new(StaticEffectContext.CriticalDamage, 1161),
                         share.SuperArmorBreakPowerRate005,
-                        new(StaticEffect.CriticalRate, .045m)
+                        new(StaticEffectContext.CriticalRate, .045m)
                     }),
                 new(TitleField.Last,
                     51,
                     "逃避者",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRatePrimal, .01m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRatePrimal, .01m)}),
                 new(TitleField.Last,
                     52,
                     "紮破者",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRatePrimal, .015m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRatePrimal, .015m)}),
                 new(TitleField.Last,
                     53,
                     "透視者",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRatePrimal, .02m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRatePrimal, .02m)}),
                 new(TitleField.Last,
                     54,
                     "毀滅者",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRatePrimal, .025m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRatePrimal, .025m)}),
                 new(TitleField.Last,
                     55,
                     "洗澡",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateJunk, .01m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateJunk, .01m)}),
                 new(TitleField.Last,
                     56,
                     "感覺",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateJunk, .015m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateJunk, .015m)}),
                 new(TitleField.Last,
                     57,
                     "居民",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateJunk, .02m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateJunk, .02m)}),
                 new(TitleField.Last,
                     58,
                     "清道夫",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateJunk, .025m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateJunk, .025m)}),
                 new(TitleField.Last,
                     59,
                     "信任",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateNed, .01m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateNed, .01m)}),
                 new(TitleField.Last,
                     60,
                     "憤怒",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateNed, .015m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateNed, .015m)}),
                 new(TitleField.Last,
                     61,
                     "復仇者",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateNed, .02m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateNed, .02m)}),
                 new(TitleField.Last,
                     62,
                     "復仇者",
@@ -276,15 +279,15 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new(TitleField.Last,
                     63,
                     "消防員",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateFlame, .01m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateFlame, .01m)}),
                 new(TitleField.Last,
                     64,
                     "追逐者",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateFlame, .015m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateFlame, .015m)}),
                 new(TitleField.Last,
                     65,
                     "教練",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateFlame, .02m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateFlame, .02m)}),
                 new(TitleField.Last,
                     66,
                     "戰士",
@@ -297,23 +300,23 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 new(TitleField.Last,
                     67,
                     "破壞犯",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateIron, .01m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateIron, .01m)}),
                 new(TitleField.Last,
                     68,
                     "破壞狂",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateIron, .015m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateIron, .015m)}),
                 new(TitleField.Last,
                     69,
                     "摧毀者",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DamageReductionRateIron, .02m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DamageReductionRateIron, .02m)}),
                 new(TitleField.Last,
                     70,
                     "工程師",
                     new[]
                     {
                         share.MoveSpaceRate005,
-                        new(StaticEffect.DamageReductionRateIron, .025m),
-                        new(StaticEffect.DamageReductionRateSoul, .025m)
+                        new(StaticEffectContext.DamageReductionRateIron, .025m),
+                        new(StaticEffectContext.DamageReductionRateSoul, .025m)
                     }),
                 new(TitleField.Last,
                     71,
@@ -327,7 +330,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         share.Stamina11,
                         share.DefenseRateM00225,
                         share.DamageReductionRateSoul0045,
-                        new(StaticEffect.Evade, 86)
+                        new(StaticEffectContext.Evade, 86)
                     }),
                 new(TitleField.Last,
                     73,
@@ -486,7 +489,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         share.MoveSpaceRateM005,
                         share.DefenseBreakRate002,
                         share.DamageReductionRate004,
-                        new(StaticEffect.CriticalResistanceRate, .04m)
+                        new(StaticEffectContext.CriticalResistanceRate, .04m)
                     }),
                 new(TitleField.Last, 102, "挖掘機", new[] {share.Stamina6, share.MoneyVolumeRateEnemy00375}),
                 new(TitleField.Last,
@@ -553,7 +556,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         share.HpRateM00525,
                         share.DamageReductionRateSix005,
                         share.CriticalRate005,
-                        new(StaticEffect.DamageReductionRateBoss, .04m)
+                        new(StaticEffectContext.DamageReductionRateBoss, .04m)
                     }),
                 new(TitleField.Last,
                     113,
@@ -564,18 +567,18 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         share.HpRateM0045,
                         share.DamageReductionRateSix005,
                         share.CriticalRate005,
-                        new(StaticEffect.DamageReductionRateBoss, .045m)
+                        new(StaticEffectContext.DamageReductionRateBoss, .045m)
                     }),
                 new(TitleField.Last, 114, "流浪者", new[] {share.MoveSpaceRate003}),
                 new(TitleField.Last, 115, "聊天者", new[] {share.MoveSpaceRate005}),
                 new(TitleField.Last,
                     116,
                     "吟游詩人",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DefenseRate, .0045m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DefenseRate, .0045m)}),
                 new(TitleField.Last,
                     117,
                     "記錄者",
-                    new[] {share.MoveSpaceRate005, new(StaticEffect.DefenseRate, .009m)}),
+                    new[] {share.MoveSpaceRate005, new(StaticEffectContext.DefenseRate, .009m)}),
                 new(TitleField.Last, 118, "迷信者", new[] {share.AttackRate0027, share.Evade32}),
                 new(TitleField.Last, 119, "駭客", new[] {share.AttackRate0036, share.Evade43}),
                 new(TitleField.Last, 120, "機會", new[] {share.AttackRate0027, share.MoneyVolumeRateEnemy0045}),
@@ -663,7 +666,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         share.MoveSpaceRate005,
                         share.SoulNovaVolumeRate003,
-                        new(StaticEffect.DamageReductionRatePrimal, .035m)
+                        new(StaticEffectContext.DamageReductionRatePrimal, .035m)
                     }),
                 new(TitleField.Last,
                     148,
@@ -672,7 +675,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         share.MoveSpaceRate005,
                         share.SoulNovaVolumeRate003,
-                        new(StaticEffect.DamageReductionRateJunk, .035m)
+                        new(StaticEffectContext.DamageReductionRateJunk, .035m)
                     }),
                 new(TitleField.Last,
                     149,
@@ -681,7 +684,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         share.MoveSpaceRate005,
                         share.SoulNovaVolumeRate003,
-                        new(StaticEffect.DamageReductionRateFlame, .035m)
+                        new(StaticEffectContext.DamageReductionRateFlame, .035m)
                     }),
                 new(TitleField.Last,
                     150,
@@ -690,7 +693,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         share.MoveSpaceRate005,
                         share.SoulNovaVolumeRate003,
-                        new(StaticEffect.DamageReductionRateIron, .035m)
+                        new(StaticEffectContext.DamageReductionRateIron, .035m)
                     }),
                 new(TitleField.Last,
                     151,
@@ -699,7 +702,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     {
                         share.MoveSpaceRate005,
                         share.SoulNovaVolumeRate003,
-                        new(StaticEffect.DamageReductionRateSix, .035m)
+                        new(StaticEffectContext.DamageReductionRateSix, .035m)
                     }),
                 new(TitleField.Last, 152, "大王", new[] {share.AttackRate00225}),
                 new(TitleField.Last, 153, "生命", new[] {share.AttackRate00315, share.SoulNovaVolumeRate003}),
@@ -736,18 +739,18 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     "魔王",
                     new[]
                     {
-                        new(StaticEffect.CriticalDamage, 550),
+                        new(StaticEffectContext.CriticalDamage, 550),
                         share.ExtraDamageRateBoss0045,
                         share.AttackSpeedRate0035,
                         share.SoulNovaVolumeRate003,
-                        new(StaticEffect.CooldownShorterRate, -.03m)
+                        new(StaticEffectContext.CooldownShorterRate, -.03m)
                     }),
                 new(TitleField.Last,
                     177,
                     "尊敬",
                     new[]
                     {
-                        new(StaticEffect.DefenseRate, .06m),
+                        new(StaticEffectContext.DefenseRate, .06m),
                         share.DamageReductionRateBoss0035,
                         share.SuperArmorBreakPowerRate003
                     }),
@@ -756,37 +759,38 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     "大將",
                     new[]
                     {
-                        new(StaticEffect.DamageReductionRatePartialDamage, .05m),
+                        new(StaticEffectContext.DamageReductionRatePartialDamage, .05m),
                         share.SGateReducedRate003,
-                        new(StaticEffect.MoneyVolumeRateEnemy, .07m),
-                        new(StaticEffect.Evade, 45),
-                        new(StaticEffect.DamageReductionRateFall, .05m)
+                        new(StaticEffectContext.MoneyVolumeRateEnemy, .07m),
+                        new(StaticEffectContext.Evade, 45),
+                        new(StaticEffectContext.DamageReductionRateFall, .05m)
                     }),
                 new(TitleField.Last,
                     179,
                     "金手",
                     new Effect[]
                     {
-                        new(StaticEffect.MoneyVolumeRateEnemy, .10m), new(StaticEffect.SoulNovaVolumeRate, .05m)
+                        new(StaticEffectContext.MoneyVolumeRateEnemy, .10m),
+                        new(StaticEffectContext.SoulNovaVolumeRate, .05m)
                     }),
                 new(TitleField.Last,
                     180,
                     "遊戲",
                     new[]
                     {
-                        new(StaticEffect.DefenseRate, .08m),
+                        new(StaticEffectContext.DefenseRate, .08m),
                         share.MoveSpaceRateM005,
                         share.SoulNovaVolumeRate003,
                         share.DamageReductionRate003,
-                        new(StaticEffect.CriticalRate, -.01m)
+                        new(StaticEffectContext.CriticalRate, -.01m)
                     }),
                 new(TitleField.Last,
                     181,
                     "紀念物",
                     new[]
                     {
-                        new(StaticEffect.Stamina, 7.2m),
-                        new(StaticEffect.Hp, 550),
+                        new(StaticEffectContext.Stamina, 7.2m),
+                        new(StaticEffectContext.Hp, 550),
                         share.SuperArmorBreakPowerRate0025,
                         share.CriticalRate002
                     }),
@@ -796,7 +800,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new[]
                     {
                         share.AttackSpeedRate004,
-                        new(StaticEffect.SoulNovaVolumeRate, .035m),
+                        new(StaticEffectContext.SoulNovaVolumeRate, .035m),
                         share.ExtraDamageRateJunk0025,
                         share.ExtraDamageRateBasic003
                     }),
@@ -882,8 +886,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     "傷痕",
                     new[]
                     {
-                        new(StaticEffect.DefenseRate, .04m),
-                        new(StaticEffect.DamageReductionRateBasic, .05m),
+                        new(StaticEffectContext.DefenseRate, .04m),
+                        new(StaticEffectContext.DamageReductionRateBasic, .05m),
                         share.DamageReductionRateBoss005
                     }),
                 new(TitleField.Last,
@@ -891,8 +895,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     "白色騎士",
                     new[]
                     {
-                        new(StaticEffect.CooldownShorterRate, .03m),
-                        new(StaticEffect.SoulGateConsumptionReducedRate, .045m),
+                        new(StaticEffectContext.CooldownShorterRate, .03m),
+                        new(StaticEffectContext.SoulGateConsumptionReducedRate, .045m),
                         share.HpRate01,
                         share.DamageReductionRateBoss005
                     }),
@@ -902,7 +906,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new[]
                     {
                         share.CriticalRate002,
-                        new(StaticEffect.CriticalDamage, 500),
+                        new(StaticEffectContext.CriticalDamage, 500),
                         share.Stamina5,
                         share.MoveSpaceRate003
                     }),

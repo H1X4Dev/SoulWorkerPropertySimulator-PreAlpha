@@ -8,16 +8,16 @@ namespace SoulWorkerPropertySimulator.Data.Storage
 {
     internal static partial class BroochesData
     {
-        private static Brooch _sdA1;
-        private static Brooch _sdA2;
-        private static Brooch _sdA3;
-        private static Brooch _sdA4;
-        private static Brooch _sdA9;
-        private static Brooch _sdA14;
-        private static Brooch _sdA15;
-        private static Brooch _sdD6;
-        private static Brooch _sdE3;
-        private static Brooch _sdE8;
+        private static Brooch _sdA1  = null!;
+        private static Brooch _sdA2  = null!;
+        private static Brooch _sdA3  = null!;
+        private static Brooch _sdA4  = null!;
+        private static Brooch _sdA9  = null!;
+        private static Brooch _sdA14 = null!;
+        private static Brooch _sdA15 = null!;
+        private static Brooch _sdD6  = null!;
+        private static Brooch _sdE3  = null!;
+        private static Brooch _sdE8  = null!;
 
         #region
 
@@ -30,11 +30,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 BroochesType.Attack,
                 new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                 {
-                    {BroochesRare.Tera, new Effect[] {new(StaticEffect.Accuracy, 52)}},
-                    {BroochesRare.Giga, new Effect[] {new(StaticEffect.Accuracy, 42)}},
-                    {BroochesRare.Mega, new Effect[] {new(StaticEffect.Accuracy, 31)}},
-                    {BroochesRare.Kilo, new Effect[] {new(StaticEffect.Accuracy, 21)}},
-                    {BroochesRare.Byte, new Effect[] {new(StaticEffect.Accuracy, 10)}}
+                    {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.Accuracy, 52)}},
+                    {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.Accuracy, 42)}},
+                    {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.Accuracy, 31)}},
+                    {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.Accuracy, 21)}},
+                    {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.Accuracy, 10)}}
                 });
             _sdA2 = new("致命",
                 BroochesSeries.Sd,
@@ -74,22 +74,22 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 BroochesType.Attack,
                 new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                 {
-                    {BroochesRare.Tera, new Effect[] {new(StaticEffect.PartialDamageRate, .2m)}},
-                    {BroochesRare.Giga, new Effect[] {new(StaticEffect.PartialDamageRate, .16m)}},
-                    {BroochesRare.Mega, new Effect[] {new(StaticEffect.PartialDamageRate, .12m)}},
-                    {BroochesRare.Kilo, new Effect[] {new(StaticEffect.PartialDamageRate, .08m)}},
-                    {BroochesRare.Byte, new Effect[] {new(StaticEffect.PartialDamageRate, .04m)}}
+                    {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.PartialDamageRate, .2m)}},
+                    {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.PartialDamageRate, .16m)}},
+                    {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.PartialDamageRate, .12m)}},
+                    {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.PartialDamageRate, .08m)}},
+                    {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.PartialDamageRate, .04m)}}
                 });
             _sdA14 = new("黃蜂",
                 BroochesSeries.Sd,
                 BroochesType.Attack,
                 new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                 {
-                    {BroochesRare.Tera, new Effect[] {new(StaticEffect.ExtraDamageRateAir, .2m)}},
-                    {BroochesRare.Giga, new Effect[] {new(StaticEffect.ExtraDamageRateAir, .16m)}},
-                    {BroochesRare.Mega, new Effect[] {new(StaticEffect.ExtraDamageRateAir, .12m)}},
-                    {BroochesRare.Kilo, new Effect[] {new(StaticEffect.ExtraDamageRateAir, .08m)}},
-                    {BroochesRare.Byte, new Effect[] {new(StaticEffect.ExtraDamageRateAir, .04m)}}
+                    {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.ExtraDamageRateAir, .2m)}},
+                    {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.ExtraDamageRateAir, .16m)}},
+                    {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.ExtraDamageRateAir, .12m)}},
+                    {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.ExtraDamageRateAir, .08m)}},
+                    {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.ExtraDamageRateAir, .04m)}}
                 });
             _sdA15 = new("踐踏",
                 BroochesSeries.Sd,
@@ -107,11 +107,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 BroochesType.Defense,
                 new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                 {
-                    {BroochesRare.Tera, new Effect[] {new(StaticEffect.DamageReductionRateBoss, .05m)}},
-                    {BroochesRare.Giga, new Effect[] {new(StaticEffect.DamageReductionRateBoss, .04m)}},
-                    {BroochesRare.Mega, new Effect[] {new(StaticEffect.DamageReductionRateBoss, .03m)}},
-                    {BroochesRare.Kilo, new Effect[] {new(StaticEffect.DamageReductionRateBoss, .02m)}},
-                    {BroochesRare.Byte, new Effect[] {new(StaticEffect.DamageReductionRateBoss, .01m)}}
+                    {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.DamageReductionRateBoss, .05m)}},
+                    {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.DamageReductionRateBoss, .04m)}},
+                    {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.DamageReductionRateBoss, .03m)}},
+                    {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.DamageReductionRateBoss, .02m)}},
+                    {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.DamageReductionRateBoss, .01m)}}
                 });
 
             _sdE3 = new("行軍",
@@ -119,11 +119,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 BroochesType.Effect,
                 new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                 {
-                    {BroochesRare.Tera, new Effect[] {new(StaticEffect.MoveSpaceRateTown, .06m)}},
-                    {BroochesRare.Giga, new Effect[] {new(StaticEffect.MoveSpaceRateTown, .05m)}},
-                    {BroochesRare.Mega, new Effect[] {new(StaticEffect.MoveSpaceRateTown, .04m)}},
-                    {BroochesRare.Kilo, new Effect[] {new(StaticEffect.MoveSpaceRateTown, .03m)}},
-                    {BroochesRare.Byte, new Effect[] {new(StaticEffect.MoveSpaceRateTown, .02m)}}
+                    {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.MoveSpaceRateTown, .06m)}},
+                    {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.MoveSpaceRateTown, .05m)}},
+                    {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.MoveSpaceRateTown, .04m)}},
+                    {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.MoveSpaceRateTown, .03m)}},
+                    {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.MoveSpaceRateTown, .02m)}}
                 });
             _sdE8 = new("迅速",
                 BroochesSeries.Sd,
@@ -159,7 +159,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.ExtraDamageRateBoss, .05m)}},
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.ExtraDamageRateBoss, .05m)}},
                         {BroochesRare.Giga, new[] {share.ExtraDamageRateBoss002}}
                     }),
 
@@ -169,8 +169,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.ExtraDamageRateBasic, .05m)}},
-                        {BroochesRare.Giga, new Effect[] {new(StaticEffect.ExtraDamageRateBasic, .02m)}}
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.ExtraDamageRateBasic, .05m)}},
+                        {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.ExtraDamageRateBasic, .02m)}}
                     }),
 
                 // sdA7
@@ -189,11 +189,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.Attack, 405)}},
-                        {BroochesRare.Giga, new Effect[] {new(StaticEffect.Attack, 315)}},
-                        {BroochesRare.Mega, new Effect[] {new(StaticEffect.Attack, 225)}},
-                        {BroochesRare.Kilo, new Effect[] {new(StaticEffect.Attack, 135)}},
-                        {BroochesRare.Byte, new Effect[] {new(StaticEffect.Attack, 45)}}
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.Attack, 405)}},
+                        {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.Attack, 315)}},
+                        {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.Attack, 225)}},
+                        {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.Attack, 135)}},
+                        {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.Attack, 45)}}
                     }),
 
                 // sdA9
@@ -202,11 +202,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Attack,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.PartialDamageRate, .2m)}},
-                        {BroochesRare.Giga, new Effect[] {new(StaticEffect.PartialDamageRate, .16m)}},
-                        {BroochesRare.Mega, new Effect[] {new(StaticEffect.PartialDamageRate, .12m)}},
-                        {BroochesRare.Kilo, new Effect[] {new(StaticEffect.PartialDamageRate, .08m)}},
-                        {BroochesRare.Byte, new Effect[] {new(StaticEffect.PartialDamageRate, .04m)}}
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.PartialDamageRate, .2m)}},
+                        {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.PartialDamageRate, .16m)}},
+                        {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.PartialDamageRate, .12m)}},
+                        {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.PartialDamageRate, .08m)}},
+                        {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.PartialDamageRate, .04m)}}
                     }),
 
                 // sdA10
@@ -277,10 +277,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.AttackRateOriginal, .54m)}},
-                        {BroochesRare.Giga, new Effect[] {new(StaticEffect.AttackRateOriginal, .45m)}},
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.AttackRateOriginal, .54m)}},
+                        {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.AttackRateOriginal, .45m)}},
                         {BroochesRare.Mega, new[] {share.AttackRateOriginal036}},
-                        {BroochesRare.Kilo, new Effect[] {new(StaticEffect.AttackRateOriginal, .27m)}},
+                        {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.AttackRateOriginal, .27m)}},
                         {BroochesRare.Byte, new[] {share.AttackRateOriginal018}}
                     }),
 
@@ -290,11 +290,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.CriticalResistanceRate, .06m)}},
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.CriticalResistanceRate, .06m)}},
                         {BroochesRare.Giga, new[] {share.CriticalResistanceRate004}},
                         {BroochesRare.Mega, new[] {share.CriticalResistanceRate003}},
                         {BroochesRare.Kilo, new[] {share.CriticalResistanceRate002}},
-                        {BroochesRare.Byte, new Effect[] {new(StaticEffect.CriticalResistanceRate, .01m)}}
+                        {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.CriticalResistanceRate, .01m)}}
                     }),
 
                 // sdD3
@@ -303,11 +303,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.Evade, 52)}},
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.Evade, 52)}},
                         {BroochesRare.Giga, new[] {share.Evade42}},
-                        {BroochesRare.Mega, new Effect[] {new(StaticEffect.Evade, 31)}},
-                        {BroochesRare.Kilo, new Effect[] {new(StaticEffect.Evade, 21)}},
-                        {BroochesRare.Byte, new Effect[] {new(StaticEffect.Evade, 10)}}
+                        {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.Evade, 31)}},
+                        {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.Evade, 21)}},
+                        {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.Evade, 10)}}
                     }),
 
                 // sdD4
@@ -329,11 +329,11 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.DamageReductionRateBasic, .07m)}},
-                        {BroochesRare.Giga, new Effect[] {new(StaticEffect.DamageReductionRateBasic, .05m)}},
-                        {BroochesRare.Mega, new Effect[] {new(StaticEffect.DamageReductionRateBasic, .04m)}},
-                        {BroochesRare.Kilo, new Effect[] {new(StaticEffect.DamageReductionRateBasic, .02m)}},
-                        {BroochesRare.Byte, new Effect[] {new(StaticEffect.DamageReductionRateBasic, .01m)}}
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.DamageReductionRateBasic, .07m)}},
+                        {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.DamageReductionRateBasic, .05m)}},
+                        {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.DamageReductionRateBasic, .04m)}},
+                        {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.DamageReductionRateBasic, .02m)}},
+                        {BroochesRare.Byte, new Effect[] {new(StaticEffectContext.DamageReductionRateBasic, .01m)}}
                     }),
 
                 // sdD6
@@ -410,10 +410,10 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.HpRate, .12m)}},
-                        {BroochesRare.Giga, new Effect[] {new(StaticEffect.HpRate, .1m)}},
-                        {BroochesRare.Mega, new Effect[] {new(StaticEffect.HpRate, .07m)}},
-                        {BroochesRare.Kilo, new Effect[] {new(StaticEffect.HpRate, .05m)}},
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.HpRate, .12m)}},
+                        {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.HpRate, .1m)}},
+                        {BroochesRare.Mega, new Effect[] {new(StaticEffectContext.HpRate, .07m)}},
+                        {BroochesRare.Kilo, new Effect[] {new(StaticEffectContext.HpRate, .05m)}},
                         {BroochesRare.Byte, new[] {share.HpRate002}}
                     }),
 
@@ -423,8 +423,8 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     BroochesType.Defense,
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
-                        {BroochesRare.Tera, new Effect[] {new(StaticEffect.StaminaRecovery, 8)}},
-                        {BroochesRare.Giga, new Effect[] {new(StaticEffect.StaminaRecovery, 6)}}
+                        {BroochesRare.Tera, new Effect[] {new(StaticEffectContext.StaminaRecovery, 8)}},
+                        {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.StaminaRecovery, 6)}}
                     }),
 
                 // sdD14
@@ -434,7 +434,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                     new Dictionary<BroochesRare, IReadOnlyCollection<Effect>>
                     {
                         {BroochesRare.Tera, new[] {share.DamageReductionRate005}},
-                        {BroochesRare.Giga, new Effect[] {new(StaticEffect.DamageReductionRate, .02m)}}
+                        {BroochesRare.Giga, new Effect[] {new(StaticEffectContext.DamageReductionRate, .02m)}}
                     }),
 
                 // sdD15

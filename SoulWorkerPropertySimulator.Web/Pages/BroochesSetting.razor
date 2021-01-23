@@ -1,6 +1,6 @@
 ﻿@page "/brooches"
 @inject IPageInfoService InfoService
-@inject IBroochesComputeService BroochesCompute
+@inject IBroochesSetComputeService BroochesSetCompute
 @using SoulWorkerPropertySimulator.Extensions
 @using SoulWorkerPropertySimulator.Models.Brooches
 @using SoulWorkerPropertySimulator.Services
@@ -45,7 +45,7 @@
         base.OnInitialized();
 
         InfoService.SetTitle(nameof(Detail), Title);
-        BroochesCompute.OnSetChange += SetChange;
+        BroochesSetCompute.OnSetChange += SetChange;
         foreach (var field in Enum.GetValues<BroochesField>()) { _set[field] = null; }
     }
 
@@ -66,7 +66,7 @@
     public void Dispose()
     {
         InfoService.SetTitle(nameof(Detail), null);
-        BroochesCompute.OnSetChange -= SetChange;
+        BroochesSetCompute.OnSetChange -= SetChange;
     }
 
 }

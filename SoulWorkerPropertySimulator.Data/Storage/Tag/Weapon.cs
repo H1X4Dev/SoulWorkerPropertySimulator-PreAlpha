@@ -16,27 +16,51 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 {
                     {
                         ItemRare.Heroic,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 481), new Effect(StaticEffect.Attack, 112)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 481),
+                            new Effect(StaticEffectContext.Attack, 112)
+                        }
                     },
                     {
                         ItemRare.Legendary,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 359), new Effect(StaticEffect.Attack, 96)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 359),
+                            new Effect(StaticEffectContext.Attack, 96)
+                        }
                     },
                     {
                         ItemRare.Unique,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 252), new Effect(StaticEffect.Attack, 72)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 252),
+                            new Effect(StaticEffectContext.Attack, 72)
+                        }
                     },
                     {
                         ItemRare.Valuable,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 95), new Effect(StaticEffect.Attack, 48)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 95),
+                            new Effect(StaticEffectContext.Attack, 48)
+                        }
                     },
                     {
                         ItemRare.Magical,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 31), new Effect(StaticEffect.Attack, 24)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 31),
+                            new Effect(StaticEffectContext.Attack, 24)
+                        }
                     },
                     {
                         ItemRare.Common,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 16), new Effect(StaticEffect.Attack, 14)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 16),
+                            new Effect(StaticEffectContext.Attack, 14)
+                        }
                     }
                 }),
             new(TagField.Weapon,
@@ -45,27 +69,51 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 {
                     {
                         ItemRare.Heroic,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 541), new Effect(StaticEffect.Attack, 315)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 541),
+                            new Effect(StaticEffectContext.Attack, 315)
+                        }
                     },
                     {
                         ItemRare.Legendary,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 404), new Effect(StaticEffect.Attack, 252)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 404),
+                            new Effect(StaticEffectContext.Attack, 252)
+                        }
                     },
                     {
                         ItemRare.Unique,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 283), new Effect(StaticEffect.Attack, 189)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 283),
+                            new Effect(StaticEffectContext.Attack, 189)
+                        }
                     },
                     {
                         ItemRare.Valuable,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 107), new Effect(StaticEffect.Attack, 126)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 107),
+                            new Effect(StaticEffectContext.Attack, 126)
+                        }
                     },
                     {
                         ItemRare.Magical,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 35), new Effect(StaticEffect.Attack, 63)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 35),
+                            new Effect(StaticEffectContext.Attack, 63)
+                        }
                     },
                     {
                         ItemRare.Common,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 18), new Effect(StaticEffect.Attack, 32)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 18),
+                            new Effect(StaticEffectContext.Attack, 32)
+                        }
                     }
                 }),
             new(TagField.Weapon,
@@ -76,48 +124,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .13m),
-                            new Effect(StaticEffect.Accuracy, 315)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .13m),
+                            new Effect(StaticEffectContext.Accuracy, 315)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .1m),
-                            new Effect(StaticEffect.Accuracy, 252)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .1m),
+                            new Effect(StaticEffectContext.Accuracy, 252)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.Accuracy, 189)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.Accuracy, 189)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .06m),
-                            new Effect(StaticEffect.Accuracy, 126)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .06m),
+                            new Effect(StaticEffectContext.Accuracy, 126)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.Accuracy, 63)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.Accuracy, 63)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.Accuracy, 32)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.Accuracy, 32)
                         }
                     }
                 }),
@@ -129,48 +177,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .12m),
-                            new Effect(StaticEffect.Accuracy, 112)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .12m),
+                            new Effect(StaticEffectContext.Accuracy, 112)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.Accuracy, 96)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.Accuracy, 96)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .08m),
-                            new Effect(StaticEffect.Accuracy, 72)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .08m),
+                            new Effect(StaticEffectContext.Accuracy, 72)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .05m),
-                            new Effect(StaticEffect.Accuracy, 48)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .05m),
+                            new Effect(StaticEffectContext.Accuracy, 48)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.Accuracy, 24)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.Accuracy, 24)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.Accuracy, 14)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.Accuracy, 14)
                         }
                     }
                 }),
@@ -182,33 +230,49 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 481),
-                            new Effect(StaticEffect.AttackRate, .15m)
+                            new Effect(StaticEffectContext.WeaponAttack, 481),
+                            new Effect(StaticEffectContext.AttackRate, .15m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 359),
-                            new Effect(StaticEffect.AttackRate, .12m)
+                            new Effect(StaticEffectContext.WeaponAttack, 359),
+                            new Effect(StaticEffectContext.AttackRate, .12m)
                         }
                     },
                     {
                         ItemRare.Unique,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 252), new Effect(StaticEffect.AttackRate, .1m)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 252),
+                            new Effect(StaticEffectContext.AttackRate, .1m)
+                        }
                     },
                     {
                         ItemRare.Valuable,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 95), new Effect(StaticEffect.AttackRate, .08m)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 95),
+                            new Effect(StaticEffectContext.AttackRate, .08m)
+                        }
                     },
                     {
                         ItemRare.Magical,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 31), new Effect(StaticEffect.AttackRate, .05m)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 31),
+                            new Effect(StaticEffectContext.AttackRate, .05m)
+                        }
                     },
                     {
                         ItemRare.Common,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 16), new Effect(StaticEffect.AttackRate, .03m)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 16),
+                            new Effect(StaticEffectContext.AttackRate, .03m)
+                        }
                     }
                 }),
             new(TagField.Weapon,
@@ -219,48 +283,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .12m),
-                            new Effect(StaticEffect.AttackRate, .15m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .12m),
+                            new Effect(StaticEffectContext.AttackRate, .15m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.AttackRate, .12m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.AttackRate, .12m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .08m),
-                            new Effect(StaticEffect.AttackRate, .1m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .08m),
+                            new Effect(StaticEffectContext.AttackRate, .1m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .05m),
-                            new Effect(StaticEffect.AttackRate, .08m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .05m),
+                            new Effect(StaticEffectContext.AttackRate, .08m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.AttackRate, .05m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.AttackRate, .05m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.AttackRate, .03m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.AttackRate, .03m)
                         }
                     }
                 }),
@@ -272,48 +336,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 481),
-                            new Effect(StaticEffect.CriticalDamage, 384)
+                            new Effect(StaticEffectContext.WeaponAttack, 481),
+                            new Effect(StaticEffectContext.CriticalDamage, 384)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 359),
-                            new Effect(StaticEffect.CriticalDamage, 240)
+                            new Effect(StaticEffectContext.WeaponAttack, 359),
+                            new Effect(StaticEffectContext.CriticalDamage, 240)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 252),
-                            new Effect(StaticEffect.CriticalDamage, 200)
+                            new Effect(StaticEffectContext.WeaponAttack, 252),
+                            new Effect(StaticEffectContext.CriticalDamage, 200)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 95),
-                            new Effect(StaticEffect.CriticalDamage, 140)
+                            new Effect(StaticEffectContext.WeaponAttack, 95),
+                            new Effect(StaticEffectContext.CriticalDamage, 140)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 31),
-                            new Effect(StaticEffect.CriticalDamage, 80)
+                            new Effect(StaticEffectContext.WeaponAttack, 31),
+                            new Effect(StaticEffectContext.CriticalDamage, 80)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 16),
-                            new Effect(StaticEffect.CriticalDamage, 40)
+                            new Effect(StaticEffectContext.WeaponAttack, 16),
+                            new Effect(StaticEffectContext.CriticalDamage, 40)
                         }
                     }
                 }),
@@ -325,48 +389,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .12m),
-                            new Effect(StaticEffect.CriticalDamage, 384)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .12m),
+                            new Effect(StaticEffectContext.CriticalDamage, 384)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.CriticalDamage, 240)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.CriticalDamage, 240)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .08m),
-                            new Effect(StaticEffect.CriticalDamage, 200)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .08m),
+                            new Effect(StaticEffectContext.CriticalDamage, 200)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .05m),
-                            new Effect(StaticEffect.CriticalDamage, 140)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .05m),
+                            new Effect(StaticEffectContext.CriticalDamage, 140)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.CriticalDamage, 80)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.CriticalDamage, 80)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.CriticalDamage, 40)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.CriticalDamage, 40)
                         }
                     }
                 }),
@@ -378,48 +442,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 481),
-                            new Effect(StaticEffect.CriticalRate, .07m)
+                            new Effect(StaticEffectContext.WeaponAttack, 481),
+                            new Effect(StaticEffectContext.CriticalRate, .07m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 359),
-                            new Effect(StaticEffect.CriticalRate, .05m)
+                            new Effect(StaticEffectContext.WeaponAttack, 359),
+                            new Effect(StaticEffectContext.CriticalRate, .05m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 252),
-                            new Effect(StaticEffect.CriticalRate, .04m)
+                            new Effect(StaticEffectContext.WeaponAttack, 252),
+                            new Effect(StaticEffectContext.CriticalRate, .04m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 95),
-                            new Effect(StaticEffect.CriticalRate, .03m)
+                            new Effect(StaticEffectContext.WeaponAttack, 95),
+                            new Effect(StaticEffectContext.CriticalRate, .03m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 31),
-                            new Effect(StaticEffect.CriticalRate, .02m)
+                            new Effect(StaticEffectContext.WeaponAttack, 31),
+                            new Effect(StaticEffectContext.CriticalRate, .02m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 16),
-                            new Effect(StaticEffect.CriticalRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttack, 16),
+                            new Effect(StaticEffectContext.CriticalRate, .01m)
                         }
                     }
                 }),
@@ -431,48 +495,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .12m),
-                            new Effect(StaticEffect.CriticalRate, .07m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .12m),
+                            new Effect(StaticEffectContext.CriticalRate, .07m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.CriticalRate, .05m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.CriticalRate, .05m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .08m),
-                            new Effect(StaticEffect.CriticalRate, .04m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .08m),
+                            new Effect(StaticEffectContext.CriticalRate, .04m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .05m),
-                            new Effect(StaticEffect.CriticalRate, .03m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .05m),
+                            new Effect(StaticEffectContext.CriticalRate, .03m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.CriticalRate, .02m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.CriticalRate, .02m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.CriticalRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.CriticalRate, .01m)
                         }
                     }
                 }),
@@ -484,48 +548,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 481),
-                            new Effect(StaticEffect.DefenseBreakRate, .04m)
+                            new Effect(StaticEffectContext.WeaponAttack, 481),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .04m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 359),
-                            new Effect(StaticEffect.DefenseBreakRate, .04m)
+                            new Effect(StaticEffectContext.WeaponAttack, 359),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .04m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 252),
-                            new Effect(StaticEffect.DefenseBreakRate, .03m)
+                            new Effect(StaticEffectContext.WeaponAttack, 252),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .03m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 95),
-                            new Effect(StaticEffect.DefenseBreakRate, .02m)
+                            new Effect(StaticEffectContext.WeaponAttack, 95),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .02m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 31),
-                            new Effect(StaticEffect.DefenseBreakRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttack, 31),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .01m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 16),
-                            new Effect(StaticEffect.DefenseBreakRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttack, 16),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .01m)
                         }
                     }
                 }),
@@ -537,48 +601,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .12m),
-                            new Effect(StaticEffect.DefenseBreakRate, .04m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .12m),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .04m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.DefenseBreakRate, .04m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .04m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .08m),
-                            new Effect(StaticEffect.DefenseBreakRate, .03m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .08m),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .03m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .05m),
-                            new Effect(StaticEffect.DefenseBreakRate, .02m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .05m),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .02m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.DefenseBreakRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .01m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.DefenseBreakRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.DefenseBreakRate, .01m)
                         }
                     }
                 }),
@@ -590,48 +654,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 511),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .12m)
+                            new Effect(StaticEffectContext.WeaponAttack, 511),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .12m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 381),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .09m)
+                            new Effect(StaticEffectContext.WeaponAttack, 381),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .09m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 267),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .06m)
+                            new Effect(StaticEffectContext.WeaponAttack, 267),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .06m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 101),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .05m)
+                            new Effect(StaticEffectContext.WeaponAttack, 101),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .05m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 33),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .03m)
+                            new Effect(StaticEffectContext.WeaponAttack, 33),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .03m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 17),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .01m)
+                            new Effect(StaticEffectContext.WeaponAttack, 17),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .01m)
                         }
                     }
                 }),
@@ -643,48 +707,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .12m),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .12m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .12m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .12m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .1m),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .09m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .1m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .09m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .08m),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .06m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .08m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .06m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .06m),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .05m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .06m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .05m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .03m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .03m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.ExtraDamageRateBasic, .01m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBasic, .01m)
                         }
                     }
                 }),
@@ -696,48 +760,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 511),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .12m)
+                            new Effect(StaticEffectContext.WeaponAttack, 511),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .12m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 381),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .09m)
+                            new Effect(StaticEffectContext.WeaponAttack, 381),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .09m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 267),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .06m)
+                            new Effect(StaticEffectContext.WeaponAttack, 267),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .06m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 101),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .05m)
+                            new Effect(StaticEffectContext.WeaponAttack, 101),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .05m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 33),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .03m)
+                            new Effect(StaticEffectContext.WeaponAttack, 33),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .03m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 17),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .01m)
+                            new Effect(StaticEffectContext.WeaponAttack, 17),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .01m)
                         }
                     }
                 }),
@@ -749,48 +813,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .12m),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .12m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .12m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .12m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .1m),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .09m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .1m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .09m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .08m),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .06m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .08m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .06m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .06m),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .05m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .06m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .05m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .03m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .03m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.ExtraDamageRateBoss, .01m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.ExtraDamageRateBoss, .01m)
                         }
                     }
                 }),
@@ -802,48 +866,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 481),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .16m)
+                            new Effect(StaticEffectContext.WeaponAttack, 481),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .16m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 359),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .12m)
+                            new Effect(StaticEffectContext.WeaponAttack, 359),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .12m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 252),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .09m)
+                            new Effect(StaticEffectContext.WeaponAttack, 252),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .09m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 95),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .06m)
+                            new Effect(StaticEffectContext.WeaponAttack, 95),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .06m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 31),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .04m)
+                            new Effect(StaticEffectContext.WeaponAttack, 31),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .04m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 16),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .03m)
+                            new Effect(StaticEffectContext.WeaponAttack, 16),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .03m)
                         }
                     }
                 }),
@@ -855,48 +919,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .12m),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .16m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .12m),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .16m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .12m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .12m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .08m),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .09m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .08m),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .09m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .05m),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .06m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .05m),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .06m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .04m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .04m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.ExtraDamageRateGolden, .03m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.ExtraDamageRateGolden, .03m)
                         }
                     }
                 }),
@@ -908,48 +972,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 481),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .16m)
+                            new Effect(StaticEffectContext.WeaponAttack, 481),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .16m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 359),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .12m)
+                            new Effect(StaticEffectContext.WeaponAttack, 359),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .12m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 252),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .09m)
+                            new Effect(StaticEffectContext.WeaponAttack, 252),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .09m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 95),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .06m)
+                            new Effect(StaticEffectContext.WeaponAttack, 95),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .06m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 31),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .04m)
+                            new Effect(StaticEffectContext.WeaponAttack, 31),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .04m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 16),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .03m)
+                            new Effect(StaticEffectContext.WeaponAttack, 16),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .03m)
                         }
                     }
                 }),
@@ -961,48 +1025,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .12m),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .16m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .12m),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .16m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .12m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .12m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .08m),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .09m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .08m),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .09m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .05m),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .06m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .05m),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .06m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .04m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .04m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.ExtraDamageRatePrimal, .03m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.ExtraDamageRatePrimal, .03m)
                         }
                     }
                 }),
@@ -1012,27 +1076,51 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 {
                     {
                         ItemRare.Heroic,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 541), new Effect(StaticEffect.Hp, 1_800)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 541),
+                            new Effect(StaticEffectContext.Hp, 1_800)
+                        }
                     },
                     {
                         ItemRare.Legendary,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 404), new Effect(StaticEffect.Hp, 1_260)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 404),
+                            new Effect(StaticEffectContext.Hp, 1_260)
+                        }
                     },
                     {
                         ItemRare.Unique,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 283), new Effect(StaticEffect.Hp, 810)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 283),
+                            new Effect(StaticEffectContext.Hp, 810)
+                        }
                     },
                     {
                         ItemRare.Valuable,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 107), new Effect(StaticEffect.Hp, 450)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 107),
+                            new Effect(StaticEffectContext.Hp, 450)
+                        }
                     },
                     {
                         ItemRare.Magical,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 35), new Effect(StaticEffect.Hp, 225)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 35),
+                            new Effect(StaticEffectContext.Hp, 225)
+                        }
                     },
                     {
                         ItemRare.Common,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 18), new Effect(StaticEffect.Hp, 135)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 18),
+                            new Effect(StaticEffectContext.Hp, 135)
+                        }
                     }
                 }),
             new(TagField.Weapon,
@@ -1041,27 +1129,51 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 {
                     {
                         ItemRare.Heroic,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .13m), new Effect(StaticEffect.Hp, 1_800)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .13m),
+                            new Effect(StaticEffectContext.Hp, 1_800)
+                        }
                     },
                     {
                         ItemRare.Legendary,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .1m), new Effect(StaticEffect.Hp, 1_260)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .1m),
+                            new Effect(StaticEffectContext.Hp, 1_260)
+                        }
                     },
                     {
                         ItemRare.Unique,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .09m), new Effect(StaticEffect.Hp, 810)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.Hp, 810)
+                        }
                     },
                     {
                         ItemRare.Valuable,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .06m), new Effect(StaticEffect.Hp, 450)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .06m),
+                            new Effect(StaticEffectContext.Hp, 450)
+                        }
                     },
                     {
                         ItemRare.Magical,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .04m), new Effect(StaticEffect.Hp, 225)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.Hp, 225)
+                        }
                     },
                     {
                         ItemRare.Common,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .02m), new Effect(StaticEffect.Hp, 135)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.Hp, 135)
+                        }
                     }
                 }),
             new(TagField.Weapon,
@@ -1072,48 +1184,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 541),
-                            new Effect(StaticEffect.MoveSpaceRate, .05m)
+                            new Effect(StaticEffectContext.WeaponAttack, 541),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .05m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 404),
-                            new Effect(StaticEffect.MoveSpaceRate, .04m)
+                            new Effect(StaticEffectContext.WeaponAttack, 404),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .04m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 283),
-                            new Effect(StaticEffect.MoveSpaceRate, .03m)
+                            new Effect(StaticEffectContext.WeaponAttack, 283),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .03m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 107),
-                            new Effect(StaticEffect.MoveSpaceRate, .02m)
+                            new Effect(StaticEffectContext.WeaponAttack, 107),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .02m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 35),
-                            new Effect(StaticEffect.MoveSpaceRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttack, 35),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .01m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 18),
-                            new Effect(StaticEffect.MoveSpaceRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttack, 18),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .01m)
                         }
                     }
                 }),
@@ -1125,48 +1237,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .13m),
-                            new Effect(StaticEffect.MoveSpaceRate, .05m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .13m),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .05m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .1m),
-                            new Effect(StaticEffect.MoveSpaceRate, .04m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .1m),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .04m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.MoveSpaceRate, .03m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .03m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .06m),
-                            new Effect(StaticEffect.MoveSpaceRate, .02m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .06m),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .02m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.MoveSpaceRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .01m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.MoveSpaceRate, .01m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.MoveSpaceRate, .01m)
                         }
                     }
                 }),
@@ -1178,48 +1290,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 662),
-                            new Effect(StaticEffect.PartialDamageRate, .55m)
+                            new Effect(StaticEffectContext.WeaponAttack, 662),
+                            new Effect(StaticEffectContext.PartialDamageRate, .55m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 493),
-                            new Effect(StaticEffect.PartialDamageRate, .44m)
+                            new Effect(StaticEffectContext.WeaponAttack, 493),
+                            new Effect(StaticEffectContext.PartialDamageRate, .44m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 346),
-                            new Effect(StaticEffect.PartialDamageRate, .33m)
+                            new Effect(StaticEffectContext.WeaponAttack, 346),
+                            new Effect(StaticEffectContext.PartialDamageRate, .33m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 130),
-                            new Effect(StaticEffect.PartialDamageRate, .22m)
+                            new Effect(StaticEffectContext.WeaponAttack, 130),
+                            new Effect(StaticEffectContext.PartialDamageRate, .22m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 42),
-                            new Effect(StaticEffect.PartialDamageRate, .11m)
+                            new Effect(StaticEffectContext.WeaponAttack, 42),
+                            new Effect(StaticEffectContext.PartialDamageRate, .11m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 22),
-                            new Effect(StaticEffect.PartialDamageRate, .06m)
+                            new Effect(StaticEffectContext.WeaponAttack, 22),
+                            new Effect(StaticEffectContext.PartialDamageRate, .06m)
                         }
                     }
                 }),
@@ -1231,48 +1343,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .16m),
-                            new Effect(StaticEffect.PartialDamageRate, .55m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .16m),
+                            new Effect(StaticEffectContext.PartialDamageRate, .55m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .13m),
-                            new Effect(StaticEffect.PartialDamageRate, .44m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .13m),
+                            new Effect(StaticEffectContext.PartialDamageRate, .44m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .1m),
-                            new Effect(StaticEffect.PartialDamageRate, .33m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .1m),
+                            new Effect(StaticEffectContext.PartialDamageRate, .33m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .07m),
-                            new Effect(StaticEffect.PartialDamageRate, .22m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .07m),
+                            new Effect(StaticEffectContext.PartialDamageRate, .22m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .05m),
-                            new Effect(StaticEffect.PartialDamageRate, .11m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .05m),
+                            new Effect(StaticEffectContext.PartialDamageRate, .11m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .03m),
-                            new Effect(StaticEffect.PartialDamageRate, .06m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .03m),
+                            new Effect(StaticEffectContext.PartialDamageRate, .06m)
                         }
                     }
                 }),
@@ -1282,27 +1394,51 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 {
                     {
                         ItemRare.Heroic,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 541), new Effect(StaticEffect.Stamina, 6)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 541),
+                            new Effect(StaticEffectContext.Stamina, 6)
+                        }
                     },
                     {
                         ItemRare.Legendary,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 404), new Effect(StaticEffect.Stamina, 5)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 404),
+                            new Effect(StaticEffectContext.Stamina, 5)
+                        }
                     },
                     {
                         ItemRare.Unique,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 283), new Effect(StaticEffect.Stamina, 4)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 283),
+                            new Effect(StaticEffectContext.Stamina, 4)
+                        }
                     },
                     {
                         ItemRare.Valuable,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 107), new Effect(StaticEffect.Stamina, 3)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 107),
+                            new Effect(StaticEffectContext.Stamina, 3)
+                        }
                     },
                     {
                         ItemRare.Magical,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 35), new Effect(StaticEffect.Stamina, 2)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 35),
+                            new Effect(StaticEffectContext.Stamina, 2)
+                        }
                     },
                     {
                         ItemRare.Common,
-                        new[] {new Effect(StaticEffect.WeaponAttack, 18), new Effect(StaticEffect.Stamina, 1)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttack, 18),
+                            new Effect(StaticEffectContext.Stamina, 1)
+                        }
                     }
                 }),
             new(TagField.Weapon,
@@ -1311,27 +1447,51 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                 {
                     {
                         ItemRare.Heroic,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .13m), new Effect(StaticEffect.Stamina, 6)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .13m),
+                            new Effect(StaticEffectContext.Stamina, 6)
+                        }
                     },
                     {
                         ItemRare.Legendary,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .1m), new Effect(StaticEffect.Stamina, 5)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .1m),
+                            new Effect(StaticEffectContext.Stamina, 5)
+                        }
                     },
                     {
                         ItemRare.Unique,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .09m), new Effect(StaticEffect.Stamina, 4)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.Stamina, 4)
+                        }
                     },
                     {
                         ItemRare.Valuable,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .06m), new Effect(StaticEffect.Stamina, 3)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .06m),
+                            new Effect(StaticEffectContext.Stamina, 3)
+                        }
                     },
                     {
                         ItemRare.Magical,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .04m), new Effect(StaticEffect.Stamina, 2)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.Stamina, 2)
+                        }
                     },
                     {
                         ItemRare.Common,
-                        new[] {new Effect(StaticEffect.WeaponAttackRate, .02m), new Effect(StaticEffect.Stamina, 1)}
+                        new[]
+                        {
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.Stamina, 1)
+                        }
                     }
                 }),
             new(TagField.Weapon,
@@ -1342,48 +1502,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 601),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .22m)
+                            new Effect(StaticEffectContext.WeaponAttack, 601),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .22m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 448),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .16m)
+                            new Effect(StaticEffectContext.WeaponAttack, 448),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .16m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 314),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .12m)
+                            new Effect(StaticEffectContext.WeaponAttack, 314),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .12m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 118),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .08m)
+                            new Effect(StaticEffectContext.WeaponAttack, 118),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .08m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 38),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .05m)
+                            new Effect(StaticEffectContext.WeaponAttack, 38),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .05m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttack, 20),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .03m)
+                            new Effect(StaticEffectContext.WeaponAttack, 20),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .03m)
                         }
                     }
                 }),
@@ -1395,48 +1555,48 @@ namespace SoulWorkerPropertySimulator.Data.Storage
                         ItemRare.Heroic,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .14m),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .22m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .14m),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .22m)
                         }
                     },
                     {
                         ItemRare.Legendary,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .11m),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .16m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .11m),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .16m)
                         }
                     },
                     {
                         ItemRare.Unique,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .09m),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .12m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .09m),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .12m)
                         }
                     },
                     {
                         ItemRare.Valuable,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .06m),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .08m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .06m),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .08m)
                         }
                     },
                     {
                         ItemRare.Magical,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .04m),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .05m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .04m),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .05m)
                         }
                     },
                     {
                         ItemRare.Common,
                         new[]
                         {
-                            new Effect(StaticEffect.WeaponAttackRate, .02m),
-                            new Effect(StaticEffect.SuperArmorBreakPowerRate, .03m)
+                            new Effect(StaticEffectContext.WeaponAttackRate, .02m),
+                            new Effect(StaticEffectContext.SuperArmorBreakPowerRate, .03m)
                         }
                     }
                 })

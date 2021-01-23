@@ -11,10 +11,10 @@ namespace SoulWorkerPropertySimulator.Services
     public interface IDataProvideService
     {
         BroochSet                               GetBroochesSets(BroochesField field, BroochesSeries series);
-        IReadOnlyCollection<AccessorySetEffect> GetAccessorySetEffects();
-        IReadOnlyCollection<EquipmentSetEffect> GetArmorSetEffects();
+        IReadOnlyCollection<AccessorySet>       GetAccessorySets();
+        IReadOnlyCollection<EquipmentSet>       GetEquipmentSets();
         IReadOnlyCollection<Brooch>             GetBrooches(BroochesType              type);
-        IReadOnlyCollection<EquipmentBlueprint> GetArmorBlueprints(ArmorField         field);
+        IReadOnlyCollection<EquipmentBlueprint> GetEquipmentBlueprints(EquipmentField field);
         IReadOnlyCollection<AccessoryBlueprint> GetAccessoryBlueprints(AccessoryField field);
         IReadOnlyCollection<PluginBlueprint>    GetPluginBlueprints(PluginField       field);
         IReadOnlyCollection<Tag>                GetTags(TagField                      field);

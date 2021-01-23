@@ -93,8 +93,8 @@
     {
         base.OnInitializedAsync();
 
-        _effects = PanelCompute.Get();
-        PanelCompute.OnChange += Update;
+        _effects = PanelCompute.GetStatic().ToDictionary(x => x.Context, x => x.Value);
+        PanelCompute.OnStaticChange += Update;
 
         return Task.CompletedTask;
     }

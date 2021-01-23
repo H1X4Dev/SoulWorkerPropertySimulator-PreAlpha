@@ -2,7 +2,7 @@
 using SoulWorkerPropertySimulator.Data.Services;
 using SoulWorkerPropertySimulator.Services;
 
-namespace SoulWorkerPropertySimulator.Data
+namespace SoulWorkerPropertySimulator.Data.Extensions
 {
     public static class ServiceCollectionExtensions
     {

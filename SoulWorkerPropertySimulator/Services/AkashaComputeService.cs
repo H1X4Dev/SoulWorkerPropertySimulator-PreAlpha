@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using SoulWorkerPropertySimulator.Models;
+using SoulWorkerPropertySimulator.Services.Scaffolding;
 
 namespace SoulWorkerPropertySimulator.Services
 {
@@ -30,6 +31,11 @@ namespace SoulWorkerPropertySimulator.Services
         }
 
 
-        public void Change(int index, Akasha? newItem) => NotifyChange(ComputeAffect(_akasha[index], newItem));
+        public void Change(int index, Akasha? newItem)
+        {
+            var old = _akasha[index];
+            _akasha[index] = newItem;
+            ProcessAffect(old, newItem);
+        }
     }
 }

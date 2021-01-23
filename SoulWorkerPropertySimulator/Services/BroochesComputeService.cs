@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using SoulWorkerPropertySimulator.Models.Brooches;
-using SoulWorkerPropertySimulator.Models.Effects;
+using SoulWorkerPropertySimulator.Services.Scaffolding;
 using SoulWorkerPropertySimulator.Types;
 
 namespace SoulWorkerPropertySimulator.Services
 {
-    public interface IBroochesComputeService : IComputeService<BroochSet>
+    public interface IBroochesSetComputeService : ISetComputeService<BroochSet>
     {
-        Brooch? Get(BroochesField    field, BroochesType  type);
-        void    Change(BroochesField field, Brooch        newItem);
-        void    Clear(BroochesField  field, BroochesType? type = null);
+        Brooch? Get(BroochesField    field, BroochesType type);
+        void    Change(BroochesField field, Brooch       newItem);
+        void    Clear(BroochesField  field, BroochesType type);
     }
 
-    internal class BroochesComputeService : ComputeServiceBase<BroochSet>, IBroochesComputeService
+    internal class BroochesSetComputeService : ComputeServiceBase, IBroochesSetComputeService
     {
-        private readonly Dictionary<BroochesField, IDictionary<BroochesType, Brooch?>> _brooches    = new();
-        private readonly Dictionary<BroochesField, BroochSet?>                         _broochesSet = new();
-        private readonly IDataProvideService                                           _provider;
+        private readonly Dictionary<BroochesField, Dictionary<BroochesType, Brooch?>> _brooches    = new();
+        private readonly Dictionary<BroochesField, BroochSet?>                        _broochesSet = new();
+        private readonly IDataProvideService                                          _provider;
 
-        public BroochesComputeService(IDataProvideService provider) => _provider = provider;
-
-        protected override List<BroochSet> Sets => _broochesSet.Values.Where(x => x != null).ToList()!;
+        public BroochesSetComputeService(IDataProvideService provider) => _provider = provider;
+        public event Action<IReadOnlyCollection<BroochSet>>? OnSetChange;
+        public IReadOnlyCollection<BroochSet> GetSets() => _broochesSet.Values.Where(x => x != null).ToList()!;
 
         public Brooch? Get(BroochesField field, BroochesType type)
         {
@@ -32,66 +32,37 @@ namespace SoulWorkerPropertySimulator.Services
 
         public void Change(BroochesField field, Brooch newItem)
         {
-            if (newItem == null) { throw new InvalidOperationException(); }
+            Brooch? before = null;
+            if (!_brooches.ContainsKey(field)) { _brooches.Add(field, new()); }
 
-            IDictionary<BroochesType, Brooch?> dict;
-            if (_brooches.ContainsKey(field)) { dict = _brooches[field]; }
-            else
-            {
-                dict = new Dictionary<BroochesType, Brooch?>();
-                _brooches.Add(field, dict);
-            }
+            if (_brooches[field].ContainsKey(newItem.Type)) { before = _brooches[field][newItem.Type]; }
 
-            Brooch? before;
+            _brooches[field][newItem.Type] = newItem;
 
-            try { before = dict[newItem.Type]; }
-            catch (KeyNotFoundException) { before = null; }
-
-            dict[newItem.Type] = newItem;
-
-            var setResult = ComputeSetAffect(field);
-
-            NotifyChange(ComputeAffect(
-                (before?.Effects ?? Array.Empty<Effect>()).Concat(setResult?.Before?.Effects ?? Array.Empty<Effect>()),
-                newItem.Effects.Concat(setResult?.After?.Effects ?? Array.Empty<Effect>())));
-
-            if (setResult != null)
-            {
-                _broochesSet[field] = setResult.Value.After;
-
-                NotifySetChange();
-            }
+            ProcessAffect(before, newItem, field);
         }
 
-        public void Clear(BroochesField field, BroochesType? type = null)
+        public void Clear(BroochesField field, BroochesType type)
         {
             if (!_brooches.ContainsKey(field)) { return; }
 
-            IEnumerable<Effect> before;
-            if (type == null)
-            {
-                before = _brooches[field].Where(x => x.Value != null).SelectMany(x => x.Value!.Effects);
-                _brooches[field].Clear();
-            }
-            else if (_brooches[field].ContainsKey(type.Value) && _brooches[field][type.Value] != null)
-            {
-                before                       = _brooches[field][type.Value]!.Effects;
-                _brooches[field][type.Value] = null;
-            }
-            else { return; }
+            if (!_brooches[field].ContainsKey(type) || _brooches[field][type] == null) { return; }
 
-            BroochSet? setBefore;
-            try { setBefore = _broochesSet[field]; }
-            catch (KeyNotFoundException) { setBefore = null; }
+            var before = _brooches[field][type];
+            if (before == null) { return; }
 
-            _broochesSet[field] = null;
-            NotifyChange(ComputeAffect(before.Concat(setBefore?.Effects ?? Array.Empty<Effect>()),
-                Array.Empty<Effect>()));
+            _brooches[field][type] = null;
 
-            if (setBefore != null) { NotifySetChange(); }
+            ProcessAffect(before, null, field);
         }
 
-        private (BroochSet? Before, BroochSet? After)? ComputeSetAffect(BroochesField field)
+        protected void ProcessAffect(Brooch? before, Brooch? after, BroochesField field)
+        {
+            ProcessAffect(before, after);
+            ComputeSetAffect(field);
+        }
+
+        private void ComputeSetAffect(BroochesField field)
         {
             if (!_brooches.ContainsKey(field)) { throw new InvalidOperationException(); }
 
@@ -110,8 +81,13 @@ namespace SoulWorkerPropertySimulator.Services
                 after = _provider.GetBroochesSets(field, first.Series) with {Rare = first.Rare};
             }
 
-            return before == null && after == null        ? ((BroochSet? Before, BroochSet? After)?) null :
-                before?.Name.Equals(after?.Name) ?? false ? null : (before, after);
+            if (before == after) { return; }
+
+            _broochesSet[field] = after;
+
+            ProcessAffect(before, after);
+
+            OnSetChange?.Invoke(_broochesSet.Values.Where(x => x != null).ToList()!);
         }
     }
 }
