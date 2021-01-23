@@ -1,0 +1,7083 @@
+[
+  {
+    "field": "First",
+    "id": 1,
+    "name": "嶄露頭角的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0225
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 1,
+    "name": "另一個",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0225
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 1,
+    "name": "另一個",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0225
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 2,
+    "name": "神聖的",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 3,
+    "name": "漆黑的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 4,
+    "name": "悲歎少女的",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 4,
+    "name": "悲歎少年的",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 4
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 5,
+    "name": "蒼穹的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0225
+      },
+      {
+        "property": "Stamina",
+        "value": -4
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 6,
+    "name": "懲戒之刃",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "HpRate",
+        "value": -0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 6,
+    "name": "懲戒之彈",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "HpRate",
+        "value": -0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 6,
+    "name": "懲戒之鐮",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "HpRate",
+        "value": -0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 6,
+    "name": "懲戒之拳",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "HpRate",
+        "value": -0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 6,
+    "name": "懲戒之幻想",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "HpRate",
+        "value": -0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 6,
+    "name": "懲戒之炮",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "HpRate",
+        "value": -0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 6,
+    "name": "懲戒之炮",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "HpRate",
+        "value": -0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 6,
+    "name": "懲戒槍擊",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "HpRate",
+        "value": -0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 7,
+    "name": "呼風喚雨的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0225
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 8,
+    "name": "命運中的",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 9,
+    "name": "危機處理",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 10,
+    "name": "需要檢查的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.045
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 11,
+    "name": "美麗的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0525
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0525
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 12,
+    "name": "過度消費的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.03
+      },
+      {
+        "property": "Evade",
+        "value": 21
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 13,
+    "name": "商人聯盟的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "Evade",
+        "value": 27
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 14,
+    "name": "傑出的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.045
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 15,
+    "name": "光榮的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0525
+      },
+      {
+        "property": "Evade",
+        "value": 37
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 16,
+    "name": "心軟的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0225
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 17,
+    "name": "老古董",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.027
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 18,
+    "name": "修理界的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0315
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0525
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.0525
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 19,
+    "name": "沒有棉被的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0975
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 39.6
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 20,
+    "name": "用報紙當被子的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.105
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 42.9
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 21,
+    "name": "復活的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.1125
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 46.2
+      },
+      {
+        "property": "Stamina",
+        "value": 10
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 22,
+    "name": "頑強的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.12
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 49.5
+      },
+      {
+        "property": "Stamina",
+        "value": 11
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 23,
+    "name": "敵人",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.027
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 24,
+    "name": "眼前的敵人",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0315
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 25,
+    "name": "十萬大軍",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.045
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.03
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.075
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 26,
+    "name": "怪物的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.054
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.035
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.035
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.09
+      },
+      {
+        "property": "Evade",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 27,
+    "name": "被餡餅砸中的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.035
+      },
+      {
+        "property": "Evade",
+        "value": 21
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 28,
+    "name": "刻意為之的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.04
+      },
+      {
+        "property": "Evade",
+        "value": 27
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 29,
+    "name": "眼力超群的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 30,
+    "name": "弱者",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 37
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 31,
+    "name": "無畏的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.018
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 32,
+    "name": "勇敢的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0225
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 33,
+    "name": "傲慢的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.027
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 34,
+    "name": "垃圾",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0315
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.025
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 35,
+    "name": "只差2%的",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.018
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 36,
+    "name": "畏縮的",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0225
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 37,
+    "name": "選擇中的",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.027
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 38,
+    "name": "最強",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0315
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.025
+      },
+      {
+        "property": "Evade",
+        "value": 37
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 39,
+    "name": "BOSS一般的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.018
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 258
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 40,
+    "name": "中級",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0225
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 323
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 41,
+    "name": "二號角色",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.027
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 387
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 42,
+    "name": "中級BOSS",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0315
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 452
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 43,
+    "name": "無意識的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0315
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.025
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 44,
+    "name": "王座",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.036
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.025
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 45,
+    "name": "BOSS",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.045
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.03
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 46,
+    "name": "國王",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.054
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.035
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 774
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 47,
+    "name": "豪邁的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0675
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": -0.035
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 968
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 48,
+    "name": "凱旋歸來的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0765
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": -0.035
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 1097
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 49,
+    "name": "協力的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0855
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": -0.035
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 1226
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 50,
+    "name": "區域突襲副本",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.09
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": -0.03
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 1290
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 51,
+    "name": "恐怖傀儡",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "ExtraDamageRatePuppet",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 52,
+    "name": "氣球",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRatePuppet",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 53,
+    "name": "門後的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRatePuppet",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 54,
+    "name": "玩偶",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.035
+      },
+      {
+        "property": "ExtraDamageRatePuppet",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 55,
+    "name": "必須去",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "ExtraDamageRateJunk",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 56,
+    "name": "麻痹的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRateJunk",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 57,
+    "name": "下水道",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateJunk",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 58,
+    "name": "殘渣",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.035
+      },
+      {
+        "property": "ExtraDamageRateJunk",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 59,
+    "name": "扭曲的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRateNed",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 60,
+    "name": "無情的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateNed",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 61,
+    "name": "暴怒的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.035
+      },
+      {
+        "property": "ExtraDamageRateNed",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 62,
+    "name": "N.E.D",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "ExtraDamageRateNed",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRateFlame",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 63,
+    "name": "生疏的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRateFlame",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 64,
+    "name": "減肥夢",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateFlame",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 65,
+    "name": "健身",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.035
+      },
+      {
+        "property": "ExtraDamageRateFlame",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 66,
+    "name": "火焰",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "ExtraDamageRateFlame",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRateNed",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 67,
+    "name": "蓄意的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRateIron",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 68,
+    "name": "鋼鐵",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateIron",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 69,
+    "name": "模型",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.035
+      },
+      {
+        "property": "ExtraDamageRateIron",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 70,
+    "name": "機器人",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "ExtraDamageRateIron",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRateSoul",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 71,
+    "name": "日久生情的",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 11
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.027
+      },
+      {
+        "property": "ExtraDamageRateSoul",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 72,
+    "name": "充滿殺意的",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 11
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.0225
+      },
+      {
+        "property": "ExtraDamageRateSoul",
+        "value": 0.045
+      },
+      {
+        "property": "Evade",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 73,
+    "name": "打情罵俏的",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 12
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.018
+      },
+      {
+        "property": "ExtraDamageRateSoul",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 80
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 74,
+    "name": "近乎",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 12
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.018
+      },
+      {
+        "property": "ExtraDamageRateSoul",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 91
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 75,
+    "name": "破壞",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.015
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 76,
+    "name": "盾牌",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0225
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 77,
+    "name": "銅牆鐵壁",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.03
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 78,
+    "name": "破甲",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 79,
+    "name": "手疼",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.025
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 80,
+    "name": "夢幻般的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.03
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 81,
+    "name": "人品爆發",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.035
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 82,
+    "name": "傳說中的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.04
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 83,
+    "name": "心地善良的",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 84,
+    "name": "藍色問號的",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 85,
+    "name": "前世",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 7
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 86,
+    "name": "1000",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 8
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "Accuracy",
+        "value": 47
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 87,
+    "name": "迷惘",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.03
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 88,
+    "name": "在迷宮中的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0525
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.0525
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 89,
+    "name": "迷宮",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.075
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.075
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 90,
+    "name": "光速",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "Accuracy",
+        "value": 56.4
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 91,
+    "name": "神速的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "Accuracy",
+        "value": 61.1
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 92,
+    "name": "遁地術",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "Accuracy",
+        "value": 65.8
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 93,
+    "name": "疾速",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "Accuracy",
+        "value": 70.5
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "Evade",
+        "value": 107
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 94,
+    "name": "菁英",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0405
+      },
+      {
+        "property": "Accuracy",
+        "value": 42.3
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 29.7
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 95,
+    "name": "榮耀的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.045
+      },
+      {
+        "property": "Accuracy",
+        "value": 47
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 33
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 645
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 96,
+    "name": "第一",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0495
+      },
+      {
+        "property": "Accuracy",
+        "value": 51.7
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 36.3
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 710
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 97,
+    "name": "神一般的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.054
+      },
+      {
+        "property": "Accuracy",
+        "value": 56.4
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 39.6
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 774
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 98,
+    "name": "雙槍",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0585
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 99,
+    "name": "絕對意志",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.063
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 100,
+    "name": "有點奇怪的",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0675
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 101,
+    "name": "故意的",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.072
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.03
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 102,
+    "name": "遊樂園的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.03
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 103,
+    "name": "富礦",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0525
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0525
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 104,
+    "name": "身經百戰的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.075
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.075
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 105,
+    "name": "掉落",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.09
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.09
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 106,
+    "name": "固執的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.045
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 107,
+    "name": "需要強化的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0525
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 108,
+    "name": "圓形",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.06
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 109,
+    "name": "乙太",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0675
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 110,
+    "name": "達到新境界的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0765
+      },
+      {
+        "property": "HpRate",
+        "value": -0.0675
+      },
+      {
+        "property": "ExtraDamageRateSix",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 111,
+    "name": "遊刃有餘的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.081
+      },
+      {
+        "property": "HpRate",
+        "value": -0.06
+      },
+      {
+        "property": "ExtraDamageRateSix",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 112,
+    "name": "老練的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0855
+      },
+      {
+        "property": "HpRate",
+        "value": -0.0525
+      },
+      {
+        "property": "ExtraDamageRateSix",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.05
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 113,
+    "name": "如魚得水的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.09
+      },
+      {
+        "property": "HpRate",
+        "value": -0.045
+      },
+      {
+        "property": "ExtraDamageRateSix",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.05
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 114,
+    "name": "做完熱身運動的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 115,
+    "name": "饑餓的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 116,
+    "name": "失眠的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "AttackRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 117,
+    "name": "時間",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.025
+      },
+      {
+        "property": "AttackRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 118,
+    "name": "強化",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 119,
+    "name": "黃金",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 43
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 120,
+    "name": "下一步",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.027
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 121,
+    "name": "這東西",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.036
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.06
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 122,
+    "name": "強化變成了",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.045
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.075
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 123,
+    "name": "傳說中的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.054
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.09
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 124,
+    "name": "製作",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.027
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 125,
+    "name": "黃金",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.036
+      },
+      {
+        "property": "Evade",
+        "value": 43
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 126,
+    "name": "神秘的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0225
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 127,
+    "name": "無法",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.03
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 128,
+    "name": "分解是",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 129,
+    "name": "庖丁",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.045
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 130,
+    "name": "徹底的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0525
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0315
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 131,
+    "name": "熟練的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0675
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0405
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 132,
+    "name": "金錢",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0675
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0405
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 133,
+    "name": "購物",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0825
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0495
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 134,
+    "name": "藏寶狸的",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.09
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 135,
+    "name": "兢兢業業",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "Accuracy",
+        "value": 28.2
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 136,
+    "name": "隱藏",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 137,
+    "name": "虛擬世界的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0975
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0585
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 138,
+    "name": "花錢的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.045
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 139,
+    "name": "齋藤的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 140,
+    "name": "由美的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 141,
+    "name": "珍妮絲的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 142,
+    "name": "特麗莎的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 143,
+    "name": "阿珍的",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 144,
+    "name": "扭曲幻境",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.045
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 145,
+    "name": "金光幻境",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.045
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 146,
+    "name": "荒蕪幻境",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.054
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 147,
+    "name": "傀儡",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRatePuppet",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 148,
+    "name": "紫色",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateJunk",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 149,
+    "name": "漆黑",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateFlame",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 150,
+    "name": "未完成的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateIron",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 151,
+    "name": "金色",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateSix",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 152,
+    "name": "蹭吃蹭喝",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0225
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 153,
+    "name": "萌發的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0315
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 154,
+    "name": "激蕩的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.036
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 155,
+    "name": "成長的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0405
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 156,
+    "name": "盛放的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.045
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 157,
+    "name": "新手",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0315
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 158,
+    "name": "自給",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.036
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 159,
+    "name": "這是我的",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0405
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 160,
+    "name": "農民",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.045
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 161,
+    "name": "黃金時間",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.04
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 162,
+    "name": "肥料",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.04
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 163,
+    "name": "援助",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 164,
+    "name": "在一起的",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 165,
+    "name": "善行的",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 166,
+    "name": "上帝",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0525
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 167,
+    "name": "虛空",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 168,
+    "name": "第六區域的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.045
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.03
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 169,
+    "name": "災難的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 176,
+    "name": "可怕的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.064
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.05
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.045
+      },
+      {
+        "property": "Stamina",
+        "value": 9
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 250
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 177,
+    "name": "全部的",
+    "effect": [
+      {
+        "property": "Hp",
+        "value": 2500
+      },
+      {
+        "property": "Evade",
+        "value": 80
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 178,
+    "name": "史無前例",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.08
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.03
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 750
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 179,
+    "name": "世紀的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.06
+      },
+      {
+        "property": "Accuracy",
+        "value": 60
+      },
+      {
+        "property": "Accuracy",
+        "value": 100
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 180,
+    "name": "專家",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.078
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.03
+      },
+      {
+        "property": "Hp",
+        "value": 500
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 181,
+    "name": "天然",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.1
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 182,
+    "name": "到達",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.0425
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.04
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 183,
+    "name": "勇氣",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      },
+      {
+        "property": "Hp",
+        "value": 1500
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 184,
+    "name": "永續的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      },
+      {
+        "property": "Hp",
+        "value": 1500
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 185,
+    "name": "搶先的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      },
+      {
+        "property": "Hp",
+        "value": 1500
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 186,
+    "name": "熱情的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      },
+      {
+        "property": "Hp",
+        "value": 1500
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 187,
+    "name": "非凡的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      },
+      {
+        "property": "Hp",
+        "value": 1500
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 188,
+    "name": "橫行",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      },
+      {
+        "property": "Hp",
+        "value": 1500
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 188,
+    "name": "突變的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      },
+      {
+        "property": "Hp",
+        "value": 1500
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 190,
+    "name": "殘存的",
+    "effect": [
+      {
+        "property": "Hp",
+        "value": 2200
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 50
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 206,
+    "name": "清高地 理想的",
+    "effect": [
+      {
+        "property": "CriticalRate",
+        "value": 0.04
+      },
+      {
+        "property": "AttackRate",
+        "value": 0.08
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.035
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.04
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 249,
+    "name": "幻想般的",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.04
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.06
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.04
+      },
+      {
+        "property": "Evade",
+        "value": 150
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 250,
+    "name": "不敗的",
+    "effect": [
+      {
+        "property": "DamageReductionRatePvP",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "First",
+    "id": 265,
+    "name": "虛空的",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.054
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 1,
+    "name": "靈魂行者",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 1,
+    "name": "安排",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 1,
+    "name": "安排",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 2,
+    "name": "化身",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 2,
+    "name": "自我",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 2,
+    "name": "安慰",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 2,
+    "name": "斷念",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 2,
+    "name": "安心",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 2,
+    "name": "犧牲",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 2,
+    "name": "犧牲",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 2,
+    "name": "哀悼",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 3,
+    "name": "安息",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.018
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 4,
+    "name": "劍",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 4,
+    "name": "子彈",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 4,
+    "name": "鐮刀",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 4,
+    "name": "拳",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 4,
+    "name": "幻想",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 4,
+    "name": "炮火",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 4,
+    "name": "炮火",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 4,
+    "name": "槍擊",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 5,
+    "name": "霸王",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.018
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 6,
+    "name": "降臨者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.018
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 7,
+    "name": "緣分",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 8,
+    "name": "彷徨的少女",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 8,
+    "name": "彷徨的少年",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0135
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 9,
+    "name": "高手",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0225
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 10,
+    "name": "傷患",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 11,
+    "name": "消費者",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0525
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0525
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 12,
+    "name": "先驅者",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "Evade",
+        "value": 21
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 13,
+    "name": "常客",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "Evade",
+        "value": 27
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 14,
+    "name": "VIP",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 15,
+    "name": "VVIP",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 7
+      },
+      {
+        "property": "Evade",
+        "value": 37
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 16,
+    "name": "武器主人",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0225
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 17,
+    "name": "收藏家",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.027
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 18,
+    "name": "金主",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0315
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0525
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.0525
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 19,
+    "name": "失敗者",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0975
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0225
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 42.9
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 20,
+    "name": "露宿者",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.105
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0225
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 46.2
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 21,
+    "name": "屍體",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.1125
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0225
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 49.5
+      },
+      {
+        "property": "Stamina",
+        "value": 11
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 22,
+    "name": "不死之身",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.12
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0225
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 52.8
+      },
+      {
+        "property": "Stamina",
+        "value": 11
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 23,
+    "name": "清掃者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.036
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 24,
+    "name": "消滅者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0405
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.03
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 25,
+    "name": "殲滅者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.045
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.03
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.03
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.075
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 26,
+    "name": "怪物",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.054
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.035
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.035
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.09
+      },
+      {
+        "property": "Evade",
+        "value": 64
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 27,
+    "name": "實力角",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 21
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 28,
+    "name": "受益者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 27
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 29,
+    "name": "鬥士",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 30,
+    "name": "獵人",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 37
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 31,
+    "name": "小市民",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.018
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 32,
+    "name": "市民",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0225
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 33,
+    "name": "挑釁者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.027
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 34,
+    "name": "處理者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0315
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.025
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 35,
+    "name": "安慰",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.018
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 36,
+    "name": "強者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0225
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 37,
+    "name": "獵手",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.027
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 38,
+    "name": "追擊者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0315
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.025
+      },
+      {
+        "property": "Evade",
+        "value": 37
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 39,
+    "name": "二號角色",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.018
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 258
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 40,
+    "name": "挑戰者",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0225
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 323
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 41,
+    "name": "覬覦者",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.027
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 387
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 42,
+    "name": "殺手",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0315
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 452
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 43,
+    "name": "追蹤者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0315
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.025
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 44,
+    "name": "威脅者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0405
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.03
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 45,
+    "name": "追蹤者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0495
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.035
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 46,
+    "name": "屠殺者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.054
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.035
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 774
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 47,
+    "name": "參加者",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0675
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": -0.03
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 968
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 48,
+    "name": "將軍",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.072
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": -0.03
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 1032
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 49,
+    "name": "榮耀",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0765
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": -0.03
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 1097
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 50,
+    "name": "會長",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.081
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": -0.025
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 1161
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 51,
+    "name": "逃避者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRatePrimal",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 52,
+    "name": "紮破者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRatePrimal",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 53,
+    "name": "透視者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRatePrimal",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 54,
+    "name": "毀滅者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRatePrimal",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 55,
+    "name": "洗澡",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateJunk",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 56,
+    "name": "感覺",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateJunk",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 57,
+    "name": "居民",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateJunk",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 58,
+    "name": "清道夫",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateJunk",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 59,
+    "name": "信任",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateNed",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 60,
+    "name": "憤怒",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateNed",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 61,
+    "name": "復仇者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateNed",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 62,
+    "name": "復仇者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateNed",
+        "value": 0.025
+      },
+      {
+        "property": "DamageReductionRateFlame",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 63,
+    "name": "消防員",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateFlame",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 64,
+    "name": "追逐者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateFlame",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 65,
+    "name": "教練",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateFlame",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 66,
+    "name": "戰士",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateFlame",
+        "value": 0.025
+      },
+      {
+        "property": "DamageReductionRateNed",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 67,
+    "name": "破壞犯",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateIron",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 68,
+    "name": "破壞狂",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateIron",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 69,
+    "name": "摧毀者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateIron",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 70,
+    "name": "工程師",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateIron",
+        "value": 0.025
+      },
+      {
+        "property": "DamageReductionRateSoul",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 71,
+    "name": "歡喜冤家",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 11
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.027
+      },
+      {
+        "property": "DamageReductionRateSoul",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 72,
+    "name": "友誼",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 11
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.0225
+      },
+      {
+        "property": "DamageReductionRateSoul",
+        "value": 0.045
+      },
+      {
+        "property": "Evade",
+        "value": 86
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 73,
+    "name": "朋友關係",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 12
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.018
+      },
+      {
+        "property": "DamageReductionRateSoul",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 91
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 74,
+    "name": "朋友",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 12
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.018
+      },
+      {
+        "property": "DamageReductionRateSoul",
+        "value": 0.05
+      },
+      {
+        "property": "Evade",
+        "value": 91
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 75,
+    "name": "嗜好者",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 4
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 76,
+    "name": "破碎者",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 4
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 77,
+    "name": "破壞者",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.01
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 78,
+    "name": "破甲",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.015
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 79,
+    "name": "忍受者",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.02
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 80,
+    "name": "連擊",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.025
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 81,
+    "name": "777!",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.03
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 82,
+    "name": "連擊之王",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.035
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 83,
+    "name": "冤大頭",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 84,
+    "name": "誘惑",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 85,
+    "name": "傭兵王",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 7
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 86,
+    "name": "全知全能",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 8
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "Accuracy",
+        "value": 47
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 87,
+    "name": "徘徊之人",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 88,
+    "name": "探險家",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 7
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.0525
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 89,
+    "name": "探險家",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 8
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.075
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 90,
+    "name": "行進者",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "Accuracy",
+        "value": 65.8
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 91,
+    "name": "賽跑選手",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "Accuracy",
+        "value": 70.5
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 92,
+    "name": "修煉者",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "Accuracy",
+        "value": 79.9
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 93,
+    "name": "騎手",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackRate",
+        "value": -0.0135
+      },
+      {
+        "property": "Accuracy",
+        "value": 79.9
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "Evade",
+        "value": 70
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 94,
+    "name": "排名入圍者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0405
+      },
+      {
+        "property": "Accuracy",
+        "value": 42.3
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 29.7
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 95,
+    "name": "記錄",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.045
+      },
+      {
+        "property": "Accuracy",
+        "value": 47
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 33
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 645
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 96,
+    "name": "階層",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0495
+      },
+      {
+        "property": "Accuracy",
+        "value": 51.7
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 36.3
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 710
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 97,
+    "name": "操作",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0495
+      },
+      {
+        "property": "Accuracy",
+        "value": 51.7
+      },
+      {
+        "property": "KillHpRecovery",
+        "value": 36.3
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 710
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 98,
+    "name": "適合者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0675
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 99,
+    "name": "擁有者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.072
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.04
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 100,
+    "name": "榮譽",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0765
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.04
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 101,
+    "name": "失敗者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0765
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.04
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.04
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 102,
+    "name": "挖掘機",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 103,
+    "name": "開拓者",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 7
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0525
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 104,
+    "name": "守財奴",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 8
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.075
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 105,
+    "name": "大富翁",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 9
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.09
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 106,
+    "name": "冒險家",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 4
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 107,
+    "name": "收藏",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 108,
+    "name": "愛好者",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 7
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 109,
+    "name": "收集者",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 8
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 110,
+    "name": "戰鬥",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0765
+      },
+      {
+        "property": "HpRate",
+        "value": -0.0675
+      },
+      {
+        "property": "DamageReductionRateSix",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 111,
+    "name": "修煉者",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.081
+      },
+      {
+        "property": "HpRate",
+        "value": -0.06
+      },
+      {
+        "property": "DamageReductionRateSix",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 112,
+    "name": "戰鬥高手",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.081
+      },
+      {
+        "property": "HpRate",
+        "value": -0.0525
+      },
+      {
+        "property": "DamageReductionRateSix",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.04
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 113,
+    "name": "戰鬥",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0855
+      },
+      {
+        "property": "HpRate",
+        "value": -0.045
+      },
+      {
+        "property": "DamageReductionRateSix",
+        "value": 0.05
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 114,
+    "name": "流浪者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 115,
+    "name": "聊天者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 116,
+    "name": "吟游詩人",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0045
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 117,
+    "name": "記錄者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.009
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 118,
+    "name": "迷信者",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.027
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 119,
+    "name": "駭客",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.036
+      },
+      {
+        "property": "Evade",
+        "value": 43
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 120,
+    "name": "機會",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.027
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 121,
+    "name": "白費力氣",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.036
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.06
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 122,
+    "name": "弱化",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.045
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.075
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 123,
+    "name": "破壞大師",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.054
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.09
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 124,
+    "name": "後援者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.027
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 125,
+    "name": "煉金術士",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.036
+      },
+      {
+        "property": "Evade",
+        "value": 43
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 126,
+    "name": "分解",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 4
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 127,
+    "name": "復原",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 128,
+    "name": "力量",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 129,
+    "name": "手部",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 7
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 130,
+    "name": "價格比較",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0525
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0315
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 131,
+    "name": "交易者",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0675
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0405
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 132,
+    "name": "流動",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0675
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0405
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 133,
+    "name": "之王",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0825
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0495
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 134,
+    "name": "天敵",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "ExpVolumeRateEnemy",
+        "value": 0.09
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 135,
+    "name": "工作者",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "Accuracy",
+        "value": 28.2
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 136,
+    "name": "極限",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 6
+      },
+      {
+        "property": "Evade",
+        "value": 32
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 137,
+    "name": "訓練者",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0975
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.0585
+      },
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 138,
+    "name": "滋味",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.045
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 139,
+    "name": "老顧客",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 140,
+    "name": "貴客",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 141,
+    "name": "開心果",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 142,
+    "name": "暴徒朋友",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 143,
+    "name": "超級貴賓",
+    "effect": [
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 144,
+    "name": "驅動者",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.045
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 145,
+    "name": "反抗者",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.045
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 146,
+    "name": "征服者",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.054
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 147,
+    "name": "指揮官",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DamageReductionRatePrimal",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 148,
+    "name": "蜘蛛女王",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DamageReductionRateJunk",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 149,
+    "name": "影子",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DamageReductionRateFlame",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 150,
+    "name": "敵人",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DamageReductionRateIron",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 151,
+    "name": "異形",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DamageReductionRateSix",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 152,
+    "name": "大王",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0225
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 153,
+    "name": "生命",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0315
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 154,
+    "name": "誕生",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.036
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 155,
+    "name": "樂趣",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.0405
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 156,
+    "name": "喜悅",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.045
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 157,
+    "name": "農夫",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0315
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 158,
+    "name": "自足",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.036
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 159,
+    "name": "天職",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0405
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 160,
+    "name": "企業家",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.045
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 161,
+    "name": "園藝師",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.04
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 162,
+    "name": "生產者",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.04
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 163,
+    "name": "之手",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 164,
+    "name": "幸福",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0375
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 165,
+    "name": "美德",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.045
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 166,
+    "name": "使者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.0525
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 167,
+    "name": "切斷者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 168,
+    "name": "解放者",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.0495
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.035
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 169,
+    "name": "驅逐者",
+    "effect": [
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.035
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 176,
+    "name": "魔王",
+    "effect": [
+      {
+        "property": "CriticalDamage",
+        "value": 550
+      },
+      {
+        "property": "ExtraDamageRateBoss",
+        "value": 0.045
+      },
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.035
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": -0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 177,
+    "name": "尊敬",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.06
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.035
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 178,
+    "name": "大將",
+    "effect": [
+      {
+        "property": "DamageReductionRatePartialDamage",
+        "value": 0.05
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.03
+      },
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.07
+      },
+      {
+        "property": "Evade",
+        "value": 45
+      },
+      {
+        "property": "DamageReductionRateFall",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 179,
+    "name": "金手",
+    "effect": [
+      {
+        "property": "MoneyVolumeRateEnemy",
+        "value": 0.10
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 180,
+    "name": "遊戲",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.08
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": -0.05
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.03
+      },
+      {
+        "property": "DamageReductionRate",
+        "value": 0.03
+      },
+      {
+        "property": "CriticalRate",
+        "value": -0.01
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 181,
+    "name": "紀念物",
+    "effect": [
+      {
+        "property": "Stamina",
+        "value": 7.2
+      },
+      {
+        "property": "Hp",
+        "value": 550
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.025
+      },
+      {
+        "property": "CriticalRate",
+        "value": 0.02
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 182,
+    "name": "真實",
+    "effect": [
+      {
+        "property": "AttackSpeedRate",
+        "value": 0.04
+      },
+      {
+        "property": "SoulNovaVolumeRate",
+        "value": 0.035
+      },
+      {
+        "property": "ExtraDamageRateJunk",
+        "value": 0.025
+      },
+      {
+        "property": "ExtraDamageRateBasic",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 183,
+    "name": "刀刃",
+    "effect": [
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      },
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 184,
+    "name": "炮彈",
+    "effect": [
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      },
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 185,
+    "name": "鎖鏈",
+    "effect": [
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      },
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 186,
+    "name": "護盾",
+    "effect": [
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      },
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 187,
+    "name": "鬥魂",
+    "effect": [
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      },
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 188,
+    "name": "兵器",
+    "effect": [
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      },
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 188,
+    "name": "光槍",
+    "effect": [
+      {
+        "property": "DefenseBreakRate",
+        "value": 0.02
+      },
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.02
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.05
+      },
+      {
+        "property": "HpRate",
+        "value": 0.0375
+      },
+      {
+        "property": "DefenseRate",
+        "value": -0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 190,
+    "name": "傷痕",
+    "effect": [
+      {
+        "property": "DefenseRate",
+        "value": 0.04
+      },
+      {
+        "property": "DamageReductionRateBasic",
+        "value": 0.05
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 206,
+    "name": "白色騎士",
+    "effect": [
+      {
+        "property": "CooldownShorterRate",
+        "value": 0.03
+      },
+      {
+        "property": "SoulGateConsumptionReducedRate",
+        "value": 0.045
+      },
+      {
+        "property": "HpRate",
+        "value": 0.1
+      },
+      {
+        "property": "DamageReductionRateBoss",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 247,
+    "name": "渴望者行者",
+    "effect": [
+      {
+        "property": "CriticalRate",
+        "value": 0.02
+      },
+      {
+        "property": "CriticalDamage",
+        "value": 500
+      },
+      {
+        "property": "Stamina",
+        "value": 5
+      },
+      {
+        "property": "MoveSpaceRate",
+        "value": 0.03
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 250,
+    "name": "作戰執行者",
+    "effect": [
+      {
+        "property": "DamageReductionRatePvP",
+        "value": 0.025
+      }
+    ]
+  },
+  {
+    "field": "Last",
+    "id": 265,
+    "name": "怪物",
+    "effect": [
+      {
+        "property": "AttackRate",
+        "value": 0.05
+      },
+      {
+        "property": "DefenseRate",
+        "value": 0.054
+      },
+      {
+        "property": "SuperArmorBreakPowerRate",
+        "value": 0.035
+      },
+      {
+        "property": "CriticalResistanceRate",
+        "value": 0.035
+      }
+    ]
+  }
+]
