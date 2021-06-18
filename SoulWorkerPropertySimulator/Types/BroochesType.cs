@@ -4,13 +4,13 @@ namespace SoulWorkerPropertySimulator.Types
 {
     public enum BroochesType
     {
-        [Description("攻擊")]
+        [Description("Attack")]
         Attack,
 
-        [Description("防禦")]
+        [Description("Defense")]
         Defense,
 
-        [Description("功能")]
+        [Description("Technical")]
         Effect
     }
 }

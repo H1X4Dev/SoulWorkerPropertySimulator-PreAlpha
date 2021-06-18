@@ -8,7 +8,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
     {
         private static readonly IReadOnlyCollection<AccessorySet> Result = new List<AccessorySet>
         {
-            new("暮光",
+            new("Twilight",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {

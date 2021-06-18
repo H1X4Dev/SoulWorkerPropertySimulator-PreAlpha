@@ -29,14 +29,14 @@
                     <div>@(_set[field]!.Name)(@_set[field]!.Rare.GetDescription())</div>
                 }
                 else
-                { <div>無套裝效果</div> }
+                { <div>No brooches selected</div> }
             </div>
         </div>
     }
 </div>
 
 @code {
-        public const string Title = "勳章";
+        public const string Title = "Brooches";
 
     private readonly Dictionary<BroochesField, BroochSet?> _set = new();
 

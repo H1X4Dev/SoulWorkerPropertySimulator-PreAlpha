@@ -10,7 +10,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         #region
 
         private static Character SetupErwin() =>
-            new("歐文",
+            new("Erwin Arclight",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {

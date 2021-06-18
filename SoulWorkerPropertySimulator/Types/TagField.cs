@@ -4,10 +4,10 @@ namespace SoulWorkerPropertySimulator.Types
 {
     public enum TagField
     {
-        [Description("攻擊型")]
+        [Description("Weapon")]
         Weapon,
 
-        [Description("防禦型")]
+        [Description("Gear")]
         Gear
     }
 }

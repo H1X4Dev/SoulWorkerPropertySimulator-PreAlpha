@@ -10,7 +10,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         #region
 
         private static Character SetupJin() =>
-            new("金",
+            new("Jin Seipatsu",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {

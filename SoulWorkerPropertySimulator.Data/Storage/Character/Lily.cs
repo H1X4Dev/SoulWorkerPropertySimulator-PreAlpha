@@ -10,7 +10,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         #region
 
         private static Character SetupLily() =>
-            new("莉莉",
+            new("Lily Bloomerchen",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {

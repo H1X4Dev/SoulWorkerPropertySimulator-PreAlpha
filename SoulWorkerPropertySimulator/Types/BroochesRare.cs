@@ -4,19 +4,19 @@ namespace SoulWorkerPropertySimulator.Types
 {
     public enum BroochesRare
     {
-        [Description("綠")]
+        [Description("Byte")]
         Byte,
 
-        [Description("藍")]
+        [Description("Kilo")]
         Kilo,
 
-        [Description("黃")]
+        [Description("Mega")]
         Mega,
 
-        [Description("紅")]
+        [Description("Giga")]
         Giga,
 
-        [Description("紫")]
+        [Description("Tera")]
         Tera
     }
 }

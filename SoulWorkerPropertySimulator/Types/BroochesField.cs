@@ -4,19 +4,19 @@ namespace SoulWorkerPropertySimulator.Types
 {
     public enum BroochesField
     {
-        [Description("頭部")]
+        [Description("Head")]
         Head,
 
-        [Description("上衣")]
+        [Description("Top")]
         Top,
 
-        [Description("手套")]
+        [Description("Gloves")]
         Gloves,
 
-        [Description("下衣")]
+        [Description("Bottom")]
         Bottom,
 
-        [Description("鞋子")]
+        [Description("Shoes")]
         Shoes
     }
 }

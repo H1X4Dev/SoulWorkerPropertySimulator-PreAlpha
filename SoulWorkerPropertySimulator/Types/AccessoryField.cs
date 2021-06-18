@@ -4,13 +4,13 @@ namespace SoulWorkerPropertySimulator.Types
 {
     public enum AccessoryField
     {
-        [Description("墜子")]
+        [Description("Amulet")]
         Amulet,
 
-        [Description("耳環")]
+        [Description("Earring")]
         Earrings,
 
-        [Description("戒指")]
+        [Description("Ring")]
         Ring
     }
 }

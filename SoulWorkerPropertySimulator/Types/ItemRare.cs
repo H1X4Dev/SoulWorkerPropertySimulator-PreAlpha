@@ -4,22 +4,22 @@ namespace SoulWorkerPropertySimulator.Types
 {
     public enum ItemRare
     {
-        [Description("白")]
+        [Description("Common")]
         Common,
 
-        [Description("綠")]
+        [Description("Magic")]
         Magical,
 
-        [Description("藍")]
+        [Description("Rare")]
         Valuable,
 
-        [Description("黃")]
+        [Description("Unique")]
         Unique,
 
-        [Description("紅")]
+        [Description("Legend")]
         Legendary,
 
-        [Description("紫")]
+        [Description("Hero")]
         Heroic
     }
 }

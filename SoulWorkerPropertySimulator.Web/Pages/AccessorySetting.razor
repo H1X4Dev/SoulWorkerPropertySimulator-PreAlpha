@@ -42,7 +42,7 @@
 
     private readonly IReadOnlyDictionary<AccessoryField, int> _fields = new Dictionary<AccessoryField, int> {{AccessoryField.Amulet, 1}, {AccessoryField.Earrings, 1}, {AccessoryField.Ring, 2}};
 
-        public const string Title = "飾品";
+        public const string Title = "Accessories";
 
     private ICollection<Accessory> Default { get; set; } = null!;
 
@@ -79,7 +79,7 @@
         if (!sets.Any()) { return string.Empty; }
         var builder = new StringBuilder();
         builder.Append(First);
-        foreach (var set in sets) { builder.Append($"{set.Name}: {set.Step}件效果"); }
+        foreach (var set in sets) { builder.Append($"{set.Name}: {set.Step} piece effect"); }
         builder.Append(Last);
         return builder.ToString();
     }

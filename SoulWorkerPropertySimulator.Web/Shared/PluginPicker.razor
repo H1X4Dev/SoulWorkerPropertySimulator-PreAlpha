@@ -9,7 +9,7 @@
         @if (Options.Any())
         {
             <div class="card-header d-flex align-items-center">
-                <div>插件</div>
+                <div>Options</div>
                 <div class="flex-grow-1 ms-2">
                     <select class="form-select" @bind="Selected">
                         <option></option>
@@ -26,7 +26,7 @@
                     @if (SelectedBlueprint.ValidStep?.Count > 1)
                     {
                         <div class="input-group mb-3">
-                            <span class="input-group-text">等級</span>
+                            <span class="input-group-text">Grade</span>
                             <select class="form-control" @bind="SelectedStep">
                                 @foreach (var i in SelectedBlueprint.ValidStep)
                                 {

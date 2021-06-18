@@ -4,208 +4,208 @@ namespace SoulWorkerPropertySimulator.Types
 {
     public enum Property
     {
-        [Description("命中度")]
+        [Description("Accuracy")]
         Accuracy,
 
-        [Description("攻擊力")]
+        [Description("Attack")]
         Attack,
 
-        [Description("攻擊力(%)")]
+        [Description("Attack(%)")]
         AttackRate,
 
-        [Description("下次攻擊的攻擊力(%)")]
+        [Description("Next Attack(%)")]
         AttackRateNext,
 
-        [Description("空裝攻擊力")]
+        [Description("Original Attack")]
         AttackRateOriginal,
 
-        [Description("攻擊速度")]
+        [Description("Attack Speed")]
         AttackSpeedRate,
 
-        [Description("冷卻時間")]
+        [Description("Cooldown Reduction")]
         CooldownShorterRate,
 
-        [Description("暴擊傷害")]
+        [Description("Critical Damage")]
         CriticalDamage,
 
-        [Description("暴擊率")]
+        [Description("Critical")]
         CriticalRate,
 
-        [Description("暴擊抵抗(%)")]
+        [Description("Critical Resist.(%)")]
         CriticalResistanceRate,
 
-        [Description("減傷率")]
+        [Description("Damage Reduction")]
         DamageReductionRate,
 
-        [Description("傷害減少：空中")]
+        [Description("Damage Reduction: Air")]
         DamageReductionRateAir,
 
-        [Description("傷害減少：一般怪物")]
+        [Description("Damage Reduction：Basic")]
         DamageReductionRateBasic,
 
-        [Description("傷害減少：BOSS")]
+        [Description("Damage Reduction：Boss/Named")]
         DamageReductionRateBoss,
 
-        [Description("傷害減少：暴擊")]
+        [Description("Damage Reduction：Critical")]
         DamageReductionRateCritical,
 
-        [Description("傷害減少：倒地")]
+        [Description("Damage Reduction : Fall")]
         DamageReductionRateFall,
 
-        [Description("傷害減少：疾速烈焰")]
+        [Description("Damage Reduction：Fire")]
         DamageReductionRateFlame,
 
-        [Description("傷害減少：鋼鐵勢力")]
+        [Description("Damage Reduction：Iron")]
         DamageReductionRateIron,
 
-        [Description("傷害減少：靈魂暗影")]
+        [Description("Damage Reduction：Junk")]
         DamageReductionRateJunk,
 
-        [Description("傷害減少：NED")]
+        [Description("Damage Reduction：NED")]
         DamageReductionRateNed,
 
-        [Description("傷害減少：攻擊失敗")]
+        [Description("Damage Reduction：Partial Damage")]
         DamageReductionRatePartialDamage,
 
-        [Description("傷害減少：原始勢力")]
+        [Description("Damage Reduction : Primal")]
         DamageReductionRatePrimal,
 
-        [Description("傷害減少：傀儡軍隊")]
+        [Description("Damage Reduction：Doll")]
         DamageReductionRatePuppet,
 
-        [Description("傷害減少：PvP")]
+        [Description("Damage Reduction：PvP")]
         DamageReductionRatePvP,
 
-        [Description("傷害減少：第六區域")]
+        [Description("Damage Reduction：District 6")]
         DamageReductionRateSix,
 
-        [Description("傷害減少：人造靈魂行者")]
+        [Description("Damage Reduction：Soul")]
         DamageReductionRateSoul,
 
-        [Description("防禦度")]
+        [Description("Defense")]
         Defense,
 
-        [Description("防禦貫穿率")]
+        [Description("Armor Break")]
         DefenseBreakRate,
 
-        [Description("防禦度(%)")]
+        [Description("Defense(%)")]
         DefenseRate,
 
-        [Description("空裝防禦度")]
+        [Description("Original Defense")]
         DefenseRateOriginal,
 
-        [Description("霸體(秒)")]
+        [Description("Stamina(秒)")]
         EndureSecond,
 
-        [Description("回避度")]
+        [Description("Evasion")]
         Evade,
 
-        [Description("從敵人獲得經驗")]
+        [Description("EXP% increase")]
         ExpVolumeRateEnemy,
 
-        [Description("附加傷害：空中")]
+        [Description("Extra Damage against：Air")]
         ExtraDamageRateAir,
 
-        [Description("附加傷害：一般")]
+        [Description("Extra Damage against：Basic")]
         ExtraDamageRateBasic,
 
-        [Description("附加傷害：BOSS")]
+        [Description("Extra Damage against：Boss/Named")]
         ExtraDamageRateBoss,
 
-        [Description("附加傷害：倒地")]
+        [Description("Extra Damage against：Fall")]
         ExtraDamageRateFall,
 
-        [Description("附加傷害：疾速烈焰")]
+        [Description("Extra Damage against：Flame")]
         ExtraDamageRateFlame,
 
-        [Description("附加傷害：金色城堡")]
+        [Description("Extra Damage against：Golden Citadel")]
         ExtraDamageRateGolden,
 
-        [Description("附加傷害：鋼鐵勢力")]
+        [Description("Extra Damage against：Iron")]
         ExtraDamageRateIron,
 
-        [Description("附加傷害：靈魂暗影")]
+        [Description("Extra Damage against：Soul Junk")]
         ExtraDamageRateJunk,
 
-        [Description("附加傷害：NED")]
+        [Description("Extra Damage against：NED")]
         ExtraDamageRateNed,
 
-        [Description("附加傷害：原始勢力")]
+        [Description("Extra Damage against：Primal")]
         ExtraDamageRatePrimal,
 
-        [Description("附加傷害：傀儡軍隊")]
+        [Description("Extra Damage against：Doll")]
         ExtraDamageRatePuppet,
 
-        [Description("附加傷害：第六區域")]
+        [Description("Extra Damage against：Distric Six")]
         ExtraDamageRateSix,
 
-        [Description("附加傷害：人造靈魂行者")]
+        [Description("Extra Damage against：Soul Junk")]
         ExtraDamageRateSoul,
 
-        [Description("防禦防禦度")]
+        [Description("Gear Defense")]
         GearDefense,
 
-        [Description("防禦防禦度(%)")]
+        [Description("Gear Defense(%)")]
         GearDefenseRate,
 
-        [Description("最大HP")]
+        [Description("HP")]
         Hp,
 
-        [Description("最大HP(%)")]
+        [Description("HP(%)")]
         HpRate,
 
-        [Description("HP恢復")]
+        [Description("HP Recovery")]
         HpRecovery,
 
-        [Description("HP恢復(%)")]
+        [Description("HP Recovery(%)")]
         HpRecoveryRate,
 
-        [Description("無敵(秒)")]
+        [Description("Invinicible/s")]
         InvincibleSecond,
 
-        [Description("擊殺效果：HP恢復")]
+        [Description("HP Recovery on kill")]
         KillHpRecovery,
 
-        [Description("從敵人獲得金幣量")]
+        [Description("Zenny increase from enemy")]
         MoneyVolumeRateEnemy,
 
-        [Description("移動速度")]
+        [Description("Movement Speed")]
         MoveSpaceRate,
 
-        [Description("戰鬥中移動速度")]
+        [Description("Movement Speed in Battle")]
         MoveSpaceRateBattle,
 
-        [Description("城鎮中移動速度")]
+        [Description("Movement Speed in District")]
         MoveSpaceRateTown,
 
-        [Description("攻擊失敗傷害")]
+        [Description("Partial Damage(%)")]
         PartialDamageRate,
 
-        [Description("反射傷害量")]
+        [Description("Reflect Damage")]
         ReflectionDamageRate,
 
-        [Description("SG消耗量減少")]
+        [Description("SG Consumption")]
         SoulGateConsumptionReducedRate,
 
-        [Description("SG恢復(%)")]
+        [Description("SG Recovery(%)")]
         SoulGateRecoveryRate,
 
-        [Description("SV獲得量")]
+        [Description("SV")]
         SoulNovaVolumeRate,
 
-        [Description("最大耐力")]
+        [Description("Stamina")]
         Stamina,
 
-        [Description("耐力回復")]
+        [Description("Stamina Recovery")]
         StaminaRecovery,
 
-        [Description("SA破壞力")]
+        [Description("Super Armor Break Power")]
         SuperArmorBreakPowerRate,
 
-        [Description("武器攻擊力")]
+        [Description("Weapon Attack")]
         WeaponAttack,
 
-        [Description("武器攻擊力(%)")]
+        [Description("Weapon Attack(%)")]
         WeaponAttackRate
     }
 }

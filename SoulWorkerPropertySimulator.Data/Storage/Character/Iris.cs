@@ -10,7 +10,7 @@ namespace SoulWorkerPropertySimulator.Data.Storage
         #region
 
         private static Character SetupIris() =>
-            new("伊莉絲",
+            new("Iris Yuma",
                 new Dictionary<int, IReadOnlyCollection<Effect>>
                 {
                     {

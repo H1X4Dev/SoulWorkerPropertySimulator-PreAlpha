@@ -4,10 +4,10 @@ namespace SoulWorkerPropertySimulator.Types
 {
     public enum TitleField
     {
-        [Description("前稱")]
+        [Description("First")]
         First,
 
-        [Description("後稱")]
+        [Description("Last")]
         Last
     }
 }

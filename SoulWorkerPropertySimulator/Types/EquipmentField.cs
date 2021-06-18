@@ -4,19 +4,19 @@ namespace SoulWorkerPropertySimulator.Types
 {
     public enum EquipmentField
     {
-        [Description("武器")]
+        [Description("Weapon")]
         Weapon,
 
-        [Description("頭盔")]
+        [Description("Helmet")]
         Head,
 
-        [Description("護肩")]
+        [Description("Shoulder Guard")]
         Shoulder,
 
-        [Description("胸甲")]
+        [Description("Top")]
         Chest,
 
-        [Description("護腿")]
+        [Description("Bottom")]
         Leg
     }
 }
